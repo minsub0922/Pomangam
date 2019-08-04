@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C83722F659D2007D26DD /* AppDelegate.swift */; };
+		AFF0C83A22F659D2007D26DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C83922F659D2007D26DD /* ViewController.swift */; };
+		AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF0C83B22F659D2007D26DD /* Main.storyboard */; };
+		AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C83E22F659D2007D26DD /* PomangamiOS.xcdatamodeld */; };
+		AFF0C84222F659D2007D26DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF0C84122F659D2007D26DD /* Assets.xcassets */; };
+		AFF0C84522F659D2007D26DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF0C84322F659D2007D26DD /* LaunchScreen.storyboard */; };
+		AFF0C85022F659D2007D26DD /* PomangamiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C84F22F659D2007D26DD /* PomangamiOSTests.swift */; };
+		AFF0C85B22F659D2007D26DD /* PomangamiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C85A22F659D2007D26DD /* PomangamiOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFF0C84C22F659D2007D26DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFF0C82C22F659D2007D26DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFF0C83322F659D2007D26DD;
+			remoteInfo = PomangamiOS;
+		};
+		AFF0C85722F659D2007D26DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFF0C82C22F659D2007D26DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFF0C83322F659D2007D26DD;
+			remoteInfo = PomangamiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AFF0C83422F659D2007D26DD /* PomangamiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomangamiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF0C83722F659D2007D26DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFF0C83922F659D2007D26DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFF0C83C22F659D2007D26DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFF0C83F22F659D2007D26DD /* PomangamiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PomangamiOS.xcdatamodel; sourceTree = "<group>"; };
+		AFF0C84122F659D2007D26DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFF0C84422F659D2007D26DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFF0C84622F659D2007D26DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF0C84B22F659D2007D26DD /* PomangamiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomangamiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF0C84F22F659D2007D26DD /* PomangamiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomangamiOSTests.swift; sourceTree = "<group>"; };
+		AFF0C85122F659D2007D26DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF0C85622F659D2007D26DD /* PomangamiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomangamiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF0C85A22F659D2007D26DD /* PomangamiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomangamiOSUITests.swift; sourceTree = "<group>"; };
+		AFF0C85C22F659D2007D26DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFF0C83122F659D2007D26DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFF0C84822F659D2007D26DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFF0C85322F659D2007D26DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFF0C82B22F659D2007D26DD = {
+			isa = PBXGroup;
+			children = (
+				AFF0C83622F659D2007D26DD /* PomangamiOS */,
+				AFF0C84E22F659D2007D26DD /* PomangamiOSTests */,
+				AFF0C85922F659D2007D26DD /* PomangamiOSUITests */,
+				AFF0C83522F659D2007D26DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFF0C83522F659D2007D26DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFF0C83422F659D2007D26DD /* PomangamiOS.app */,
+				AFF0C84B22F659D2007D26DD /* PomangamiOSTests.xctest */,
+				AFF0C85622F659D2007D26DD /* PomangamiOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFF0C83622F659D2007D26DD /* PomangamiOS */ = {
+			isa = PBXGroup;
+			children = (
+				AFF0C83722F659D2007D26DD /* AppDelegate.swift */,
+				AFF0C83922F659D2007D26DD /* ViewController.swift */,
+				AFF0C83B22F659D2007D26DD /* Main.storyboard */,
+				AFF0C84122F659D2007D26DD /* Assets.xcassets */,
+				AFF0C84322F659D2007D26DD /* LaunchScreen.storyboard */,
+				AFF0C84622F659D2007D26DD /* Info.plist */,
+				AFF0C83E22F659D2007D26DD /* PomangamiOS.xcdatamodeld */,
+			);
+			path = PomangamiOS;
+			sourceTree = "<group>";
+		};
+		AFF0C84E22F659D2007D26DD /* PomangamiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFF0C84F22F659D2007D26DD /* PomangamiOSTests.swift */,
+				AFF0C85122F659D2007D26DD /* Info.plist */,
+			);
+			path = PomangamiOSTests;
+			sourceTree = "<group>";
+		};
+		AFF0C85922F659D2007D26DD /* PomangamiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AFF0C85A22F659D2007D26DD /* PomangamiOSUITests.swift */,
+				AFF0C85C22F659D2007D26DD /* Info.plist */,
+			);
+			path = PomangamiOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFF0C83322F659D2007D26DD /* PomangamiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFF0C85F22F659D2007D26DD /* Build configuration list for PBXNativeTarget "PomangamiOS" */;
+			buildPhases = (
+				AFF0C83022F659D2007D26DD /* Sources */,
+				AFF0C83122F659D2007D26DD /* Frameworks */,
+				AFF0C83222F659D2007D26DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PomangamiOS;
+			productName = PomangamiOS;
+			productReference = AFF0C83422F659D2007D26DD /* PomangamiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFF0C84A22F659D2007D26DD /* PomangamiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFF0C86222F659D2007D26DD /* Build configuration list for PBXNativeTarget "PomangamiOSTests" */;
+			buildPhases = (
+				AFF0C84722F659D2007D26DD /* Sources */,
+				AFF0C84822F659D2007D26DD /* Frameworks */,
+				AFF0C84922F659D2007D26DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFF0C84D22F659D2007D26DD /* PBXTargetDependency */,
+			);
+			name = PomangamiOSTests;
+			productName = PomangamiOSTests;
+			productReference = AFF0C84B22F659D2007D26DD /* PomangamiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AFF0C85522F659D2007D26DD /* PomangamiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFF0C86522F659D2007D26DD /* Build configuration list for PBXNativeTarget "PomangamiOSUITests" */;
+			buildPhases = (
+				AFF0C85222F659D2007D26DD /* Sources */,
+				AFF0C85322F659D2007D26DD /* Frameworks */,
+				AFF0C85422F659D2007D26DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFF0C85822F659D2007D26DD /* PBXTargetDependency */,
+			);
+			name = PomangamiOSUITests;
+			productName = PomangamiOSUITests;
+			productReference = AFF0C85622F659D2007D26DD /* PomangamiOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFF0C82C22F659D2007D26DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "최민섭";
+				TargetAttributes = {
+					AFF0C83322F659D2007D26DD = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					AFF0C84A22F659D2007D26DD = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = AFF0C83322F659D2007D26DD;
+					};
+					AFF0C85522F659D2007D26DD = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = AFF0C83322F659D2007D26DD;
+					};
+				};
+			};
+			buildConfigurationList = AFF0C82F22F659D2007D26DD /* Build configuration list for PBXProject "PomangamiOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFF0C82B22F659D2007D26DD;
+			productRefGroup = AFF0C83522F659D2007D26DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFF0C83322F659D2007D26DD /* PomangamiOS */,
+				AFF0C84A22F659D2007D26DD /* PomangamiOSTests */,
+				AFF0C85522F659D2007D26DD /* PomangamiOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFF0C83222F659D2007D26DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFF0C84522F659D2007D26DD /* LaunchScreen.storyboard in Resources */,
+				AFF0C84222F659D2007D26DD /* Assets.xcassets in Resources */,
+				AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFF0C84922F659D2007D26DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFF0C85422F659D2007D26DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFF0C83022F659D2007D26DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFF0C83A22F659D2007D26DD /* ViewController.swift in Sources */,
+				AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */,
+				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFF0C84722F659D2007D26DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFF0C85022F659D2007D26DD /* PomangamiOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFF0C85222F659D2007D26DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFF0C85B22F659D2007D26DD /* PomangamiOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFF0C84D22F659D2007D26DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFF0C83322F659D2007D26DD /* PomangamiOS */;
+			targetProxy = AFF0C84C22F659D2007D26DD /* PBXContainerItemProxy */;
+		};
+		AFF0C85822F659D2007D26DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFF0C83322F659D2007D26DD /* PomangamiOS */;
+			targetProxy = AFF0C85722F659D2007D26DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AFF0C83B22F659D2007D26DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFF0C83C22F659D2007D26DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFF0C84322F659D2007D26DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFF0C84422F659D2007D26DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFF0C85D22F659D2007D26DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFF0C85E22F659D2007D26DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFF0C86022F659D2007D26DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CJ9DCX3V4H;
+				INFOPLIST_FILE = PomangamiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kau.com.PomangamiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFF0C86122F659D2007D26DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CJ9DCX3V4H;
+				INFOPLIST_FILE = PomangamiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kau.com.PomangamiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AFF0C86322F659D2007D26DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CJ9DCX3V4H;
+				INFOPLIST_FILE = PomangamiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kau.com.PomangamiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PomangamiOS.app/PomangamiOS";
+			};
+			name = Debug;
+		};
+		AFF0C86422F659D2007D26DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CJ9DCX3V4H;
+				INFOPLIST_FILE = PomangamiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kau.com.PomangamiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PomangamiOS.app/PomangamiOS";
+			};
+			name = Release;
+		};
+		AFF0C86622F659D2007D26DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CJ9DCX3V4H;
+				INFOPLIST_FILE = PomangamiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kau.com.PomangamiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PomangamiOS;
+			};
+			name = Debug;
+		};
+		AFF0C86722F659D2007D26DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CJ9DCX3V4H;
+				INFOPLIST_FILE = PomangamiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kau.com.PomangamiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PomangamiOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFF0C82F22F659D2007D26DD /* Build configuration list for PBXProject "PomangamiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFF0C85D22F659D2007D26DD /* Debug */,
+				AFF0C85E22F659D2007D26DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFF0C85F22F659D2007D26DD /* Build configuration list for PBXNativeTarget "PomangamiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFF0C86022F659D2007D26DD /* Debug */,
+				AFF0C86122F659D2007D26DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFF0C86222F659D2007D26DD /* Build configuration list for PBXNativeTarget "PomangamiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFF0C86322F659D2007D26DD /* Debug */,
+				AFF0C86422F659D2007D26DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFF0C86522F659D2007D26DD /* Build configuration list for PBXNativeTarget "PomangamiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFF0C86622F659D2007D26DD /* Debug */,
+				AFF0C86722F659D2007D26DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AFF0C83E22F659D2007D26DD /* PomangamiOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AFF0C83F22F659D2007D26DD /* PomangamiOS.xcdatamodel */,
+			);
+			currentVersion = AFF0C83F22F659D2007D26DD /* PomangamiOS.xcdatamodel */;
+			path = PomangamiOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AFF0C82C22F659D2007D26DD /* Project object */;
+}
