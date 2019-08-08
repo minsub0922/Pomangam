@@ -9,7 +9,6 @@
 import UIKit
 
 class HomeMenuCell: UICollectionViewCell {
-    @IBOutlet weak var
-    View: UIImageView!
+    @IBOutlet weak var menuImageView: UIImageView!
     @IBOutlet weak var menuLabel: UILabel!
 }

@@ -7,7 +7,7 @@
 //
 import UIKit
 
-struct MainMenuModel {
+struct HomeMenuModel {
     var image: UIImage
     var title: String
 }

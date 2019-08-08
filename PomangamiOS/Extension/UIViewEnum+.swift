@@ -10,7 +10,13 @@ import UIKit
 
 extension UIImage {
     enum AssetIdentifier: String {
-        case mainMenuCommunity = "btnCommunity"
+        //HomeMenu
+        case homeMenuDelivery = "btnMainDelivery"
+        case homeMenuAffiliate = "btnMainPartnership"
+        case homeMenuPurchase = "btnMainPurchase"
+        case homeMenuTransaction = "btnMainTransaction"
+        case homeMenuCommunity = "btnCommunity"
+        case homeMenuNotice = "btnMainNotice"
     }
  
     convenience init!(asset: AssetIdentifier) {
