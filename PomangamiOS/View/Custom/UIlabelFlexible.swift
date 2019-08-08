@@ -27,16 +27,14 @@ class UILabelFlexible: UILabel {
     // Returns an UIFont that fits the new label's height.
     private func fontToFitHeight() -> UIFont {
         //print(font.pointSize)
-        var minFontSize: CGFloat = font.pointSize / 2 // CGFloat 18
+        var minFontSize: CGFloat = font.pointSize * 0.6 // CGFloat 18
         var maxFontSize: CGFloat = font.pointSize     // CGFloat 67
         var fontSizeAverage: CGFloat = 0
         var textAndLabelHeightDiff: CGFloat = 0
         
         while (minFontSize <= maxFontSize) {
             
-            fontSizeAverage = minFontSize + (maxFontSize - minFontSize) / 2
-            
-            // Abort if text happens to be nil
+            fontSizeAverage = minFontSize + (maxFontSize - minFontSize) / 4
             
             guard (text?.count)! > 0 else {
                 break
