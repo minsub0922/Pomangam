@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AFDD4C5F22FC0BA200CD8CD5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4C5E22FC0BA200CD8CD5 /* HomeViewController.swift */; };
+		AFDD4C6122FC0BAD00CD8CD5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDD4C6022FC0BAD00CD8CD5 /* Home.storyboard */; };
+		AFDD4C6322FC0BBF00CD8CD5 /* AffiliateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4C6222FC0BBF00CD8CD5 /* AffiliateViewController.swift */; };
+		AFDD4C6522FC0BC700CD8CD5 /* Affiliate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDD4C6422FC0BC700CD8CD5 /* Affiliate.storyboard */; };
+		AFDD4C6722FC0BD200CD8CD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4C6622FC0BD200CD8CD5 /* ProfileViewController.swift */; };
+		AFDD4C6922FC0BD900CD8CD5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDD4C6822FC0BD900CD8CD5 /* Profile.storyboard */; };
+		AFDD4C6B22FC0BE100CD8CD5 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4C6A22FC0BE100CD8CD5 /* MoreViewController.swift */; };
+		AFDD4C6D22FC0BEA00CD8CD5 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDD4C6C22FC0BEA00CD8CD5 /* More.storyboard */; };
+		AFDD4CAC22FC15E600CD8CD5 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CAB22FC15E600CD8CD5 /* UIView+.swift */; };
+		AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CAD22FC1BAD00CD8CD5 /* TabBarController.swift */; };
 		AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C83722F659D2007D26DD /* AppDelegate.swift */; };
-		AFF0C83A22F659D2007D26DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C83922F659D2007D26DD /* ViewController.swift */; };
 		AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF0C83B22F659D2007D26DD /* Main.storyboard */; };
 		AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C83E22F659D2007D26DD /* PomangamiOS.xcdatamodeld */; };
 		AFF0C84222F659D2007D26DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF0C84122F659D2007D26DD /* Assets.xcassets */; };
@@ -35,9 +44,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AFDD4C5E22FC0BA200CD8CD5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AFDD4C6022FC0BAD00CD8CD5 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		AFDD4C6222FC0BBF00CD8CD5 /* AffiliateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliateViewController.swift; sourceTree = "<group>"; };
+		AFDD4C6422FC0BC700CD8CD5 /* Affiliate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Affiliate.storyboard; sourceTree = "<group>"; };
+		AFDD4C6622FC0BD200CD8CD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AFDD4C6822FC0BD900CD8CD5 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		AFDD4C6A22FC0BE100CD8CD5 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		AFDD4C6C22FC0BEA00CD8CD5 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		AFDD4CAB22FC15E600CD8CD5 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		AFDD4CAD22FC1BAD00CD8CD5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AFF0C83422F659D2007D26DD /* PomangamiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomangamiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF0C83722F659D2007D26DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFF0C83922F659D2007D26DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFF0C83C22F659D2007D26DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFF0C83F22F659D2007D26DD /* PomangamiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PomangamiOS.xcdatamodel; sourceTree = "<group>"; };
 		AFF0C84122F659D2007D26DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +94,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFDD4C1722FBEE4900CD8CD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFDD4C5D22FC0B8200CD8CD5 /* More */,
+				AFDD4C5C22FC0B7A00CD8CD5 /* Profile */,
+				AFDD4C5B22FC0B7000CD8CD5 /* Affiliate */,
+				AFDD4C5A22FC0B6400CD8CD5 /* Home */,
+				AFDD4CAD22FC1BAD00CD8CD5 /* TabBarController.swift */,
+				AFF0C83B22F659D2007D26DD /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFDD4C1822FBEE4D00CD8CD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AFDD4C1922FBEE4F00CD8CD5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AFDD4C1A22FBEE5300CD8CD5 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		AFDD4C1B22FBEE5500CD8CD5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AFDD4CAB22FC15E600CD8CD5 /* UIView+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AFDD4C5922FC0B2B00CD8CD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFF0C83722F659D2007D26DD /* AppDelegate.swift */,
+				AFF0C84122F659D2007D26DD /* Assets.xcassets */,
+				AFF0C84322F659D2007D26DD /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFDD4C5A22FC0B6400CD8CD5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AFDD4C6022FC0BAD00CD8CD5 /* Home.storyboard */,
+				AFDD4C5E22FC0BA200CD8CD5 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AFDD4C5B22FC0B7000CD8CD5 /* Affiliate */ = {
+			isa = PBXGroup;
+			children = (
+				AFDD4C6222FC0BBF00CD8CD5 /* AffiliateViewController.swift */,
+				AFDD4C6422FC0BC700CD8CD5 /* Affiliate.storyboard */,
+			);
+			path = Affiliate;
+			sourceTree = "<group>";
+		};
+		AFDD4C5C22FC0B7A00CD8CD5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AFDD4C6622FC0BD200CD8CD5 /* ProfileViewController.swift */,
+				AFDD4C6822FC0BD900CD8CD5 /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		AFDD4C5D22FC0B8200CD8CD5 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				AFDD4C6A22FC0BE100CD8CD5 /* MoreViewController.swift */,
+				AFDD4C6C22FC0BEA00CD8CD5 /* More.storyboard */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
 		AFF0C82B22F659D2007D26DD = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +205,12 @@
 		AFF0C83622F659D2007D26DD /* PomangamiOS */ = {
 			isa = PBXGroup;
 			children = (
-				AFF0C83722F659D2007D26DD /* AppDelegate.swift */,
-				AFF0C83922F659D2007D26DD /* ViewController.swift */,
-				AFF0C83B22F659D2007D26DD /* Main.storyboard */,
-				AFF0C84122F659D2007D26DD /* Assets.xcassets */,
-				AFF0C84322F659D2007D26DD /* LaunchScreen.storyboard */,
+				AFDD4C1B22FBEE5500CD8CD5 /* Extension */,
+				AFDD4C1A22FBEE5300CD8CD5 /* Module */,
+				AFDD4C1922FBEE4F00CD8CD5 /* Utils */,
+				AFDD4C1822FBEE4D00CD8CD5 /* Model */,
+				AFDD4C1722FBEE4900CD8CD5 /* View */,
+				AFDD4C5922FC0B2B00CD8CD5 /* Supporting Files */,
 				AFF0C84622F659D2007D26DD /* Info.plist */,
 				AFF0C83E22F659D2007D26DD /* PomangamiOS.xcdatamodeld */,
 			);
@@ -232,9 +339,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDD4C6922FC0BD900CD8CD5 /* Profile.storyboard in Resources */,
 				AFF0C84522F659D2007D26DD /* LaunchScreen.storyboard in Resources */,
+				AFDD4C6D22FC0BEA00CD8CD5 /* More.storyboard in Resources */,
 				AFF0C84222F659D2007D26DD /* Assets.xcassets in Resources */,
 				AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */,
+				AFDD4C6122FC0BAD00CD8CD5 /* Home.storyboard in Resources */,
+				AFDD4C6522FC0BC700CD8CD5 /* Affiliate.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +370,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF0C83A22F659D2007D26DD /* ViewController.swift in Sources */,
+				AFDD4C6B22FC0BE100CD8CD5 /* MoreViewController.swift in Sources */,
+				AFDD4C6722FC0BD200CD8CD5 /* ProfileViewController.swift in Sources */,
+				AFDD4CAC22FC15E600CD8CD5 /* UIView+.swift in Sources */,
+				AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */,
 				AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */,
+				AFDD4C6322FC0BBF00CD8CD5 /* AffiliateViewController.swift in Sources */,
 				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
+				AFDD4C5F22FC0BA200CD8CD5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
