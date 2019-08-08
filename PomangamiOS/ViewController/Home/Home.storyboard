@@ -55,8 +55,8 @@
                                                     <rect key="frame" x="26" y="0.0" width="120" height="92"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQD-Qh-Z4s" customClass="UILabelFlexible" customModule="PomangamiOS" customModuleProvider="target">
-                                                    <rect key="frame" x="67.5" y="107" width="37.5" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <rect key="frame" x="67.5" y="107" width="37" height="32.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -66,9 +66,10 @@
                                             <constraint firstItem="HQD-Qh-Z4s" firstAttribute="top" secondItem="sHa-xI-7eH" secondAttribute="bottom" priority="750" constant="15" id="0GG-c1-dfn"/>
                                             <constraint firstItem="sHa-xI-7eH" firstAttribute="centerX" secondItem="S48-sW-Vih" secondAttribute="centerX" id="2YY-aC-ndh"/>
                                             <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="HQD-Qh-Z4s" secondAttribute="bottom" id="AWO-Au-X9H"/>
-                                            <constraint firstItem="HQD-Qh-Z4s" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sHa-xI-7eH" secondAttribute="bottom" constant="5" id="It5-nT-A4K"/>
+                                            <constraint firstItem="HQD-Qh-Z4s" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sHa-xI-7eH" secondAttribute="bottom" constant="8" id="It5-nT-A4K"/>
                                             <constraint firstItem="sHa-xI-7eH" firstAttribute="top" secondItem="S48-sW-Vih" secondAttribute="top" id="N5U-cC-WSn"/>
                                             <constraint firstItem="HQD-Qh-Z4s" firstAttribute="centerX" secondItem="S48-sW-Vih" secondAttribute="centerX" id="Snl-Mm-JwA"/>
+                                            <constraint firstItem="HQD-Qh-Z4s" firstAttribute="height" secondItem="sHa-xI-7eH" secondAttribute="height" multiplier="0.35" id="tGU-KU-e90"/>
                                             <constraint firstItem="sHa-xI-7eH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="S48-sW-Vih" secondAttribute="top" id="tbj-bL-gRQ"/>
                                             <constraint firstItem="sHa-xI-7eH" firstAttribute="width" secondItem="S48-sW-Vih" secondAttribute="width" multiplier="0.7" id="voV-lh-4R4"/>
                                             <constraint firstItem="sHa-xI-7eH" firstAttribute="height" secondItem="S48-sW-Vih" secondAttribute="height" multiplier="0.53" id="yGb-wB-KL8"/>
