@@ -13,6 +13,12 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupRootViewControllers()
+        
+        setupStyle()
+    }
+    
+    func setupRootViewControllers(){
         let pageNames = ["Home","Affiliate","Profile","More"]
         let titles = ["홈","제휴문의","내정보","더보기"]
         var pages: [UINavigationController] = []
@@ -29,19 +35,10 @@ class TabBarController: UITabBarController {
         }
         
         viewControllers = pages
-        
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupStyle() {
+        UITabBar.clearShadow()
+        tabBar.layer.applyShadow(color: .gray, alpha: 0.3, x: 0, y: 0, blur: 12)
     }
-    */
-
 }

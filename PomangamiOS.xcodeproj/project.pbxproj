@@ -15,8 +15,13 @@
 		AFDD4C6922FC0BD900CD8CD5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDD4C6822FC0BD900CD8CD5 /* Profile.storyboard */; };
 		AFDD4C6B22FC0BE100CD8CD5 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4C6A22FC0BE100CD8CD5 /* MoreViewController.swift */; };
 		AFDD4C6D22FC0BEA00CD8CD5 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDD4C6C22FC0BEA00CD8CD5 /* More.storyboard */; };
-		AFDD4CAC22FC15E600CD8CD5 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CAB22FC15E600CD8CD5 /* UIView+.swift */; };
+		AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CAB22FC15E600CD8CD5 /* UIViewFunction+.swift */; };
 		AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CAD22FC1BAD00CD8CD5 /* TabBarController.swift */; };
+		AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB022FC21B700CD8CD5 /* BaseRootViewController.swift */; };
+		AFDD4CB422FC252000CD8CD5 /* HomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB322FC252000CD8CD5 /* HomeMenuCell.swift */; };
+		AFDD4CB622FC261800CD8CD5 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB522FC261800CD8CD5 /* MainMenuModel.swift */; };
+		AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB722FC266C00CD8CD5 /* Enums.swift */; };
+		AFDD4CBA22FC278100CD8CD5 /* UIViewEnum+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB922FC278100CD8CD5 /* UIViewEnum+.swift */; };
 		AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C83722F659D2007D26DD /* AppDelegate.swift */; };
 		AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF0C83B22F659D2007D26DD /* Main.storyboard */; };
 		AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C83E22F659D2007D26DD /* PomangamiOS.xcdatamodeld */; };
@@ -52,8 +57,13 @@
 		AFDD4C6822FC0BD900CD8CD5 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		AFDD4C6A22FC0BE100CD8CD5 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		AFDD4C6C22FC0BEA00CD8CD5 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
-		AFDD4CAB22FC15E600CD8CD5 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		AFDD4CAB22FC15E600CD8CD5 /* UIViewFunction+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewFunction+.swift"; sourceTree = "<group>"; };
 		AFDD4CAD22FC1BAD00CD8CD5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		AFDD4CB022FC21B700CD8CD5 /* BaseRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRootViewController.swift; sourceTree = "<group>"; };
+		AFDD4CB322FC252000CD8CD5 /* HomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCell.swift; sourceTree = "<group>"; };
+		AFDD4CB522FC261800CD8CD5 /* MainMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuModel.swift; sourceTree = "<group>"; };
+		AFDD4CB722FC266C00CD8CD5 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		AFDD4CB922FC278100CD8CD5 /* UIViewEnum+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewEnum+.swift"; sourceTree = "<group>"; };
 		AFF0C83422F659D2007D26DD /* PomangamiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomangamiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF0C83722F659D2007D26DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF0C83C22F659D2007D26DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,9 +104,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AFDD4C1722FBEE4900CD8CD5 /* View */ = {
+		AFDD4C1722FBEE4900CD8CD5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AFDD4CAF22FC219C00CD8CD5 /* Base */,
 				AFDD4C5D22FC0B8200CD8CD5 /* More */,
 				AFDD4C5C22FC0B7A00CD8CD5 /* Profile */,
 				AFDD4C5B22FC0B7000CD8CD5 /* Affiliate */,
@@ -104,12 +115,13 @@
 				AFDD4CAD22FC1BAD00CD8CD5 /* TabBarController.swift */,
 				AFF0C83B22F659D2007D26DD /* Main.storyboard */,
 			);
-			path = View;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		AFDD4C1822FBEE4D00CD8CD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AFDD4CB522FC261800CD8CD5 /* MainMenuModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +129,7 @@
 		AFDD4C1922FBEE4F00CD8CD5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AFDD4CB722FC266C00CD8CD5 /* Enums.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -131,7 +144,8 @@
 		AFDD4C1B22FBEE5500CD8CD5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				AFDD4CAB22FC15E600CD8CD5 /* UIView+.swift */,
+				AFDD4CAB22FC15E600CD8CD5 /* UIViewFunction+.swift */,
+				AFDD4CB922FC278100CD8CD5 /* UIViewEnum+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -182,6 +196,22 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		AFDD4CAF22FC219C00CD8CD5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AFDD4CB022FC21B700CD8CD5 /* BaseRootViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AFDD4CB222FC24EF00CD8CD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFDD4CB322FC252000CD8CD5 /* HomeMenuCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AFF0C82B22F659D2007D26DD = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +239,8 @@
 				AFDD4C1A22FBEE5300CD8CD5 /* Module */,
 				AFDD4C1922FBEE4F00CD8CD5 /* Utils */,
 				AFDD4C1822FBEE4D00CD8CD5 /* Model */,
-				AFDD4C1722FBEE4900CD8CD5 /* View */,
+				AFDD4CB222FC24EF00CD8CD5 /* View */,
+				AFDD4C1722FBEE4900CD8CD5 /* ViewController */,
 				AFDD4C5922FC0B2B00CD8CD5 /* Supporting Files */,
 				AFF0C84622F659D2007D26DD /* Info.plist */,
 				AFF0C83E22F659D2007D26DD /* PomangamiOS.xcdatamodeld */,
@@ -371,12 +402,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFDD4C6B22FC0BE100CD8CD5 /* MoreViewController.swift in Sources */,
+				AFDD4CB422FC252000CD8CD5 /* HomeMenuCell.swift in Sources */,
 				AFDD4C6722FC0BD200CD8CD5 /* ProfileViewController.swift in Sources */,
-				AFDD4CAC22FC15E600CD8CD5 /* UIView+.swift in Sources */,
+				AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */,
 				AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */,
 				AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */,
+				AFDD4CBA22FC278100CD8CD5 /* UIViewEnum+.swift in Sources */,
 				AFDD4C6322FC0BBF00CD8CD5 /* AffiliateViewController.swift in Sources */,
+				AFDD4CB622FC261800CD8CD5 /* MainMenuModel.swift in Sources */,
 				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
+				AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */,
+				AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */,
 				AFDD4C5F22FC0BA200CD8CD5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

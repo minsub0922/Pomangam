@@ -1,5 +1,5 @@
 //
-//  AffiliateViewController.swift
+//  MoreViewController.swift
 //  PomangamiOS
 //
 //  Created by 최민섭 on 08/08/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AffiliateViewController: UIViewController {
+class MoreViewController: BaseRootViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

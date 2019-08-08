@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  AffiliateViewController.swift
 //  PomangamiOS
 //
 //  Created by 최민섭 on 08/08/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class AffiliateViewController: BaseRootViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
