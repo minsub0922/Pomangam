@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeViewController: BaseRootViewController {
 
@@ -25,6 +26,11 @@ class HomeViewController: BaseRootViewController {
         APISource.shared.getListallMain(params: params) { (res) in
             print(res)
         }
+//        
+//        Alamofire.request("https://www.pomangam.com:9530/api/v1/views/main", method: .get, parameters: params, headers: ["Authorization": "Bearer 7e67d67d-df31-4373-b6dc-1a60d2cbce7f"])
+//            .responseJSON(completionHandler: { (res) in
+//                print(res.description)
+//            })
     }
 }
 

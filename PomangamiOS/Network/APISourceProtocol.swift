@@ -17,6 +17,16 @@
 import Foundation
 import Alamofire
 
+struct API {
+    static let baseUrl = "https://www.pomangam.com:9530/api"
+    
+    static let jsonDecoder: JSONDecoder = {
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+        return jsonDecoder
+    }()
+}
+
 enum NetworkResult<T> {
     case networkSuccess(T)
     case networkError((resCode: Int, msg: String))
@@ -39,7 +49,7 @@ extension APISourceProtocol {
                          params: Parameters? = nil,
                          headers: HTTPHeaders? = nil,
                          completion: @escaping (NetworkResult<(Int, T)>) -> Void) {
-        guard let encodedUrl = URL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+        guard let encodedUrl = (API.baseUrl+URL).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             print("networking - invalid url")
             return
         }
@@ -54,8 +64,7 @@ extension APISourceProtocol {
                                     let decoder = JSONDecoder()
                                     do {
                                         let resCode = res.response?.statusCode ?? 0
-                                        print(resCode)
-                                        print(res.response)
+                                        print(value)
                                         let datas = try decoder.decode(T.self, from: value)
                                         let result = (resCode, datas)
                                         completion(.networkSuccess(result))
@@ -77,7 +86,7 @@ extension APISourceProtocol {
     func post<T: Codable>(_ URL: String,
                           params: [String: Any],
                           completion: @escaping (NetworkResult<(Int, T)>) -> Void) {
-        guard let encodedUrl = URL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+        guard let encodedUrl = (API.baseUrl+URL).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             print("networking - invalid url")
             return
         }
