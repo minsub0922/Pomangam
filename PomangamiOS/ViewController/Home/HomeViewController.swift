@@ -18,6 +18,13 @@ class HomeViewController: BaseRootViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        let params = [
+            "deliverySiteIdx": 1
+        ]
+        APISource.shared.getListallMain(params: params) { (res) in
+            print(res)
+        }
     }
 }
 

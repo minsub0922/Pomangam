@@ -9,7 +9,6 @@
 import UIKit
 
 class BaseRootViewController: UIViewController {
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)

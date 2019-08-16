@@ -8,6 +8,39 @@
 
 import UIKit
 
+extension UIImage {
+    func resized(to size: CGSize) -> UIImage {
+        return UIGraphicsImageRenderer(size: size).image { _ in
+            draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
+}
+
+extension UIView {
+    func addRounded(radius: CGFloat = 16.0) {
+        self.layer.cornerRadius = radius
+        self.clipsToBounds = true
+    }
+    
+    func changeHeight(by dHeight: Double) {
+        let center = self.center
+        self.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height + CGFloat(dHeight) < 0 ? 0 : self.frame.height + CGFloat(dHeight))
+        self.center = center
+    }
+    
+//    // MARK: Set Shadow on the view without bound limited
+//    private func applyShadow(radius: CGFloat = 0.0, opacity: Float = 0.3) {
+//        self.layer.cornerRadius = radius
+//        self.layer.shadowOffset = CGSize(width: 0, height: 2)
+//        self.layer.shadowRadius = radius
+//        self.layer.shadowOpacity = opacity
+//        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 3, height: 2)).cgPath
+//        self.layer.shouldRasterize = true
+//        self.layer.rasterizationScale = UIScreen.main.scale
+//        self.layer.masksToBounds = false
+//    }
+}
+
 extension UIButton {
     func centerImageAndButton(_ gap: CGFloat, imageOnTop: Bool) {
         
@@ -117,6 +150,12 @@ extension UICollectionView {
     
     func dequeueReusableCell<T: UICollectionViewCell>(_ cellClass: T.Type, for indexPath: IndexPath) -> T {
         return self.dequeueReusableCell(withReuseIdentifier: cellClass.className, for: indexPath) as! T
+    }
+    
+    func reloadDataOnMainThread() {
+        OperationQueue.main.addOperation {
+            self.reloadData()
+        }
     }
 }
 

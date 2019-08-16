@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E14B85DCC814F29A4A0DAED /* Pods_PomangamiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */; };
+		A08B6FE6CE785B1FAD49EDDB /* Pods_PomangamiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */; };
+		AF6F47C723059F3700B377C7 /* FasterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47C623059F3700B377C7 /* FasterImageView.swift */; };
+		AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */; };
+		AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CB2305A19C00B377C7 /* APISource.swift */; };
+		AF6F47CE2305A1AE00B377C7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CD2305A1AE00B377C7 /* API.swift */; };
+		AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */; };
 		AFDD4C5F22FC0BA200CD8CD5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4C5E22FC0BA200CD8CD5 /* HomeViewController.swift */; };
 		AFDD4C6122FC0BAD00CD8CD5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDD4C6022FC0BAD00CD8CD5 /* Home.storyboard */; };
 		AFDD4C6322FC0BBF00CD8CD5 /* AffiliateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4C6222FC0BBF00CD8CD5 /* AffiliateViewController.swift */; };
@@ -34,6 +41,7 @@
 		AFF0C84522F659D2007D26DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF0C84322F659D2007D26DD /* LaunchScreen.storyboard */; };
 		AFF0C85022F659D2007D26DD /* PomangamiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C84F22F659D2007D26DD /* PomangamiOSTests.swift */; };
 		AFF0C85B22F659D2007D26DD /* PomangamiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C85A22F659D2007D26DD /* PomangamiOSUITests.swift */; };
+		F8FBF7B74889204D4B5F49ED /* Pods_PomangamiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13865987CA5C8634BA89B50 /* Pods_PomangamiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		172BAE90DE915F9CEAD5EA8A /* Pods-PomangamiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOS.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOS/Pods-PomangamiOS.release.xcconfig"; sourceTree = "<group>"; };
+		3B733C07C54F726A09E26E87 /* Pods-PomangamiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PomangamiOSTests/Pods-PomangamiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3CC65E7CAA8B949866BEAD9E /* Pods-PomangamiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOSUITests/Pods-PomangamiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF6F47C623059F3700B377C7 /* FasterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasterImageView.swift; sourceTree = "<group>"; };
+		AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISourceProtocol.swift; sourceTree = "<group>"; };
+		AF6F47CB2305A19C00B377C7 /* APISource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISource.swift; sourceTree = "<group>"; };
+		AF6F47CD2305A1AE00B377C7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListallMainResponse.swift; sourceTree = "<group>"; };
 		AFDD4C5E22FC0BA200CD8CD5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AFDD4C6022FC0BAD00CD8CD5 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		AFDD4C6222FC0BBF00CD8CD5 /* AffiliateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliateViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +105,10 @@
 		AFF0C85622F659D2007D26DD /* PomangamiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomangamiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF0C85A22F659D2007D26DD /* PomangamiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomangamiOSUITests.swift; sourceTree = "<group>"; };
 		AFF0C85C22F659D2007D26DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B685962A42E324F17307CD35 /* Pods-PomangamiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-PomangamiOSUITests/Pods-PomangamiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C098FA7100CF56A624062F71 /* Pods-PomangamiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOS.debug.xcconfig"; path = "Target Support Files/Pods-PomangamiOS/Pods-PomangamiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F13865987CA5C8634BA89B50 /* Pods_PomangamiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCB4CF87CD7F86F36D09009F /* Pods-PomangamiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSTests.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOSTests/Pods-PomangamiOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8FBF7B74889204D4B5F49ED /* Pods_PomangamiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E14B85DCC814F29A4A0DAED /* Pods_PomangamiOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,12 +132,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08B6FE6CE785B1FAD49EDDB /* Pods_PomangamiOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1231BE41C461CBFB0F376AED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C098FA7100CF56A624062F71 /* Pods-PomangamiOS.debug.xcconfig */,
+				172BAE90DE915F9CEAD5EA8A /* Pods-PomangamiOS.release.xcconfig */,
+				3B733C07C54F726A09E26E87 /* Pods-PomangamiOSTests.debug.xcconfig */,
+				FCB4CF87CD7F86F36D09009F /* Pods-PomangamiOSTests.release.xcconfig */,
+				B685962A42E324F17307CD35 /* Pods-PomangamiOSUITests.debug.xcconfig */,
+				3CC65E7CAA8B949866BEAD9E /* Pods-PomangamiOSUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AF6F47C82305A0C200B377C7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */,
+				AF6F47CB2305A19C00B377C7 /* APISource.swift */,
+				AF6F47CD2305A1AE00B377C7 /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		AFDD4C1722FBEE4900CD8CD5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				AFDD4CB522FC261800CD8CD5 /* HomeMenuModel.swift */,
+				AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +280,7 @@
 			children = (
 				AFDD4CC222FC634C00CD8CD5 /* UIlabelFlexible.swift */,
 				AFDD4CC422FC7AFE00CD8CD5 /* UIViewRounded.swift */,
+				AF6F47C623059F3700B377C7 /* FasterImageView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -242,6 +292,8 @@
 				AFF0C84E22F659D2007D26DD /* PomangamiOSTests */,
 				AFF0C85922F659D2007D26DD /* PomangamiOSUITests */,
 				AFF0C83522F659D2007D26DD /* Products */,
+				1231BE41C461CBFB0F376AED /* Pods */,
+				F46D579B4398164370449D1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,6 +310,7 @@
 		AFF0C83622F659D2007D26DD /* PomangamiOS */ = {
 			isa = PBXGroup;
 			children = (
+				AF6F47C82305A0C200B377C7 /* Network */,
 				AFDD4C1B22FBEE5500CD8CD5 /* Extension */,
 				AFDD4C1A22FBEE5300CD8CD5 /* Module */,
 				AFDD4C1922FBEE4F00CD8CD5 /* Utils */,
@@ -289,6 +342,16 @@
 			path = PomangamiOSUITests;
 			sourceTree = "<group>";
 		};
+		F46D579B4398164370449D1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F13865987CA5C8634BA89B50 /* Pods_PomangamiOS.framework */,
+				60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */,
+				4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,9 +359,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFF0C85F22F659D2007D26DD /* Build configuration list for PBXNativeTarget "PomangamiOS" */;
 			buildPhases = (
+				4C24AE27D373388D5EDBADB6 /* [CP] Check Pods Manifest.lock */,
 				AFF0C83022F659D2007D26DD /* Sources */,
 				AFF0C83122F659D2007D26DD /* Frameworks */,
 				AFF0C83222F659D2007D26DD /* Resources */,
+				13FB2918BC7F898FFBE5E17D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,6 +378,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFF0C86222F659D2007D26DD /* Build configuration list for PBXNativeTarget "PomangamiOSTests" */;
 			buildPhases = (
+				A2B512B038DE73CC0F021EBC /* [CP] Check Pods Manifest.lock */,
 				AFF0C84722F659D2007D26DD /* Sources */,
 				AFF0C84822F659D2007D26DD /* Frameworks */,
 				AFF0C84922F659D2007D26DD /* Resources */,
@@ -331,6 +397,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFF0C86522F659D2007D26DD /* Build configuration list for PBXNativeTarget "PomangamiOSUITests" */;
 			buildPhases = (
+				2420E98EC92AD25390C044D3 /* [CP] Check Pods Manifest.lock */,
 				AFF0C85222F659D2007D26DD /* Sources */,
 				AFF0C85322F659D2007D26DD /* Frameworks */,
 				AFF0C85422F659D2007D26DD /* Resources */,
@@ -419,6 +486,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13FB2918BC7F898FFBE5E17D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PomangamiOS/Pods-PomangamiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PomangamiOS/Pods-PomangamiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2420E98EC92AD25390C044D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PomangamiOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C24AE27D373388D5EDBADB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PomangamiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2B512B038DE73CC0F021EBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PomangamiOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AFF0C83022F659D2007D26DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -426,20 +584,25 @@
 			files = (
 				AFDD4C6B22FC0BE100CD8CD5 /* MoreViewController.swift in Sources */,
 				AFDD4CC522FC7AFE00CD8CD5 /* UIViewRounded.swift in Sources */,
+				AF6F47CE2305A1AE00B377C7 /* API.swift in Sources */,
 				AFDD4CB422FC252000CD8CD5 /* HomeMenuCell.swift in Sources */,
 				AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */,
 				AFDD4C6722FC0BD200CD8CD5 /* ProfileViewController.swift in Sources */,
+				AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */,
 				AFDD4CC022FC49E400CD8CD5 /* FinalLists.swift in Sources */,
 				AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */,
+				AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */,
 				AFDD4CC322FC634C00CD8CD5 /* UIlabelFlexible.swift in Sources */,
 				AFDD4CBE22FC457900CD8CD5 /* Types+.swift in Sources */,
 				AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */,
 				AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */,
 				AFDD4CBA22FC278100CD8CD5 /* UIViewEnum+.swift in Sources */,
 				AFDD4C6322FC0BBF00CD8CD5 /* AffiliateViewController.swift in Sources */,
+				AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */,
 				AFDD4CB622FC261800CD8CD5 /* HomeMenuModel.swift in Sources */,
 				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
 				AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */,
+				AF6F47C723059F3700B377C7 /* FasterImageView.swift in Sources */,
 				AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */,
 				AFDD4C5F22FC0BA200CD8CD5 /* HomeViewController.swift in Sources */,
 			);
@@ -614,6 +777,7 @@
 		};
 		AFF0C86022F659D2007D26DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C098FA7100CF56A624062F71 /* Pods-PomangamiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -632,6 +796,7 @@
 		};
 		AFF0C86122F659D2007D26DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 172BAE90DE915F9CEAD5EA8A /* Pods-PomangamiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -650,6 +815,7 @@
 		};
 		AFF0C86322F659D2007D26DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B733C07C54F726A09E26E87 /* Pods-PomangamiOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -671,6 +837,7 @@
 		};
 		AFF0C86422F659D2007D26DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCB4CF87CD7F86F36D09009F /* Pods-PomangamiOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -692,6 +859,7 @@
 		};
 		AFF0C86622F659D2007D26DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B685962A42E324F17307CD35 /* Pods-PomangamiOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -712,6 +880,7 @@
 		};
 		AFF0C86722F659D2007D26DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CC65E7CAA8B949866BEAD9E /* Pods-PomangamiOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
