@@ -24,13 +24,12 @@
 		AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CAB22FC15E600CD8CD5 /* UIViewFunction+.swift */; };
 		AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CAD22FC1BAD00CD8CD5 /* TabBarController.swift */; };
 		AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB022FC21B700CD8CD5 /* BaseRootViewController.swift */; };
-		AFDD4CB422FC252000CD8CD5 /* HomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB322FC252000CD8CD5 /* HomeMenuCell.swift */; };
 		AFDD4CB622FC261800CD8CD5 /* HomeMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB522FC261800CD8CD5 /* HomeMenuModel.swift */; };
 		AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB722FC266C00CD8CD5 /* Enums.swift */; };
 		AFDD4CBA22FC278100CD8CD5 /* UIViewEnum+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB922FC278100CD8CD5 /* UIViewEnum+.swift */; };
 		AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CBB22FC450500CD8CD5 /* Obejcts+.swift */; };
 		AFDD4CBE22FC457900CD8CD5 /* Types+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CBD22FC457800CD8CD5 /* Types+.swift */; };
-		AFDD4CC022FC49E400CD8CD5 /* FinalLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CBF22FC49E400CD8CD5 /* FinalLists.swift */; };
+		AFDD4CC022FC49E400CD8CD5 /* StaticLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CBF22FC49E400CD8CD5 /* StaticLists.swift */; };
 		AFDD4CC322FC634C00CD8CD5 /* UIlabelFlexible.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CC222FC634C00CD8CD5 /* UIlabelFlexible.swift */; };
 		AFDD4CC522FC7AFE00CD8CD5 /* UIViewRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CC422FC7AFE00CD8CD5 /* UIViewRounded.swift */; };
 		AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C83722F659D2007D26DD /* AppDelegate.swift */; };
@@ -81,13 +80,12 @@
 		AFDD4CAB22FC15E600CD8CD5 /* UIViewFunction+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewFunction+.swift"; sourceTree = "<group>"; };
 		AFDD4CAD22FC1BAD00CD8CD5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AFDD4CB022FC21B700CD8CD5 /* BaseRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRootViewController.swift; sourceTree = "<group>"; };
-		AFDD4CB322FC252000CD8CD5 /* HomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCell.swift; sourceTree = "<group>"; };
 		AFDD4CB522FC261800CD8CD5 /* HomeMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuModel.swift; sourceTree = "<group>"; };
 		AFDD4CB722FC266C00CD8CD5 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		AFDD4CB922FC278100CD8CD5 /* UIViewEnum+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewEnum+.swift"; sourceTree = "<group>"; };
 		AFDD4CBB22FC450500CD8CD5 /* Obejcts+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Obejcts+.swift"; sourceTree = "<group>"; };
 		AFDD4CBD22FC457800CD8CD5 /* Types+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Types+.swift"; sourceTree = "<group>"; };
-		AFDD4CBF22FC49E400CD8CD5 /* FinalLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalLists.swift; sourceTree = "<group>"; };
+		AFDD4CBF22FC49E400CD8CD5 /* StaticLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticLists.swift; sourceTree = "<group>"; };
 		AFDD4CC222FC634C00CD8CD5 /* UIlabelFlexible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIlabelFlexible.swift; sourceTree = "<group>"; };
 		AFDD4CC422FC7AFE00CD8CD5 /* UIViewRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRounded.swift; sourceTree = "<group>"; };
 		AFF0C83422F659D2007D26DD /* PomangamiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomangamiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				AFDD4CB722FC266C00CD8CD5 /* Enums.swift */,
-				AFDD4CBF22FC49E400CD8CD5 /* FinalLists.swift */,
+				AFDD4CBF22FC49E400CD8CD5 /* StaticLists.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -267,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				AFDD4CC122FC632E00CD8CD5 /* Custom */,
-				AFDD4CB322FC252000CD8CD5 /* HomeMenuCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -581,11 +578,10 @@
 			files = (
 				AFDD4C6B22FC0BE100CD8CD5 /* MoreViewController.swift in Sources */,
 				AFDD4CC522FC7AFE00CD8CD5 /* UIViewRounded.swift in Sources */,
-				AFDD4CB422FC252000CD8CD5 /* HomeMenuCell.swift in Sources */,
 				AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */,
 				AFDD4C6722FC0BD200CD8CD5 /* ProfileViewController.swift in Sources */,
 				AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */,
-				AFDD4CC022FC49E400CD8CD5 /* FinalLists.swift in Sources */,
+				AFDD4CC022FC49E400CD8CD5 /* StaticLists.swift in Sources */,
 				AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */,
 				AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */,
 				AFDD4CC322FC634C00CD8CD5 /* UIlabelFlexible.swift in Sources */,

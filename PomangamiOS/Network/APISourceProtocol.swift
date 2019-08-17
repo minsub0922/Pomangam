@@ -18,7 +18,7 @@ import Foundation
 import Alamofire
 
 struct API {
-    static let baseUrl = "https://www.pomangam.com:9530/api"
+    static let baseUrl = "https://www.pomangam.com:9530/api/vi"
     
     static let jsonDecoder: JSONDecoder = {
         let jsonDecoder = JSONDecoder()

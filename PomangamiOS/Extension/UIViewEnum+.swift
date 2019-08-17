@@ -12,7 +12,7 @@ extension UIImage {
     enum AssetIdentifier: String {
         //HomeMenu
         case homeMenuDelivery = "btnMainDelivery"
-        case homeMenuAffiliate = "btnMainPartnership"
+        case homeMenuHotdeal = "btnMainHotdeal"
         case homeMenuPurchase = "btnMainPurchase"
         case homeMenuTransaction = "btnMainTransaction"
         case homeMenuCommunity = "btnCommunity"
