@@ -13,24 +13,11 @@ class APISource: APISourceProtocol {
     static let shared = APISource()
     
     lazy var headers: HTTPHeaders = {
-        return ["Authorization": "Bearer 4ed25807-593a-4cd6-9832-0dd197d4252a"]
+        return ["Authorization": "Bearer 7cbfc608-969c-41db-bc38-c563c57d1660"]
     }()
     
     func getMainall(params: Parameters, completion: @escaping (ListAllMainResponse) -> Void) {
-        get("/views/main/", params: params, headers: headers) { (res: NetworkResult<(Int, ListAllMainResponse)>) in
-            switch res {
-            case .networkSuccess(let data):
-                completion(data.1)
-            case .networkError(let error):
-                print(error)
-            case .networkFail:
-                print("Network Fail")
-            }
-        }
-    }
-    
-    func getAdvertiseForPopupDto(params: Parameters, completion: @escaping ([AdvertiseDto]) -> Void) {
-        get("/advertises/popup/", params: params, headers: headers) { (res: NetworkResult<(Int, [AdvertiseDto])>) in
+        get("/views/main", params: params, headers: headers) { (res: NetworkResult<(Int, ListAllMainResponse)>) in
             switch res {
             case .networkSuccess(let data):
                 completion(data.1)

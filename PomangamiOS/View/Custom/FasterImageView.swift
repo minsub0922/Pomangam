@@ -15,7 +15,6 @@ class FasterImageView: UIImageView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        addRounded()
     }
     
     func loadImageAsyc(url urlString : String){

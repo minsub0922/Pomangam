@@ -18,7 +18,7 @@ import Foundation
 import Alamofire
 
 struct API {
-    static let baseUrl = "https://www.pomangam.com:9530/api/vi"
+    static let baseUrl = "https://www.pomangam.com:9530/api/v1"
     
     static let jsonDecoder: JSONDecoder = {
         let jsonDecoder = JSONDecoder()
@@ -70,6 +70,7 @@ extension APISourceProtocol {
                                         completion(.networkSuccess(result))
                                     } catch {
                                         print("Decoding Err")
+                                        print(res.response)
                                     }
                                 }
                             case .failure(let err):

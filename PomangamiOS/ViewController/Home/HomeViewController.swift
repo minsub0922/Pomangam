@@ -14,7 +14,7 @@ class HomeViewController: BaseRootViewController {
     @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var advertisementCollectionView: UICollectionView!
     private let homeMenuList = StaticLists.getHomeMenuList()
-    private var headerAdvertisements: [String] = ["ㄴ므","ㄴ므","ㄴ므","ㄴ므","ㄴ므"]
+    private var headerAdvertisements: [AdvertiseDto] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,8 @@ class HomeViewController: BaseRootViewController {
         ]
         APISource.shared.getMainall(params: params) { (res) in
             print(res)
+            self.headerAdvertisements = res.advertiseForMainDtoList
+            self.advertisementCollectionView.reloadSections(IndexSet(0...0))
         }
     }
 }
@@ -60,6 +62,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case advertisementCollectionView:
             let menu = headerAdvertisements[indexPath.row]
             let cell = collectionView.dequeueReusableCell(HeaderAdvertisementCell.self, for: indexPath)
+            cell.imageView.loadImageAsyc(url: API.baseUrl + menu.imagePath)
             return cell
         default:
             return UICollectionViewCell()
@@ -111,7 +114,7 @@ class HomeMenuCell: UICollectionViewCell {
 }
 
 class HeaderAdvertisementCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: FasterImageView!
     override var bounds: CGRect {
         didSet {
             self.setupShadow()

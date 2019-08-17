@@ -116,7 +116,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="263" height="287"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleEventMain" translatesAutoresizingMaskIntoConstraints="NO" id="qvI-1T-jp4">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleEventMain" translatesAutoresizingMaskIntoConstraints="NO" id="qvI-1T-jp4" customClass="FasterImageView" customModule="PomangamiOS" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="263" height="287"/>
                                                 </imageView>
                                             </subviews>
