@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="36o-nj-RzP">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delivery View Controller-->
+        <scene sceneID="IXo-Yp-Oy4">
+            <objects>
+                <viewController id="NGz-kV-uoW" customClass="DeliveryViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Afm-1W-4XG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkd-RX-jBU" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="44b-RD-OoR"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQ5-Ty-l6L">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hkd-RX-jBU" firstAttribute="top" secondItem="tLv-bt-pBL" secondAttribute="top" id="8IT-Oo-HuF"/>
+                            <constraint firstItem="XQ5-Ty-l6L" firstAttribute="top" secondItem="tLv-bt-pBL" secondAttribute="top" constant="50" id="EJg-RN-Bqu"/>
+                            <constraint firstItem="hkd-RX-jBU" firstAttribute="leading" secondItem="tLv-bt-pBL" secondAttribute="leading" id="EyD-T1-agH"/>
+                            <constraint firstItem="tLv-bt-pBL" firstAttribute="bottom" secondItem="XQ5-Ty-l6L" secondAttribute="bottom" id="lPW-Bm-mI1"/>
+                            <constraint firstItem="tLv-bt-pBL" firstAttribute="trailing" secondItem="hkd-RX-jBU" secondAttribute="trailing" id="onn-eJ-Mqb"/>
+                            <constraint firstItem="tLv-bt-pBL" firstAttribute="trailing" secondItem="XQ5-Ty-l6L" secondAttribute="trailing" id="pz8-V1-DDs"/>
+                            <constraint firstItem="XQ5-Ty-l6L" firstAttribute="leading" secondItem="tLv-bt-pBL" secondAttribute="leading" id="ty3-LP-xJg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tLv-bt-pBL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Eg-wa-sr3"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="hkd-RX-jBU" id="q2r-VV-UTh"/>
+                        <outlet property="containerView" destination="XQ5-Ty-l6L" id="eoq-fw-hVW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RxS-EC-PPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621.73913043478262" y="-41.517857142857139"/>
+        </scene>
+        <!--Delivery List View Controller-->
+        <scene sceneID="t81-hc-BFT">
+            <objects>
+                <viewController storyboardIdentifier="DeliveryListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zjY-lK-fGi" customClass="DeliveryListViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GXg-B1-1AZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="At8-qn-h3J">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6bB-1A-10U">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kb1-iJ-vBI">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="afz-k5-UOK" firstAttribute="trailing" secondItem="At8-qn-h3J" secondAttribute="trailing" id="RRY-qd-fE4"/>
+                            <constraint firstItem="At8-qn-h3J" firstAttribute="top" secondItem="afz-k5-UOK" secondAttribute="top" id="WNs-WL-XWj"/>
+                            <constraint firstItem="At8-qn-h3J" firstAttribute="leading" secondItem="afz-k5-UOK" secondAttribute="leading" id="iJI-So-rY5"/>
+                            <constraint firstItem="afz-k5-UOK" firstAttribute="bottom" secondItem="At8-qn-h3J" secondAttribute="bottom" id="xYX-1d-XnF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="afz-k5-UOK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hzz-ru-4SZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444" y="-36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iFN-W2-4PR">
+            <objects>
+                <navigationController storyboardIdentifier="DeliveryNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="36o-nj-RzP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j1R-s0-YBi">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NGz-kV-uoW" kind="relationship" relationship="rootViewController" id="WPH-Q7-Aet"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnD-3p-l28" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288.40579710144931" y="-41.517857142857139"/>
+        </scene>
+    </scenes>
+</document>

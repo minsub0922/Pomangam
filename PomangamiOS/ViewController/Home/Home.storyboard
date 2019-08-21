@@ -13,11 +13,13 @@
         <!--Navigation Controller-->
         <scene sceneID="qft-KN-R04">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4PV-et-Y8a" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="4PV-et-Y8a" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CGW-5u-2Q9">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pJW-zg-uWF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="92d-WD-b3N" kind="relationship" relationship="rootViewController" id="CHE-dR-d2o"/>
                     </connections>
@@ -100,7 +102,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G0C-0p-34p">
-                                <rect key="frame" x="0.0" y="88" width="414" height="461"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="505"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tm8-GE-Hbg">
                                     <size key="itemSize" width="263" height="287"/>
@@ -110,7 +112,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderAdvertisementCell" id="7B9-OY-ieH" customClass="HeaderAdvertisementCell" customModule="PomangamiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="87" width="263" height="287"/>
+                                        <rect key="frame" x="0.0" y="109" width="263" height="287"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="263" height="287"/>
@@ -156,26 +158,20 @@
                     <connections>
                         <outlet property="advertisementCollectionView" destination="G0C-0p-34p" id="q7J-ws-H9z"/>
                         <outlet property="menuCollectionView" destination="Bkq-ht-OcZ" id="5jG-g7-P2f"/>
+                        <segue destination="6x4-4h-qm7" kind="presentation" identifier="DeliveryViewController" id="ht9-3W-WcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="164-2z-xJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704.34782608695662" y="-309.375"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ahD-U7-ja0">
+        <!--Delivery-->
+        <scene sceneID="d8O-Hu-iej">
             <objects>
-                <viewController id="TJr-5w-vWb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lri-Mi-9YL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="R0z-cg-fXR"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MrI-rA-6wo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Delivery" id="6x4-4h-qm7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Jn-cB-6o8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1476" y="-316"/>
+            <point key="canvasLocation" x="1457" y="-642"/>
         </scene>
     </scenes>
     <resources>

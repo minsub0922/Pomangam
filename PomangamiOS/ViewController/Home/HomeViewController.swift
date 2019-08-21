@@ -106,6 +106,15 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return CGFloat.leastNonzeroMagnitude
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case menuCollectionView:
+            performSegue(withIdentifier: StaticLists.homeMenuRedirectClass[indexPath.row], sender: nil)
+        default:
+            break
+        }
+    }
 }
 
 class HomeMenuCell: UICollectionViewCell {

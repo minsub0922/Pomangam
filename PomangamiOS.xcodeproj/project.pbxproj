@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5E14B85DCC814F29A4A0DAED /* Pods_PomangamiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */; };
 		A08B6FE6CE785B1FAD49EDDB /* Pods_PomangamiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */; };
+		AF11247B230847E0009CAB21 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11247A230847E0009CAB21 /* DeliveryViewController.swift */; };
+		AF11247D230847EA009CAB21 /* Delivery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF11247C230847EA009CAB21 /* Delivery.storyboard */; };
+		AF11247F23084C86009CAB21 /* DeliveryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11247E23084C86009CAB21 /* DeliveryListViewController.swift */; };
 		AF6F47C723059F3700B377C7 /* FasterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47C623059F3700B377C7 /* FasterImageView.swift */; };
 		AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */; };
 		AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CB2305A19C00B377C7 /* APISource.swift */; };
@@ -65,6 +68,9 @@
 		3CC65E7CAA8B949866BEAD9E /* Pods-PomangamiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOSUITests/Pods-PomangamiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF11247A230847E0009CAB21 /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
+		AF11247C230847EA009CAB21 /* Delivery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Delivery.storyboard; sourceTree = "<group>"; };
+		AF11247E23084C86009CAB21 /* DeliveryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListViewController.swift; sourceTree = "<group>"; };
 		AF6F47C623059F3700B377C7 /* FasterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasterImageView.swift; sourceTree = "<group>"; };
 		AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISourceProtocol.swift; sourceTree = "<group>"; };
 		AF6F47CB2305A19C00B377C7 /* APISource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISource.swift; sourceTree = "<group>"; };
@@ -148,6 +154,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AF11247923084729009CAB21 /* Delivery */ = {
+			isa = PBXGroup;
+			children = (
+				AF11247A230847E0009CAB21 /* DeliveryViewController.swift */,
+				AF11247C230847EA009CAB21 /* Delivery.storyboard */,
+				AF11247E23084C86009CAB21 /* DeliveryListViewController.swift */,
+			);
+			path = Delivery;
+			sourceTree = "<group>";
+		};
 		AF6F47C82305A0C200B377C7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +236,7 @@
 		AFDD4C5A22FC0B6400CD8CD5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AF11247923084729009CAB21 /* Delivery */,
 				AFDD4C6022FC0BAD00CD8CD5 /* Home.storyboard */,
 				AFDD4C5E22FC0BA200CD8CD5 /* HomeViewController.swift */,
 			);
@@ -460,6 +477,7 @@
 				AFF0C84222F659D2007D26DD /* Assets.xcassets in Resources */,
 				AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */,
 				AFDD4C6122FC0BAD00CD8CD5 /* Home.storyboard in Resources */,
+				AF11247D230847EA009CAB21 /* Delivery.storyboard in Resources */,
 				AFDD4C6522FC0BC700CD8CD5 /* Affiliate.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,12 +509,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PomangamiOS/Pods-PomangamiOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -577,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFDD4C6B22FC0BE100CD8CD5 /* MoreViewController.swift in Sources */,
+				AF11247F23084C86009CAB21 /* DeliveryListViewController.swift in Sources */,
 				AFDD4CC522FC7AFE00CD8CD5 /* UIViewRounded.swift in Sources */,
 				AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */,
 				AFDD4C6722FC0BD200CD8CD5 /* ProfileViewController.swift in Sources */,
@@ -584,6 +605,7 @@
 				AFDD4CC022FC49E400CD8CD5 /* StaticLists.swift in Sources */,
 				AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */,
 				AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */,
+				AF11247B230847E0009CAB21 /* DeliveryViewController.swift in Sources */,
 				AFDD4CC322FC634C00CD8CD5 /* UIlabelFlexible.swift in Sources */,
 				AFDD4CBE22FC457900CD8CD5 /* Types+.swift in Sources */,
 				AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */,

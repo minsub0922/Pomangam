@@ -19,4 +19,6 @@ struct StaticLists {
         homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuNotice), title: "공지사항/피드"))
         return homeMenuList
     }
+    
+    static let homeMenuRedirectClass: [String] = [DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className]
 }

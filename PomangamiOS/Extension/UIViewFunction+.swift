@@ -167,3 +167,9 @@ extension UITableViewCell {
         frame.origin.x += space
     }
 }
+
+extension UIStoryboard {
+    func instantiateViewController<T: UIViewController>(_ viewControllerClass: T.Type) -> T {
+        return self.instantiateViewController(withIdentifier: viewControllerClass.className) as! T
+    }
+}
