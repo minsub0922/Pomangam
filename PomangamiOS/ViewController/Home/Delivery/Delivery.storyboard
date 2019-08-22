@@ -10,66 +10,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Delivery View Controller-->
-        <scene sceneID="IXo-Yp-Oy4">
+        <!--Navigation Controller-->
+        <scene sceneID="iFN-W2-4PR">
             <objects>
-                <viewController id="NGz-kV-uoW" customClass="DeliveryViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Afm-1W-4XG">
+                <navigationController storyboardIdentifier="DeliveryNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="36o-nj-RzP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j1R-s0-YBi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Rw-qm-MmO" kind="relationship" relationship="rootViewController" id="gOU-Gf-YWc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnD-3p-l28" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233" y="-36"/>
+        </scene>
+        <!--Delivery View Controller-->
+        <scene sceneID="hke-PU-dBY">
+            <objects>
+                <viewController id="4Rw-qm-MmO" customClass="DeliveryViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jOG-Gz-Eeh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkd-RX-jBU" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ScX-h3-0Cp" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="88" width="414" height="64"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="44b-RD-OoR"/>
+                                    <constraint firstAttribute="height" constant="64" id="SGS-r5-bSl"/>
                                 </constraints>
-                            </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQ5-Ty-l6L">
-                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="hkd-RX-jBU" firstAttribute="top" secondItem="tLv-bt-pBL" secondAttribute="top" id="8IT-Oo-HuF"/>
-                            <constraint firstItem="XQ5-Ty-l6L" firstAttribute="top" secondItem="tLv-bt-pBL" secondAttribute="top" constant="50" id="EJg-RN-Bqu"/>
-                            <constraint firstItem="hkd-RX-jBU" firstAttribute="leading" secondItem="tLv-bt-pBL" secondAttribute="leading" id="EyD-T1-agH"/>
-                            <constraint firstItem="tLv-bt-pBL" firstAttribute="bottom" secondItem="XQ5-Ty-l6L" secondAttribute="bottom" id="lPW-Bm-mI1"/>
-                            <constraint firstItem="tLv-bt-pBL" firstAttribute="trailing" secondItem="hkd-RX-jBU" secondAttribute="trailing" id="onn-eJ-Mqb"/>
-                            <constraint firstItem="tLv-bt-pBL" firstAttribute="trailing" secondItem="XQ5-Ty-l6L" secondAttribute="trailing" id="pz8-V1-DDs"/>
-                            <constraint firstItem="XQ5-Ty-l6L" firstAttribute="leading" secondItem="tLv-bt-pBL" secondAttribute="leading" id="ty3-LP-xJg"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="tLv-bt-pBL"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="0Eg-wa-sr3"/>
-                    <connections>
-                        <outlet property="buttonBarView" destination="hkd-RX-jBU" id="q2r-VV-UTh"/>
-                        <outlet property="containerView" destination="XQ5-Ty-l6L" id="eoq-fw-hVW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RxS-EC-PPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="621.73913043478262" y="-41.517857142857139"/>
-        </scene>
-        <!--Delivery List View Controller-->
-        <scene sceneID="t81-hc-BFT">
-            <objects>
-                <viewController storyboardIdentifier="DeliveryListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zjY-lK-fGi" customClass="DeliveryListViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GXg-B1-1AZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="At8-qn-h3J">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6bB-1A-10U">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t6f-kk-TWd">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kb1-iJ-vBI">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YAU-69-Agj">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -79,38 +60,46 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B93-gu-Icv">
+                                <rect key="frame" x="0.0" y="152" width="414" height="710"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="afz-k5-UOK" firstAttribute="trailing" secondItem="At8-qn-h3J" secondAttribute="trailing" id="RRY-qd-fE4"/>
-                            <constraint firstItem="At8-qn-h3J" firstAttribute="top" secondItem="afz-k5-UOK" secondAttribute="top" id="WNs-WL-XWj"/>
-                            <constraint firstItem="At8-qn-h3J" firstAttribute="leading" secondItem="afz-k5-UOK" secondAttribute="leading" id="iJI-So-rY5"/>
-                            <constraint firstItem="afz-k5-UOK" firstAttribute="bottom" secondItem="At8-qn-h3J" secondAttribute="bottom" id="xYX-1d-XnF"/>
+                            <constraint firstItem="ScX-h3-0Cp" firstAttribute="top" secondItem="BEF-Cc-SlL" secondAttribute="top" id="2AH-1l-bWr"/>
+                            <constraint firstItem="ScX-h3-0Cp" firstAttribute="leading" secondItem="BEF-Cc-SlL" secondAttribute="leading" id="7Jz-fk-KuL"/>
+                            <constraint firstItem="BEF-Cc-SlL" firstAttribute="trailing" secondItem="ScX-h3-0Cp" secondAttribute="trailing" id="8lN-CE-8vt"/>
+                            <constraint firstItem="BEF-Cc-SlL" firstAttribute="trailing" secondItem="B93-gu-Icv" secondAttribute="trailing" id="JSm-cl-EOZ"/>
+                            <constraint firstItem="B93-gu-Icv" firstAttribute="top" secondItem="ScX-h3-0Cp" secondAttribute="bottom" id="KBG-GO-vDA"/>
+                            <constraint firstItem="B93-gu-Icv" firstAttribute="leading" secondItem="BEF-Cc-SlL" secondAttribute="leading" id="WLp-iI-dXt"/>
+                            <constraint firstItem="BEF-Cc-SlL" firstAttribute="bottom" secondItem="B93-gu-Icv" secondAttribute="bottom" id="feP-kX-bYb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="afz-k5-UOK"/>
+                        <viewLayoutGuide key="safeArea" id="BEF-Cc-SlL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kjt-LU-3Wn"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="ScX-h3-0Cp" id="oYh-Rd-BDe"/>
+                        <outlet property="containerView" destination="B93-gu-Icv" id="zWe-eY-9qg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VvZ-NA-PKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645" y="-35"/>
+        </scene>
+        <!--Delivery List View Controller-->
+        <scene sceneID="KNg-JA-RiF">
+            <objects>
+                <viewController storyboardIdentifier="DeliveryListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M0i-xu-Pia" customClass="DeliveryListViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uIs-zU-Cxf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kfa-b5-xeL"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hzz-ru-4SZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dgf-Uz-eQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="-36"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="iFN-W2-4PR">
-            <objects>
-                <navigationController storyboardIdentifier="DeliveryNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="36o-nj-RzP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j1R-s0-YBi">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NGz-kV-uoW" kind="relationship" relationship="rootViewController" id="WPH-Q7-Aet"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gnD-3p-l28" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-288.40579710144931" y="-41.517857142857139"/>
+            <point key="canvasLocation" x="1636" y="-47"/>
         </scene>
     </scenes>
 </document>

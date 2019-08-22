@@ -9,19 +9,17 @@
 import UIKit
 import XLPagerTabStrip
 
-class DeliveryListViewController: UIViewController {
-    var category: String!
+class DeliveryListViewController: UIViewController, IndicatorInfoProvider {
+    
+    var category: String = "hihihih"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-}
-
-extension DeliveryListViewController: IndicatorInfoProvider {
+    
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: category)
     }
-
 }
