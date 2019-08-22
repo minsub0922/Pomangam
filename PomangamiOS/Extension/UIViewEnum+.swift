@@ -16,7 +16,7 @@ extension UIImage {
         case homeMenuPurchase = "btnMainPurchase"
         case homeMenuTransaction = "btnMainTransaction"
         case homeMenuCommunity = "btnCommunity"
-        case homeMenuNotice = "btnMainNotice"
+        case homeMenuNotice = "ic-notice"
     }
  
     convenience init!(asset: AssetIdentifier) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoreViewController: BaseRootViewController {
+class NoticeViewController: BaseRootViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

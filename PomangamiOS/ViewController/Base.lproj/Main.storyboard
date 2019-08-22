@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="1270" y="637"/>
         </scene>
-        <!--Affiliate-->
+        <!--Delivery-->
         <scene sceneID="DfU-mB-Kih">
             <objects>
-                <viewControllerPlaceholder storyboardName="Affiliate" id="NYP-9p-wOJ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Delivery" id="NYP-9p-wOJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="kgH-zR-JuN"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3g-ql-caQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="4953" y="-66"/>
         </scene>
-        <!--More-->
+        <!--Notice-->
         <scene sceneID="L1S-Xt-Ydv">
             <objects>
-                <viewControllerPlaceholder storyboardName="More" id="rrG-fL-6nZ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Notice" id="rrG-fL-6nZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="7bg-ui-hiW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMU-p8-t8f" userLabel="First Responder" sceneMemberID="firstResponder"/>

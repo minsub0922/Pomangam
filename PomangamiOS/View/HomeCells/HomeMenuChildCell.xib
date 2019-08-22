@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeMenuChildCell" customModule="PomangamiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="259" height="237"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="259" height="237"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TjY-TZ-Jnl">
+                        <rect key="frame" x="9" y="54" width="240" height="128"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g7s-dN-yyF">
+                        <rect key="frame" x="0.0" y="0.0" width="259" height="189.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHr-Cg-NCd" customClass="UILabelFlexible" customModule="PomangamiOS" customModuleProvider="target">
+                        <rect key="frame" x="110" y="189.5" width="39.5" height="47.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="g7s-dN-yyF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1t3-vH-Ga3"/>
+                <constraint firstItem="TjY-TZ-Jnl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="46s-9x-HRh"/>
+                <constraint firstItem="g7s-dN-yyF" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.8" id="Ciq-0W-Vjq"/>
+                <constraint firstItem="KHr-Cg-NCd" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="NSs-XG-df5"/>
+                <constraint firstItem="TjY-TZ-Jnl" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Tm0-mo-6tG"/>
+                <constraint firstItem="KHr-Cg-NCd" firstAttribute="top" secondItem="g7s-dN-yyF" secondAttribute="bottom" id="hvM-o1-BAC"/>
+                <constraint firstAttribute="trailing" secondItem="g7s-dN-yyF" secondAttribute="trailing" id="pII-qS-upE"/>
+                <constraint firstAttribute="bottom" secondItem="KHr-Cg-NCd" secondAttribute="bottom" id="uUc-zX-8U2"/>
+                <constraint firstItem="g7s-dN-yyF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yvE-RH-6H9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="259" height="237"/>
+            <connections>
+                <outlet property="imageView" destination="g7s-dN-yyF" id="XYb-VF-9NB"/>
+                <outlet property="titleLabel" destination="KHr-Cg-NCd" id="4xt-Qq-H7u"/>
+            </connections>
+            <point key="canvasLocation" x="189.13043478260872" y="97.433035714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>

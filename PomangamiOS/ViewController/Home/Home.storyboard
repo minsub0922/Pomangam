@@ -20,9 +20,6 @@
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pJW-zg-uWF">
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
-                    <connections>
-                        <segue destination="92d-WD-b3N" kind="relationship" relationship="rootViewController" id="CHE-dR-d2o"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzp-ZN-LWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,7 +81,7 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhq-dm-NAw" customClass="UIViewRounded" customModule="PomangamiOS" customModuleProvider="target">
-                                <rect key="frame" x="45.5" y="549" width="323" height="32"/>
+                                <rect key="frame" x="45.5" y="432" width="323" height="32"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconMainSearch" translatesAutoresizingMaskIntoConstraints="NO" id="nhE-kT-56L">
                                         <rect key="frame" x="20" y="5" width="22" height="22"/>
@@ -102,7 +99,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G0C-0p-34p">
-                                <rect key="frame" x="0.0" y="44" width="414" height="505"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="358.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tm8-GE-Hbg">
                                     <size key="itemSize" width="263" height="287"/>
@@ -112,7 +109,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderAdvertisementCell" id="7B9-OY-ieH" customClass="HeaderAdvertisementCell" customModule="PomangamiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="109" width="263" height="287"/>
+                                        <rect key="frame" x="0.0" y="36" width="263" height="287"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="263" height="287"/>
@@ -140,12 +137,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="xhq-dm-NAw" firstAttribute="centerY" secondItem="D7J-dc-tLp" secondAttribute="centerY" id="7E2-gh-m1k"/>
                             <constraint firstItem="G0C-0p-34p" firstAttribute="leading" secondItem="zKK-7w-1iZ" secondAttribute="leading" id="7TA-jp-AN7"/>
-                            <constraint firstItem="Bkq-ht-OcZ" firstAttribute="top" secondItem="xhq-dm-NAw" secondAttribute="bottom" constant="30" id="BAI-Vt-ddK"/>
                             <constraint firstItem="zKK-7w-1iZ" firstAttribute="bottom" secondItem="Bkq-ht-OcZ" secondAttribute="bottom" id="Bd9-AM-cjD"/>
+                            <constraint firstItem="G0C-0p-34p" firstAttribute="height" secondItem="D7J-dc-tLp" secondAttribute="height" multiplier="0.4" id="Ioh-vT-XhI"/>
                             <constraint firstItem="Bkq-ht-OcZ" firstAttribute="width" secondItem="D7J-dc-tLp" secondAttribute="width" multiplier="0.8" id="MPm-dl-qvS"/>
                             <constraint firstItem="Bkq-ht-OcZ" firstAttribute="height" secondItem="D7J-dc-tLp" secondAttribute="height" multiplier="0.28" id="Mek-tC-sIG"/>
-                            <constraint firstItem="xhq-dm-NAw" firstAttribute="top" secondItem="G0C-0p-34p" secondAttribute="bottom" id="Ucf-jD-uhu"/>
                             <constraint firstItem="Bkq-ht-OcZ" firstAttribute="centerX" secondItem="D7J-dc-tLp" secondAttribute="centerX" id="Ziz-bZ-Fa4"/>
                             <constraint firstItem="zKK-7w-1iZ" firstAttribute="trailing" secondItem="G0C-0p-34p" secondAttribute="trailing" id="Zov-1B-rj2"/>
                             <constraint firstItem="G0C-0p-34p" firstAttribute="top" secondItem="zKK-7w-1iZ" secondAttribute="top" id="b7k-Ce-PhJ"/>
@@ -163,7 +160,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="164-2z-xJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704.34782608695662" y="-309.375"/>
+            <point key="canvasLocation" x="708.69565217391312" y="-309.375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4Hu-f0-XWw">
+            <objects>
+                <viewController id="R6i-KY-g7D" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jqY-7D-CwT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zel-eX-Yr9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zel-eX-Yr9" firstAttribute="leading" secondItem="qWG-UR-bfH" secondAttribute="leading" id="AkN-iZ-auf"/>
+                            <constraint firstItem="qWG-UR-bfH" firstAttribute="trailing" secondItem="zel-eX-Yr9" secondAttribute="trailing" id="GgD-TI-pTs"/>
+                            <constraint firstItem="qWG-UR-bfH" firstAttribute="bottom" secondItem="zel-eX-Yr9" secondAttribute="bottom" id="Zsf-op-JbM"/>
+                            <constraint firstItem="zel-eX-Yr9" firstAttribute="top" secondItem="qWG-UR-bfH" secondAttribute="top" id="iSO-Me-0KG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qWG-UR-bfH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JSe-cg-8cL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="385"/>
         </scene>
         <!--Delivery-->
         <scene sceneID="d8O-Hu-iej">
