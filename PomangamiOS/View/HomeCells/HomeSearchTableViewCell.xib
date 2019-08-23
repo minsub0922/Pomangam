@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvI-tF-atN" customClass="UIViewRounded" customModule="PomangamiOS" customModuleProvider="target">
-                        <rect key="frame" x="68.5" y="188" width="546" height="54.5"/>
+                        <rect key="frame" x="68.5" y="55" width="546" height="54.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconMainSearch" translatesAutoresizingMaskIntoConstraints="NO" id="xdx-1h-iIv">
                                 <rect key="frame" x="15" y="8" width="38" height="38.5"/>
@@ -41,7 +41,7 @@
                 <constraints>
                     <constraint firstItem="NvI-tF-atN" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="1dh-qR-gw1"/>
                     <constraint firstItem="NvI-tF-atN" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="4Vo-BY-8T7"/>
-                    <constraint firstItem="NvI-tF-atN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="U6N-P7-Ga9"/>
+                    <constraint firstItem="NvI-tF-atN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="tja-Al-b7v"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -72,9 +72,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return UIScreen.main.bounds.size.height * 0.4
+            return UIScreen.main.bounds.size.height * 0.45
         case 1:
-            return UIScreen.main.bounds.size.height * 0.07
+            return UIScreen.main.bounds.size.height * 0.06
         case 2:
             return UIScreen.main.bounds.size.height * 0.15
         case 3:

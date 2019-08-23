@@ -26,8 +26,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="259" height="179.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHr-Cg-NCd" customClass="UILabelFlexible" customModule="PomangamiOS" customModuleProvider="target">
-                        <rect key="frame" x="110" y="189.5" width="39.5" height="47.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <rect key="frame" x="106.5" y="189.5" width="46.5" height="47.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

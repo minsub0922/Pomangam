@@ -34,7 +34,7 @@ extension HomeHeaderAdvertisementCell: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = collectionView.bounds.height * 0.9
+        let height = collectionView.bounds.height * 0.88
         return CGSize(width: height, height: height)
     }
     
