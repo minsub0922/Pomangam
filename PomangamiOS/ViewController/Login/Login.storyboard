@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="PC7-Dh-SeQ">
+            <objects>
+                <viewController id="l2V-LP-zuW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qUu-Py-OQl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="42" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPJ-eb-IdB">
+                                <rect key="frame" x="103.5" y="347.5" width="207" height="201"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageLoadingPageLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9aI-pl-ifx">
+                                        <rect key="frame" x="60" y="0.0" width="87" height="69.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9aI-pl-ifx" secondAttribute="height" multiplier="86.7:69.3" id="5qT-sr-CWO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFQ-wL-SNs" customClass="UITextFieldUnderlined" customModule="PomangamiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="207" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9cf-9s-eE3" customClass="UITextFieldUnderlined" customModule="PomangamiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="134" width="207" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkt-qJ-EAS" customClass="UIButtonSelectorRounded" customModule="PomangamiOS" customModuleProvider="target">
+                                        <rect key="frame" x="68" y="177" width="71" height="24"/>
+                                        <state key="normal" title="로그인" image="ic-checkbox-unselected">
+                                            <color key="titleColor" red="0.99215686270000003" green="0.42745098040000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="stateActivated" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YFQ-wL-SNs" firstAttribute="width" secondItem="zPJ-eb-IdB" secondAttribute="width" id="27k-mm-rql"/>
+                                    <constraint firstItem="9cf-9s-eE3" firstAttribute="width" secondItem="zPJ-eb-IdB" secondAttribute="width" id="hN8-pH-JYB"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zPJ-eb-IdB" firstAttribute="centerY" secondItem="qUu-Py-OQl" secondAttribute="centerY" id="DVI-6e-E8d"/>
+                            <constraint firstItem="zPJ-eb-IdB" firstAttribute="width" secondItem="qUu-Py-OQl" secondAttribute="width" multiplier="0.5" id="tqI-WV-buc"/>
+                            <constraint firstItem="zPJ-eb-IdB" firstAttribute="centerX" secondItem="qUu-Py-OQl" secondAttribute="centerX" id="w3b-Oe-Q6u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yMO-m6-mcI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l4l-OE-KCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2177" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic-checkbox-unselected" width="24" height="24"/>
+        <image name="imageLoadingPageLogo" width="87" height="69.5"/>
+    </resources>
+</document>
