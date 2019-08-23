@@ -18,7 +18,7 @@ import Foundation
 import Alamofire
 
 struct API {
-    static let baseUrl = "https://www.pomangam.com:9530/api/v1"
+    static let baseURL = "https://www.pomangam.com:9530/api/v1"
     
     static let jsonDecoder: JSONDecoder = {
         let jsonDecoder = JSONDecoder()
@@ -40,7 +40,8 @@ protocol APISourceProtocol {
                          completion: @escaping (NetworkResult<(Int, T)>) -> Void)
     
     func post<T: Codable>(_ URL: String,
-                          params: [String: Any],
+                          params: [String: Any]?,
+                          headers: HTTPHeaders?,
                           completion: @escaping (NetworkResult<(Int, T)>) -> Void)
 }
 
@@ -49,7 +50,7 @@ extension APISourceProtocol {
                          params: Parameters? = nil,
                          headers: HTTPHeaders? = nil,
                          completion: @escaping (NetworkResult<(Int, T)>) -> Void) {
-        guard let encodedUrl = (API.baseUrl+URL).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+        guard let encodedUrl = (API.baseURL+URL).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             print("networking - invalid url")
             return
         }
@@ -85,9 +86,10 @@ extension APISourceProtocol {
     }
     
     func post<T: Codable>(_ URL: String,
-                          params: [String: Any],
+                          params: [String: Any]? = nil,
+                          headers: HTTPHeaders? = nil,
                           completion: @escaping (NetworkResult<(Int, T)>) -> Void) {
-        guard let encodedUrl = (API.baseUrl+URL).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+        guard let encodedUrl = (API.baseURL+URL).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             print("networking - invalid url")
             return
         }
@@ -95,13 +97,14 @@ extension APISourceProtocol {
         Alamofire.request(encodedUrl,
                           method: .post,
                           parameters: params,
-                          encoding: JSONEncoding.default).responseData { (res) in
+                          headers: headers).responseData { (res) in
                             switch res.result {
                             case .success:
                                 if let value = res.result.value {
                                     let decoder = JSONDecoder()
                                     do {
                                         let resCode = res.response?.statusCode ?? 0
+                                        print(resCode)
                                         let datas = try decoder.decode(T.self, from: value)
                                         let result = (resCode, datas)
                                         completion(.networkSuccess(result))

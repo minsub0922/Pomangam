@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="1091" height="717"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TmU-uS-pVh">
+                    <collectionView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TmU-uS-pVh">
                         <rect key="frame" x="0.0" y="0.0" width="1091" height="717"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZXc-C0-6bz">
@@ -31,6 +31,7 @@
                     </collectionView>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="TmU-uS-pVh" secondAttribute="trailing" id="EZf-9w-kWv"/>
                 <constraint firstAttribute="bottom" secondItem="TmU-uS-pVh" secondAttribute="bottom" id="ZSF-72-SjA"/>

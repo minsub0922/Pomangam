@@ -32,7 +32,7 @@ extension HomeTopAdvertisementCell: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let model = headerAdvertisements[indexPath.row]
         let cell = collectionView.dequeueReusableCell(HomeTopAdvertisementChildCell.self, for: indexPath)
-        cell.imageView.loadImageAsyc(url: API.baseUrl + model.imagePath)
+        cell.imageView.loadImageAsyc(url: API.baseURL + model.imagePath)
         return cell
     }
     

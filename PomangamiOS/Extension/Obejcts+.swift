@@ -19,31 +19,50 @@ extension NSObject {
     }
 }
 
-//
-//extension UserDefaults{
-//    func setCustomObject<T>(object: T, key: UserDefaultKeys) {
-//        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: object)
-//        self.set(encodedData, forKey: key.rawValue)
-//        self.synchronize()
-//    }
-//
-//    func insertToArray<T>(item: T, key: UserDefaultKeys, completion: @escaping() -> Void) {
-//        var array: [T] = getCustomObject(key: key) ?? [] as [T]
-//        array.insert(item, at: 0)
-//        setCustomObject(object: array, key: key)
-//        completion()
-//    }
-//
-//    func getCustomObject<T>(key: UserDefaultKeys) -> T? {
-//        guard let decoded  = self.data(forKey: key.rawValue) else {return nil}
-//        return NSKeyedUnarchiver.unarchiveObject(with: decoded) as? T
-//    }
-//
+extension UserDefaults{
+    enum UserDefaultKeys: String {
+        case accessToken
+    }
+    
+    func setCustomObject<T: Codable>(object: T, key: UserDefaultKeys) {
+        do {
+            let data = try PropertyListEncoder().encode(object)
+            let encodedData = NSKeyedArchiver.archivedData(withRootObject: data)
+            self.set(encodedData, forKey: key.rawValue)
+        } catch {
+            print(error.localizedDescription)
+        }
+        self.synchronize()
+    }
+
+    func insertToArray<T: Codable>(item: T, key: UserDefaultKeys, completion: @escaping() -> Void) {
+        var array: [T] = getCustomObject(key: key) ?? [] as [T]
+        array.insert(item, at: 0)
+        setCustomObject(object: array, key: key)
+        completion()
+    }
+
+    func getCustomObject<T: Codable>(key: UserDefaultKeys) -> T! {
+        guard let decoded  = self.data(forKey: key.rawValue) else {return nil}
+        guard let data = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? Data else {return nil}
+        
+        do {
+            let output = try PropertyListDecoder().decode(T.self, from: data)
+            return output
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        return nil
+    }
+
 //    func deleteFromArray(index: Int, key: UserDefaultKeys, completion: @escaping() -> Void) {
 //        guard let decoded = self.data(forKey: key.rawValue) else {return}
-//        var array = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? Array<Any>
-//        array?.remove(at: index)
+//        guard var array = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? Array<Codable> else {
+//            return
+//        }
+//        array.remove(at: index)
 //        setCustomObject(object: array, key: key)
 //        completion()
 //    }
-//}
+}
