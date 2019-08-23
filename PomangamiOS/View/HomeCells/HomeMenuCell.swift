@@ -34,6 +34,7 @@ extension HomeMenuCell: UICollectionViewDataSource, UICollectionViewDelegate, UI
         return self.collectionView.bounds.width/50
     }
     
+    //셀 사이즈
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.collectionView.bounds.width/5-1, height: self.collectionView.bounds.height)
     }

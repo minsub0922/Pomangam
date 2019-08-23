@@ -20,6 +20,9 @@ class HomeViewController: BaseRootViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var headerAdvertisements: [AdvertiseDto] = []
+    private var homeHeaderAdCellViewModel: HomeHeaderAdvertisementCellViewModel {
+        return HomeHeaderAdvertisementCellViewModel(headerAdvertisements: headerAdvertisements)
+    }
     private let homeMenuCellViewModel: HomeMenuCellViewModel = {
         return HomeMenuCellViewModel(menuList: StaticLists.getHomeMenuList())
     }()
@@ -27,7 +30,8 @@ class HomeViewController: BaseRootViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        tableView.registerNib(HomeTopAdvertisementCell.self)
+        tableView.contentInset = .init(top: UIScreen.main.bounds.size.height * 0.03, left: 0, bottom: 0, right: 0)
+        tableView.registerNib(HomeHeaderAdvertisementCell.self)
         tableView.registerNib(HomeSearchTableViewCell.self)
         tableView.registerNib(HomeMenuCell.self)
         tableView.registerNib(HomeCommunityCell.self)
@@ -43,6 +47,7 @@ class HomeViewController: BaseRootViewController {
             APISource.shared.getMainall(params: params) { res in
                 print(res)
                 self.headerAdvertisements = res.advertiseForMainDtoList
+                self.tableView.reloadData()
             }
         }
     }
@@ -67,9 +72,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return UIScreen.main.bounds.size.height * 0.45
+            return UIScreen.main.bounds.size.height * 0.4
         case 1:
-            return 50
+            return UIScreen.main.bounds.size.height * 0.07
         case 2:
             return UIScreen.main.bounds.size.height * 0.15
         case 3:
@@ -82,8 +87,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(HomeTopAdvertisementCell.self, for: indexPath)
-            //cell.setupView(model: <#T##HomeTopAdvertisementCellViewModel#>)
+            let cell = tableView.dequeueReusableCell(HomeHeaderAdvertisementCell.self, for: indexPath)
+            cell.setupView(model: homeHeaderAdCellViewModel)
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(HomeSearchTableViewCell.self, for: indexPath)

@@ -10,7 +10,7 @@ import Foundation
 
 protocol CellViewModel {}
 
-struct HomeTopAdvertisementCellViewModel: CellViewModel {
+struct HomeHeaderAdvertisementCellViewModel: CellViewModel {
     var headerAdvertisements: [AdvertiseDto]
 }
 

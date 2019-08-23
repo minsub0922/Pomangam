@@ -21,7 +21,6 @@ class APISource: APISourceProtocol {
     }()
     
     func getMainall(params: Parameters, completion: @escaping (ListAllMainResponse) -> Void) {
-        
         get("/views/main", params: params, headers: headers) { (res: NetworkResult<(Int, ListAllMainResponse)>) in
             switch res {
             case .networkSuccess(let data):

@@ -22,17 +22,19 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvI-tF-atN" customClass="UIViewRounded" customModule="PomangamiOS" customModuleProvider="target">
                         <rect key="frame" x="68.5" y="188" width="546" height="54.5"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSy-0E-0Y7">
-                                <rect key="frame" x="20" y="5.5" width="74" height="43.5"/>
-                                <state key="normal" title="Button" image="iconMainSearch"/>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconMainSearch" translatesAutoresizingMaskIntoConstraints="NO" id="xdx-1h-iIv">
+                                <rect key="frame" x="15" y="8" width="38" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xdx-1h-iIv" secondAttribute="height" multiplier="1:1" id="RRp-AC-e66"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="NvI-tF-atN" secondAttribute="height" multiplier="10:1" id="6pj-Wn-xa2"/>
-                            <constraint firstItem="KSy-0E-0Y7" firstAttribute="centerY" secondItem="NvI-tF-atN" secondAttribute="centerY" id="Oap-sb-i5N"/>
-                            <constraint firstItem="KSy-0E-0Y7" firstAttribute="leading" secondItem="NvI-tF-atN" secondAttribute="leading" constant="20" id="mFr-2B-jry"/>
-                            <constraint firstItem="KSy-0E-0Y7" firstAttribute="height" secondItem="NvI-tF-atN" secondAttribute="height" multiplier="0.8" id="vtD-yU-ofD"/>
+                            <constraint firstItem="xdx-1h-iIv" firstAttribute="leading" secondItem="NvI-tF-atN" secondAttribute="leading" constant="15" id="ORS-gI-uvP"/>
+                            <constraint firstItem="xdx-1h-iIv" firstAttribute="height" secondItem="NvI-tF-atN" secondAttribute="height" multiplier="0.7" id="TQe-Qo-dGc"/>
+                            <constraint firstItem="xdx-1h-iIv" firstAttribute="centerY" secondItem="NvI-tF-atN" secondAttribute="centerY" id="otj-fh-Esv"/>
                         </constraints>
                     </view>
                 </subviews>

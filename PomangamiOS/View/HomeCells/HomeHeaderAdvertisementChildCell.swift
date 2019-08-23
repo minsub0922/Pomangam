@@ -1,5 +1,5 @@
 //
-//  HomeTopAdvertisementChildCell.swift
+//  HomeHeaderAdvertisementChildCell.swift
 //  PomangamiOS
 //
 //  Created by 최민섭 on 23/08/2019.
@@ -8,16 +8,18 @@
 
 import UIKit
 
-class HomeTopAdvertisementChildCell: UICollectionViewCell {
+class HomeHeaderAdvertisementChildCell: UICollectionViewCell {
+
     @IBOutlet weak var imageView: FasterImageView!
     override var bounds: CGRect {
         didSet {
             self.setupShadow()
         }
     }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
+
 }
