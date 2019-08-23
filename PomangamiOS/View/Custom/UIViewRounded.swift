@@ -10,10 +10,11 @@ import UIKit
 
 class UIViewRounded: UIView {
     override func draw(_ rect: CGRect) {
-        let width = CGFloat(0.8)
+        let width = CGFloat(1.6)
         layer.borderColor = UIColor.lightGray.cgColor
         layer.borderWidth = width
         layer.cornerRadius = frame.height * 0.45
         layer.masksToBounds = true
+        alpha = 0.6
     }
 }

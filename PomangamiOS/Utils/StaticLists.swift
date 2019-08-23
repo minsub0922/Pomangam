@@ -11,14 +11,12 @@ import UIKit
 struct StaticLists {
     static func getHomeMenuList() -> [HomeMenuModel] {
         var homeMenuList: [HomeMenuModel] = []
-        homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuDelivery), title: "맛집 배달"))
-        homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuHotdeal), title: "로컬 핫딜"))
-        homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuPurchase), title: "공동구매"))
-        homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuTransaction), title: "중고거래"))
-        homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuCommunity), title: "커뮤니티"))
-        homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuNotice), title: "공지사항/피드"))
+        //homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuDelivery), title: "맛집 배달"))
+        homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuHotdeal), title: "로컬 핫딜", redirectClassName: DeliveryViewController.className ))
+        homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuPurchase), title: "공동구매", redirectClassName: DeliveryViewController.className))
+        homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuTransaction), title: "중고거래", redirectClassName: DeliveryViewController.className))
+        homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuCommunity), title: "커뮤니티", redirectClassName: DeliveryViewController.className))
+       // homeMenuList.append(HomeMenuModel(image: UIImage.init(asset: .homeMenuNotice), title: "공지사항/피드"))
         return homeMenuList
     }
-    
-    static let homeMenuRedirectClass: [String] = [DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className, DeliveryViewController.className]
 }

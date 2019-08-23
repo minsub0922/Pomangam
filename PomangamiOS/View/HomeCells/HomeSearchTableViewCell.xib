@@ -20,23 +20,26 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvI-tF-atN" customClass="UIViewRounded" customModule="PomangamiOS" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="181" width="683" height="68.5"/>
+                        <rect key="frame" x="68.5" y="188" width="546" height="54.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSy-0E-0Y7">
+                                <rect key="frame" x="20" y="5.5" width="74" height="43.5"/>
+                                <state key="normal" title="Button" image="iconMainSearch"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="NvI-tF-atN" secondAttribute="height" multiplier="10:1" id="6pj-Wn-xa2"/>
+                            <constraint firstItem="KSy-0E-0Y7" firstAttribute="centerY" secondItem="NvI-tF-atN" secondAttribute="centerY" id="Oap-sb-i5N"/>
+                            <constraint firstItem="KSy-0E-0Y7" firstAttribute="leading" secondItem="NvI-tF-atN" secondAttribute="leading" constant="20" id="mFr-2B-jry"/>
+                            <constraint firstItem="KSy-0E-0Y7" firstAttribute="height" secondItem="NvI-tF-atN" secondAttribute="height" multiplier="0.8" id="vtD-yU-ofD"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSy-0E-0Y7">
-                        <rect key="frame" x="40" y="204.5" width="74" height="22"/>
-                        <state key="normal" title="Button" image="iconMainSearch"/>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="NvI-tF-atN" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="1dh-qR-gw1"/>
-                    <constraint firstItem="NvI-tF-atN" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="4Vo-BY-8T7"/>
+                    <constraint firstItem="NvI-tF-atN" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="4Vo-BY-8T7"/>
                     <constraint firstItem="NvI-tF-atN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="U6N-P7-Ga9"/>
-                    <constraint firstItem="KSy-0E-0Y7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="a0z-08-hNv"/>
-                    <constraint firstItem="KSy-0E-0Y7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uTs-Bj-Hde"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

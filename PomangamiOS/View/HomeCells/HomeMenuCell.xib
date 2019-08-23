@@ -20,8 +20,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="60k-Va-dMV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                        <rect key="frame" x="32" y="-4" width="256" height="51.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="60k-Va-dMV" secondAttribute="height" multiplier="5:1" id="le1-JC-HiK"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BFl-tm-pdY">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,10 +34,9 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="60k-Va-dMV" secondAttribute="bottom" id="DhY-hc-oNp"/>
-                    <constraint firstItem="60k-Va-dMV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PNo-Gj-UYD"/>
-                    <constraint firstAttribute="trailing" secondItem="60k-Va-dMV" secondAttribute="trailing" id="fPb-Cg-grB"/>
-                    <constraint firstItem="60k-Va-dMV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hY7-hc-3v5"/>
+                    <constraint firstItem="60k-Va-dMV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="bNi-gn-2gR"/>
+                    <constraint firstItem="60k-Va-dMV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gN3-It-xOY"/>
+                    <constraint firstItem="60k-Va-dMV" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="qr9-hF-Jr1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

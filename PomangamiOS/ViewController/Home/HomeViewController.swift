@@ -19,16 +19,14 @@ enum HomeCellType {
 class HomeViewController: BaseRootViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    private let homeMenuList = StaticLists.getHomeMenuList()
+    private let homeMenuCellViewModel: HomeMenuCellViewModel = {
+        return HomeMenuCellViewModel(menuList: StaticLists.getHomeMenuList())
+    }()
     private var headerAdvertisements: [AdvertiseDto] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        menuCollectionView.delegate = self
-//        menuCollectionView.dataSource = self
-//        advertisementCollectionView.delegate = self
-//        advertisementCollectionView.dataSource = self
+    
         tableView.registerNib(HomeTopAdvertisementCell.self)
         tableView.registerNib(HomeSearchTableViewCell.self)
         tableView.registerNib(HomeMenuCell.self)
@@ -67,7 +65,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return UIScreen.main.bounds.size.height * 0.4
+            return UIScreen.main.bounds.size.height * 0.45
         case 1:
             return 50
         case 2:
@@ -90,6 +88,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(HomeMenuCell.self, for: indexPath)
+            cell.setupView(model: homeMenuCellViewModel)
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(HomeCommunityCell.self, for: indexPath)

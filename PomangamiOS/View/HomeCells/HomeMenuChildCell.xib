@@ -23,9 +23,9 @@
                         <rect key="frame" x="9" y="54" width="240" height="128"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g7s-dN-yyF">
-                        <rect key="frame" x="0.0" y="0.0" width="259" height="189.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="259" height="179.5"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHr-Cg-NCd" customClass="UILabelFlexible" customModule="PomangamiOS" customModuleProvider="target">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHr-Cg-NCd" customClass="UILabelFlexible" customModule="PomangamiOS" customModuleProvider="target">
                         <rect key="frame" x="110" y="189.5" width="39.5" height="47.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
@@ -36,10 +36,10 @@
             <constraints>
                 <constraint firstItem="g7s-dN-yyF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1t3-vH-Ga3"/>
                 <constraint firstItem="TjY-TZ-Jnl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="46s-9x-HRh"/>
-                <constraint firstItem="g7s-dN-yyF" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.8" id="Ciq-0W-Vjq"/>
+                <constraint firstItem="KHr-Cg-NCd" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.2" id="9R3-II-g1a"/>
                 <constraint firstItem="KHr-Cg-NCd" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="NSs-XG-df5"/>
                 <constraint firstItem="TjY-TZ-Jnl" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Tm0-mo-6tG"/>
-                <constraint firstItem="KHr-Cg-NCd" firstAttribute="top" secondItem="g7s-dN-yyF" secondAttribute="bottom" id="hvM-o1-BAC"/>
+                <constraint firstItem="KHr-Cg-NCd" firstAttribute="top" secondItem="g7s-dN-yyF" secondAttribute="bottom" constant="10" id="hvM-o1-BAC"/>
                 <constraint firstAttribute="trailing" secondItem="g7s-dN-yyF" secondAttribute="trailing" id="pII-qS-upE"/>
                 <constraint firstAttribute="bottom" secondItem="KHr-Cg-NCd" secondAttribute="bottom" id="uUc-zX-8U2"/>
                 <constraint firstItem="g7s-dN-yyF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yvE-RH-6H9"/>

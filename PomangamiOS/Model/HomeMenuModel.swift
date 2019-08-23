@@ -10,4 +10,5 @@ import UIKit
 struct HomeMenuModel {
     var image: UIImage
     var title: String
+    var redirectClassName: String
 }
