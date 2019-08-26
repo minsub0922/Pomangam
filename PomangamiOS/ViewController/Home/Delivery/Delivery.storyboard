@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="-233" y="-36"/>
         </scene>
-        <!--Delivery View Controller-->
+        <!--학생회관 뒤-->
         <scene sceneID="hke-PU-dBY">
             <objects>
                 <viewController id="4Rw-qm-MmO" customClass="DeliveryViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,7 +76,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BEF-Cc-SlL"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kjt-LU-3Wn"/>
+                    <navigationItem key="navigationItem" title="학생회관 뒤" id="kjt-LU-3Wn"/>
                     <connections>
                         <outlet property="buttonBarView" destination="ScX-h3-0Cp" id="oYh-Rd-BDe"/>
                         <outlet property="containerView" destination="B93-gu-Icv" id="zWe-eY-9qg"/>
