@@ -1,4 +1,4 @@
-//
+///
 //  DeliveryViewController.swift
 //  PomangamiOS
 //
@@ -23,6 +23,13 @@ class DeliveryViewController: ButtonBarPagerTabStripViewController {
         navigationButtonView.addTarget(self, action: #selector(navigationTitleTapAction(_:)), for: .touchUpInside)
         navigationButtonView.configure("학생회관 뒤")
         navigationItem.titleView = navigationButtonView
+        
+        let rightButton = UIBarButtonItem(image: UIImage(named: "btnDeliveryFilter"), style: .plain, target: self, action: #selector(navigationRightButtonTapAction(_:)))
+        navigationItem.rightBarButtonItem  = rightButton
+    }
+
+    @objc func navigationRightButtonTapAction(_ sender: Any) {
+        print("tapped Right Button")
     }
     
     @objc func navigationTitleTapAction(_ sender: Any) {
