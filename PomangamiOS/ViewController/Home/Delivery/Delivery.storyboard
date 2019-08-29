@@ -93,13 +93,77 @@
                     <view key="view" contentMode="scaleToFill" id="uIs-zU-Cxf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vSa-h1-aLD">
+                                <rect key="frame" x="20.5" y="44" width="373" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vcs-To-TIB">
+                                    <size key="itemSize" width="231" height="351"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Tfl-Oc-Ay5">
+                                        <rect key="frame" x="71" y="0.0" width="231" height="351"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="231" height="351"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dZK-Th-BUs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="231" height="254"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="dZK-Th-BUs" secondAttribute="height" multiplier="1:1.1" id="UlU-Dz-zzZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tB-X5-OnM">
+                                                    <rect key="frame" x="94.5" y="270" width="42" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="0fN-3K-Aqb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3X7-gc-1hu">
+                                                    <rect key="frame" x="97" y="312" width="37.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="kpB-jQ-3Mg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="9tB-X5-OnM" firstAttribute="centerX" secondItem="Tfl-Oc-Ay5" secondAttribute="centerX" id="Ag0-lX-nQQ"/>
+                                            <constraint firstItem="dZK-Th-BUs" firstAttribute="top" secondItem="Tfl-Oc-Ay5" secondAttribute="top" id="DAb-A7-mQd"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="3X7-gc-1hu" secondAttribute="bottom" constant="10" id="KzJ-c6-PX6"/>
+                                            <constraint firstItem="9tB-X5-OnM" firstAttribute="top" secondItem="dZK-Th-BUs" secondAttribute="bottom" constant="16" id="SuU-lT-klH"/>
+                                            <constraint firstItem="3X7-gc-1hu" firstAttribute="top" secondItem="9tB-X5-OnM" secondAttribute="bottom" constant="10" id="bY0-PC-XIH"/>
+                                            <constraint firstItem="dZK-Th-BUs" firstAttribute="leading" secondItem="Tfl-Oc-Ay5" secondAttribute="leading" id="hAL-fo-FZD"/>
+                                            <constraint firstItem="3X7-gc-1hu" firstAttribute="centerX" secondItem="Tfl-Oc-Ay5" secondAttribute="centerX" id="yTv-o5-mEe"/>
+                                            <constraint firstAttribute="trailing" secondItem="dZK-Th-BUs" secondAttribute="trailing" id="zUN-I5-VCK"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kfa-b5-xeL" firstAttribute="bottom" secondItem="vSa-h1-aLD" secondAttribute="bottom" id="18T-FQ-XLa"/>
+                            <constraint firstItem="vSa-h1-aLD" firstAttribute="width" secondItem="uIs-zU-Cxf" secondAttribute="width" multiplier="0.9" id="6CV-ju-obh"/>
+                            <constraint firstItem="vSa-h1-aLD" firstAttribute="centerX" secondItem="uIs-zU-Cxf" secondAttribute="centerX" id="6Ic-NR-Vyf"/>
+                            <constraint firstItem="vSa-h1-aLD" firstAttribute="top" secondItem="kfa-b5-xeL" secondAttribute="top" id="Ych-TY-tk8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kfa-b5-xeL"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgf-Uz-eQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="-47"/>
+            <point key="canvasLocation" x="1634.7826086956522" y="-47.544642857142854"/>
         </scene>
     </scenes>
 </document>
