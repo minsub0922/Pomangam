@@ -52,17 +52,4 @@ class APISource: APISourceProtocol {
             }
         }
     }
-    
-//    func getPicturesPixay(params: Parameters, completion : @escaping (PixaPictures) -> Void) {
-//        get(API.getPictures(), params: params) { (res: NetworkResult<(Int, PixaPictures)>) in
-//            switch res {
-//            case .networkSuccess(let data):
-//                completion(data.1)
-//            case .networkError(let error):
-//                print(error)
-//            case .networkFail:
-//                print("Network Fail")
-//            }
-//        }
-//    }
 }

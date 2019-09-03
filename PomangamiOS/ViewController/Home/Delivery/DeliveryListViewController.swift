@@ -11,7 +11,7 @@ import XLPagerTabStrip
 
 class DeliveryListViewController: UIViewController, IndicatorInfoProvider {
     
-    var category: String = "hihihih" {
+    var category: String = "" {
         didSet {
             self.title = category
         }
@@ -24,7 +24,6 @@ class DeliveryListViewController: UIViewController, IndicatorInfoProvider {
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        
         
         return IndicatorInfo(title: category)
     }
