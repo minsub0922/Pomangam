@@ -50,6 +50,10 @@ class HomeViewController: BaseRootViewController {
                 self.tableView.reloadData()
             }
         }
+        
+        APISource.shared.getDeliverySite(deliverySiteIndex: "1", type: .affiliate) { (res) in
+            print(res)
+        }
     }
 }
 

@@ -39,6 +39,11 @@ protocol APISourceProtocol {
                          headers: HTTPHeaders?,
                          completion: @escaping (NetworkResult<(Int, T)>) -> Void)
     
+    func get<T: Codable>(_ URL: String,
+                         params: Parameters?,
+                         headers: HTTPHeaders?,
+                         completion: @escaping (NetworkResult<(Int, [T])>) -> Void)
+    
     func post<T: Codable>(_ URL: String,
                           params: [String: Any]?,
                           headers: HTTPHeaders?,
@@ -67,6 +72,45 @@ extension APISourceProtocol {
                                         let resCode = res.response?.statusCode ?? 0
                                         print(value)
                                         let datas = try decoder.decode(T.self, from: value)
+                                        let result = (resCode, datas)
+                                        completion(.networkSuccess(result))
+                                    } catch {
+                                        print("Decoding Err")
+                                        print(res.response)
+                                    }
+                                }
+                            case .failure(let err):
+                                if let error = err as NSError?, error.code == -1009 {
+                                    completion(.networkFail)
+                                } else {
+                                    let resCode = res.response?.statusCode ?? 0
+                                    completion(.networkError((resCode, err.localizedDescription)))
+                                }
+                            }
+        }
+    }
+    
+    func get<T: Codable>(_ URL: String,
+                         params: Parameters? = nil,
+                         headers: HTTPHeaders? = nil,
+                         completion: @escaping (NetworkResult<(Int, [T])>) -> Void) {
+        guard let encodedUrl = (API.baseURL+URL).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            print("networking - invalid url")
+            return
+        }
+        
+        Alamofire.request(encodedUrl,
+                          method: .get,
+                          parameters: params,
+                          headers: headers).responseData { (res) in
+                            switch res.result {
+                            case .success:
+                                if let value = res.result.value {
+                                    let decoder = JSONDecoder()
+                                    do {
+                                        let resCode = res.response?.statusCode ?? 0
+                                        print(value)
+                                        let datas = try decoder.decode([T].self, from: value)
                                         let result = (resCode, datas)
                                         completion(.networkSuccess(result))
                                     } catch {

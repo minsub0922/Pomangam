@@ -68,13 +68,31 @@ class APISource: APISourceProtocol {
     
     func getDeliverySite(deliverySiteIndex: String, type: StoreType, orderBy: StoreOrderType? = nil, size: String? = nil, page: String? = nil, completion: @escaping ([Store]) -> Void) {
         //deliverySiteIdx=&type=&orderBy=&size=&page=
+//        let params = [
+//            "deliverySiteIdx": deliverySiteIndex,
+//            "type": type.rawValue,
+//            "orderBy": orderBy?.rawValue ?? "",
+//            "size": size ?? "",
+//            "page": page ?? ""
+//            ] as [String : Any]
+        
         let params = [
             "deliverySiteIdx": deliverySiteIndex,
-            "type": type.rawValue,
-            "orderBy": orderBy?.rawValue,
-            "size": size,
-            "page": page
+            "type": type.rawValue
             ] as [String : Any]
+        
+        //need to make struct or object for params !!!
+        
+        get("/stores/search/findByType", params: params, headers: headers) { (res: NetworkResult<(Int, [Store])>) in
+            switch res {
+            case .networkSuccess(let data):
+                completion(data.1)
+            case .networkError(let error):
+                print(error)
+            case .networkFail:
+                print("Network Fail")
+            }
+        }
         
         //get("/stores/search/findByType", params: params, headers: headers, completion: responseBody(completion: completion))
     }

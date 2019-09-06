@@ -19,12 +19,12 @@ import Foundation
 //    "imgpath": "/assets/image/store/1.png"
 //},
 
-struct Store {
+struct Store: Codable {
     let index: Int
     let name: String
     let description: String
     let numberOfLikes: Int
-    let numberofComments: Int
+    let numberOfComments: Int
     let sequence: Int
     let type: Int
     var storeType: StoreType {
@@ -35,16 +35,16 @@ struct Store {
     
     enum CodingKeys: String, CodingKey {
         case name, description, sequence, type
-        case idx = "index"
+        case index = "idx"
         case numberOfLikes = "cnt_like"
         case numberOfComments = "cnt_comment"
         case imageURL = "imgpath"
     }
 }
 
-enum StoreType: String {
-    case affiliate = "1"
-    case notAffiliate = "0"
+enum StoreType: Int {
+    case affiliate = 1
+    case notAffiliate = 0
 }
 
 enum StoreOrderType: String {
