@@ -37,7 +37,7 @@ class NavigationTitleDropDownButton: UIButton {
     
     var imgVDropDown: UIImageView = {
         var imgV: UIImageView = UIImageView(image: UIImage(named: "btnDropDown")?.withRenderingMode(.alwaysTemplate))
-        imgV.tintColor = .blue
+        imgV.tintColor = .black
         return imgV
     }()
     

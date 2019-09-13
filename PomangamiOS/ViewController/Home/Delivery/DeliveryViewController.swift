@@ -28,11 +28,11 @@ class DeliveryViewController: ButtonBarPagerTabStripViewController {
         navigationItem.rightBarButtonItem  = rightButton
     }
 
-    @objc func navigationRightButtonTapAction(_ sender: Any) {
+    @objc private func navigationRightButtonTapAction(_ sender: Any) {
         print("tapped Right Button")
     }
     
-    @objc func navigationTitleTapAction(_ sender: Any) {
+    @objc private func navigationTitleTapAction(_ sender: Any) {
         print("touched??")
     }
     
