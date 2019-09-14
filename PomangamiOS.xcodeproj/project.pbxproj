@@ -30,10 +30,10 @@
 		AF4A3EA4230F7EF2003F3825 /* UIButtonCheckable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3EA3230F7EF2003F3825 /* UIButtonCheckable.swift */; };
 		AF4A3EA6230F8364003F3825 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3EA5230F8364003F3825 /* TokenModel.swift */; };
 		AF4A3EA9230F8554003F3825 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3EA8230F8554003F3825 /* User.swift */; };
-		AF4A3EAC230FA2F4003F3825 /* HomeHeaderAdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3EAA230FA2F4003F3825 /* HomeHeaderAdvertisementCell.swift */; };
-		AF4A3EAD230FA2F4003F3825 /* HomeHeaderAdvertisementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4A3EAB230FA2F4003F3825 /* HomeHeaderAdvertisementCell.xib */; };
-		AF4A3EB0230FA520003F3825 /* HomeHeaderAdvertisementChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3EAE230FA51F003F3825 /* HomeHeaderAdvertisementChildCell.swift */; };
-		AF4A3EB1230FA520003F3825 /* HomeHeaderAdvertisementChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4A3EAF230FA520003F3825 /* HomeHeaderAdvertisementChildCell.xib */; };
+		AF5B31F1232D34E00052F495 /* HomeHeaderAdvertisementChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B31EF232D34DF0052F495 /* HomeHeaderAdvertisementChildCell.swift */; };
+		AF5B31F2232D34E00052F495 /* HomeHeaderAdvertisementChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5B31F0232D34E00052F495 /* HomeHeaderAdvertisementChildCell.xib */; };
+		AF5B31F5232D34F30052F495 /* HomeHeaderAdvertisementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5B31F3232D34F30052F495 /* HomeHeaderAdvertisementCell.xib */; };
+		AF5B31F6232D34F30052F495 /* HomeHeaderAdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B31F4232D34F30052F495 /* HomeHeaderAdvertisementCell.swift */; };
 		AF6F47C723059F3700B377C7 /* FasterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47C623059F3700B377C7 /* FasterImageView.swift */; };
 		AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */; };
 		AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CB2305A19C00B377C7 /* APISource.swift */; };
@@ -113,10 +113,10 @@
 		AF4A3EA3230F7EF2003F3825 /* UIButtonCheckable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonCheckable.swift; sourceTree = "<group>"; };
 		AF4A3EA5230F8364003F3825 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		AF4A3EA8230F8554003F3825 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		AF4A3EAA230FA2F4003F3825 /* HomeHeaderAdvertisementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderAdvertisementCell.swift; sourceTree = "<group>"; };
-		AF4A3EAB230FA2F4003F3825 /* HomeHeaderAdvertisementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderAdvertisementCell.xib; sourceTree = "<group>"; };
-		AF4A3EAE230FA51F003F3825 /* HomeHeaderAdvertisementChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderAdvertisementChildCell.swift; sourceTree = "<group>"; };
-		AF4A3EAF230FA520003F3825 /* HomeHeaderAdvertisementChildCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderAdvertisementChildCell.xib; sourceTree = "<group>"; };
+		AF5B31EF232D34DF0052F495 /* HomeHeaderAdvertisementChildCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeHeaderAdvertisementChildCell.swift; path = ../../../../../../.Trash/HomeHeaderAdvertisementChildCell.swift; sourceTree = "<group>"; };
+		AF5B31F0232D34E00052F495 /* HomeHeaderAdvertisementChildCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeHeaderAdvertisementChildCell.xib; path = ../../../../../../.Trash/HomeHeaderAdvertisementChildCell.xib; sourceTree = "<group>"; };
+		AF5B31F3232D34F30052F495 /* HomeHeaderAdvertisementCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeHeaderAdvertisementCell.xib; path = ../../../../../../.Trash/HomeHeaderAdvertisementCell.xib; sourceTree = "<group>"; };
+		AF5B31F4232D34F30052F495 /* HomeHeaderAdvertisementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeHeaderAdvertisementCell.swift; path = ../../../../../../.Trash/HomeHeaderAdvertisementCell.swift; sourceTree = "<group>"; };
 		AF6F47C623059F3700B377C7 /* FasterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasterImageView.swift; sourceTree = "<group>"; };
 		AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISourceProtocol.swift; sourceTree = "<group>"; };
 		AF6F47CB2305A19C00B377C7 /* APISource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISource.swift; sourceTree = "<group>"; };
@@ -223,10 +223,10 @@
 				AF4A3E8F230EFD12003F3825 /* HomeMenuChildCell.xib */,
 				AF4A3E92230EFD2E003F3825 /* HomeCommunityCell.swift */,
 				AF4A3E93230EFD2E003F3825 /* HomeCommunityCell.xib */,
-				AF4A3EAA230FA2F4003F3825 /* HomeHeaderAdvertisementCell.swift */,
-				AF4A3EAB230FA2F4003F3825 /* HomeHeaderAdvertisementCell.xib */,
-				AF4A3EAE230FA51F003F3825 /* HomeHeaderAdvertisementChildCell.swift */,
-				AF4A3EAF230FA520003F3825 /* HomeHeaderAdvertisementChildCell.xib */,
+				AF5B31F4232D34F30052F495 /* HomeHeaderAdvertisementCell.swift */,
+				AF5B31F3232D34F30052F495 /* HomeHeaderAdvertisementCell.xib */,
+				AF5B31EF232D34DF0052F495 /* HomeHeaderAdvertisementChildCell.swift */,
+				AF5B31F0232D34E00052F495 /* HomeHeaderAdvertisementChildCell.xib */,
 			);
 			path = HomeCells;
 			sourceTree = "<group>";
@@ -573,13 +573,13 @@
 				AFDD4C6D22FC0BEA00CD8CD5 /* Notice.storyboard in Resources */,
 				AFF0C84222F659D2007D26DD /* Assets.xcassets in Resources */,
 				AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */,
+				AF5B31F5232D34F30052F495 /* HomeHeaderAdvertisementCell.xib in Resources */,
 				AF4A3E95230EFD2E003F3825 /* HomeCommunityCell.xib in Resources */,
 				AFDD4C6122FC0BAD00CD8CD5 /* Home.storyboard in Resources */,
 				AF4A3E9A230F6FBF003F3825 /* Login.storyboard in Resources */,
 				AF11247D230847EA009CAB21 /* Delivery.storyboard in Resources */,
-				AF4A3EB1230FA520003F3825 /* HomeHeaderAdvertisementChildCell.xib in Resources */,
+				AF5B31F2232D34E00052F495 /* HomeHeaderAdvertisementChildCell.xib in Resources */,
 				AFDD4C6522FC0BC700CD8CD5 /* Affiliate.storyboard in Resources */,
-				AF4A3EAD230FA2F4003F3825 /* HomeHeaderAdvertisementCell.xib in Resources */,
 				AF4A3E91230EFD12003F3825 /* HomeMenuChildCell.xib in Resources */,
 				AF4A3E8D230EFCFD003F3825 /* HomeMenuCell.xib in Resources */,
 			);
@@ -707,10 +707,10 @@
 				AF4A3E90230EFD12003F3825 /* HomeMenuChildCell.swift in Sources */,
 				AF4A3E94230EFD2E003F3825 /* HomeCommunityCell.swift in Sources */,
 				AFDD4CC522FC7AFE00CD8CD5 /* UIViewRounded.swift in Sources */,
-				AF4A3EB0230FA520003F3825 /* HomeHeaderAdvertisementChildCell.swift in Sources */,
 				AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */,
 				AFD5E32C231424B10031E375 /* NavigationTitleDropDownButton.swift in Sources */,
 				AFDD4C6722FC0BD200CD8CD5 /* ProfileViewController.swift in Sources */,
+				AF5B31F6232D34F30052F495 /* HomeHeaderAdvertisementCell.swift in Sources */,
 				AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */,
 				AFDD4CC022FC49E400CD8CD5 /* StaticLists.swift in Sources */,
 				AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */,
@@ -726,7 +726,6 @@
 				AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */,
 				AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */,
 				AFDD4CBA22FC278100CD8CD5 /* UIViewEnum+.swift in Sources */,
-				AF4A3EAC230FA2F4003F3825 /* HomeHeaderAdvertisementCell.swift in Sources */,
 				AFDD4C6322FC0BBF00CD8CD5 /* AffiliateViewController.swift in Sources */,
 				AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */,
 				AF4A3E8C230EFCFD003F3825 /* HomeMenuCell.swift in Sources */,
@@ -734,6 +733,7 @@
 				AFDD4CB622FC261800CD8CD5 /* HomeMenuModel.swift in Sources */,
 				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
 				AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */,
+				AF5B31F1232D34E00052F495 /* HomeHeaderAdvertisementChildCell.swift in Sources */,
 				AF6F47C723059F3700B377C7 /* FasterImageView.swift in Sources */,
 				AF4A3E88230EFC3C003F3825 /* HomeSearchTableViewCell.swift in Sources */,
 				AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */,

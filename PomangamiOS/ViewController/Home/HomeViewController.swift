@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
         
         setupNavigationBarButtons()
     
-        tableView.contentInset = .init(top: UIScreen.main.bounds.size.height * 0.03, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = .init(top: 0, left: 0, bottom: 0, right: 0)
         tableView.registerNib(HomeHeaderAdvertisementCell.self)
         tableView.registerNib(HomeSearchTableViewCell.self)
         tableView.registerNib(HomeMenuCell.self)
@@ -94,7 +94,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return UIScreen.main.bounds.size.height * 0.2
+            return UIScreen.main.bounds.size.height * 0.25
         case 1:
             return UIScreen.main.bounds.size.height * 0.06
         case 2:
