@@ -19,18 +19,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="683" height="430.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2ZW-I2-czq">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2ZW-I2-czq">
                         <rect key="frame" x="0.0" y="0.0" width="683" height="430.5"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ncr-ZH-AFk" customClass="NavigationTitleDropDownButton" customModule="PomangamiOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="341.5" height="430.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="is2-YD-2GG" customClass="NavigationTitleDropDownButton" customModule="PomangamiOS" customModuleProvider="target">
-                                <rect key="frame" x="341.5" y="0.0" width="341.5" height="430.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
                     </stackView>
                 </subviews>
                 <constraints>
@@ -41,6 +31,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="stackView" destination="2ZW-I2-czq" id="pRe-dY-3IF"/>
+            </connections>
             <point key="canvasLocation" x="392.02898550724643" y="282.25446428571428"/>
         </tableViewCell>
     </objects>

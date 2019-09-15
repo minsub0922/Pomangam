@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
     
         tableView.contentInset = .init(top: 0, left: 0, bottom: 0, right: 0)
         tableView.registerNib(HomeHeaderAdvertisementCell.self)
-        tableView.registerNib(HomeSearchTableViewCell.self)
+        tableView.registerNib(DeliveryArrivalCell.self)
         tableView.registerNib(HomeMenuCell.self)
         tableView.registerNib(HomeCommunityCell.self)
     }
@@ -113,7 +113,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             cell.setupView(model: homeHeaderAdCellViewModel)
             return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(HomeSearchTableViewCell.self, for: indexPath)
+            let cell = tableView.dequeueReusableCell(DeliveryArrivalCell.self, for: indexPath)
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(HomeMenuCell.self, for: indexPath)
