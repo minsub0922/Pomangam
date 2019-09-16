@@ -9,29 +9,20 @@
 import UIKit
 
 class DeliveryArrivalCell: UITableViewCell {
-    @IBOutlet weak var stackView: UIStackView!
     
+    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var timeButton: UIButton!
+    @IBAction func tapLocationButton(_ sender: Any) {
+    }
+    @IBAction func tapTimeButton(_ sender: Any) {
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let label1 = UILabel()
-        let label2 = UILabel()
-        label1.text = "Hihi"
-        label2.text = "Hihi!!!"
-        label1.textAlignment = .center
-        label2.textAlignment = .center
+        locationButton.setTitle("학생회관 뒤 ", for: .normal)
+        timeButton.setTitle("12시 ", for: .normal)
         
-        stackView.addArrangedSubview(label1)
-        stackView.addArrangedSubview(label2)
-        label1.center = label1.superview?.center ?? .zero
-        
-    }
-    
-    @objc private func tapLocationDropdownButton(_ sender: Any) {
-        
-    }
-    
-    @objc private func tapTimeDropdownButton(_ sender: Any) {
-        
+        locationButton.addImage(image: UIImage(named: "btnDeliverymainSelectplace")!)
+        timeButton.addImage(image: UIImage(named: "btnDeliverymainSelectplace")!)
     }
 }

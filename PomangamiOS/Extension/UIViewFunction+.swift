@@ -70,6 +70,24 @@ extension UIButton {
                                                  bottom: 0,
                                                  right: -titleSize.width)
     }
+    
+    func addImage(image: UIImage, on: Direction = Direction.right) {
+        self.setImage(image, for: .normal)
+        if on == Direction.left {
+            self.semanticContentAttribute = .forceLeftToRight
+            self.sizeToFit()
+        } else {
+            self.sizeToFit()
+            self.semanticContentAttribute = .forceRightToLeft
+        }
+        
+        
+    }
+}
+
+enum Direction {
+    case left
+    case right
 }
 
 extension CALayer {
