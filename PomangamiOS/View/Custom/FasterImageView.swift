@@ -31,6 +31,7 @@ class FasterImageView: UIImageView {
                 print(error?.localizedDescription)
                 return
             }
+            
             DispatchQueue.global().async {
                 let imageToCache = UIImage(data: data!)
                 if self.url == urlString {

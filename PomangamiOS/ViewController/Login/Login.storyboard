@@ -54,10 +54,37 @@
                                     <constraint firstItem="9cf-9s-eE3" firstAttribute="width" secondItem="zPJ-eb-IdB" secondAttribute="width" id="hN8-pH-JYB"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DLL-6H-Kcq">
+                                <rect key="frame" x="114.5" y="780.5" width="185" height="29"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g27-ih-c3n">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="회원가입">
+                                            <color key="titleColor" red="0.99215686270000003" green="0.42745098040000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MY1-P4-jta">
+                                        <rect key="frame" x="54" y="0.0" width="8" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99215686270000003" green="0.42745098040000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raT-Og-vyJ">
+                                        <rect key="frame" x="67" y="0.0" width="118" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="아이디/비밀번호 찾기">
+                                            <color key="titleColor" red="0.99215686270000003" green="0.42745098040000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zPJ-eb-IdB" firstAttribute="centerY" secondItem="qUu-Py-OQl" secondAttribute="centerY" id="DVI-6e-E8d"/>
+                            <constraint firstItem="DLL-6H-Kcq" firstAttribute="centerX" secondItem="qUu-Py-OQl" secondAttribute="centerX" id="Myq-CT-pqx"/>
+                            <constraint firstItem="yMO-m6-mcI" firstAttribute="bottom" secondItem="DLL-6H-Kcq" secondAttribute="bottom" constant="52.5" id="g23-cm-SVJ"/>
                             <constraint firstItem="zPJ-eb-IdB" firstAttribute="width" secondItem="qUu-Py-OQl" secondAttribute="width" multiplier="0.5" id="tqI-WV-buc"/>
                             <constraint firstItem="zPJ-eb-IdB" firstAttribute="centerX" secondItem="qUu-Py-OQl" secondAttribute="centerX" id="w3b-Oe-Q6u"/>
                         </constraints>
