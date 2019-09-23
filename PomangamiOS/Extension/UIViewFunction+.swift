@@ -181,8 +181,16 @@ extension UICollectionView {
     }
     
     func reloadDataOnMainThread() {
-        OperationQueue.main.addOperation {
+        DispatchQueue.main.async {
             self.reloadData()
+        }
+    }
+    
+    func reloadSection(section: Int) {
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.reloadSections(IndexSet(section...section))
+            })
         }
     }
 }

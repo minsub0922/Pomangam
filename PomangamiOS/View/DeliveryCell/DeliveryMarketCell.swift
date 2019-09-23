@@ -13,7 +13,7 @@ class DeliveryMarketCell: UICollectionViewCell, CellProtocol {
     @IBOutlet weak var imageView: UIImageView!
     
     func setupView(model: DeliveryMarketCellViewModel) {
-        self.titleLabel.text = model.market.title
-        self.imageView.loadImageAsync(fromURL: model.market.imageUrl)
+        self.titleLabel.text = model.name
+        self.imageView.loadImageAsync(fromURL: model.imageUrl)
     }
 }

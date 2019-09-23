@@ -46,7 +46,6 @@
 		AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CAB22FC15E600CD8CD5 /* UIViewFunction+.swift */; };
 		AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CAD22FC1BAD00CD8CD5 /* TabBarController.swift */; };
 		AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB022FC21B700CD8CD5 /* BaseRootViewController.swift */; };
-		AFDD4CB622FC261800CD8CD5 /* DeliveryMarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB522FC261800CD8CD5 /* DeliveryMarketModel.swift */; };
 		AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB722FC266C00CD8CD5 /* Enums.swift */; };
 		AFDD4CBA22FC278100CD8CD5 /* UIViewEnum+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CB922FC278100CD8CD5 /* UIViewEnum+.swift */; };
 		AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4CBB22FC450500CD8CD5 /* Obejcts+.swift */; };
@@ -61,7 +60,7 @@
 		AFF0C84522F659D2007D26DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF0C84322F659D2007D26DD /* LaunchScreen.storyboard */; };
 		AFF0C85022F659D2007D26DD /* PomangamiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C84F22F659D2007D26DD /* PomangamiOSTests.swift */; };
 		AFF0C85B22F659D2007D26DD /* PomangamiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0C85A22F659D2007D26DD /* PomangamiOSUITests.swift */; };
-		AFF148EC23210514006FB68B /* StoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF148EB23210514006FB68B /* StoreResponse.swift */; };
+		AFF148EC23210514006FB68B /* MarketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF148EB23210514006FB68B /* MarketResponse.swift */; };
 		F8FBF7B74889204D4B5F49ED /* Pods_PomangamiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13865987CA5C8634BA89B50 /* Pods_PomangamiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,7 +124,6 @@
 		AFDD4CAB22FC15E600CD8CD5 /* UIViewFunction+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewFunction+.swift"; sourceTree = "<group>"; };
 		AFDD4CAD22FC1BAD00CD8CD5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AFDD4CB022FC21B700CD8CD5 /* BaseRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRootViewController.swift; sourceTree = "<group>"; };
-		AFDD4CB522FC261800CD8CD5 /* DeliveryMarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMarketModel.swift; sourceTree = "<group>"; };
 		AFDD4CB722FC266C00CD8CD5 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		AFDD4CB922FC278100CD8CD5 /* UIViewEnum+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewEnum+.swift"; sourceTree = "<group>"; };
 		AFDD4CBB22FC450500CD8CD5 /* Obejcts+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Obejcts+.swift"; sourceTree = "<group>"; };
@@ -146,7 +144,7 @@
 		AFF0C85622F659D2007D26DD /* PomangamiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomangamiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF0C85A22F659D2007D26DD /* PomangamiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomangamiOSUITests.swift; sourceTree = "<group>"; };
 		AFF0C85C22F659D2007D26DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFF148EB23210514006FB68B /* StoreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreResponse.swift; sourceTree = "<group>"; };
+		AFF148EB23210514006FB68B /* MarketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketResponse.swift; sourceTree = "<group>"; };
 		B685962A42E324F17307CD35 /* Pods-PomangamiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-PomangamiOSUITests/Pods-PomangamiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C098FA7100CF56A624062F71 /* Pods-PomangamiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOS.debug.xcconfig"; path = "Target Support Files/Pods-PomangamiOS/Pods-PomangamiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F13865987CA5C8634BA89B50 /* Pods_PomangamiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,7 +232,7 @@
 			children = (
 				AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */,
 				AF4A3EA5230F8364003F3825 /* TokenModel.swift */,
-				AFF148EB23210514006FB68B /* StoreResponse.swift */,
+				AFF148EB23210514006FB68B /* MarketResponse.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -267,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				AF4A3EA7230F8531003F3825 /* NetworkModel */,
-				AFDD4CB522FC261800CD8CD5 /* DeliveryMarketModel.swift */,
 				AF4A3EA8230F8554003F3825 /* User.swift */,
 			);
 			path = Model;
@@ -704,7 +701,7 @@
 				AF11247B230847E0009CAB21 /* DeliveryListPagerController.swift in Sources */,
 				AFDD4CC322FC634C00CD8CD5 /* UIlabelFlexible.swift in Sources */,
 				AF4A3EA9230F8554003F3825 /* User.swift in Sources */,
-				AFF148EC23210514006FB68B /* StoreResponse.swift in Sources */,
+				AFF148EC23210514006FB68B /* MarketResponse.swift in Sources */,
 				AF4A3EA6230F8364003F3825 /* TokenModel.swift in Sources */,
 				AF4A3E9E230F7466003F3825 /* UITextFieldUnderlined.swift in Sources */,
 				AFDD4CBE22FC457900CD8CD5 /* Types+.swift in Sources */,
@@ -714,7 +711,6 @@
 				AFDD4C6322FC0BBF00CD8CD5 /* HotdealViewController.swift in Sources */,
 				AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */,
 				AF4A3EA0230F7900003F3825 /* UIColor+.swift in Sources */,
-				AFDD4CB622FC261800CD8CD5 /* DeliveryMarketModel.swift in Sources */,
 				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
 				AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */,
 				AF5B31F1232D34E00052F495 /* DeliveryHeaderAdvertisementChildCell.swift in Sources */,

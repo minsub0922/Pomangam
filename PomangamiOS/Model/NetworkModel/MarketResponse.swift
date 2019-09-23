@@ -19,7 +19,7 @@ import Foundation
 //    "imgpath": "/assets/image/store/1.png"
 //},
 
-struct Store: Codable {
+struct Market: Codable {
     let index: Int
     let name: String
     let description: String
@@ -39,6 +39,10 @@ struct Store: Codable {
         case numberOfLikes = "cnt_like"
         case numberOfComments = "cnt_comment"
         case imageURL = "imgpath"
+    }
+    
+    var asMarketViewModel: DeliveryMarketCellViewModel {
+        return DeliveryMarketCellViewModel(imageUrl: imageURL, name: name, marketId: index)
     }
 }
 

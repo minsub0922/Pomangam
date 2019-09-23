@@ -53,7 +53,7 @@ class APISource: APISourceProtocol {
         }
     }
     
-    func getDeliverySite(deliverySiteIndex: String, type: StoreType, orderBy: StoreOrderType? = nil, size: String? = nil, page: String? = nil, completion: @escaping ([Store]) -> Void) {
+    func getMarkets(deliverySiteIndex: String, type: StoreType, orderBy: StoreOrderType? = nil, size: String? = nil, page: String? = nil, completion: @escaping ([Market]) -> Void) {
         //deliverySiteIdx=&type=&orderBy=&size=&page=
 //        let params = [
 //            "deliverySiteIdx": deliverySiteIndex,
@@ -70,7 +70,7 @@ class APISource: APISourceProtocol {
         
         //need to make struct or object for params !!!
         
-        get("/stores/search/findByType", params: params, headers: headers) { (res: NetworkResult<(Int, [Store])>) in
+        get("/stores/search/findByType", params: params, headers: headers) { (res: NetworkResult<(Int, [Market])>) in
             switch res {
             case .networkSuccess(let data):
                 completion(data.1)

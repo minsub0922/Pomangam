@@ -15,7 +15,9 @@ struct DeliveryHeaderAdvertisementCellViewModel: CellViewModel {
 }
 
 struct DeliveryMarketCellViewModel: CellViewModel {
-    var market: DeliveryMarketModel
+    var imageUrl: String
+    var name: String
+    var marketId: Int
 }
 
 protocol CellProtocol {

@@ -12,7 +12,7 @@ import Alamofire
 class DeliveryViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     private var headerAdvertisements: [AdvertiseDto] = []
-    private var markets: [DeliveryMarketModel] = []
+    private var markets: [Market] = []
     private var navigationButtonView: NavigationTitleDropDownButton = NavigationTitleDropDownButton()
     private var homeHeaderAdCellViewModel: DeliveryHeaderAdvertisementCellViewModel {
         return DeliveryHeaderAdvertisementCellViewModel(headerAdvertisements: headerAdvertisements)
@@ -53,14 +53,17 @@ class DeliveryViewController: UIViewController {
             
             let params = [ "deliverySiteIdx": 1 ]
             APISource.shared.getMainall(params: params) { res in
-                print(res)
+                //print(res)
                 self.headerAdvertisements = res.advertiseForMainDtoList
                 self.collectionView.reloadData()
             }
         }
         
-        APISource.shared.getDeliverySite(deliverySiteIndex: "1", type: .affiliate) { (res) in
+        APISource.shared.getMarkets(deliverySiteIndex: "1", type: .affiliate) { (res) in
             print(res)
+            self.markets = res
+            self.collectionView.reloadSection(section: DeliveryCellType.market.rawValue)
+            
         }
     }
 }
@@ -103,7 +106,6 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
         }
     }
     
-    // Mark -
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let cellType = DeliveryCellType(rawValue: indexPath.section) else {return .zero}
         let fullHeight = collectionView.bounds.height;
