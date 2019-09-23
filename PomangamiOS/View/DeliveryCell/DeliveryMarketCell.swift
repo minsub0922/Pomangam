@@ -8,7 +8,12 @@
 
 import UIKit
 
-class HomeMenuChildCell: UICollectionViewCell {
+class DeliveryMarketCell: UICollectionViewCell, CellProtocol {
     @IBOutlet weak var titleLabel: UILabelFlexible!
     @IBOutlet weak var imageView: UIImageView!
+    
+    func setupView(model: DeliveryMarketCellViewModel) {
+        self.titleLabel.text = model.market.title
+        self.imageView.loadImageAsync(fromURL: model.market.imageUrl)
+    }
 }

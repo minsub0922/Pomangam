@@ -10,12 +10,12 @@ import Foundation
 
 protocol CellViewModel {}
 
-struct HomeHeaderAdvertisementCellViewModel: CellViewModel {
+struct DeliveryHeaderAdvertisementCellViewModel: CellViewModel {
     var headerAdvertisements: [AdvertiseDto]
 }
 
-struct HomeMenuCellViewModel: CellViewModel {
-    var menuList: [HomeMenuModel]
+struct DeliveryMarketCellViewModel: CellViewModel {
+    var market: DeliveryMarketModel
 }
 
 protocol CellProtocol {

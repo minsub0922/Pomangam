@@ -37,11 +37,6 @@ protocol APISourceProtocol {
     func get<T: Codable>(_ URL: String,
                          params: Parameters?,
                          headers: HTTPHeaders?,
-                         completion: @escaping (NetworkResult<(Int, T)>) -> Void)
-    
-    func get<T: Codable>(_ URL: String,
-                         params: Parameters?,
-                         headers: HTTPHeaders?,
                          completion: @escaping (NetworkResult<(Int, [T])>) -> Void)
     
     func post<T: Codable>(_ URL: String,
@@ -51,6 +46,17 @@ protocol APISourceProtocol {
 }
 
 extension APISourceProtocol {
+    /**
+     Alamofire GET Method, NetworkResult에 따른 처리와 디코딩 작업
+     
+     - Parameters:
+         - URL: Api endPoint
+         - params: Query로 들어갈 파라미터
+         - completion: NetworkResult reponse에 대한 결과 처리
+     - Throws: If 'who' already dead, it throws some exception
+     
+     - Returns: Returns false if not available skill
+     */
     func get<T: Codable>(_ URL: String,
                          params: Parameters? = nil,
                          headers: HTTPHeaders? = nil,

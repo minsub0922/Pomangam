@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeliveryArrivalCell: UITableViewCell {
+class DeliveryArrivalCell: UICollectionViewCell {
     
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var timeButton: UIButton!

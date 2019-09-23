@@ -16,22 +16,9 @@ class APISource: APISourceProtocol {
         guard let model: TokenModel = UserDefaults.standard.getCustomObject(key: .accessToken) else {
             return nil
         }
-        print(model.accessToken)
+        print("access token is \(model.accessToken)")
         return ["Authorization": "Bearer \(model.accessToken)"]
     }()
-    
-//    private func responseBody<T: Codable>(completion: @escaping (T) -> Void) -> (NetworkResult<(Int, T)>) {
-//        return { (res: NetworkResult<(Int, T)>) in
-//            switch res {
-//            case .networkSuccess(let data):
-//                completion(data.1)
-//            case .networkError(let error):
-//                print(error)
-//            case .networkFail:
-//                print("Network Fail")
-//            }
-//        }
-//    }
     
     func getMainall(params: Parameters, completion: @escaping (ListAllMainResponse) -> Void) {
         get("/views/main", params: params, headers: headers) { (res: NetworkResult<(Int, ListAllMainResponse)>) in

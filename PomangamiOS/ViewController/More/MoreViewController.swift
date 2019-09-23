@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: BaseRootViewController {
+class MoreViewController: BaseRootViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

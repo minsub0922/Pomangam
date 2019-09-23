@@ -19,8 +19,8 @@ class TabBarController: UITabBarController {
     }
     
     func setupRootViewControllers(){
-        let pageNames = ["Home","Delivery","Profile","Notice"]
-        let titles = ["홈","맛집배달","내정보","공지사항"]
+        let pageNames = ["Delivery","Hotdeal","Community","More"]
+        let titles = ["맛집배달","로컬핫딜","커뮤니티","더보기"]
         var pages: [UINavigationController] = []
         
         for i in 0..<4 {
