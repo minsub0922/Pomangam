@@ -25,15 +25,15 @@
 		AF4A3EA4230F7EF2003F3825 /* UIButtonCheckable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3EA3230F7EF2003F3825 /* UIButtonCheckable.swift */; };
 		AF4A3EA6230F8364003F3825 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3EA5230F8364003F3825 /* TokenModel.swift */; };
 		AF4A3EA9230F8554003F3825 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3EA8230F8554003F3825 /* User.swift */; };
-		AF5B31F1232D34E00052F495 /* DeliveryHeaderAdvertisementChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B31EF232D34DF0052F495 /* DeliveryHeaderAdvertisementChildCell.swift */; };
-		AF5B31F2232D34E00052F495 /* DeliveryHeaderAdvertisementChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5B31F0232D34E00052F495 /* DeliveryHeaderAdvertisementChildCell.xib */; };
-		AF5B31F5232D34F30052F495 /* DeliveryHeaderAdvertisementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5B31F3232D34F30052F495 /* DeliveryHeaderAdvertisementCell.xib */; };
-		AF5B31F6232D34F30052F495 /* DeliveryHeaderAdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B31F4232D34F30052F495 /* DeliveryHeaderAdvertisementCell.swift */; };
 		AF5B31F8232D3D8E0052F495 /* DropDownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B31F7232D3D8E0052F495 /* DropDownLabel.swift */; };
 		AF6F47C723059F3700B377C7 /* FasterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47C623059F3700B377C7 /* FasterImageView.swift */; };
 		AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */; };
 		AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CB2305A19C00B377C7 /* APISource.swift */; };
 		AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */; };
+		AF99D4EC233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99D4EA233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift */; };
+		AF99D4ED233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF99D4EB233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib */; };
+		AF99D4F0233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99D4EE233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift */; };
+		AF99D4F1233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF99D4EF233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.xib */; };
 		AFD5E32C231424B10031E375 /* NavigationTitleDropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5E32B231424B10031E375 /* NavigationTitleDropDownButton.swift */; };
 		AFDD4C5F22FC0BA200CD8CD5 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4C5E22FC0BA200CD8CD5 /* DeliveryViewController.swift */; };
 		AFDD4C6122FC0BAD00CD8CD5 /* Delivery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDD4C6022FC0BAD00CD8CD5 /* Delivery.storyboard */; };
@@ -103,15 +103,15 @@
 		AF4A3EA3230F7EF2003F3825 /* UIButtonCheckable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonCheckable.swift; sourceTree = "<group>"; };
 		AF4A3EA5230F8364003F3825 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		AF4A3EA8230F8554003F3825 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		AF5B31EF232D34DF0052F495 /* DeliveryHeaderAdvertisementChildCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryHeaderAdvertisementChildCell.swift; path = ../../../../../../.Trash/DeliveryHeaderAdvertisementChildCell.swift; sourceTree = "<group>"; };
-		AF5B31F0232D34E00052F495 /* DeliveryHeaderAdvertisementChildCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DeliveryHeaderAdvertisementChildCell.xib; path = ../../../../../../.Trash/DeliveryHeaderAdvertisementChildCell.xib; sourceTree = "<group>"; };
-		AF5B31F3232D34F30052F495 /* DeliveryHeaderAdvertisementCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DeliveryHeaderAdvertisementCell.xib; path = ../../../../../../.Trash/DeliveryHeaderAdvertisementCell.xib; sourceTree = "<group>"; };
-		AF5B31F4232D34F30052F495 /* DeliveryHeaderAdvertisementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryHeaderAdvertisementCell.swift; path = ../../../../../../.Trash/DeliveryHeaderAdvertisementCell.swift; sourceTree = "<group>"; };
 		AF5B31F7232D3D8E0052F495 /* DropDownLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownLabel.swift; sourceTree = "<group>"; };
 		AF6F47C623059F3700B377C7 /* FasterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasterImageView.swift; sourceTree = "<group>"; };
 		AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISourceProtocol.swift; sourceTree = "<group>"; };
 		AF6F47CB2305A19C00B377C7 /* APISource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISource.swift; sourceTree = "<group>"; };
 		AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListallMainResponse.swift; sourceTree = "<group>"; };
+		AF99D4EA233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryHeaderAdvertisementChildCell.swift; sourceTree = "<group>"; };
+		AF99D4EB233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryHeaderAdvertisementChildCell.xib; sourceTree = "<group>"; };
+		AF99D4EE233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryHeaderAdvertisementCell.swift; sourceTree = "<group>"; };
+		AF99D4EF233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryHeaderAdvertisementCell.xib; sourceTree = "<group>"; };
 		AFD5E32B231424B10031E375 /* NavigationTitleDropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleDropDownButton.swift; sourceTree = "<group>"; };
 		AFDD4C5E22FC0BA200CD8CD5 /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
 		AFDD4C6022FC0BAD00CD8CD5 /* Delivery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Delivery.storyboard; sourceTree = "<group>"; };
@@ -210,10 +210,10 @@
 				AF4A3E87230EFC3C003F3825 /* DeliveryArrivalCell.xib */,
 				AF4A3E8E230EFD12003F3825 /* DeliveryMarketCell.swift */,
 				AF4A3E8F230EFD12003F3825 /* DeliveryMarketCell.xib */,
-				AF5B31F4232D34F30052F495 /* DeliveryHeaderAdvertisementCell.swift */,
-				AF5B31F3232D34F30052F495 /* DeliveryHeaderAdvertisementCell.xib */,
-				AF5B31EF232D34DF0052F495 /* DeliveryHeaderAdvertisementChildCell.swift */,
-				AF5B31F0232D34E00052F495 /* DeliveryHeaderAdvertisementChildCell.xib */,
+				AF99D4EE233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift */,
+				AF99D4EF233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.xib */,
+				AF99D4EA233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift */,
+				AF99D4EB233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib */,
 			);
 			path = DeliveryCell;
 			sourceTree = "<group>";
@@ -558,10 +558,10 @@
 				AFDD4C6D22FC0BEA00CD8CD5 /* Community.storyboard in Resources */,
 				AFF0C84222F659D2007D26DD /* Assets.xcassets in Resources */,
 				AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */,
-				AF5B31F5232D34F30052F495 /* DeliveryHeaderAdvertisementCell.xib in Resources */,
 				AFDD4C6122FC0BAD00CD8CD5 /* Delivery.storyboard in Resources */,
+				AF99D4ED233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib in Resources */,
+				AF99D4F1233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.xib in Resources */,
 				AF4A3E9A230F6FBF003F3825 /* Login.storyboard in Resources */,
-				AF5B31F2232D34E00052F495 /* DeliveryHeaderAdvertisementChildCell.xib in Resources */,
 				AFDD4C6522FC0BC700CD8CD5 /* Hotdeal.storyboard in Resources */,
 				AF4A3E91230EFD12003F3825 /* DeliveryMarketCell.xib in Resources */,
 			);
@@ -692,8 +692,8 @@
 				AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */,
 				AFD5E32C231424B10031E375 /* NavigationTitleDropDownButton.swift in Sources */,
 				AFDD4C6722FC0BD200CD8CD5 /* MoreViewController.swift in Sources */,
-				AF5B31F6232D34F30052F495 /* DeliveryHeaderAdvertisementCell.swift in Sources */,
 				AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */,
+				AF99D4F0233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift in Sources */,
 				AFDD4CC022FC49E400CD8CD5 /* StaticLists.swift in Sources */,
 				AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */,
 				AF4A3E9C230F6FDE003F3825 /* LoginViewController.swift in Sources */,
@@ -704,6 +704,7 @@
 				AFF148EC23210514006FB68B /* MarketResponse.swift in Sources */,
 				AF4A3EA6230F8364003F3825 /* TokenModel.swift in Sources */,
 				AF4A3E9E230F7466003F3825 /* UITextFieldUnderlined.swift in Sources */,
+				AF99D4EC233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift in Sources */,
 				AFDD4CBE22FC457900CD8CD5 /* Types+.swift in Sources */,
 				AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */,
 				AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */,
@@ -713,7 +714,6 @@
 				AF4A3EA0230F7900003F3825 /* UIColor+.swift in Sources */,
 				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
 				AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */,
-				AF5B31F1232D34E00052F495 /* DeliveryHeaderAdvertisementChildCell.swift in Sources */,
 				AF6F47C723059F3700B377C7 /* FasterImageView.swift in Sources */,
 				AF4A3E88230EFC3C003F3825 /* DeliveryArrivalCell.swift in Sources */,
 				AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */,

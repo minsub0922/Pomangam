@@ -55,7 +55,7 @@ class DeliveryViewController: UIViewController {
             APISource.shared.getMainall(params: params) { res in
                 //print(res)
                 self.headerAdvertisements = res.advertiseForMainDtoList
-                self.collectionView.reloadData()
+                self.collectionView.reloadSection(section: DeliveryCellType.headerAd.rawValue)
             }
         }
         
@@ -113,7 +113,7 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
         
         switch cellType {
         case .headerAd:
-            return CGSize(width: fullWidth, height: fullHeight * 0.28)
+            return CGSize(width: fullWidth, height: fullHeight * 0.3)
         case .arrivalSpot:
             return CGSize(width: fullWidth, height: fullHeight * 0.06)
         case .market:

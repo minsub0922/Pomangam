@@ -210,39 +210,52 @@ extension UIStoryboard {
     }
 }
 
-public extension UIImageView {
-    func loadImageAsync(fromURL url: String) {
-        guard let imageURL = URL(string: url) else {
-            return
+let imageCache = NSCache<AnyObject, AnyObject>()
+
+extension UIImageView {
+    private static var _url = [String:String]()
+    
+    var url: String {
+        get {
+            let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+            return UIImageView._url[tmpAddress] ?? ""
         }
-        
-        let cache =  URLCache.shared
-        let request = URLRequest(url: imageURL)
-        DispatchQueue.global(qos: .userInitiated).async {
-            if let data = cache.cachedResponse(for: request)?.data, let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self.transition(toImage: image)
-                }
-            } else {
-                URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
-                    if let data = data, let response = response, ((response as? HTTPURLResponse)?.statusCode ?? 500) < 300, let image = UIImage(data: data) {
-                        let cachedData = CachedURLResponse(response: response, data: data)
-                        cache.storeCachedResponse(cachedData, for: request)
-                        DispatchQueue.main.async {
-                            self.transition(toImage: image)
-                        }
-                    }
-                }).resume()
-            }
+        set(newValue) {
+            let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+            UIImageView._url[tmpAddress] = newValue
         }
     }
     
-    public func transition(toImage image: UIImage?) {
-        UIView.transition(with: self, duration: 0.3,
-                          options: [.transitionCrossDissolve],
-                          animations: {
-                            self.image = image
-        },
-                          completion: nil)
+    func loadImageAsyc(fromURL stringUrl : String, fromPomangamAPI: Bool = true) {
+        let stringUrl = API.baseURL + stringUrl
+        guard let url = URL(string: stringUrl) else { return }
+        
+        self.url = stringUrl
+        
+        if let imageFromCache = imageCache.object(forKey: stringUrl as AnyObject) as? UIImage {
+            self.image = imageFromCache
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { (data:Data?, res:URLResponse?, error:Error?) in
+            if error != nil {
+                print(error?.localizedDescription)
+                return
+            }
+            
+            DispatchQueue.global().async {
+                guard let data = data, let imageToCache = UIImage(data: data) else {
+                    print("Image Data Error")
+                    return
+                }
+                
+                if self.url == stringUrl {
+                    DispatchQueue.main.async {
+                        self.image = imageToCache
+                        imageCache.setObject(imageToCache, forKey: stringUrl as AnyObject)
+                    }
+                }
+            }
+            }.resume()
     }
 }

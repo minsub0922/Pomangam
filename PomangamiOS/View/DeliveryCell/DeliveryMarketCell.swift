@@ -14,6 +14,6 @@ class DeliveryMarketCell: UICollectionViewCell, CellProtocol {
     
     func setupView(model: DeliveryMarketCellViewModel) {
         self.titleLabel.text = model.name
-        self.imageView.loadImageAsync(fromURL: model.imageUrl)
+        self.imageView.loadImageAsyc(fromURL: model.imageUrl)
     }
 }
