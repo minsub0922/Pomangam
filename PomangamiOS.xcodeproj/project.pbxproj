@@ -34,6 +34,8 @@
 		AF99D4ED233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF99D4EB233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib */; };
 		AF99D4F0233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99D4EE233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift */; };
 		AF99D4F1233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF99D4EF233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.xib */; };
+		AFC92E10233B13C20054D92E /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC92E0F233B13C20054D92E /* Cart.swift */; };
+		AFC92E12233B152B0054D92E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC92E11233B152B0054D92E /* Product.swift */; };
 		AFD5E32C231424B10031E375 /* NavigationTitleDropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5E32B231424B10031E375 /* NavigationTitleDropDownButton.swift */; };
 		AFDD4C5F22FC0BA200CD8CD5 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDD4C5E22FC0BA200CD8CD5 /* DeliveryViewController.swift */; };
 		AFDD4C6122FC0BAD00CD8CD5 /* Delivery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDD4C6022FC0BAD00CD8CD5 /* Delivery.storyboard */; };
@@ -112,6 +114,8 @@
 		AF99D4EB233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryHeaderAdvertisementChildCell.xib; sourceTree = "<group>"; };
 		AF99D4EE233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryHeaderAdvertisementCell.swift; sourceTree = "<group>"; };
 		AF99D4EF233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryHeaderAdvertisementCell.xib; sourceTree = "<group>"; };
+		AFC92E0F233B13C20054D92E /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		AFC92E11233B152B0054D92E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		AFD5E32B231424B10031E375 /* NavigationTitleDropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleDropDownButton.swift; sourceTree = "<group>"; };
 		AFDD4C5E22FC0BA200CD8CD5 /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
 		AFDD4C6022FC0BAD00CD8CD5 /* Delivery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Delivery.storyboard; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 				AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */,
 				AF4A3EA5230F8364003F3825 /* TokenModel.swift */,
 				AFF148EB23210514006FB68B /* MarketResponse.swift */,
+				AFC92E11233B152B0054D92E /* Product.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -244,6 +249,14 @@
 				AF6F47CB2305A19C00B377C7 /* APISource.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		AFC92E0E233B13A10054D92E /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				AFC92E0F233B13C20054D92E /* Cart.swift */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 		AFDD4C1722FBEE4900CD8CD5 /* ViewController */ = {
@@ -264,6 +277,7 @@
 		AFDD4C1822FBEE4D00CD8CD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AFC92E0E233B13A10054D92E /* Singleton */,
 				AF4A3EA7230F8531003F3825 /* NetworkModel */,
 				AF4A3EA8230F8554003F3825 /* User.swift */,
 			);
@@ -697,6 +711,8 @@
 				AFDD4CC022FC49E400CD8CD5 /* StaticLists.swift in Sources */,
 				AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */,
 				AF4A3E9C230F6FDE003F3825 /* LoginViewController.swift in Sources */,
+				AFC92E10233B13C20054D92E /* Cart.swift in Sources */,
+				AFC92E12233B152B0054D92E /* Product.swift in Sources */,
 				AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */,
 				AF11247B230847E0009CAB21 /* DeliveryListPagerController.swift in Sources */,
 				AFDD4CC322FC634C00CD8CD5 /* UIlabelFlexible.swift in Sources */,
