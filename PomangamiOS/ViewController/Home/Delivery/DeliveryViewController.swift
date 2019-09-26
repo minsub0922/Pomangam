@@ -100,7 +100,7 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
         guard let cellType = DeliveryCellType(rawValue: section) else {return .zero}
         switch cellType {
         case .market:
-            return self.collectionView.bounds.width/50
+            return 1
         default:
             return .zero
         }
@@ -117,7 +117,7 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
         case .arrivalSpot:
             return CGSize(width: fullWidth, height: fullHeight * 0.06)
         case .market:
-            return CGSize(width: collectionView.bounds.width/5-1, height: fullHeight * 0.15)
+            return CGSize(width: collectionView.bounds.width/3-1, height: fullHeight * 0.22)
         default:
             return .zero
         }
