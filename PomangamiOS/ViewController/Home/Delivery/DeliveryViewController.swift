@@ -22,13 +22,14 @@ class DeliveryViewController: UIViewController {
         super.viewDidLoad()
         
         setupNavigationBarButtons()
+        
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
     
         collectionView.contentInset = .init(top: 0, left: 0, bottom: 0, right: 0)
         collectionView.registerNib(DeliveryHeaderAdvertisementCell.self)
         collectionView.registerNib(DeliveryArrivalCell.self)
         collectionView.registerNib(DeliveryMarketCell.self)
     }
-    
     
     private func setupNavigationBarButtons() {
         navigationButtonView.configure("한국항공대학교")
@@ -115,7 +116,7 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
         case .headerAd:
             return CGSize(width: fullWidth, height: fullHeight * 0.3)
         case .arrivalSpot:
-            return CGSize(width: fullWidth, height: fullHeight * 0.06)
+            return CGSize(width: fullWidth, height: fullHeight * 0.1)
         case .market:
             return CGSize(width: collectionView.bounds.width/3-1, height: fullHeight * 0.22)
         default:

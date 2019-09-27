@@ -11,9 +11,11 @@ import UIKit
 class DeliveryMarketCell: UICollectionViewCell, CellProtocol {
     @IBOutlet weak var titleLabel: UILabelFlexible!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var rating: UILabelFlexible!
     
     func setupView(model: DeliveryMarketCellViewModel) {
         self.titleLabel.text = model.name
         self.imageView.loadImageAsyc(fromURL: model.imageUrl)
+        self.rating.text = String(model.rating)
     }
 }

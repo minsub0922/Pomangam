@@ -18,6 +18,7 @@ struct DeliveryMarketCellViewModel: CellViewModel {
     var imageUrl: String
     var name: String
     var marketId: Int
+    var rating: Double
 }
 
 protocol CellProtocol {

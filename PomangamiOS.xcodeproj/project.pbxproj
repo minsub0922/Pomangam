@@ -10,8 +10,7 @@
 		5E14B85DCC814F29A4A0DAED /* Pods_PomangamiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */; };
 		A08B6FE6CE785B1FAD49EDDB /* Pods_PomangamiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */; };
 		AF0A3738230E76BA009AEBEA /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A3737230E76BA009AEBEA /* MenuBar.swift */; };
-		AF11247B230847E0009CAB21 /* DeliveryListPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11247A230847E0009CAB21 /* DeliveryListPagerController.swift */; };
-		AF11247F23084C86009CAB21 /* DeliveryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11247E23084C86009CAB21 /* DeliveryListViewController.swift */; };
+		AF11247B230847E0009CAB21 /* DeliveryMenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11247A230847E0009CAB21 /* DeliveryMenuListViewController.swift */; };
 		AF4A3E88230EFC3C003F3825 /* DeliveryArrivalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3E86230EFC3C003F3825 /* DeliveryArrivalCell.swift */; };
 		AF4A3E89230EFC3C003F3825 /* DeliveryArrivalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4A3E87230EFC3C003F3825 /* DeliveryArrivalCell.xib */; };
 		AF4A3E90230EFD12003F3825 /* DeliveryMarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3E8E230EFD12003F3825 /* DeliveryMarketCell.swift */; };
@@ -90,8 +89,7 @@
 		4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0A3737230E76BA009AEBEA /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
-		AF11247A230847E0009CAB21 /* DeliveryListPagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListPagerController.swift; sourceTree = "<group>"; };
-		AF11247E23084C86009CAB21 /* DeliveryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListViewController.swift; sourceTree = "<group>"; };
+		AF11247A230847E0009CAB21 /* DeliveryMenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMenuListViewController.swift; sourceTree = "<group>"; };
 		AF4A3E86230EFC3C003F3825 /* DeliveryArrivalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryArrivalCell.swift; sourceTree = "<group>"; };
 		AF4A3E87230EFC3C003F3825 /* DeliveryArrivalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryArrivalCell.xib; sourceTree = "<group>"; };
 		AF4A3E8E230EFD12003F3825 /* DeliveryMarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMarketCell.swift; sourceTree = "<group>"; };
@@ -201,8 +199,7 @@
 			children = (
 				AFDD4C6022FC0BAD00CD8CD5 /* Delivery.storyboard */,
 				AFDD4C5E22FC0BA200CD8CD5 /* DeliveryViewController.swift */,
-				AF11247A230847E0009CAB21 /* DeliveryListPagerController.swift */,
-				AF11247E23084C86009CAB21 /* DeliveryListViewController.swift */,
+				AF11247A230847E0009CAB21 /* DeliveryMenuListViewController.swift */,
 			);
 			path = Delivery;
 			sourceTree = "<group>";
@@ -696,7 +693,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFDD4C6B22FC0BE100CD8CD5 /* CommunityViewController.swift in Sources */,
-				AF11247F23084C86009CAB21 /* DeliveryListViewController.swift in Sources */,
 				AF4A3EA4230F7EF2003F3825 /* UIButtonCheckable.swift in Sources */,
 				AF4A3E97230EFF0F003F3825 /* PomangamModule.swift in Sources */,
 				AF0A3738230E76BA009AEBEA /* MenuBar.swift in Sources */,
@@ -714,7 +710,7 @@
 				AFC92E10233B13C20054D92E /* Cart.swift in Sources */,
 				AFC92E12233B152B0054D92E /* Product.swift in Sources */,
 				AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */,
-				AF11247B230847E0009CAB21 /* DeliveryListPagerController.swift in Sources */,
+				AF11247B230847E0009CAB21 /* DeliveryMenuListViewController.swift in Sources */,
 				AFDD4CC322FC634C00CD8CD5 /* UIlabelFlexible.swift in Sources */,
 				AF4A3EA9230F8554003F3825 /* User.swift in Sources */,
 				AFF148EC23210514006FB68B /* MarketResponse.swift in Sources */,

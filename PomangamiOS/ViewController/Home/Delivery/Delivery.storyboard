@@ -37,7 +37,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3RB-gv-dqb">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3RB-gv-dqb">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fo9-qJ-970">
@@ -84,55 +84,14 @@
         <!--학생회관 뒤-->
         <scene sceneID="1ce-Us-LeW">
             <objects>
-                <viewController id="vdd-pV-7Kp" customClass="DeliveryListPagerController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vdd-pV-7Kp" customClass="DeliveryMenuListViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IUE-XE-Dsw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y7p-pU-XRW" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="88" width="414" height="64"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="484-Pr-dxs"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ru8-nq-9Pr">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="q8Y-NX-jU4">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gof-JW-wxj">
-                                <rect key="frame" x="0.0" y="152" width="414" height="710"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="u06-Jz-jLe" firstAttribute="bottom" secondItem="Gof-JW-wxj" secondAttribute="bottom" id="1IL-qg-IJW"/>
-                            <constraint firstItem="y7p-pU-XRW" firstAttribute="leading" secondItem="u06-Jz-jLe" secondAttribute="leading" id="B5N-50-S71"/>
-                            <constraint firstItem="y7p-pU-XRW" firstAttribute="top" secondItem="u06-Jz-jLe" secondAttribute="top" id="CkL-pm-nfO"/>
-                            <constraint firstItem="Gof-JW-wxj" firstAttribute="top" secondItem="y7p-pU-XRW" secondAttribute="bottom" id="FoK-eM-Cm8"/>
-                            <constraint firstItem="u06-Jz-jLe" firstAttribute="trailing" secondItem="Gof-JW-wxj" secondAttribute="trailing" id="Hjv-ij-B5C"/>
-                            <constraint firstItem="u06-Jz-jLe" firstAttribute="trailing" secondItem="y7p-pU-XRW" secondAttribute="trailing" id="XaX-wb-NLS"/>
-                            <constraint firstItem="Gof-JW-wxj" firstAttribute="leading" secondItem="u06-Jz-jLe" secondAttribute="leading" id="ygB-pO-6sq"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="u06-Jz-jLe"/>
                     </view>
                     <navigationItem key="navigationItem" title="학생회관 뒤" id="0g4-fi-Z5v"/>
-                    <connections>
-                        <outlet property="buttonBarView" destination="y7p-pU-XRW" id="5u0-9G-EQF"/>
-                        <outlet property="containerView" destination="Gof-JW-wxj" id="ia0-zH-96p"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vr7-bh-0R6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

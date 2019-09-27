@@ -42,7 +42,7 @@ struct Market: Codable {
     }
     
     var asMarketViewModel: DeliveryMarketCellViewModel {
-        return DeliveryMarketCellViewModel(imageUrl: imageURL, name: name, marketId: index)
+        return DeliveryMarketCellViewModel(imageUrl: imageURL, name: name, marketId: index, rating: Double(numberOfLikes))
     }
 }
 

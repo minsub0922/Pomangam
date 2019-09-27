@@ -9,7 +9,7 @@
 import UIKit
 import XLPagerTabStrip
 
-class DeliveryListPagerController: ButtonBarPagerTabStripViewController {
+class DeliveryMenuListViewController: UIViewController {
     var navigationButtonView: NavigationTitleDropDownButton = NavigationTitleDropDownButton()
 
     override func viewDidLoad() {
@@ -34,11 +34,5 @@ class DeliveryListPagerController: ButtonBarPagerTabStripViewController {
     
     @objc private func navigationTitleTapAction(_ sender: Any) {
         print("touched??")
-    }
-    
-    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let vc = UIStoryboard(name: "Delivery", bundle: nil).instantiateViewController(DeliveryListViewController.self)
-        vc.category = "hellow trips !! "
-        return [vc, vc, vc]
     }
 }
