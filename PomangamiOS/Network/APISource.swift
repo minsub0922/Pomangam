@@ -53,7 +53,25 @@ class APISource: APISourceProtocol {
         }
     }
     
-    func getMarkets(deliverySiteIndex: String, type: StoreType, orderBy: StoreOrderType? = nil, size: String? = nil, page: String? = nil, completion: @escaping ([Market]) -> Void) {
+    func getDeliveryMarkets(arrivalDate: String, detailForDeliverySiteIndex: String, completion: @escaping ([DeliveryMarket]) -> Void) {
+        let params = [
+            "arrivalDate": arrivalDate,
+            "detailForDeliverySiteIdx": detailForDeliverySiteIndex
+        ] as [String: Any]
+        
+        get("/stores/search/getInquiryResult", params: params, headers: headers) { (res: NetworkResult<(Int, [DeliveryMarket])>) in
+            switch res {
+            case .networkSuccess(let data):
+                completion(data.1)
+            case .networkError(let error):
+                print(error)
+            case .networkFail:
+                print("Network Fail")
+            }
+        }
+    }
+    
+    func getAffiliateMarkets(deliverySiteIndex: String, type: StoreType, orderBy: StoreOrderType? = nil, size: String? = nil, page: String? = nil, completion: @escaping ([Market]) -> Void) {
         //deliverySiteIdx=&type=&orderBy=&size=&page=
 //        let params = [
 //            "deliverySiteIdx": deliverySiteIndex,

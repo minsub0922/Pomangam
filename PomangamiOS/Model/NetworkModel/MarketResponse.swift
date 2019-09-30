@@ -40,10 +40,6 @@ struct Market: Codable {
         case numberOfComments = "cnt_comment"
         case imageURL = "imgpath"
     }
-    
-    var asMarketViewModel: DeliveryMarketCellViewModel {
-        return DeliveryMarketCellViewModel(imageUrl: imageURL, name: name, marketId: index, rating: Double(numberOfLikes))
-    }
 }
 
 enum StoreType: Int {

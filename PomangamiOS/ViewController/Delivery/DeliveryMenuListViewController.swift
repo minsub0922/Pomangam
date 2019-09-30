@@ -16,7 +16,6 @@ class DeliveryMenuListViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        
     }
     
     private func setupUI() {

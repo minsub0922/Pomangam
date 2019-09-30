@@ -12,7 +12,7 @@ import Alamofire
 class DeliveryViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     private var headerAdvertisements: [AdvertiseDto] = []
-    private var markets: [Market] = []
+    private var markets: [DeliveryMarket] = []
     private var navigationButtonView: NavigationTitleDropDownButton = NavigationTitleDropDownButton()
     private var homeHeaderAdCellViewModel: DeliveryHeaderAdvertisementCellViewModel {
         return DeliveryHeaderAdvertisementCellViewModel(headerAdvertisements: headerAdvertisements)
@@ -20,6 +20,9 @@ class DeliveryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let vc = UIStoryboard.init(name: "Delivery", bundle: nil).instantiateViewController(DeliveryMenuListViewController.self)
+        present( vc, animated: true, completion: nil)
         
         setupNavigationBarButtons()
         
@@ -58,13 +61,13 @@ class DeliveryViewController: UIViewController {
                 self.headerAdvertisements = res.advertiseForMainDtoList
                 self.collectionView.reloadSection(section: DeliveryCellType.headerAd.rawValue)
             }
-        }
-        
-        APISource.shared.getMarkets(deliverySiteIndex: "1", type: .affiliate) { (res) in
-            print(res)
-            self.markets = res
-            self.collectionView.reloadSection(section: DeliveryCellType.market.rawValue)
             
+            APISource.shared.getDeliveryMarkets(arrivalDate: "1", detailForDeliverySiteIndex: "1") { (res) in
+                     print(res)
+                     self.markets = res
+                     self.collectionView.reloadSection(section: DeliveryCellType.market.rawValue)
+                     
+                 }
         }
     }
 }
@@ -136,7 +139,7 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
             return cell
         case .market:
             let cell = collectionView.dequeueReusableCell(DeliveryMarketCell.self, for: indexPath)
-            cell.setupView(model: markets[indexPath.row].asMarketViewModel)
+            cell.setupView(model: markets[indexPath.row].asDeliveryMarketViewModel)
             return cell;
         default:
             break;
