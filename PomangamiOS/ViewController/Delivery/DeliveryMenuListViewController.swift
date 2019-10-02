@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import XLPagerTabStrip
 
 class DeliveryMenuListViewController: UIViewController {
     var navigationButtonView: NavigationTitleDropDownButton = NavigationTitleDropDownButton()

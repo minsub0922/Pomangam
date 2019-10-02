@@ -101,12 +101,12 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        guard let cellType = DeliveryCellType(rawValue: section) else {return .zero}
+        guard let cellType = DeliveryCellType(rawValue: section) else {return .leastNonzeroMagnitude}
         switch cellType {
         case .market:
             return 1
         default:
-            return .zero
+            return .leastNonzeroMagnitude
         }
     }
     
