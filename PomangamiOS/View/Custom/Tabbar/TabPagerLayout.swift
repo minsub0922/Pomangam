@@ -72,7 +72,7 @@ class TabPagerLayout: UIView, CustomMenuBarDelegate{
         pageCollectionView.backgroundColor = .gray
         pageCollectionView.showsHorizontalScrollIndicator = false
         pageCollectionView.isPagingEnabled = true
-        pageCollectionView.register(UINib(nibName: PageCell.reusableIdentifier, bundle: nil), forCellWithReuseIdentifier: PageCell.reusableIdentifier)
+        pageCollectionView.registerNib(PageCell.self)
         self.addSubview(pageCollectionView)
         pageCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         pageCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
@@ -83,8 +83,7 @@ class TabPagerLayout: UIView, CustomMenuBarDelegate{
 //MARK:- UICollectionViewDelegate, UICollectionViewDataSource
 extension TabPagerLayout: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PageCell.reusableIdentifier, for: indexPath) as! PageCell
-        
+        let cell = collectionView.dequeueReusableCell(PageCell.self, for: indexPath)
         return cell
     }
     

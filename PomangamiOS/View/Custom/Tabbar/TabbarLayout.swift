@@ -48,7 +48,7 @@ class TabbarLayout: UIView {
         customTabBarCollectionView.delegate = self
         customTabBarCollectionView.dataSource = self
         customTabBarCollectionView.showsHorizontalScrollIndicator = false
-        customTabBarCollectionView.register(UINib(nibName: CustomCell.reusableIdentifier, bundle: nil), forCellWithReuseIdentifier: CustomCell.reusableIdentifier)
+        customTabBarCollectionView.registerNib(PageCell.self)
         customTabBarCollectionView.isScrollEnabled = false
         
         let indexPath = IndexPath(item: 0, section: 0)
@@ -78,7 +78,7 @@ class TabbarLayout: UIView {
 extension TabbarLayout: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCell.reusableIdentifier, for: indexPath) as! CustomCell
+        let cell = collectionView.dequeueReusableCell(CustomCell.self, for: indexPath)
         return cell
     }
     
@@ -127,86 +127,3 @@ extension UIView {
     }
 }
 
-class CustomCell: UICollectionViewCell {
-    
-    var label: UILabel = {
-        let label = UILabel()
-        label.text = "Tab"
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        label.textColor = .lightGray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    override var isSelected: Bool {
-        didSet{
-            print("Changed")
-            self.label.textColor = isSelected ? .black : .lightGray
-        }
-    }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.addSubview(label)
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-    }
-}
-
-
-class PageCell: UICollectionViewCell {
-    var collectionView: UICollectionView = {
-        let collectionViewLayout = UICollectionViewFlowLayout()
-        collectionViewLayout.scrollDirection = .vertical
-        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), collectionViewLayout: collectionViewLayout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        return collectionView
-    }()
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.backgroundColor = .gray
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.backgroundColor = .gray
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(UINib(nibName: MarketMenuCell.reusableIdentifier, bundle: nil), forCellWithReuseIdentifier: MarketMenuCell.reusableIdentifier)
-        self.addSubview(collectionView)
-        collectionView.frame = self.frame
-    }
-}
-
-extension PageCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width / 2 - 5, height: collectionView.bounds.width / 2 - 1)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MarketMenuCell.reusableIdentifier, for: indexPath) as! MarketMenuCell
-        return cell
-    }
-    
-    
-}
-
-class MarketMenuCell: UICollectionViewCell {
-    var imageView: UIImageView {
-        let imageView = UIImageView(frame: CGRect(origin: .zero, size: .zero))
-        return imageView
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.addSubview(imageView)
-        self.backgroundColor = .white
-        imageView.frame = self.frame
-    }
-}

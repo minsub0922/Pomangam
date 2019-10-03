@@ -21,9 +21,6 @@ class DeliveryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let vc = UIStoryboard.init(name: "Delivery", bundle: nil).instantiateViewController(DeliveryMenuListViewController.self)
-        present( vc, animated: true, completion: nil)
-        
         setupNavigationBarButtons()
         
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
@@ -57,18 +54,17 @@ class DeliveryViewController: UIViewController {
             
             let params = [ "deliverySiteIdx": 1 ]
             APISource.shared.getMainall(params: params) { res in
-                //print(res)
                 self.headerAdvertisements = res.advertiseForMainDtoList
                 self.collectionView.reloadSection(section: DeliveryCellType.headerAd.rawValue)
             }
             
-            APISource.shared.getDeliveryMarkets(arrivalDate: "1", detailForDeliverySiteIndex: "1") { (res) in
-                     print(res)
-                     self.markets = res
-                     self.collectionView.reloadSection(section: DeliveryCellType.market.rawValue)
-                     
-                 }
+            APISource.shared.getDeliveryMarkets(arrivalDate: "2019-10-03 18:00:00", detailForDeliverySiteIndex: "1") { (res) in
+                print(res)
+                self.markets = res
+                self.collectionView.reloadSection(section: DeliveryCellType.market.rawValue)
+            }
         }
+        
     }
 }
 
@@ -95,8 +91,17 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
             return 1//fix
         case .market:
             return markets.count;
-        default:
-            return 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cellType = DeliveryCellType(rawValue: indexPath.section) else {return}
+        switch cellType {
+        case .headerAd, .arrivalSpot:
+            break
+        case .market:
+            navigationController?.pushViewController(storyboard: "Delivery",viewController: DeliveryMenuListViewController.self)
+            break
         }
     }
     

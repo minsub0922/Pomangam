@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10A623459D9C007D2C78 /* PageCell.swift */; };
+		1A6A10A923459D9C007D2C78 /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10A723459D9C007D2C78 /* PageCell.xib */; };
+		1A6A10AC2345A1F4007D2C78 /* MarketMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10AA2345A1F4007D2C78 /* MarketMenuCell.swift */; };
+		1A6A10AD2345A1F4007D2C78 /* MarketMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10AB2345A1F4007D2C78 /* MarketMenuCell.xib */; };
+		1A6A10B42345A2C6007D2C78 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10B22345A2C6007D2C78 /* CustomCell.swift */; };
+		1A6A10B52345A2C6007D2C78 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10B32345A2C6007D2C78 /* CustomCell.xib */; };
 		1A6AF01E2344CB98007ACE44 /* TabPagerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */; };
 		5E14B85DCC814F29A4A0DAED /* Pods_PomangamiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */; };
 		A08B6FE6CE785B1FAD49EDDB /* Pods_PomangamiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */; };
@@ -33,8 +39,6 @@
 		AF8A010C233F21B3002EAEA6 /* DeliveryMarketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A010B233F21B3002EAEA6 /* DeliveryMarketResponse.swift */; };
 		AF8A01E8233F6927002EAEA6 /* DeliveryMenuListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A01E6233F6927002EAEA6 /* DeliveryMenuListCell.swift */; };
 		AF8A01E9233F6927002EAEA6 /* DeliveryMenuListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8A01E7233F6927002EAEA6 /* DeliveryMenuListCell.xib */; };
-		AF8A01EC233F6A17002EAEA6 /* TabmenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A01EA233F6A17002EAEA6 /* TabmenuBarCell.swift */; };
-		AF8A01ED233F6A17002EAEA6 /* TabmenuBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8A01EB233F6A17002EAEA6 /* TabmenuBarCell.xib */; };
 		AF99D4EC233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99D4EA233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift */; };
 		AF99D4ED233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF99D4EB233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib */; };
 		AF99D4F0233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99D4EE233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift */; };
@@ -91,6 +95,12 @@
 
 /* Begin PBXFileReference section */
 		172BAE90DE915F9CEAD5EA8A /* Pods-PomangamiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOS.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOS/Pods-PomangamiOS.release.xcconfig"; sourceTree = "<group>"; };
+		1A6A10A623459D9C007D2C78 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		1A6A10A723459D9C007D2C78 /* PageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
+		1A6A10AA2345A1F4007D2C78 /* MarketMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketMenuCell.swift; sourceTree = "<group>"; };
+		1A6A10AB2345A1F4007D2C78 /* MarketMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketMenuCell.xib; sourceTree = "<group>"; };
+		1A6A10B22345A2C6007D2C78 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		1A6A10B32345A2C6007D2C78 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPagerLayout.swift; sourceTree = "<group>"; };
 		3B733C07C54F726A09E26E87 /* Pods-PomangamiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PomangamiOSTests/Pods-PomangamiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CC65E7CAA8B949866BEAD9E /* Pods-PomangamiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOSUITests/Pods-PomangamiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,8 +129,6 @@
 		AF8A010B233F21B3002EAEA6 /* DeliveryMarketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMarketResponse.swift; sourceTree = "<group>"; };
 		AF8A01E6233F6927002EAEA6 /* DeliveryMenuListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMenuListCell.swift; sourceTree = "<group>"; };
 		AF8A01E7233F6927002EAEA6 /* DeliveryMenuListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryMenuListCell.xib; sourceTree = "<group>"; };
-		AF8A01EA233F6A17002EAEA6 /* TabmenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabmenuBarCell.swift; sourceTree = "<group>"; };
-		AF8A01EB233F6A17002EAEA6 /* TabmenuBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabmenuBarCell.xib; sourceTree = "<group>"; };
 		AF99D4EA233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryHeaderAdvertisementChildCell.swift; sourceTree = "<group>"; };
 		AF99D4EB233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryHeaderAdvertisementChildCell.xib; sourceTree = "<group>"; };
 		AF99D4EE233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryHeaderAdvertisementCell.swift; sourceTree = "<group>"; };
@@ -213,6 +221,12 @@
 			children = (
 				AFBBB144234216AD0061CFE8 /* TabbarLayout.swift */,
 				1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */,
+				1A6A10A623459D9C007D2C78 /* PageCell.swift */,
+				1A6A10A723459D9C007D2C78 /* PageCell.xib */,
+				1A6A10AA2345A1F4007D2C78 /* MarketMenuCell.swift */,
+				1A6A10AB2345A1F4007D2C78 /* MarketMenuCell.xib */,
+				1A6A10B22345A2C6007D2C78 /* CustomCell.swift */,
+				1A6A10B32345A2C6007D2C78 /* CustomCell.xib */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -278,8 +292,6 @@
 			children = (
 				AF8A01E6233F6927002EAEA6 /* DeliveryMenuListCell.swift */,
 				AF8A01E7233F6927002EAEA6 /* DeliveryMenuListCell.xib */,
-				AF8A01EA233F6A17002EAEA6 /* TabmenuBarCell.swift */,
-				AF8A01EB233F6A17002EAEA6 /* TabmenuBarCell.xib */,
 			);
 			path = DeliveryMenuListCell;
 			sourceTree = "<group>";
@@ -594,13 +606,15 @@
 			files = (
 				AFDD4C6922FC0BD900CD8CD5 /* More.storyboard in Resources */,
 				AF4A3E89230EFC3C003F3825 /* DeliveryArrivalCell.xib in Resources */,
+				1A6A10A923459D9C007D2C78 /* PageCell.xib in Resources */,
 				AFF0C84522F659D2007D26DD /* LaunchScreen.storyboard in Resources */,
 				AFDD4C6D22FC0BEA00CD8CD5 /* Community.storyboard in Resources */,
 				AFF0C84222F659D2007D26DD /* Assets.xcassets in Resources */,
 				AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */,
-				AF8A01ED233F6A17002EAEA6 /* TabmenuBarCell.xib in Resources */,
+				1A6A10AD2345A1F4007D2C78 /* MarketMenuCell.xib in Resources */,
 				AFDD4C6122FC0BAD00CD8CD5 /* Delivery.storyboard in Resources */,
 				AF99D4ED233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib in Resources */,
+				1A6A10B52345A2C6007D2C78 /* CustomCell.xib in Resources */,
 				AF8A01E9233F6927002EAEA6 /* DeliveryMenuListCell.xib in Resources */,
 				AF99D4F1233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.xib in Resources */,
 				AF4A3E9A230F6FBF003F3825 /* Login.storyboard in Resources */,
@@ -716,12 +730,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A6A10B42345A2C6007D2C78 /* CustomCell.swift in Sources */,
 				AFDD4C6B22FC0BE100CD8CD5 /* CommunityViewController.swift in Sources */,
 				AFBBB145234216AD0061CFE8 /* TabbarLayout.swift in Sources */,
 				AF4A3EA4230F7EF2003F3825 /* UIButtonCheckable.swift in Sources */,
 				AF4A3E97230EFF0F003F3825 /* PomangamModule.swift in Sources */,
 				AF0A3738230E76BA009AEBEA /* MenuBar.swift in Sources */,
 				AF4A3E90230EFD12003F3825 /* DeliveryMarketCell.swift in Sources */,
+				1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */,
 				AF5B31F8232D3D8E0052F495 /* DropDownLabel.swift in Sources */,
 				AFDD4CC522FC7AFE00CD8CD5 /* UIViewRounded.swift in Sources */,
 				AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */,
@@ -731,7 +747,6 @@
 				AF99D4F0233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift in Sources */,
 				AFDD4CC022FC49E400CD8CD5 /* StaticLists.swift in Sources */,
 				AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */,
-				AF8A01EC233F6A17002EAEA6 /* TabmenuBarCell.swift in Sources */,
 				AF4A3E9C230F6FDE003F3825 /* LoginViewController.swift in Sources */,
 				AFC92E10233B13C20054D92E /* Cart.swift in Sources */,
 				AFC92E12233B152B0054D92E /* Product.swift in Sources */,
@@ -760,6 +775,7 @@
 				AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */,
 				AF4A3EA2230F7B1B003F3825 /* UIButtonSelectorRounded.swift in Sources */,
 				AFDD4C5F22FC0BA200CD8CD5 /* DeliveryViewController.swift in Sources */,
+				1A6A10AC2345A1F4007D2C78 /* MarketMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

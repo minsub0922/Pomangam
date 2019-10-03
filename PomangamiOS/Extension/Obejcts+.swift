@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 extension NSObject {
     var className: String {
@@ -65,4 +65,11 @@ extension UserDefaults{
 //        setCustomObject(object: array, key: key)
 //        completion()
 //    }
+}
+
+extension UINavigationController {
+    func pushViewController<T: UIViewController>(storyboard: String = "Main", viewController: T.Type) {
+        let target = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(viewController)
+        self.pushViewController(target, animated: true)
+    }
 }
