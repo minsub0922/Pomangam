@@ -71,24 +71,12 @@ class APISource: APISourceProtocol {
         }
     }
     
-    func getAffiliateMarkets(deliverySiteIndex: String, type: StoreType, orderBy: StoreOrderType? = nil, size: String? = nil, page: String? = nil, completion: @escaping ([Market]) -> Void) {
-        //deliverySiteIdx=&type=&orderBy=&size=&page=
-//        let params = [
-//            "deliverySiteIdx": deliverySiteIndex,
-//            "type": type.rawValue,
-//            "orderBy": orderBy?.rawValue ?? "",
-//            "size": size ?? "",
-//            "page": page ?? ""
-//            ] as [String : Any]
-        
+    func getMarketDetail(storeIndex: Int, completion: @escaping (MarketDetailResponse) -> Void) {
         let params = [
-            "deliverySiteIdx": deliverySiteIndex,
-            "type": type.rawValue
+            "storeIdx": storeIndex,
             ] as [String : Any]
         
-        //need to make struct or object for params !!!
-        
-        get("/stores/search/findByType", params: params, headers: headers) { (res: NetworkResult<(Int, [Market])>) in
+        get("/stores/search/findWithCategory", params: params, headers: headers) { (res: NetworkResult<(Int, MarketDetailResponse)>) in
             switch res {
             case .networkSuccess(let data):
                 completion(data.1)
@@ -98,7 +86,57 @@ class APISource: APISourceProtocol {
                 print("Network Fail")
             }
         }
-        
-        //get("/stores/search/findByType", params: params, headers: headers, completion: responseBody(completion: completion))
     }
+    
+    func getMarketDetail(storeIndex: Int, orderBy: StoreOrderType? = nil, size: String? = nil, page: String? = nil, completion: @escaping ([MarketCommentResponse]) -> Void) {
+        let params = [
+            "storeIdx": storeIndex,
+            "orderBy": orderBy?.rawValue ?? "",
+            "size": size ?? "",
+            "page": page ?? ""
+            ] as [String : Any]
+        
+        get("/commentStores/search/findByStoreIdx", params: params, headers: headers) { (res: NetworkResult<(Int, [MarketCommentResponse])>) in
+            switch res {
+            case .networkSuccess(let data):
+                completion(data.1)
+            case .networkError(let error):
+                print(error)
+            case .networkFail:
+                print("Network Fail")
+            }
+        }
+    }
+    
+    
+//    func getAffiliateMarkets(deliverySiteIndex: String, type: StoreType, orderBy: StoreOrderType? = nil, size: String? = nil, page: String? = nil, completion: @escaping ([Market]) -> Void) {
+//        //deliverySiteIdx=&type=&orderBy=&size=&page=
+////        let params = [
+////            "deliverySiteIdx": deliverySiteIndex,
+////            "type": type.rawValue,
+////            "orderBy": orderBy?.rawValue ?? "",
+////            "size": size ?? "",
+////            "page": page ?? ""
+////            ] as [String : Any]
+//
+//        let params = [
+//            "deliverySiteIdx": deliverySiteIndex,
+//            "type": type.rawValue
+//            ] as [String : Any]
+//
+//        //need to make struct or object for params !!!
+//
+//        get("/stores/search/findByType", params: params, headers: headers) { (res: NetworkResult<(Int, [Market])>) in
+//            switch res {
+//            case .networkSuccess(let data):
+//                completion(data.1)
+//            case .networkError(let error):
+//                print(error)
+//            case .networkFail:
+//                print("Network Fail")
+//            }
+//        }
+//
+//        //get("/stores/search/findByType", params: params, headers: headers, completion: responseBody(completion: completion))
+//    }
 }

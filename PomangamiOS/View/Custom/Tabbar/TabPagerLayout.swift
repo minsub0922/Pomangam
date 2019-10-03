@@ -23,25 +23,12 @@ class TabPagerLayout: UIView, TabbarLayoutDelegate{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupHeaderView()
         setupCustomTabBar()
         setupPageCollectionView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setupHeaderView() {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        self.addSubview(button)
-        button.setTitle("asd", for: .normal)
-        button.setTitleColor(.dustyOrange, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        button.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        button.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 85).isActive = true
     }
     
     //MARK: Setup view
@@ -52,7 +39,7 @@ class TabPagerLayout: UIView, TabbarLayoutDelegate{
         customMenuBar.indicatorViewWidthConstraint.constant = self.frame.width / 5
         customMenuBar.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         customMenuBar.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        customMenuBar.topAnchor.constraint(equalTo: self.subviews[0].bottomAnchor).isActive = true
+        customMenuBar.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         customMenuBar.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
     

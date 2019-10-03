@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A39D7EC2345E5050002A3C6 /* MarketDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */; };
+		1A39D7EE2345E7580002A3C6 /* MarketCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */; };
+		1A39D7F02345EC660002A3C6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7EF2345EC660002A3C6 /* BaseViewController.swift */; };
 		1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10A623459D9C007D2C78 /* PageCell.swift */; };
 		1A6A10A923459D9C007D2C78 /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10A723459D9C007D2C78 /* PageCell.xib */; };
 		1A6A10AC2345A1F4007D2C78 /* PageChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10AA2345A1F4007D2C78 /* PageChildCell.swift */; };
@@ -17,6 +20,7 @@
 		1A6A10B92345B59B007D2C78 /* DeliveryTabpagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10B72345B59B007D2C78 /* DeliveryTabpagerCell.xib */; };
 		1A6A10BC2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10BA2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift */; };
 		1A6A10BD2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */; };
+		1A6A10BF2345BB85007D2C78 /* NotificationCenter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10BE2345BB85007D2C78 /* NotificationCenter+.swift */; };
 		1A6AF01E2344CB98007ACE44 /* TabPagerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */; };
 		5E14B85DCC814F29A4A0DAED /* Pods_PomangamiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */; };
 		A08B6FE6CE785B1FAD49EDDB /* Pods_PomangamiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */; };
@@ -96,6 +100,9 @@
 
 /* Begin PBXFileReference section */
 		172BAE90DE915F9CEAD5EA8A /* Pods-PomangamiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOS.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOS/Pods-PomangamiOS.release.xcconfig"; sourceTree = "<group>"; };
+		1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetailResponse.swift; sourceTree = "<group>"; };
+		1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCommentResponse.swift; sourceTree = "<group>"; };
+		1A39D7EF2345EC660002A3C6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1A6A10A623459D9C007D2C78 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		1A6A10A723459D9C007D2C78 /* PageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
 		1A6A10AA2345A1F4007D2C78 /* PageChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageChildCell.swift; sourceTree = "<group>"; };
@@ -106,6 +113,7 @@
 		1A6A10B72345B59B007D2C78 /* DeliveryTabpagerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryTabpagerCell.xib; sourceTree = "<group>"; };
 		1A6A10BA2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMenuListHeaderCell.swift; sourceTree = "<group>"; };
 		1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryMenuListHeaderCell.xib; sourceTree = "<group>"; };
+		1A6A10BE2345BB85007D2C78 /* NotificationCenter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+.swift"; sourceTree = "<group>"; };
 		1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPagerLayout.swift; sourceTree = "<group>"; };
 		3B733C07C54F726A09E26E87 /* Pods-PomangamiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PomangamiOSTests/Pods-PomangamiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CC65E7CAA8B949866BEAD9E /* Pods-PomangamiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOSUITests/Pods-PomangamiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -276,6 +284,8 @@
 				AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */,
 				AFC92E11233B152B0054D92E /* Product.swift */,
 				AF8A010B233F21B3002EAEA6 /* DeliveryMarketResponse.swift */,
+				1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */,
+				1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -355,6 +365,7 @@
 			children = (
 				AFDD4CAB22FC15E600CD8CD5 /* UIViewFunction+.swift */,
 				AFDD4CB922FC278100CD8CD5 /* UIViewEnum+.swift */,
+				1A6A10BE2345BB85007D2C78 /* NotificationCenter+.swift */,
 				AFDD4CBB22FC450500CD8CD5 /* Obejcts+.swift */,
 				AFDD4CBD22FC457800CD8CD5 /* Types+.swift */,
 				AF4A3E9F230F7900003F3825 /* UIColor+.swift */,
@@ -403,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				AFDD4CB022FC21B700CD8CD5 /* BaseRootViewController.swift */,
+				1A39D7EF2345EC660002A3C6 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -745,6 +757,8 @@
 				AFDD4CC522FC7AFE00CD8CD5 /* UIViewRounded.swift in Sources */,
 				AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */,
 				AFD5E32C231424B10031E375 /* NavigationTitleDropDownButton.swift in Sources */,
+				1A39D7EC2345E5050002A3C6 /* MarketDetailResponse.swift in Sources */,
+				1A39D7EE2345E7580002A3C6 /* MarketCommentResponse.swift in Sources */,
 				AFDD4C6722FC0BD200CD8CD5 /* MoreViewController.swift in Sources */,
 				AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */,
 				1A6A10B82345B59B007D2C78 /* DeliveryTabpagerCell.swift in Sources */,
@@ -777,9 +791,11 @@
 				AF4A3E88230EFC3C003F3825 /* DeliveryArrivalCell.swift in Sources */,
 				AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */,
 				1A6A10BC2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift in Sources */,
+				1A39D7F02345EC660002A3C6 /* BaseViewController.swift in Sources */,
 				AF4A3EA2230F7B1B003F3825 /* UIButtonSelectorRounded.swift in Sources */,
 				AFDD4C5F22FC0BA200CD8CD5 /* DeliveryViewController.swift in Sources */,
 				1A6A10AC2345A1F4007D2C78 /* PageChildCell.swift in Sources */,
+				1A6A10BF2345BB85007D2C78 /* NotificationCenter+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

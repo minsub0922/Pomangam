@@ -17,6 +17,8 @@ class PageCell: UICollectionViewCell {
         return collectionView
     }()
     
+    private var preY: CGFloat = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -59,5 +61,9 @@ extension PageCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         return cell
     }
     
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let y = scrollView.contentOffset.y
+        NotificationCenter.default.post(notificationName: .deliveryMenuListScrolled, object: ScrollDetails(y: preY - y))
+        preY = y
+    }
 }

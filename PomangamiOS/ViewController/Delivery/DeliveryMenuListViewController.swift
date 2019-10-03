@@ -8,13 +8,21 @@
 
 import UIKit
 
-class DeliveryMenuListViewController: UIViewController {
+class DeliveryMenuListViewController: BaseViewController {
     private var navigationButtonView: NavigationTitleDropDownButton = NavigationTitleDropDownButton()
-
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private var marketDetail: DeliveryMarket!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        addDeliveryMenuListScrollObserver()
+    }
+    
+    override func setPacket(packet: BaseViewController.Packet) {
+        guard let marketDetail = packet as? DeliveryMarket else {return}
+        self.marketDetail = marketDetail
     }
     
     private func setupUI() {
@@ -29,23 +37,40 @@ class DeliveryMenuListViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.isScrollEnabled = false
         collectionView.registerNib(DeliveryMenuListHeaderCell.self)
         collectionView.registerNib(DeliveryTabpagerCell.self)
         self.view.addSubview(collectionView)
         collectionView.addAutoLayout(parent: self.view)
     }
     
-   
-
     @objc private func navigationRightButtonTapAction(_ sender: Any) {
         print("tapped Right Button")
     }
     
     @objc private func navigationTitleTapAction(_ sender: Any) {
         print("touched??")
+    }
+    
+    private func addDeliveryMenuListScrollObserver() {
+        NotificationCenter.default.addObserver(
+            target: self,
+            notificationName: .deliveryMenuListScrolled,
+            selector: #selector(deliveryMenuListScrolledAction(_:)))
+    }
+    
+    @objc private func deliveryMenuListScrolledAction(_ notification: Notification) {
+        guard let info = notification.scrollDetail else { return }
+        print("i gotya! \(info.y)")
+        let origin = collectionView.frame.origin
+        
+//        collectionView.frame = CGRect(
+//            x: origin.x,
+//            y: info.y > 0 ? origin.y+1 : origin.y-1,
+//            width: collectionView.bounds.width,
+//            height: collectionView.bounds.height)
     }
 }
 
@@ -61,7 +86,7 @@ extension DeliveryMenuListViewController: UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0:
-            return CGSize(width: collectionView.bounds.width, height: 50)
+            return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height * 0.2)
         case 1:
             return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
         default:
@@ -73,6 +98,7 @@ extension DeliveryMenuListViewController: UICollectionViewDelegate, UICollection
         switch indexPath.section {
         case 0:
             let cell = collectionView.dequeueReusableCell(DeliveryMenuListHeaderCell.self, for: indexPath)
+            cell.setupView(model: marketDetail.asDeliveryMenuListHeaderViewModel)
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(DeliveryTabpagerCell.self, for: indexPath)

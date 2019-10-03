@@ -10,6 +10,11 @@ import Foundation
 
 protocol CellViewModel {}
 
+protocol CellProtocol {
+    associatedtype ViewModel: CellViewModel
+    func setupView(model: ViewModel)
+}
+
 struct DeliveryHeaderAdvertisementCellViewModel: CellViewModel {
     var headerAdvertisements: [AdvertiseDto]
 }
@@ -20,7 +25,11 @@ struct DeliveryMarketCellViewModel: CellViewModel {
     var rating: Double
 }
 
-protocol CellProtocol {
-    associatedtype ViewModel: CellViewModel
-    func setupView(model: ViewModel)
+
+struct DeliveryMenuListHeaderCellViewModel: CellViewModel {
+    var imageURL: String
+    var name: String
+    var rating: Double
+    var number: String
+    var description: String
 }

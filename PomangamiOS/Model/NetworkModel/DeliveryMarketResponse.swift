@@ -59,4 +59,8 @@ struct DeliveryMarket: Codable {
     var asDeliveryMarketViewModel: DeliveryMarketCellViewModel {
         return DeliveryMarketCellViewModel(imageUrl: imagePath, name: name, rating: Double(likeCount))
     }
+    
+    var asDeliveryMenuListHeaderViewModel: DeliveryMenuListHeaderCellViewModel {
+        return DeliveryMenuListHeaderCellViewModel(imageURL: imagePath, name: name, rating: Double(likeCount), number: phoneNumber, description: description)
+    }
 }
