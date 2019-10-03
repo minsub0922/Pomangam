@@ -59,7 +59,6 @@ class DeliveryViewController: UIViewController {
             }
             
             APISource.shared.getDeliveryMarkets(arrivalDate: "2019-10-03 18:00:00", detailForDeliverySiteIndex: "1") { (res) in
-                print(res)
                 self.markets = res
                 self.collectionView.reloadSection(section: DeliveryCellType.market.rawValue)
             }

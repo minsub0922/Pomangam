@@ -12,22 +12,27 @@ class PageCell: UICollectionViewCell {
     var collectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .vertical
-        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), collectionViewLayout: collectionViewLayout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+        collectionView.backgroundColor = .black
         return collectionView
     }()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.backgroundColor = .gray
+        self.backgroundColor = .white
+        setupCollectionView()
+    }
+    
+    private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = .gray
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.registerNib(MarketMenuCell.self)
+        collectionView.registerNib(PageChildCell.self)
         self.addSubview(collectionView)
-        collectionView.frame = self.frame
+        
+        collectionView.addAutoLayout(parent: self, widthRatio: 0.9)
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
 }
 
@@ -37,15 +42,20 @@ extension PageCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width / 2 - 5, height: collectionView.bounds.width / 2 - 1)
+        let width = collectionView.bounds.width / 2 - 15
+        return CGSize(width: width, height: width + 30)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MarketMenuCell.reusableIdentifier, for: indexPath) as! MarketMenuCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PageChildCell.reusableIdentifier, for: indexPath) as! PageChildCell
         return cell
     }
     

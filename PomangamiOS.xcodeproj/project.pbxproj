@@ -9,14 +9,17 @@
 /* Begin PBXBuildFile section */
 		1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10A623459D9C007D2C78 /* PageCell.swift */; };
 		1A6A10A923459D9C007D2C78 /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10A723459D9C007D2C78 /* PageCell.xib */; };
-		1A6A10AC2345A1F4007D2C78 /* MarketMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10AA2345A1F4007D2C78 /* MarketMenuCell.swift */; };
-		1A6A10AD2345A1F4007D2C78 /* MarketMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10AB2345A1F4007D2C78 /* MarketMenuCell.xib */; };
-		1A6A10B42345A2C6007D2C78 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10B22345A2C6007D2C78 /* CustomCell.swift */; };
-		1A6A10B52345A2C6007D2C78 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10B32345A2C6007D2C78 /* CustomCell.xib */; };
+		1A6A10AC2345A1F4007D2C78 /* PageChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10AA2345A1F4007D2C78 /* PageChildCell.swift */; };
+		1A6A10AD2345A1F4007D2C78 /* PageChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10AB2345A1F4007D2C78 /* PageChildCell.xib */; };
+		1A6A10B42345A2C6007D2C78 /* TabbarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10B22345A2C6007D2C78 /* TabbarCell.swift */; };
+		1A6A10B52345A2C6007D2C78 /* TabbarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10B32345A2C6007D2C78 /* TabbarCell.xib */; };
+		1A6A10B82345B59B007D2C78 /* DeliveryTabpagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10B62345B59B007D2C78 /* DeliveryTabpagerCell.swift */; };
+		1A6A10B92345B59B007D2C78 /* DeliveryTabpagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10B72345B59B007D2C78 /* DeliveryTabpagerCell.xib */; };
+		1A6A10BC2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10BA2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift */; };
+		1A6A10BD2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */; };
 		1A6AF01E2344CB98007ACE44 /* TabPagerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */; };
 		5E14B85DCC814F29A4A0DAED /* Pods_PomangamiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */; };
 		A08B6FE6CE785B1FAD49EDDB /* Pods_PomangamiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */; };
-		AF0A3738230E76BA009AEBEA /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A3737230E76BA009AEBEA /* MenuBar.swift */; };
 		AF11247B230847E0009CAB21 /* DeliveryMenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11247A230847E0009CAB21 /* DeliveryMenuListViewController.swift */; };
 		AF4A3E88230EFC3C003F3825 /* DeliveryArrivalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3E86230EFC3C003F3825 /* DeliveryArrivalCell.swift */; };
 		AF4A3E89230EFC3C003F3825 /* DeliveryArrivalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4A3E87230EFC3C003F3825 /* DeliveryArrivalCell.xib */; };
@@ -37,8 +40,6 @@
 		AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CB2305A19C00B377C7 /* APISource.swift */; };
 		AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */; };
 		AF8A010C233F21B3002EAEA6 /* DeliveryMarketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A010B233F21B3002EAEA6 /* DeliveryMarketResponse.swift */; };
-		AF8A01E8233F6927002EAEA6 /* DeliveryMenuListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A01E6233F6927002EAEA6 /* DeliveryMenuListCell.swift */; };
-		AF8A01E9233F6927002EAEA6 /* DeliveryMenuListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8A01E7233F6927002EAEA6 /* DeliveryMenuListCell.xib */; };
 		AF99D4EC233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99D4EA233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift */; };
 		AF99D4ED233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF99D4EB233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib */; };
 		AF99D4F0233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99D4EE233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift */; };
@@ -97,16 +98,19 @@
 		172BAE90DE915F9CEAD5EA8A /* Pods-PomangamiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOS.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOS/Pods-PomangamiOS.release.xcconfig"; sourceTree = "<group>"; };
 		1A6A10A623459D9C007D2C78 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		1A6A10A723459D9C007D2C78 /* PageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
-		1A6A10AA2345A1F4007D2C78 /* MarketMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketMenuCell.swift; sourceTree = "<group>"; };
-		1A6A10AB2345A1F4007D2C78 /* MarketMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketMenuCell.xib; sourceTree = "<group>"; };
-		1A6A10B22345A2C6007D2C78 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		1A6A10B32345A2C6007D2C78 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		1A6A10AA2345A1F4007D2C78 /* PageChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageChildCell.swift; sourceTree = "<group>"; };
+		1A6A10AB2345A1F4007D2C78 /* PageChildCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageChildCell.xib; sourceTree = "<group>"; };
+		1A6A10B22345A2C6007D2C78 /* TabbarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCell.swift; sourceTree = "<group>"; };
+		1A6A10B32345A2C6007D2C78 /* TabbarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarCell.xib; sourceTree = "<group>"; };
+		1A6A10B62345B59B007D2C78 /* DeliveryTabpagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTabpagerCell.swift; sourceTree = "<group>"; };
+		1A6A10B72345B59B007D2C78 /* DeliveryTabpagerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryTabpagerCell.xib; sourceTree = "<group>"; };
+		1A6A10BA2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMenuListHeaderCell.swift; sourceTree = "<group>"; };
+		1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryMenuListHeaderCell.xib; sourceTree = "<group>"; };
 		1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPagerLayout.swift; sourceTree = "<group>"; };
 		3B733C07C54F726A09E26E87 /* Pods-PomangamiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PomangamiOSTests/Pods-PomangamiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CC65E7CAA8B949866BEAD9E /* Pods-PomangamiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOSUITests/Pods-PomangamiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF0A3737230E76BA009AEBEA /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		AF11247A230847E0009CAB21 /* DeliveryMenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMenuListViewController.swift; sourceTree = "<group>"; };
 		AF4A3E86230EFC3C003F3825 /* DeliveryArrivalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryArrivalCell.swift; sourceTree = "<group>"; };
 		AF4A3E87230EFC3C003F3825 /* DeliveryArrivalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryArrivalCell.xib; sourceTree = "<group>"; };
@@ -127,8 +131,6 @@
 		AF6F47CB2305A19C00B377C7 /* APISource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISource.swift; sourceTree = "<group>"; };
 		AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListallMainResponse.swift; sourceTree = "<group>"; };
 		AF8A010B233F21B3002EAEA6 /* DeliveryMarketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMarketResponse.swift; sourceTree = "<group>"; };
-		AF8A01E6233F6927002EAEA6 /* DeliveryMenuListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMenuListCell.swift; sourceTree = "<group>"; };
-		AF8A01E7233F6927002EAEA6 /* DeliveryMenuListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryMenuListCell.xib; sourceTree = "<group>"; };
 		AF99D4EA233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryHeaderAdvertisementChildCell.swift; sourceTree = "<group>"; };
 		AF99D4EB233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryHeaderAdvertisementChildCell.xib; sourceTree = "<group>"; };
 		AF99D4EE233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryHeaderAdvertisementCell.swift; sourceTree = "<group>"; };
@@ -223,10 +225,10 @@
 				1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */,
 				1A6A10A623459D9C007D2C78 /* PageCell.swift */,
 				1A6A10A723459D9C007D2C78 /* PageCell.xib */,
-				1A6A10AA2345A1F4007D2C78 /* MarketMenuCell.swift */,
-				1A6A10AB2345A1F4007D2C78 /* MarketMenuCell.xib */,
-				1A6A10B22345A2C6007D2C78 /* CustomCell.swift */,
-				1A6A10B32345A2C6007D2C78 /* CustomCell.xib */,
+				1A6A10AA2345A1F4007D2C78 /* PageChildCell.swift */,
+				1A6A10AB2345A1F4007D2C78 /* PageChildCell.xib */,
+				1A6A10B22345A2C6007D2C78 /* TabbarCell.swift */,
+				1A6A10B32345A2C6007D2C78 /* TabbarCell.xib */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -290,8 +292,10 @@
 		AF8A01E5233F68F1002EAEA6 /* DeliveryMenuListCell */ = {
 			isa = PBXGroup;
 			children = (
-				AF8A01E6233F6927002EAEA6 /* DeliveryMenuListCell.swift */,
-				AF8A01E7233F6927002EAEA6 /* DeliveryMenuListCell.xib */,
+				1A6A10B62345B59B007D2C78 /* DeliveryTabpagerCell.swift */,
+				1A6A10B72345B59B007D2C78 /* DeliveryTabpagerCell.xib */,
+				1A6A10BA2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift */,
+				1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */,
 			);
 			path = DeliveryMenuListCell;
 			sourceTree = "<group>";
@@ -420,7 +424,6 @@
 				AF4A3E9D230F7466003F3825 /* UITextFieldUnderlined.swift */,
 				AFDD4CC422FC7AFE00CD8CD5 /* UIViewRounded.swift */,
 				AF6F47C623059F3700B377C7 /* FasterImageView.swift */,
-				AF0A3737230E76BA009AEBEA /* MenuBar.swift */,
 				AF4A3EA1230F7B1B003F3825 /* UIButtonSelectorRounded.swift */,
 				AF4A3EA3230F7EF2003F3825 /* UIButtonCheckable.swift */,
 				AFD5E32B231424B10031E375 /* NavigationTitleDropDownButton.swift */,
@@ -610,12 +613,13 @@
 				AFF0C84522F659D2007D26DD /* LaunchScreen.storyboard in Resources */,
 				AFDD4C6D22FC0BEA00CD8CD5 /* Community.storyboard in Resources */,
 				AFF0C84222F659D2007D26DD /* Assets.xcassets in Resources */,
+				1A6A10BD2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib in Resources */,
 				AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */,
-				1A6A10AD2345A1F4007D2C78 /* MarketMenuCell.xib in Resources */,
+				1A6A10B92345B59B007D2C78 /* DeliveryTabpagerCell.xib in Resources */,
+				1A6A10AD2345A1F4007D2C78 /* PageChildCell.xib in Resources */,
 				AFDD4C6122FC0BAD00CD8CD5 /* Delivery.storyboard in Resources */,
 				AF99D4ED233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib in Resources */,
-				1A6A10B52345A2C6007D2C78 /* CustomCell.xib in Resources */,
-				AF8A01E9233F6927002EAEA6 /* DeliveryMenuListCell.xib in Resources */,
+				1A6A10B52345A2C6007D2C78 /* TabbarCell.xib in Resources */,
 				AF99D4F1233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.xib in Resources */,
 				AF4A3E9A230F6FBF003F3825 /* Login.storyboard in Resources */,
 				AFDD4C6522FC0BC700CD8CD5 /* Hotdeal.storyboard in Resources */,
@@ -730,12 +734,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A6A10B42345A2C6007D2C78 /* CustomCell.swift in Sources */,
+				1A6A10B42345A2C6007D2C78 /* TabbarCell.swift in Sources */,
 				AFDD4C6B22FC0BE100CD8CD5 /* CommunityViewController.swift in Sources */,
 				AFBBB145234216AD0061CFE8 /* TabbarLayout.swift in Sources */,
 				AF4A3EA4230F7EF2003F3825 /* UIButtonCheckable.swift in Sources */,
 				AF4A3E97230EFF0F003F3825 /* PomangamModule.swift in Sources */,
-				AF0A3738230E76BA009AEBEA /* MenuBar.swift in Sources */,
 				AF4A3E90230EFD12003F3825 /* DeliveryMarketCell.swift in Sources */,
 				1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */,
 				AF5B31F8232D3D8E0052F495 /* DropDownLabel.swift in Sources */,
@@ -744,6 +747,7 @@
 				AFD5E32C231424B10031E375 /* NavigationTitleDropDownButton.swift in Sources */,
 				AFDD4C6722FC0BD200CD8CD5 /* MoreViewController.swift in Sources */,
 				AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */,
+				1A6A10B82345B59B007D2C78 /* DeliveryTabpagerCell.swift in Sources */,
 				AF99D4F0233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift in Sources */,
 				AFDD4CC022FC49E400CD8CD5 /* StaticLists.swift in Sources */,
 				AFDD4CAC22FC15E600CD8CD5 /* UIViewFunction+.swift in Sources */,
@@ -752,7 +756,6 @@
 				AFC92E12233B152B0054D92E /* Product.swift in Sources */,
 				AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */,
 				AF11247B230847E0009CAB21 /* DeliveryMenuListViewController.swift in Sources */,
-				AF8A01E8233F6927002EAEA6 /* DeliveryMenuListCell.swift in Sources */,
 				AFDD4CC322FC634C00CD8CD5 /* UIlabelFlexible.swift in Sources */,
 				1A6AF01E2344CB98007ACE44 /* TabPagerLayout.swift in Sources */,
 				AF4A3EA9230F8554003F3825 /* User.swift in Sources */,
@@ -773,9 +776,10 @@
 				AF6F47C723059F3700B377C7 /* FasterImageView.swift in Sources */,
 				AF4A3E88230EFC3C003F3825 /* DeliveryArrivalCell.swift in Sources */,
 				AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */,
+				1A6A10BC2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift in Sources */,
 				AF4A3EA2230F7B1B003F3825 /* UIButtonSelectorRounded.swift in Sources */,
 				AFDD4C5F22FC0BA200CD8CD5 /* DeliveryViewController.swift in Sources */,
-				1A6A10AC2345A1F4007D2C78 /* MarketMenuCell.swift in Sources */,
+				1A6A10AC2345A1F4007D2C78 /* PageChildCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

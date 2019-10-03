@@ -8,16 +8,15 @@
 
 import UIKit
 
-protocol CustomMenuBarDelegate: class {
+protocol TabbarLayoutDelegate: class {
     func customMenuBar(scrollTo index: Int)
 }
 
 class TabbarLayout: UIView {
     
-    weak var delegate: CustomMenuBarDelegate?
+    weak var delegate: TabbarLayoutDelegate?
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
         setupCustomTabBar()
     }
     
@@ -33,13 +32,14 @@ class TabbarLayout: UIView {
         collectionView.backgroundColor = .white
         return collectionView
     }()
-    
+
     var indicatorView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .black
         return view
     }()
+    
     //MARK: Properties
     var indicatorViewLeadingConstraint:NSLayoutConstraint!
     var indicatorViewWidthConstraint: NSLayoutConstraint!
@@ -48,7 +48,7 @@ class TabbarLayout: UIView {
         customTabBarCollectionView.delegate = self
         customTabBarCollectionView.dataSource = self
         customTabBarCollectionView.showsHorizontalScrollIndicator = false
-        customTabBarCollectionView.registerNib(PageCell.self)
+        customTabBarCollectionView.registerNib(TabbarCell.self)
         customTabBarCollectionView.isScrollEnabled = false
         
         let indexPath = IndexPath(item: 0, section: 0)
@@ -63,31 +63,34 @@ class TabbarLayout: UIView {
         customTabBarCollectionView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         customTabBarCollectionView.heightAnchor.constraint(equalToConstant: 55).isActive = true
         
+        setupIndicatorView()
+    }
+    
+    private func setupIndicatorView() {
         self.addSubview(indicatorView)
-        indicatorViewWidthConstraint = indicatorView.widthAnchor.constraint(equalToConstant: self.frame.width / 4)
+        indicatorViewWidthConstraint = indicatorView.widthAnchor.constraint(equalToConstant: self.frame.width / 5)
         indicatorViewWidthConstraint.isActive = true
         indicatorView.heightAnchor.constraint(equalToConstant: 5).isActive = true
         indicatorViewLeadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
         indicatorViewLeadingConstraint.isActive = true
         indicatorView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
-    
 }
 
 //MARK:- UICollectionViewDelegate, DataSource
 extension TabbarLayout: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(CustomCell.self, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(TabbarCell.self, for: indexPath)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.frame.width / 4 , height: 55)
+        return CGSize(width: self.frame.width / 5 , height: 55)
         
     }
     
@@ -96,7 +99,7 @@ extension TabbarLayout: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? CustomCell else {return}
+        guard let cell = collectionView.cellForItem(at: indexPath) as? TabbarCell else {return}
         cell.label.textColor = .lightGray
     }
 }

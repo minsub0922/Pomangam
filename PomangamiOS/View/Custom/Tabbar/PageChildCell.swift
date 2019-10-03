@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MarketMenuCell: UICollectionViewCell {
+class PageChildCell: UICollectionViewCell {
     var imageView: UIImageView {
         let imageView = UIImageView(frame: CGRect(origin: .zero, size: .zero))
         return imageView

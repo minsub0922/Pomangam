@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabPagerLayout: UIView, CustomMenuBarDelegate{
+class TabPagerLayout: UIView, TabbarLayoutDelegate{
     
     //MARK: Outltes
     var pageCollectionView: UICollectionView = {
@@ -21,32 +21,27 @@ class TabPagerLayout: UIView, CustomMenuBarDelegate{
     
     var customMenuBar = TabbarLayout()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.backgroundColor = .white
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupHeaderView()
-        
-        ////
         setupCustomTabBar()
         setupPageCollectionView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func setupHeaderView() {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         self.addSubview(button)
         button.setTitle("asd", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.dustyOrange, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         button.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        if #available(iOS 11.0, *) {
-            button.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
-        } else {
-            // Fallback on earlier versions
-        }
-        button.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        button.backgroundColor = .orange
+        button.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 85).isActive = true
     }
     
     //MARK: Setup view
@@ -54,7 +49,7 @@ class TabPagerLayout: UIView, CustomMenuBarDelegate{
         self.addSubview(customMenuBar)
         customMenuBar.delegate = self
         customMenuBar.translatesAutoresizingMaskIntoConstraints = false
-        customMenuBar.indicatorViewWidthConstraint.constant = self.frame.width / 4
+        customMenuBar.indicatorViewWidthConstraint.constant = self.frame.width / 5
         customMenuBar.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         customMenuBar.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         customMenuBar.topAnchor.constraint(equalTo: self.subviews[0].bottomAnchor).isActive = true
@@ -88,11 +83,11 @@ extension TabPagerLayout: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        customMenuBar.indicatorViewLeadingConstraint.constant = scrollView.contentOffset.x / 4
+        customMenuBar.indicatorViewLeadingConstraint.constant = scrollView.contentOffset.x / 5
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {

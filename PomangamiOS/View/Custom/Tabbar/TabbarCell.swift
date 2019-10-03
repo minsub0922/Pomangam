@@ -8,21 +8,20 @@
 
 import UIKit
 
-class CustomCell: UICollectionViewCell {
+class TabbarCell: UICollectionViewCell {
     
     var label: UILabel = {
         let label = UILabel()
         label.text = "Tab"
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 18)
         label.textColor = .lightGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     override var isSelected: Bool {
         didSet{
-            print("Changed")
-            self.label.textColor = isSelected ? .black : .lightGray
+            self.label.textColor = isSelected ? .dustyOrange : .lightGray
         }
     }
     override func awakeFromNib() {

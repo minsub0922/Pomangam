@@ -49,6 +49,24 @@ extension UIView {
 //        self.layer.rasterizationScale = UIScreen.main.scale
 //        self.layer.masksToBounds = false
 //    }
+    
+    func addAutoLayout(parent: UIView, topConstraint: UIView? = nil, bottomConstraint: UIView? = nil, heightRatio: CGFloat = 1, widthRatio: CGFloat = 1) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.centerXAnchor.constraint(equalTo: parent.centerXAnchor).isActive = true
+        self.centerYAnchor.constraint(equalTo: parent.centerYAnchor).isActive = true
+        
+        if let topConstraint = topConstraint {
+            self.topAnchor.constraint(equalTo: topConstraint.bottomAnchor).isActive = true
+        } else {
+            self.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: widthRatio).isActive = true
+        }
+        
+        if let bottomConstraint = bottomConstraint {
+            self.bottomAnchor.constraint(equalTo: bottomConstraint.topAnchor).isActive = true
+        } else {
+            self.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: heightRatio).isActive = true
+        }
+    }
 }
 
 extension UIButton {
