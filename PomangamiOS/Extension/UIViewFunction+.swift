@@ -28,11 +28,13 @@ extension UIView {
         self.center = center
     }
     
-    func setupShadow(shadowRadius: CGFloat = 8.0, shadowDepth: CGFloat = 4) {
+    func setupShadow(shadowRadius: CGFloat = 8.0, shadowDepth: CGFloat = 4, opacity: Float = 0.3) {
         self.layer.shadowOffset = CGSize(width: 0, height: shadowDepth)
-        self.layer.shadowOpacity = 0.3
+        self.layer.shadowOpacity = opacity
         self.layer.shadowRadius = shadowRadius   //퍼짐 정도
-        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 4, height: 3)).cgPath
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds,
+                                             byRoundingCorners: .allCorners,
+                                             cornerRadii: CGSize(width: 4, height: 3)).cgPath
         self.layer.shouldRasterize = true
         self.layer.rasterizationScale = UIScreen.main.scale
         self.layer.masksToBounds = false

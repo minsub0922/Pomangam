@@ -23,32 +23,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="298" height="171"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uz1-jA-lk8">
-                                <rect key="frame" x="20" y="38.5" width="94" height="94"/>
+                                <rect key="frame" x="12.5" y="38.5" width="94" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uz1-jA-lk8" secondAttribute="height" multiplier="1:1" id="Vyn-94-M6B"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgDeliverystoreStar" translatesAutoresizingMaskIntoConstraints="NO" id="BOD-RF-bEH">
-                                <rect key="frame" x="134" y="38.5" width="15" height="15"/>
+                                <rect key="frame" x="126.5" y="38.5" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="rTD-Cg-1S6"/>
                                     <constraint firstAttribute="width" secondItem="BOD-RF-bEH" secondAttribute="height" multiplier="1:1" id="xl8-KG-pVa"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nul-VO-pD8">
-                                <rect key="frame" x="152" y="38.5" width="31" height="14.5"/>
+                                <rect key="frame" x="144.5" y="38.5" width="31" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg9-1K-q9h">
-                                <rect key="frame" x="134" y="58.5" width="35.5" height="17"/>
+                                <rect key="frame" x="126.5" y="58.5" width="35.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEi-hq-S8W">
-                                <rect key="frame" x="191" y="33" width="39" height="26"/>
+                                <rect key="frame" x="183.5" y="33" width="39" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="리뷰보기"/>
                                 <connections>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwe-NX-xFo">
-                                <rect key="frame" x="134" y="75.5" width="77" height="26"/>
+                                <rect key="frame" x="126.5" y="75.5" width="77" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="031-971-8399"/>
                                 <connections>
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-da-rGq">
-                                <rect key="frame" x="134" y="105.5" width="26.5" height="12"/>
+                                <rect key="frame" x="126.5" y="105.5" width="26.5" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -98,7 +98,7 @@
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VCJ-da-rGq" secondAttribute="bottom" constant="10" id="m01-At-gm2"/>
                             <constraint firstItem="BOD-RF-bEH" firstAttribute="leading" secondItem="uz1-jA-lk8" secondAttribute="trailing" constant="20" id="uyJ-e3-DbE"/>
                             <constraint firstItem="uz1-jA-lk8" firstAttribute="height" secondItem="qbJ-4d-K0L" secondAttribute="height" multiplier="0.55" id="vuc-ig-8aQ"/>
-                            <constraint firstItem="uz1-jA-lk8" firstAttribute="centerX" secondItem="qbJ-4d-K0L" secondAttribute="centerX" multiplier="0.45" id="yDK-1J-kzE"/>
+                            <constraint firstItem="uz1-jA-lk8" firstAttribute="centerX" secondItem="qbJ-4d-K0L" secondAttribute="centerX" multiplier="0.4" id="yDK-1J-kzE"/>
                         </constraints>
                     </view>
                 </subviews>

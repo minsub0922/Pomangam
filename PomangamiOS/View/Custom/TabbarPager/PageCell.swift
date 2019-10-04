@@ -11,7 +11,6 @@ import UIKit
 class PageCell: UICollectionViewCell {
     var collectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
-        collectionViewLayout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.backgroundColor = .white
         return collectionView
@@ -42,7 +41,6 @@ class PageCell: UICollectionViewCell {
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.showsHorizontalScrollIndicator = false
         collectionView.registerNib(PageChildCell.self)
         self.addSubview(collectionView)
         
@@ -60,7 +58,7 @@ extension PageCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.bounds.width - 2*collectionViewMargin) / 2 - 5
+        let width = (collectionView.bounds.width-2*collectionViewMargin)/2-5
         return CGSize(width: width, height: width + 30)
     }
     

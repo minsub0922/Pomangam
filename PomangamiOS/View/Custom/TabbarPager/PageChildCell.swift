@@ -12,7 +12,7 @@ import UIKit
 class PageChildCell: UICollectionViewCell, CellProtocol {
     override var bounds: CGRect {
         didSet {
-            self.setupShadow(shadowRadius: 4, shadowDepth: 0.1)
+            self.setupShadow(shadowRadius: 3, shadowDepth: 0, opacity: 0.1)
         }
     }
     
