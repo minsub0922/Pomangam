@@ -12,9 +12,8 @@ class TabbarCell: UICollectionViewCell {
     
     var label: UILabel = {
         let label = UILabel()
-        label.text = "Tab"
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

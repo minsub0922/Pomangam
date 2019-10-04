@@ -10,5 +10,10 @@ import Foundation
 
 class Cart {
     static let shared = Cart()
-    var products: [Product] = []
+    var products: [ProductResponse] = []
+}
+
+class CurrentMarket {
+    static let shared = CurrentMarket()
+    var index: Int? = nil
 }

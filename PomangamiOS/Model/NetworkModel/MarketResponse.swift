@@ -19,7 +19,7 @@ import Foundation
 //    "imgpath": "/assets/image/store/1.png"
 //},
 
-struct Market: Codable {
+struct MarketResponse: Codable {
     let index: Int
     let name: String
     let description: String

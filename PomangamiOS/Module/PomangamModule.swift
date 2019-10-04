@@ -33,3 +33,9 @@ struct DeliveryMenuListHeaderCellViewModel: CellViewModel {
     var number: String
     var description: String
 }
+
+struct DeliveryMenuCellViewModel: CellViewModel {
+    let imageURL: String
+    let name: String
+    let price: String
+}

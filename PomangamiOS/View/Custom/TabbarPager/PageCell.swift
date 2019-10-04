@@ -13,17 +13,30 @@ class PageCell: UICollectionViewCell {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = .white
         return collectionView
     }()
     
     private var preY: CGFloat = 0
+    private var menuList: [MenuResponse] = []
+    private let collectionViewMargin = UIScreen.main.bounds.width * 0.06
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.backgroundColor = .white
         setupCollectionView()
+        
+        guard let storeId = CurrentMarket.shared.index else {
+            print("there is no currentMarket!")
+            return
+        }
+        
+        APISource.shared.getMenuList(storeIndex: storeId) { menuList in
+            self.menuList = menuList
+            self.collectionView.reloadSection(section: 0)
+        
+        }
     }
     
     private func setupCollectionView() {
@@ -33,18 +46,21 @@ class PageCell: UICollectionViewCell {
         collectionView.registerNib(PageChildCell.self)
         self.addSubview(collectionView)
         
-        collectionView.addAutoLayout(parent: self, widthRatio: 0.9)
-        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        collectionView.addAutoLayout(parent: self)
+        collectionView.contentInset = UIEdgeInsets(top: 5,
+                                                   left: collectionViewMargin,
+                                                   bottom: UIScreen.main.bounds.height/3,
+                                                   right: collectionViewMargin)
     }
 }
 
 extension PageCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return menuList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width / 2 - 15
+        let width = (collectionView.bounds.width - 2*collectionViewMargin) / 2 - 5
         return CGSize(width: width, height: width + 30)
     }
     
@@ -57,7 +73,8 @@ extension PageCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PageChildCell.reusableIdentifier, for: indexPath) as! PageChildCell
+        let cell = collectionView.dequeueReusableCell(PageChildCell.self, for: indexPath)
+        cell.setupView(model: menuList[indexPath.row].asDeliveryMenuCellViewModel)
         return cell
     }
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Product {
+struct ProductResponse {
     let productWithCostDto: ProductDetail
     let subMenuList: [Submenu]
 }

@@ -14,15 +14,11 @@ protocol TabbarLayoutDelegate: class {
 
 class TabbarLayout: UIView {
     
+    //MARK: Properties
     weak var delegate: TabbarLayoutDelegate?
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupCustomTabBar()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var indicatorViewLeadingConstraint:NSLayoutConstraint!
+    var indicatorViewWidthConstraint: NSLayoutConstraint!
+    private var tabTitles: [String] = ["전체", "메인", "서브", "토핑", "음료"]
     
     var customTabBarCollectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
@@ -36,13 +32,21 @@ class TabbarLayout: UIView {
     var indicatorView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black
+        //view.backgroundColor = .black
         return view
     }()
     
-    //MARK: Properties
-    var indicatorViewLeadingConstraint:NSLayoutConstraint!
-    var indicatorViewWidthConstraint: NSLayoutConstraint!
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupCustomTabBar()
+        self.backgroundColor = .white
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     //MARK: Setup Views
     func setupCollectioView(){
         customTabBarCollectionView.delegate = self
@@ -70,7 +74,7 @@ class TabbarLayout: UIView {
         self.addSubview(indicatorView)
         indicatorViewWidthConstraint = indicatorView.widthAnchor.constraint(equalToConstant: self.frame.width / 5)
         indicatorViewWidthConstraint.isActive = true
-        indicatorView.heightAnchor.constraint(equalToConstant: 5).isActive = true
+        //indicatorView.heightAnchor.constraint(equalToConstant: 5).isActive = true
         indicatorViewLeadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
         indicatorViewLeadingConstraint.isActive = true
         indicatorView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
@@ -79,9 +83,9 @@ class TabbarLayout: UIView {
 
 //MARK:- UICollectionViewDelegate, DataSource
 extension TabbarLayout: UICollectionViewDelegate, UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(TabbarCell.self, for: indexPath)
+        cell.label.text = tabTitles[indexPath.row]
         return cell
     }
     
@@ -91,7 +95,6 @@ extension TabbarLayout: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.frame.width / 5 , height: 55)
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -114,19 +117,3 @@ extension TabbarLayout: UICollectionViewDelegateFlowLayout {
         return 0
     }
 }
-
-extension NSObject {
-    static var reusableIdentifier: String {
-        return String(describing: self)
-    }
-}
-
-extension UIView {
-    func fillToParent(parent: UIView) {
-        self.leadingAnchor.constraint(equalTo: parent.leadingAnchor).isActive = true
-        self.trailingAnchor.constraint(equalTo: parent.trailingAnchor).isActive = true
-        self.bottomAnchor.constraint(equalTo: parent.bottomAnchor).isActive = true
-        self.topAnchor.constraint(equalTo: parent.topAnchor).isActive = true
-    }
-}
-

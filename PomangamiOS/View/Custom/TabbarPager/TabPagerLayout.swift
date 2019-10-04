@@ -51,7 +51,6 @@ class TabPagerLayout: UIView, TabbarLayoutDelegate{
     func setupPageCollectionView(){
         pageCollectionView.delegate = self
         pageCollectionView.dataSource = self
-        pageCollectionView.backgroundColor = .gray
         pageCollectionView.showsHorizontalScrollIndicator = false
         pageCollectionView.isPagingEnabled = true
         pageCollectionView.registerNib(PageCell.self)

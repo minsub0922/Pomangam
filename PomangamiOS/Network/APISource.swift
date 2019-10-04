@@ -109,7 +109,7 @@ class APISource: APISourceProtocol {
         }
     }
     
-    func getMenuList(storeIndex: Int, categoryId: Int? = nil, type: MenuType? = nil, orderBy: MenuOrder? = nil, size: Int? = nil, page: Int? = nil, completion: @escaping ([Menu]) -> Void) {
+    func getMenuList(storeIndex: Int, categoryId: Int? = nil, type: MenuType? = nil, orderBy: MenuOrder? = nil, size: Int? = nil, page: Int? = nil, completion: @escaping ([MenuResponse]) -> Void) {
         var params = [
             "storeIdx": storeIndex,
         ] as [String: Any]
@@ -120,7 +120,7 @@ class APISource: APISourceProtocol {
         if let size = size { params["size"] = size }
         if let page = page { params["page"] = page }
         
-        get("/products/search/findByStoreIdx", params: params, headers: headers) { (res: NetworkResult<(Int, [Menu])>) in
+        get("/products/search/findByStoreIdx", params: params, headers: headers) { (res: NetworkResult<(Int, [MenuResponse])>) in
             switch res {
             case .networkSuccess(let data):
                 completion(data.1)

@@ -9,31 +9,33 @@
 import UIKit
 
 class DeliveryMenuListViewController: BaseViewController {
+    //MARK: Properties
     private var navigationButtonView: NavigationTitleDropDownButton = NavigationTitleDropDownButton()
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private var marketDetail: DeliveryMarket!
     
+    //MARK:- ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
         addDeliveryMenuListScrollObserver()
-        getMenu()
     }
     
+    //MARK
     override func setPacket(packet: BaseViewController.Packet) {
         guard let marketDetail = packet as? DeliveryMarket else {return}
         self.marketDetail = marketDetail
+        CurrentMarket.shared.index = marketDetail.index
     }
     
     private func setupUI() {
         navigationButtonView.addTarget(self, action: #selector(navigationTitleTapAction(_:)), for: .touchUpInside)
         navigationButtonView.configure("학생회관 뒤")
-        navigationItem.titleView = navigationButtonView
-        
         let rightButton = UIBarButtonItem(image: UIImage(named: "btnDeliveryFilter"), style: .plain, target: self, action: #selector(navigationRightButtonTapAction(_:)))
-        navigationItem.rightBarButtonItem  = rightButton
         
+        navigationItem.titleView = navigationButtonView
+        navigationItem.rightBarButtonItem  = rightButton
+        navigationController?.navigationBar.backgroundColor = .white
         setupCollectionView()
     }
     
@@ -47,12 +49,6 @@ class DeliveryMenuListViewController: BaseViewController {
         collectionView.addAutoLayout(parent: self.view)
     }
     
-    private func getMenu() {
-        APISource.shared.getMenuList(storeIndex: marketDetail.index) { res in
-            print(res)
-        }
-    }
-
     private func addDeliveryMenuListScrollObserver() {
         NotificationCenter.default.addObserver(
             target: self,
@@ -93,7 +89,7 @@ extension DeliveryMenuListViewController: UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0:
-            return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height * 0.2)
+            return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height * 0.17)
         case 1:
             return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
         default:

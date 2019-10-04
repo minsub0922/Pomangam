@@ -27,7 +27,7 @@ import Foundation
 //        "imgpath": "/img/product/10.jpg"
 //    },
 
-struct Menu: Codable {
+struct MenuResponse: Codable {
     let index: Int
     let storeIndex: Int
     let name: String
@@ -60,6 +60,10 @@ struct Menu: Codable {
         case primeCost = "prime_cost"
         case finalCost = "final_cost"
         case imagePath = "imgpath"
+    }
+    
+    var asDeliveryMenuCellViewModel: DeliveryMenuCellViewModel {
+        return DeliveryMenuCellViewModel(imageURL: imagePath, name: name, price: String(finalCost))
     }
 }
 
