@@ -18,6 +18,7 @@ class DeliveryMenuListViewController: BaseViewController {
         
         setupUI()
         addDeliveryMenuListScrollObserver()
+        getMenu()
     }
     
     override func setPacket(packet: BaseViewController.Packet) {
@@ -46,19 +47,25 @@ class DeliveryMenuListViewController: BaseViewController {
         collectionView.addAutoLayout(parent: self.view)
     }
     
+    private func getMenu() {
+        APISource.shared.getMenuList(storeIndex: marketDetail.index) { res in
+            print(res)
+        }
+    }
+
+    private func addDeliveryMenuListScrollObserver() {
+        NotificationCenter.default.addObserver(
+            target: self,
+            notificationName: .deliveryMenuListScrolled,
+            selector: #selector(deliveryMenuListScrolledAction(_:)))
+    }
+    
     @objc private func navigationRightButtonTapAction(_ sender: Any) {
         print("tapped Right Button")
     }
     
     @objc private func navigationTitleTapAction(_ sender: Any) {
         print("touched??")
-    }
-    
-    private func addDeliveryMenuListScrollObserver() {
-        NotificationCenter.default.addObserver(
-            target: self,
-            notificationName: .deliveryMenuListScrolled,
-            selector: #selector(deliveryMenuListScrolledAction(_:)))
     }
     
     @objc private func deliveryMenuListScrolledAction(_ notification: Notification) {

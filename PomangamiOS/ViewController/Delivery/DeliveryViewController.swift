@@ -29,6 +29,21 @@ class DeliveryViewController: UIViewController {
         collectionView.registerNib(DeliveryHeaderAdvertisementCell.self)
         collectionView.registerNib(DeliveryArrivalCell.self)
         collectionView.registerNib(DeliveryMarketCell.self)
+        
+        APISource.shared.getTokenGuest { res in
+            UserDefaults.standard.setCustomObject(object: res, key: .accessToken)
+            
+            let params = [ "deliverySiteIdx": 1 ]
+            APISource.shared.getMainall(params: params) { res in
+                self.headerAdvertisements = res.advertiseForMainDtoList
+                self.collectionView.reloadSection(section: DeliveryCellType.headerAd.rawValue)
+            }
+            
+            APISource.shared.getDeliveryMarkets(arrivalDate: "2019-10-04 19:00:00", detailForDeliverySiteIndex: "1") { (res) in
+                self.markets = res
+                self.collectionView.reloadSection(section: DeliveryCellType.market.rawValue)
+            }
+        }
     }
     
     private func setupNavigationBarButtons() {
@@ -44,26 +59,6 @@ class DeliveryViewController: UIViewController {
     
     @objc private func navigationTitleTapAction(_ sender: Any) {
         print("cleicked??")
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        APISource.shared.getTokenGuest { res in
-            UserDefaults.standard.setCustomObject(object: res, key: .accessToken)
-            
-            let params = [ "deliverySiteIdx": 1 ]
-            APISource.shared.getMainall(params: params) { res in
-                self.headerAdvertisements = res.advertiseForMainDtoList
-                self.collectionView.reloadSection(section: DeliveryCellType.headerAd.rawValue)
-            }
-            
-            APISource.shared.getDeliveryMarkets(arrivalDate: "2019-10-03 19:00:00", detailForDeliverySiteIndex: "1") { (res) in
-                self.markets = res
-                self.collectionView.reloadSection(section: DeliveryCellType.market.rawValue)
-            }
-        }
-        
     }
 }
 
