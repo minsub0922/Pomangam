@@ -43,8 +43,8 @@ struct DeliveryMenuCellViewModel: CellViewModel {
 struct DeliveryOrderMenuCellViewModel: CellViewModel {
     let imageURL: String
     let name: String
-    let likeCount: Int
-    let price: Int
+    let likeCount: String
+    let price: String
     let description: String
 }
 

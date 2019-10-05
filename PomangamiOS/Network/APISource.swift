@@ -109,6 +109,17 @@ class APISource: APISourceProtocol {
             completion: commonResponseHandler(completion: completion))
     }
     
+    func getMenuDetail(productIndex: Int, completion: @escaping (MenuDetailResponse) -> Void) {
+        let params = [
+            "productIdx": productIndex
+        ] as [String: Any]
+        
+        get("/products/search/getDetailOrder",
+            params: params,
+            headers: headers,
+            completion: commonResponseHandler(completion: completion))
+    }
+    
 //    func getAffiliateMarkets(deliverySiteIndex: String, type: StoreType, orderBy: StoreOrderType? = nil, size: String? = nil, page: String? = nil, completion: @escaping ([Market]) -> Void) {
 //        //deliverySiteIdx=&type=&orderBy=&size=&page=
 ////        let params = [

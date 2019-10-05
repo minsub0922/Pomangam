@@ -10,7 +10,7 @@ import UIKit
 
 class BaseViewController: UIViewController {
     typealias Packet = Any
-    private var packet: Packet?
+    internal var packet: Packet?
 
     func setPacket(packet: Packet) {
         self.packet = packet

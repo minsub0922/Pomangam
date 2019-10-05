@@ -32,6 +32,7 @@
 		1AE61FDA2347B0040075285B /* DeliveryOrderRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE61FD82347B0040075285B /* DeliveryOrderRequestCell.xib */; };
 		1AE61FDD2347B14C0075285B /* DeliveryOrderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FDB2347B14C0075285B /* DeliveryOrderFooter.swift */; };
 		1AE61FDE2347B14C0075285B /* DeliveryOrderFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE61FDC2347B14C0075285B /* DeliveryOrderFooter.xib */; };
+		1AE61FE02348330A0075285B /* MenuDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FDF2348330A0075285B /* MenuDetailResponse.swift */; };
 		5E14B85DCC814F29A4A0DAED /* Pods_PomangamiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */; };
 		A08B6FE6CE785B1FAD49EDDB /* Pods_PomangamiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */; };
 		AF11247B230847E0009CAB21 /* DeliveryMenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11247A230847E0009CAB21 /* DeliveryMenuListViewController.swift */; };
@@ -135,6 +136,7 @@
 		1AE61FD82347B0040075285B /* DeliveryOrderRequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryOrderRequestCell.xib; sourceTree = "<group>"; };
 		1AE61FDB2347B14C0075285B /* DeliveryOrderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderFooter.swift; sourceTree = "<group>"; };
 		1AE61FDC2347B14C0075285B /* DeliveryOrderFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryOrderFooter.xib; sourceTree = "<group>"; };
+		1AE61FDF2348330A0075285B /* MenuDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailResponse.swift; sourceTree = "<group>"; };
 		3B733C07C54F726A09E26E87 /* Pods-PomangamiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PomangamiOSTests/Pods-PomangamiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CC65E7CAA8B949866BEAD9E /* Pods-PomangamiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOSUITests/Pods-PomangamiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,6 +334,7 @@
 				1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */,
 				1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */,
 				1A0BF4B22345F6CC007A7F21 /* MenuResponse.swift */,
+				1AE61FDF2348330A0075285B /* MenuDetailResponse.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -810,6 +813,7 @@
 				1AE61FDD2347B14C0075285B /* DeliveryOrderFooter.swift in Sources */,
 				1AE61FD12347AFDC0075285B /* DeliveryOrderMenuCell.swift in Sources */,
 				AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */,
+				1AE61FE02348330A0075285B /* MenuDetailResponse.swift in Sources */,
 				AFD5E32C231424B10031E375 /* NavigationTitleDropDownButton.swift in Sources */,
 				1A39D7EC2345E5050002A3C6 /* MarketDetailResponse.swift in Sources */,
 				1A39D7EE2345E7580002A3C6 /* MarketCommentResponse.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeliveryOrderViewController: UIViewController {
+class DeliveryOrderViewController: BaseViewController {
     
     var collectionView: UICollectionView {
         return UICollectionView(frame: .zero,
@@ -18,7 +18,10 @@ class DeliveryOrderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        guard let menuInfo = packet as? MenuResponse else {return}
+        APISource.shared.getMenuDetail(productIndex: menuInfo.index) { res in
+            print(res)
+        }
     }
 
     private func setupCollectionView() {

@@ -42,9 +42,9 @@ struct MenuResponse: Codable {
     let modifyDate: String
     let sequence: Int
     let primeCost: Int
-    let finalCost: Int
-    let imagePath: String
-    let likeType: String?
+    let finalCost: Int = Int()
+    let imagePath: String = String()
+    let likeType: String? = nil
     
     enum CodingKeys: String, CodingKey {
         case index = "idx"
@@ -63,7 +63,17 @@ struct MenuResponse: Codable {
     }
     
     var asDeliveryMenuCellViewModel: DeliveryMenuCellViewModel {
-        return DeliveryMenuCellViewModel(imageURL: imagePath, name: name, price: String(finalCost))
+        return DeliveryMenuCellViewModel(imageURL: imagePath,
+                                         name: name,
+                                         price: String(finalCost))
+    }
+    
+    var asDeliveryOrderMenuViewModel: DeliveryOrderMenuCellViewModel {
+        return DeliveryOrderMenuCellViewModel(imageURL: imagePath,
+                                              name: name,
+                                              likeCount: String(likeCount),
+                                              price: String(finalCost),
+                                              description: description ?? "")
     }
 }
 
