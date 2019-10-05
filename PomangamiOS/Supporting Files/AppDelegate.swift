@@ -14,10 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        getToken()
         return true
+    }
+
+    private func getToken() {
+        APISource.shared.getTokenGuest { res in
+            UserDefaults.standard.setCustomObject(object: res, key: .accessToken)
+            self.startController()
+        }
+    }
+    
+    private func startController() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(TabBarController.self)
+        window?.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

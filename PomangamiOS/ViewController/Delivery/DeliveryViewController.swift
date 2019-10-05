@@ -9,8 +9,14 @@
 import UIKit
 import Alamofire
 
+public protocol DeliveryViewControllerDelegate: class {
+    func navigateToMenuList<T>(packet: T?)
+}
+
 class DeliveryViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    public weak var delegate: DeliveryViewControllerDelegate?
+    
     private var headerAdvertisements: [AdvertiseDto] = []
     private var markets: [DeliveryMarket] = []
     private var navigationButtonView: NavigationTitleDropDownButton = NavigationTitleDropDownButton()
@@ -25,25 +31,28 @@ class DeliveryViewController: UIViewController {
         
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
     
-        collectionView.contentInset = .init(top: 0, left: 0, bottom: 0, right: 0)
-        collectionView.registerNib(DeliveryHeaderAdvertisementCell.self)
-        collectionView.registerNib(DeliveryArrivalCell.self)
-        collectionView.registerNib(DeliveryMarketCell.self)
-        
-        APISource.shared.getTokenGuest { res in
-            UserDefaults.standard.setCustomObject(object: res, key: .accessToken)
-            
-            let params = [ "deliverySiteIdx": 1 ]
-            APISource.shared.getMainall(params: params) { res in
-                self.headerAdvertisements = res.advertiseForMainDtoList
-                self.collectionView.reloadSection(section: CellType.headerAd.rawValue)
-            }
+        setupCollectionView()
+        getMainDatas()
+    }
+
+    private func getMainDatas() {
+        let params = [ "deliverySiteIdx": 1 ]
+        APISource.shared.getMainall(params: params) { res in
+            self.headerAdvertisements = res.advertiseForMainDtoList
+            self.collectionView.reloadSection(section: CellType.headerAd.rawValue)
             
             APISource.shared.getDeliveryMarkets(arrivalDate: "2019-10-05 19:00:00", detailForDeliverySiteIndex: "1") { (res) in
                 self.markets = res
                 self.collectionView.reloadSection(section: CellType.market.rawValue)
             }
         }
+    }
+    
+    private func setupCollectionView() {
+        collectionView.contentInset = .init(top: 0, left: 0, bottom: 0, right: 0)
+        collectionView.registerNib(DeliveryHeaderAdvertisementCell.self)
+        collectionView.registerNib(DeliveryArrivalCell.self)
+        collectionView.registerNib(DeliveryMarketCell.self)
     }
     
     private func setupNavigationBarButtons() {

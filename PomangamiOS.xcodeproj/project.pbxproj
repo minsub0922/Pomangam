@@ -11,6 +11,9 @@
 		1A39D7EC2345E5050002A3C6 /* MarketDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */; };
 		1A39D7EE2345E7580002A3C6 /* MarketCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */; };
 		1A39D7F02345EC660002A3C6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7EF2345EC660002A3C6 /* BaseViewController.swift */; };
+		1A4535D62348696200DFFC8A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4535D52348696200DFFC8A /* SplashViewController.swift */; };
+		1A4535D82348735800DFFC8A /* DeliveryMenuListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4535D72348735800DFFC8A /* DeliveryMenuListCoordinator.swift */; };
+		1A5297B323489A4C00C601BE /* DeliveryOrderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */; };
 		1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10A623459D9C007D2C78 /* PageCell.swift */; };
 		1A6A10A923459D9C007D2C78 /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10A723459D9C007D2C78 /* PageCell.xib */; };
 		1A6A10AC2345A1F4007D2C78 /* PageChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10AA2345A1F4007D2C78 /* PageChildCell.swift */; };
@@ -33,6 +36,12 @@
 		1AE61FDD2347B14C0075285B /* DeliveryOrderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FDB2347B14C0075285B /* DeliveryOrderFooter.swift */; };
 		1AE61FDE2347B14C0075285B /* DeliveryOrderFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE61FDC2347B14C0075285B /* DeliveryOrderFooter.xib */; };
 		1AE61FE02348330A0075285B /* MenuDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FDF2348330A0075285B /* MenuDetailResponse.swift */; };
+		1AE61FE323485D730075285B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FE223485D730075285B /* Coordinator.swift */; };
+		1AE61FE523485E1E0075285B /* DeliveryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FE423485E1E0075285B /* DeliveryCoordinator.swift */; };
+		1AE61FE72348626C0075285B /* HotdealCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FE62348626C0075285B /* HotdealCoordinator.swift */; };
+		1AE61FE92348627D0075285B /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FE82348627D0075285B /* MoreCoordinator.swift */; };
+		1AE61FEB2348628E0075285B /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FEA2348628E0075285B /* LoginCoordinator.swift */; };
+		1AE61FED2348629C0075285B /* CommunityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FEC2348629C0075285B /* CommunityCoordinator.swift */; };
 		5E14B85DCC814F29A4A0DAED /* Pods_PomangamiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD0172C42936DAECCDAADB /* Pods_PomangamiOSTests.framework */; };
 		A08B6FE6CE785B1FAD49EDDB /* Pods_PomangamiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */; };
 		AF11247B230847E0009CAB21 /* DeliveryMenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11247A230847E0009CAB21 /* DeliveryMenuListViewController.swift */; };
@@ -115,6 +124,9 @@
 		1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetailResponse.swift; sourceTree = "<group>"; };
 		1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCommentResponse.swift; sourceTree = "<group>"; };
 		1A39D7EF2345EC660002A3C6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1A4535D52348696200DFFC8A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		1A4535D72348735800DFFC8A /* DeliveryMenuListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMenuListCoordinator.swift; sourceTree = "<group>"; };
+		1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderCoordinator.swift; sourceTree = "<group>"; };
 		1A6A10A623459D9C007D2C78 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		1A6A10A723459D9C007D2C78 /* PageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
 		1A6A10AA2345A1F4007D2C78 /* PageChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageChildCell.swift; sourceTree = "<group>"; };
@@ -137,6 +149,12 @@
 		1AE61FDB2347B14C0075285B /* DeliveryOrderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderFooter.swift; sourceTree = "<group>"; };
 		1AE61FDC2347B14C0075285B /* DeliveryOrderFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryOrderFooter.xib; sourceTree = "<group>"; };
 		1AE61FDF2348330A0075285B /* MenuDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailResponse.swift; sourceTree = "<group>"; };
+		1AE61FE223485D730075285B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1AE61FE423485E1E0075285B /* DeliveryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCoordinator.swift; sourceTree = "<group>"; };
+		1AE61FE62348626C0075285B /* HotdealCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotdealCoordinator.swift; sourceTree = "<group>"; };
+		1AE61FE82348627D0075285B /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
+		1AE61FEA2348628E0075285B /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		1AE61FEC2348629C0075285B /* CommunityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCoordinator.swift; sourceTree = "<group>"; };
 		3B733C07C54F726A09E26E87 /* Pods-PomangamiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PomangamiOSTests/Pods-PomangamiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CC65E7CAA8B949866BEAD9E /* Pods-PomangamiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOSUITests/Pods-PomangamiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4FA5E502C0793B707BD48F10 /* Pods_PomangamiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomangamiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +311,21 @@
 			path = DeliveryOrderCell;
 			sourceTree = "<group>";
 		};
+		1AE61FE123485D540075285B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1AE61FE223485D730075285B /* Coordinator.swift */,
+				1AE61FE62348626C0075285B /* HotdealCoordinator.swift */,
+				1AE61FE82348627D0075285B /* MoreCoordinator.swift */,
+				1AE61FEC2348629C0075285B /* CommunityCoordinator.swift */,
+				1AE61FEA2348628E0075285B /* LoginCoordinator.swift */,
+				1A4535D72348735800DFFC8A /* DeliveryMenuListCoordinator.swift */,
+				1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */,
+				1AE61FE423485E1E0075285B /* DeliveryCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		AF11247923084729009CAB21 /* Delivery */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +352,7 @@
 			children = (
 				AF4A3E99230F6FBF003F3825 /* Login.storyboard */,
 				AF4A3E9B230F6FDE003F3825 /* LoginViewController.swift */,
+				1A4535D52348696200DFFC8A /* SplashViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -518,6 +552,7 @@
 		AFF0C83622F659D2007D26DD /* PomangamiOS */ = {
 			isa = PBXGroup;
 			children = (
+				1AE61FE123485D540075285B /* Coordinator */,
 				AF6F47C82305A0C200B377C7 /* Network */,
 				AFDD4C1B22FBEE5500CD8CD5 /* Extension */,
 				AFDD4C1A22FBEE5300CD8CD5 /* Module */,
@@ -804,9 +839,11 @@
 				1AE61FD52347AFF20075285B /* DeliveryOrderOptionCell.swift in Sources */,
 				AFDD4C6B22FC0BE100CD8CD5 /* CommunityViewController.swift in Sources */,
 				AFBBB145234216AD0061CFE8 /* TabbarLayout.swift in Sources */,
+				1AE61FE323485D730075285B /* Coordinator.swift in Sources */,
 				AF4A3EA4230F7EF2003F3825 /* UIButtonCheckable.swift in Sources */,
 				AF4A3E97230EFF0F003F3825 /* PomangamModule.swift in Sources */,
 				AF4A3E90230EFD12003F3825 /* DeliveryMarketCell.swift in Sources */,
+				1AE61FE92348627D0075285B /* MoreCoordinator.swift in Sources */,
 				1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */,
 				AF5B31F8232D3D8E0052F495 /* DropDownLabel.swift in Sources */,
 				AFDD4CC522FC7AFE00CD8CD5 /* UIViewRounded.swift in Sources */,
@@ -814,12 +851,14 @@
 				1AE61FD12347AFDC0075285B /* DeliveryOrderMenuCell.swift in Sources */,
 				AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */,
 				1AE61FE02348330A0075285B /* MenuDetailResponse.swift in Sources */,
+				1A4535D82348735800DFFC8A /* DeliveryMenuListCoordinator.swift in Sources */,
 				AFD5E32C231424B10031E375 /* NavigationTitleDropDownButton.swift in Sources */,
 				1A39D7EC2345E5050002A3C6 /* MarketDetailResponse.swift in Sources */,
 				1A39D7EE2345E7580002A3C6 /* MarketCommentResponse.swift in Sources */,
 				AFDD4C6722FC0BD200CD8CD5 /* MoreViewController.swift in Sources */,
 				AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */,
 				1AE61FCC234789B40075285B /* DeliveryOrderViewController.swift in Sources */,
+				1AE61FED2348629C0075285B /* CommunityCoordinator.swift in Sources */,
 				1A6A10B82345B59B007D2C78 /* DeliveryTabpagerCell.swift in Sources */,
 				AF99D4F0233A0C7200DB3A95 /* DeliveryHeaderAdvertisementCell.swift in Sources */,
 				AFDD4CC022FC49E400CD8CD5 /* StaticLists.swift in Sources */,
@@ -827,12 +866,14 @@
 				AF4A3E9C230F6FDE003F3825 /* LoginViewController.swift in Sources */,
 				AFC92E10233B13C20054D92E /* Delivery.swift in Sources */,
 				AFC92E12233B152B0054D92E /* ProductResponse.swift in Sources */,
+				1A4535D62348696200DFFC8A /* SplashViewController.swift in Sources */,
 				AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */,
 				AF11247B230847E0009CAB21 /* DeliveryMenuListViewController.swift in Sources */,
 				AFDD4CC322FC634C00CD8CD5 /* UIlabelFlexible.swift in Sources */,
 				1A6AF01E2344CB98007ACE44 /* TabPagerLayout.swift in Sources */,
 				AF4A3EA9230F8554003F3825 /* User.swift in Sources */,
 				AFF148EC23210514006FB68B /* MarketResponse.swift in Sources */,
+				1A5297B323489A4C00C601BE /* DeliveryOrderCoordinator.swift in Sources */,
 				AF8A010C233F21B3002EAEA6 /* DeliveryMarketResponse.swift in Sources */,
 				AF4A3EA6230F8364003F3825 /* TokenModel.swift in Sources */,
 				1A0BF4B32345F6CC007A7F21 /* MenuResponse.swift in Sources */,
@@ -843,8 +884,11 @@
 				AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */,
 				AFDD4CBA22FC278100CD8CD5 /* UIViewEnum+.swift in Sources */,
 				AFDD4C6322FC0BBF00CD8CD5 /* HotdealViewController.swift in Sources */,
+				1AE61FEB2348628E0075285B /* LoginCoordinator.swift in Sources */,
+				1AE61FE523485E1E0075285B /* DeliveryCoordinator.swift in Sources */,
 				AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */,
 				AF4A3EA0230F7900003F3825 /* UIColor+.swift in Sources */,
+				1AE61FE72348626C0075285B /* HotdealCoordinator.swift in Sources */,
 				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
 				AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */,
 				AF6F47C723059F3700B377C7 /* FasterImageView.swift in Sources */,

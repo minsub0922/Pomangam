@@ -8,7 +8,13 @@
 
 import UIKit
 
+public protocol DeliveryMenuListViewControllerDelegate: class {
+    func navigateToDelivery()
+    func navigateToDeliveryOrder<T>(packet: T)
+}
+
 class DeliveryMenuListViewController: BaseViewController {
+    public weak var delegate: DeliveryMenuListViewControllerDelegate?
     //MARK: Properties
     private var navigationButtonView: NavigationTitleDropDownButton = NavigationTitleDropDownButton()
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
