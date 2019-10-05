@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeliveryOrderMenuCell: UICollectionViewCell {
+class DeliveryOrderMenuCell: UICollectionViewCell, CellProtocol {
 
     @IBOutlet weak var meneImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
@@ -21,4 +21,11 @@ class DeliveryOrderMenuCell: UICollectionViewCell {
         // Initialization code
     }
 
+    func setupView(model: DeliveryOrderMenuCellViewModel) {
+        meneImageView.loadImageAsyc(fromURL: model.imageURL)
+        likeButton.setTitle(String(model.likeCount), for: .normal)
+        nameLabel.text = model.name
+        priceLabel.text = String(model.price)
+        descriptionLabel.text = model.description
+    }
 }

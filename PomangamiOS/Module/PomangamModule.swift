@@ -39,3 +39,15 @@ struct DeliveryMenuCellViewModel: CellViewModel {
     let name: String
     let price: String
 }
+
+struct DeliveryOrderMenuCellViewModel: CellViewModel {
+    let imageURL: String
+    let name: String
+    let likeCount: Int
+    let price: Int
+    let description: String
+}
+
+struct DeliveryOrderOptionCellViewModel: CellViewModel {
+    let optionName: String
+}

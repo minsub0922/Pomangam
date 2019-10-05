@@ -31,7 +31,7 @@ struct MenuResponse: Codable {
     let index: Int
     let storeIndex: Int
     let name: String
-    let description: String
+    let description: String?
     let subDescription: String?
     let categoryId: Int?
     let categoryName: String?

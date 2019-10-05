@@ -10,6 +10,7 @@ import UIKit
 
 class DeliveryOrderRequestCell: UICollectionViewCell {
 
+    @IBOutlet weak var textfield: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

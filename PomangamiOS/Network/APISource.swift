@@ -20,8 +20,8 @@ class APISource: APISourceProtocol {
         return ["Authorization": "Bearer \(model.accessToken)"]
     }()
     
-    func getMainall(params: Parameters, completion: @escaping (ListAllMainResponse) -> Void) {
-        get("/views/main", params: params, headers: headers) { (res: NetworkResult<(Int, ListAllMainResponse)>) in
+    private func commonResponseHandler<T>(completion: @escaping (T) -> Void) -> (NetworkResult<(Int, T)>) -> Void {
+        return { (res: NetworkResult<(Int, T)>) in
             switch res {
             case .networkSuccess(let data):
                 completion(data.1)
@@ -31,6 +31,13 @@ class APISource: APISourceProtocol {
                 print("Network Fail")
             }
         }
+    }
+    
+    func getMainall(params: Parameters, completion: @escaping (ListAllMainResponse) -> Void) {
+        get("/views/main",
+            params: params,
+            headers: headers,
+            completion: commonResponseHandler(completion: completion))
     }
     
     func getTokenGuest(completion: @escaping (TokenModel) -> Void) {
@@ -41,16 +48,10 @@ class APISource: APISourceProtocol {
             "grant_type": "client_credentials"
         ]
         
-        post("/oauth/token", params: params, headers: headers) { (res: NetworkResult<(Int, TokenModel)>) in
-            switch res {
-            case .networkSuccess(let date):
-                completion(date.1)
-            case .networkError(let error):
-                print(error)
-            case .networkFail:
-                print("Network Fail")
-            }
-        }
+        post("/oauth/token",
+             params: params,
+             headers: headers,
+             completion: commonResponseHandler(completion: completion))
     }
     
     func getDeliveryMarkets(arrivalDate: String, detailForDeliverySiteIndex: String, completion: @escaping ([DeliveryMarket]) -> Void) {
@@ -59,16 +60,10 @@ class APISource: APISourceProtocol {
             "detailForDeliverySiteIdx": detailForDeliverySiteIndex
         ] as [String: Any]
         
-        get("/stores/search/getInquiryResult", params: params, headers: headers) { (res: NetworkResult<(Int, [DeliveryMarket])>) in
-            switch res {
-            case .networkSuccess(let data):
-                completion(data.1)
-            case .networkError(let error):
-                print(error)
-            case .networkFail:
-                print("Network Fail")
-            }
-        }
+        get("/stores/search/getInquiryResult",
+            params: params,
+            headers: headers,
+            completion: commonResponseHandler(completion: completion))
     }
     
     func getMarketDetail(storeIndex: Int, completion: @escaping (MarketDetailResponse) -> Void) {
@@ -76,16 +71,10 @@ class APISource: APISourceProtocol {
             "storeIdx": storeIndex,
             ] as [String : Any]
         
-        get("/stores/search/findWithCategory", params: params, headers: headers) { (res: NetworkResult<(Int, MarketDetailResponse)>) in
-            switch res {
-            case .networkSuccess(let data):
-                completion(data.1)
-            case .networkError(let error):
-                print(error)
-            case .networkFail:
-                print("Network Fail")
-            }
-        }
+        get("/stores/search/findWithCategory",
+            params: params,
+            headers: headers,
+            completion: commonResponseHandler(completion: completion))
     }
     
     func getMarketComments(storeIndex: Int, orderBy: StoreOrderType?, size: String?, page: String?, completion: @escaping ([MarketCommentResponse]) -> Void) {
@@ -97,16 +86,10 @@ class APISource: APISourceProtocol {
         if let size = size { params["size"] = size }
         if let page = page { params["page"] = page }
         
-        get("/commentStores/search/findByStoreIdx", params: params, headers: headers) { (res: NetworkResult<(Int, [MarketCommentResponse])>) in
-            switch res {
-            case .networkSuccess(let data):
-                completion(data.1)
-            case .networkError(let error):
-                print(error)
-            case .networkFail:
-                print("Network Fail")
-            }
-        }
+        get("/commentStores/search/findByStoreIdx",
+            params: params,
+            headers: headers,
+            completion: commonResponseHandler(completion: completion))
     }
     
     func getMenuList(storeIndex: Int, categoryId: Int? = nil, type: MenuType? = nil, orderBy: MenuOrder? = nil, size: Int? = nil, page: Int? = nil, completion: @escaping ([MenuResponse]) -> Void) {
@@ -120,16 +103,10 @@ class APISource: APISourceProtocol {
         if let size = size { params["size"] = size }
         if let page = page { params["page"] = page }
         
-        get("/products/search/findByStoreIdx", params: params, headers: headers) { (res: NetworkResult<(Int, [MenuResponse])>) in
-            switch res {
-            case .networkSuccess(let data):
-                completion(data.1)
-            case .networkError(let error):
-                print(error)
-            case .networkFail:
-                print("Network Fail")
-            }
-        }
+        get("/products/search/findByStoreIdx",
+            params: params,
+            headers: headers,
+            completion: commonResponseHandler(completion: completion))
     }
     
 //    func getAffiliateMarkets(deliverySiteIndex: String, type: StoreType, orderBy: StoreOrderType? = nil, size: String? = nil, page: String? = nil, completion: @escaping ([Market]) -> Void) {

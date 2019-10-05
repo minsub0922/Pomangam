@@ -17,3 +17,10 @@ class CurrentMarket {
     static let shared = CurrentMarket()
     var index: Int? = nil
 }
+
+class SingleOrder {
+    static let shared = SingleOrder()
+    var options: [String:Int] = [:]
+    var request: String = String()
+    var amount: Int = Int()
+}
