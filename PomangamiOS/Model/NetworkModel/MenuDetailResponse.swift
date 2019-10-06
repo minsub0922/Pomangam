@@ -7,7 +7,7 @@
 //
 
 struct MenuDetailResponse: Codable {
-    let menuInfo: MenuResponse?
+    let menuInfo: MenuResponse
     let subMenuList: [MenuResponse]?
     let toppingMenuList: [MenuResponse]?
     let beverageMenuList: [MenuResponse]?

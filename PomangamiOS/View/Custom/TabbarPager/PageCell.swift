@@ -54,7 +54,15 @@ class PageCell: UICollectionViewCell {
 
 extension PageCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let target = UIStoryboard.init(name: "Delivery", bundle: nil).instantiateViewController(DeliveryOrderViewController.self)
+        target.setPacket(packet: menuList[indexPath.row])
         
+        DeliveryCommon.shared
+            .navigationController
+//            .pushViewController(storyboard: "Delivery",
+//                                viewController: DeliveryOrderViewController.self,
+//                                packet: menuList[indexPath.row])
+            .presentDetail(target: target, style: .rightToLeft)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

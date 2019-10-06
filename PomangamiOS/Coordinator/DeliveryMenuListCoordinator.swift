@@ -1,13 +1,18 @@
 //
-//  DeliveryOrderCoordinator.swift
+//  DeliveryMenuListCoordinator.swift
 //  PomangamiOS
 //
 //  Created by 최민섭 on 05/10/2019.
 //  Copyright © 2019 최민섭. All rights reserved.
 //
+
 import UIKit
 
-class DeliveryOrderCoordinator: Coordinator {
+protocol BackToDeliveryViewControllerDelegate: class {
+    func navigateBackToFirstPage()
+}
+
+class DeliveryMenuListCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     weak var delegate: BackToDeliveryViewControllerDelegate?
     
@@ -17,19 +22,22 @@ class DeliveryOrderCoordinator: Coordinator {
     }
     
     func start<T>(packet: T) {
-        let target : DeliveryOrderViewController = DeliveryOrderViewController()
+        let target : DeliveryMenuListViewController = DeliveryMenuListViewController()
         target.delegate = self
         target.setPacket(packet: packet)
         navigationController.pushViewController(target, animated: true)
     }
 }
 
-extension DeliveryOrderCoordinator: DeliveryOrderViewControllerDelegate {
-    func navigateToDelivery<T>(packet: T) {
+extension DeliveryMenuListCoordinator: DeliveryMenuListViewControllerDelegate {
+    func navigateToDelivery() {
         self.delegate?.navigateBackToFirstPage()
     }
     
-    func navigateToDeliveryMenuList<T>(packet: T) {
-        navigationController.popViewController(animated: true)
+    func navigateToDeliveryOrder<T>(packet: T) {
+        let deliveryOrderCoordinator = DeliveryOrderCoordinator(navigationController: navigationController)
+        deliveryOrderCoordinator.delegate = self as? BackToDeliveryViewControllerDelegate
+        deliveryOrderCoordinator.start(packet: packet)
     }
 }
+

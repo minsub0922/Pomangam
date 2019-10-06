@@ -68,14 +68,29 @@ extension UserDefaults{
 }
 
 extension UINavigationController {
-    func pushViewController<T: UIViewController, Packet: Any>(storyboard: String = "Main", viewController: T.Type, packet: Packet? = nil) {
+    func pushViewController<T: UIViewController>(storyboard: String = "Main", viewController: T.Type) {
         let target = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(viewController)
+            
+        self.pushViewController(target, animated: true)
+    }
+    
+    func pushViewController<T: UIViewController, Packet: Any>(storyboard: String = "Main", viewController: T.Type, packet: Packet) {
+        let target = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(viewController)
+        if let target = target as? BaseViewController {
+            target.setPacket(packet: packet)
+        }
+        
+        self.pushViewController(target, animated: true)
+    }
+
+    
+    func pushViewController(target: UIViewController, packet: Any? = nil) {
         if let packet = packet {
             if let target = target as? BaseViewController {
                 target.setPacket(packet: packet)
             }
         }
-            
+        
         self.pushViewController(target, animated: true)
     }
 }

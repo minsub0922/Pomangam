@@ -6,7 +6,7 @@
 //  Copyright © 2019 최민섭. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Cart {
     static let shared = Cart()
@@ -23,4 +23,9 @@ class SingleOrder {
     var options: [String:Int] = [:]
     var request: String = String()
     var amount: Int = Int()
+}
+
+class DeliveryCommon {
+    static let shared = DeliveryCommon()
+    var navigationController: UINavigationController = UINavigationController()
 }

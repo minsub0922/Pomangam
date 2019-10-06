@@ -55,18 +55,18 @@ extension UIView {
     func addAutoLayout(parent: UIView, topConstraint: UIView? = nil, bottomConstraint: UIView? = nil, heightRatio: CGFloat = 1, widthRatio: CGFloat = 1) {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.centerXAnchor.constraint(equalTo: parent.centerXAnchor).isActive = true
-        self.centerYAnchor.constraint(equalTo: parent.centerYAnchor).isActive = true
+        self.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: widthRatio).isActive = true
         
         if let topConstraint = topConstraint {
             self.topAnchor.constraint(equalTo: topConstraint.bottomAnchor).isActive = true
         } else {
-            self.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: widthRatio).isActive = true
+            self.topAnchor.constraint(equalTo: parent.topAnchor).isActive = true
         }
         
         if let bottomConstraint = bottomConstraint {
             self.bottomAnchor.constraint(equalTo: bottomConstraint.topAnchor).isActive = true
         } else {
-            self.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: heightRatio).isActive = true
+            self.bottomAnchor.constraint(equalTo: parent.bottomAnchor).isActive = true
         }
     }
 }
@@ -196,6 +196,12 @@ extension UICollectionView {
         self.register(UINib(nibName: reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
     
+    func registerSupplementaryNib<T: UICollectionReusableView>(_ viewClass: T.Type, isHeaderFooter: Int) {
+        let stringName = isHeaderFooter == 0 ? UICollectionView.elementKindSectionHeader : UICollectionView.elementKindSectionFooter
+        let reuseIdentifier = viewClass.className
+        self.register(UINib(nibName: reuseIdentifier, bundle: nil), forSupplementaryViewOfKind: stringName, withReuseIdentifier: reuseIdentifier)
+    }
+    
     func dequeueReusableCell<T: UICollectionViewCell>(_ cellClass: T.Type, for indexPath: IndexPath) -> T {
         return self.dequeueReusableCell(withReuseIdentifier: cellClass.className, for: indexPath) as! T
     }
@@ -277,5 +283,34 @@ extension UIImageView {
                 }
             }
         }.resume()
+    }
+}
+
+extension UIViewController {
+    enum TransitionStyle {
+        case rightToLeft
+    }
+    
+    func presentDetail(target: UIViewController, style: TransitionStyle) {
+        switch style {
+        case .rightToLeft:
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromRight
+            transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+            view.window?.layer.add(transition, forKey: kCATransition)
+        }
+        self.present(target, animated: false, completion: nil)
+    }
+    
+    func dismissDetail() {
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.view.window?.layer.add(transition, forKey: kCATransition)
+        
+        dismiss(animated: false)
     }
 }

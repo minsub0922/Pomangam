@@ -27,7 +27,7 @@ class DeliveryMenuListViewController: BaseViewController {
         addDeliveryMenuListScrollObserver()
     }
     
-    //MARK
+    //MARK:- Functions
     override func setPacket(packet: BaseViewController.Packet) {
         guard let marketDetail = packet as? DeliveryMarket else {return}
         self.marketDetail = marketDetail
@@ -63,11 +63,11 @@ class DeliveryMenuListViewController: BaseViewController {
     }
     
     @objc private func navigationRightButtonTapAction(_ sender: Any) {
-        print("tapped Right Button")
+        
     }
     
     @objc private func navigationTitleTapAction(_ sender: Any) {
-        print("touched??")
+        
     }
     
     @objc private func deliveryMenuListScrolledAction(_ notification: Notification) {
@@ -111,6 +111,7 @@ extension DeliveryMenuListViewController: UICollectionViewDelegate, UICollection
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(DeliveryTabpagerCell.self, for: indexPath)
+            
             return cell
         default:
             return UICollectionViewCell()

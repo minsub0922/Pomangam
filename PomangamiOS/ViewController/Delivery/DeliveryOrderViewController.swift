@@ -8,28 +8,47 @@
 
 import UIKit
 
+protocol DeliveryOrderViewControllerDelegate: class {
+    func navigateToDelivery<T>(packet: T)
+    func navigateToDeliveryMenuList<T>(packet: T)
+    //func navigateToDeliveryMenuList<T>(packet: T)
+}
+
 class DeliveryOrderViewController: BaseViewController {
+    public weak var delegate: DeliveryOrderViewControllerDelegate?
+    private var menudetail: MenuDetailResponse?
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBAction func touchupBackButton(_ sender: Any) {
+        print("??")
+        self.dismissDetail()
+    }
     
-    var collectionView: UICollectionView {
+    var collectionView: UICollectionView = {
         return UICollectionView(frame: .zero,
                                 collectionViewLayout: UICollectionViewFlowLayout())
-    }
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupCollectionView()
         guard let menuInfo = packet as? MenuResponse else {return}
         APISource.shared.getMenuDetail(productIndex: menuInfo.index) { res in
-            print(res)
+            self.menudetail = res
+            self.collectionView.reloadSection(section: 0)
         }
     }
 
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.registerNib(PageChildCell.self)
+        collectionView.backgroundColor = .white
+        collectionView.registerNib(DeliveryOrderMenuCell.self)
+        collectionView.registerNib(DeliveryOrderOptionCell.self)
+        collectionView.registerNib(DeliveryOrderRequestCell.self)
+        collectionView.registerSupplementaryNib(DeliveryOrderFooter.self, isHeaderFooter: 1)
         self.view.addSubview(collectionView)
-        collectionView.addAutoLayout(parent: self.view)
+        collectionView.addAutoLayout(parent: self.view, topConstraint: navigationBar)
     }
 }
 
@@ -38,13 +57,9 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
     enum CellType: Int {
         case menu = 0, options, request, amount
     }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "", for: indexPath) as? DeliveryOrderFooter, kind == UICollectionView.elementKindSectionFooter else {
-            return UICollectionReusableView()
-        }
-        
-        return footer
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -52,26 +67,57 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
             return 0
         }
         switch cellType {
-        case .menu:
+        case .menu, .request, .amount:
             return 1
         case .options:
             return 2
-        case .request:
-            return 1
-        case .amount:
-            return 1
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let fullSize = collectionView.bounds
+        guard let cellType = CellType(rawValue: indexPath.section) else {
+            return .zero
+        }
+        switch cellType {
+        case .menu:
+            return CGSize(width: fullSize.width, height: fullSize.height*0.35)
+        case .options:
+            return CGSize(width: fullSize.width, height: 35)
+        case .request:
+            return CGSize(width: fullSize.width, height: fullSize.height*0.2)
+        case .amount:
+            return CGSize(width: fullSize.width, height: fullSize.height*0.08)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        if section < numberOfSections(in: collectionView) - 1 {
+            return .zero
+        }
+            
+        let fullSize = collectionView.bounds
+        return CGSize(width: fullSize.width, height: 60)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "DeliveryOrderFooter", for: indexPath) as? DeliveryOrderFooter, kind == UICollectionView.elementKindSectionFooter else {
+            return UICollectionReusableView()
+        }
+
+        return footer
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cellType = CellType(rawValue: indexPath.section) else {
             return UICollectionViewCell()
         }
-        
         switch cellType {
         case .menu:
             let cell = collectionView.dequeueReusableCell(DeliveryOrderMenuCell.self, for: indexPath)
-//            cell.setupView(model: )
+            if let menudetail = menudetail {
+                cell.setupView(model: menudetail.menuInfo.asDeliveryOrderMenuViewModel)
+            }
             return cell
         case .options:
             let cell = collectionView.dequeueReusableCell(DeliveryOrderOptionCell.self, for: indexPath)

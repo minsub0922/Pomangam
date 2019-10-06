@@ -26,6 +26,7 @@
 		1A6A10BD2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */; };
 		1A6A10BF2345BB85007D2C78 /* NotificationCenter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10BE2345BB85007D2C78 /* NotificationCenter+.swift */; };
 		1A6AF01E2344CB98007ACE44 /* TabPagerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */; };
+		1AE384B223498E1D00968944 /* TempNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE384B123498E1D00968944 /* TempNavigationController.swift */; };
 		1AE61FCC234789B40075285B /* DeliveryOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FCB234789B40075285B /* DeliveryOrderViewController.swift */; };
 		1AE61FD12347AFDC0075285B /* DeliveryOrderMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FCF2347AFDC0075285B /* DeliveryOrderMenuCell.swift */; };
 		1AE61FD22347AFDC0075285B /* DeliveryOrderMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE61FD02347AFDC0075285B /* DeliveryOrderMenuCell.xib */; };
@@ -139,6 +140,7 @@
 		1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryMenuListHeaderCell.xib; sourceTree = "<group>"; };
 		1A6A10BE2345BB85007D2C78 /* NotificationCenter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+.swift"; sourceTree = "<group>"; };
 		1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPagerLayout.swift; sourceTree = "<group>"; };
+		1AE384B123498E1D00968944 /* TempNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNavigationController.swift; sourceTree = "<group>"; };
 		1AE61FCB234789B40075285B /* DeliveryOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderViewController.swift; sourceTree = "<group>"; };
 		1AE61FCF2347AFDC0075285B /* DeliveryOrderMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderMenuCell.swift; sourceTree = "<group>"; };
 		1AE61FD02347AFDC0075285B /* DeliveryOrderMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryOrderMenuCell.xib; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 				AFDD4C5B22FC0B7000CD8CD5 /* Hotdeal */,
 				AF11247923084729009CAB21 /* Delivery */,
 				AFDD4CAD22FC1BAD00CD8CD5 /* TabBarController.swift */,
+				1AE384B123498E1D00968944 /* TempNavigationController.swift */,
 				AFF0C83B22F659D2007D26DD /* Main.storyboard */,
 			);
 			path = ViewController;
@@ -851,6 +854,7 @@
 				1AE61FD12347AFDC0075285B /* DeliveryOrderMenuCell.swift in Sources */,
 				AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */,
 				1AE61FE02348330A0075285B /* MenuDetailResponse.swift in Sources */,
+				1AE384B223498E1D00968944 /* TempNavigationController.swift in Sources */,
 				1A4535D82348735800DFFC8A /* DeliveryMenuListCoordinator.swift in Sources */,
 				AFD5E32C231424B10031E375 /* NavigationTitleDropDownButton.swift in Sources */,
 				1A39D7EC2345E5050002A3C6 /* MarketDetailResponse.swift in Sources */,
