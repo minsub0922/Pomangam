@@ -54,8 +54,8 @@ extension UIView {
     
     func addAutoLayout(parent: UIView, topConstraint: UIView? = nil, bottomConstraint: UIView? = nil, heightRatio: CGFloat = 1, widthRatio: CGFloat = 1) {
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.centerXAnchor.constraint(equalTo: parent.centerXAnchor).isActive = true
-        self.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: widthRatio).isActive = true
+        self.leftAnchor.constraint(equalTo: parent.leftAnchor).isActive = true
+        self.rightAnchor.constraint(equalTo: parent.rightAnchor).isActive = true
         
         if let topConstraint = topConstraint {
             self.topAnchor.constraint(equalTo: topConstraint.bottomAnchor).isActive = true
@@ -165,6 +165,11 @@ extension UITableView {
         self.register(UINib(nibName: reuseIdentifier, bundle: nil), forCellReuseIdentifier: reuseIdentifier)
     }
     
+    func registerHeaderFooterNib<T: UITableViewHeaderFooterView>(_ viewClass: T.Type) {
+        let reuseIdentifier = viewClass.className
+        self.register(UINib(nibName: reuseIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: reuseIdentifier)
+    }
+    
     func dequeueReusableCell<T: UITableViewCell>(_ cellClass: T.Type, for indexPath: IndexPath) -> T {
         return self.dequeueReusableCell(withIdentifier: cellClass.className, for: indexPath) as! T
     }
@@ -183,11 +188,13 @@ extension UITableView {
         return self.dequeueReusableHeaderFooterView(withIdentifier: cellClass.className) as! T
     }
     
-    //can add animation during reloadData
-//    func reloadData(completion: @escaping () -> Void) {
-//        UIView.animate(withDuration: 0, animations: { self.reloadData() })
-//        completion()
-//    }
+    func reloadSection(section: Int) {
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.reloadSections(IndexSet(section...section), with: .automatic)
+            })
+        }
+    }
 }
 
 extension UICollectionView {
@@ -298,7 +305,7 @@ extension UIViewController {
             transition.duration = 0.5
             transition.type = CATransitionType.push
             transition.subtype = CATransitionSubtype.fromRight
-            transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+//            transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
             view.window?.layer.add(transition, forKey: kCATransition)
         }
         self.present(target, animated: false, completion: nil)

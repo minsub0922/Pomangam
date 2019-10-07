@@ -45,7 +45,7 @@ class DeliveryViewController: UIViewController {
             self.headerAdvertisements = res.advertiseForMainDtoList
             self.collectionView.reloadSection(section: CellType.headerAd.rawValue)
             
-            APISource.shared.getDeliveryMarkets(arrivalDate: "2019-10-07 19:00:00", detailForDeliverySiteIndex: "1") { (res) in
+            APISource.shared.getDeliveryMarkets(arrivalDate: "2019-10-09 19:00:00", detailForDeliverySiteIndex: "1") { (res) in
                 self.markets = res
                 self.collectionView.reloadSection(section: CellType.market.rawValue)
             }

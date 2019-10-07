@@ -94,6 +94,9 @@
                         <viewLayoutGuide key="safeArea" id="u06-Jz-jLe"/>
                     </view>
                     <navigationItem key="navigationItem" title="학생회관 뒤" id="0g4-fi-Z5v"/>
+                    <connections>
+                        <segue destination="Idj-1K-gGX" kind="show" id="0yz-cp-PDI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vr7-bh-0R6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,37 +109,14 @@
                     <view key="view" contentMode="scaleToFill" id="2c0-Pd-4Pg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dI5-xE-Itm">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem title="상세주문" id="Wtk-Iv-2AI">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="undo" id="y3l-D4-Ubb">
-                                            <connections>
-                                                <action selector="touchupBackButton:" destination="Idj-1K-gGX" id="tGY-To-Xro"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="dI5-xE-Itm" firstAttribute="top" secondItem="mCy-no-Rb9" secondAttribute="top" id="5qY-1o-juV"/>
-                            <constraint firstItem="dI5-xE-Itm" firstAttribute="leading" secondItem="mCy-no-Rb9" secondAttribute="leading" id="f55-Xq-7Eb"/>
-                            <constraint firstItem="dI5-xE-Itm" firstAttribute="trailing" secondItem="mCy-no-Rb9" secondAttribute="trailing" id="uOD-iN-lw6"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mCy-no-Rb9"/>
                     </view>
                     <navigationItem key="navigationItem" id="gXO-NN-MSN"/>
-                    <connections>
-                        <outlet property="navigationBar" destination="dI5-xE-Itm" id="Hit-NE-FLS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcD-Eh-P1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3930" y="-322"/>
+            <point key="canvasLocation" x="2429" y="-322"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EmD-vh-w4p">
@@ -166,21 +146,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybi-hZ-h0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="767" y="392"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="kfH-PE-MO7">
-            <objects>
-                <navigationController storyboardIdentifier="DeliveryOrderViewControllerNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sso-Dc-rn9" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ihr-33-QtT">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fMH-Gp-sXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3042.0289855072465" y="-322.09821428571428"/>
         </scene>
     </scenes>
 </document>

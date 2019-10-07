@@ -14,5 +14,4 @@ class DeliveryOrderFooter: UICollectionReusableView {
         super.awakeFromNib()
         // Initialization code
     }
-    
 }

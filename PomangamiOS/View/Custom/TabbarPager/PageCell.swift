@@ -59,10 +59,10 @@ extension PageCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         
         DeliveryCommon.shared
             .navigationController
-//            .pushViewController(storyboard: "Delivery",
-//                                viewController: DeliveryOrderViewController.self,
-//                                packet: menuList[indexPath.row])
-            .presentDetail(target: target, style: .rightToLeft)
+            .pushViewController(storyboard: "Delivery",
+                                viewController: DeliveryOrderViewController.self,
+                                packet: menuList[indexPath.row])
+//            .presentDetail(target: target, style: .rightToLeft)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

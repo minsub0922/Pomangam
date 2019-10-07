@@ -17,11 +17,7 @@ protocol DeliveryOrderViewControllerDelegate: class {
 class DeliveryOrderViewController: BaseViewController {
     public weak var delegate: DeliveryOrderViewControllerDelegate?
     private var menudetail: MenuDetailResponse?
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    @IBAction func touchupBackButton(_ sender: Any) {
-        print("??")
-        self.dismissDetail()
-    }
+    private let form = DeliveryOrderForm()
     
     var collectionView: UICollectionView = {
         return UICollectionView(frame: .zero,
@@ -31,12 +27,25 @@ class DeliveryOrderViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupCollectionView()
+        setupFormView()
+        //setupCollectionView()
+        
         guard let menuInfo = packet as? MenuResponse else {return}
+        
         APISource.shared.getMenuDetail(productIndex: menuInfo.index) { res in
             self.menudetail = res
             self.collectionView.reloadSection(section: 0)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
     }
 
     private func setupCollectionView() {
@@ -48,7 +57,18 @@ class DeliveryOrderViewController: BaseViewController {
         collectionView.registerNib(DeliveryOrderRequestCell.self)
         collectionView.registerSupplementaryNib(DeliveryOrderFooter.self, isHeaderFooter: 1)
         self.view.addSubview(collectionView)
-        collectionView.addAutoLayout(parent: self.view, topConstraint: navigationBar)
+        collectionView.addAutoLayout(parent: self.view)
+    }
+    
+    private func setupFormView() {
+        self.view.addSubview(form)
+        form.translatesAutoresizingMaskIntoConstraints = false
+        form.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        form.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        form.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        form.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: 90).isActive = true
+        //form.bounds.fr
+//        form.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
     }
 }
 
