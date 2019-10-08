@@ -40,6 +40,10 @@ extension UIView {
         self.layer.masksToBounds = false
     }
     
+    func removeShadow() {
+        self.layer.shadowOpacity = 0
+    }
+    
 //    // MARK: Set Shadow on the view without bound limited
 //    private func applyShadow(radius: CGFloat = 0.0, opacity: Float = 0.3) {
 //        self.layer.cornerRadius = radius
@@ -267,6 +271,10 @@ extension UICollectionView {
     
     func dequeueReusableCell<T: UICollectionViewCell>(_ cellClass: T.Type, for indexPath: IndexPath) -> T {
         return self.dequeueReusableCell(withReuseIdentifier: cellClass.className, for: indexPath) as! T
+    }
+    
+    func dequeueReusableSupplement<T: UICollectionReusableView>(_ cellClass: T.Type, kind: String, for indexPath: IndexPath) -> T {
+        return self.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: cellClass.className, for: indexPath) as! T
     }
     
     func reloadDataOnMainThread() {

@@ -58,7 +58,7 @@ extension PageCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         target.setPacket(packet: menuList[indexPath.row])
         
         DeliveryCommon.shared
-            .navigationController
+            .navigationController?
             .pushViewController(storyboard: "Delivery",
                                 viewController: DeliveryOrderViewController.self,
                                 packet: menuList[indexPath.row])

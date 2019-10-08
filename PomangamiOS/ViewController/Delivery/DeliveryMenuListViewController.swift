@@ -35,13 +35,7 @@ class DeliveryMenuListViewController: BaseViewController {
     }
     
     private func setupUI() {
-        navigationButtonView.addTarget(self, action: #selector(navigationTitleTapAction(_:)), for: .touchUpInside)
-        navigationButtonView.configure("학생회관 뒤")
-        let rightButton = UIBarButtonItem(image: UIImage(named: "btnDeliveryFilter"), style: .plain, target: self, action: #selector(navigationRightButtonTapAction(_:)))
-        
-        navigationItem.titleView = navigationButtonView
-        navigationItem.rightBarButtonItem  = rightButton
-        navigationController?.navigationBar.backgroundColor = .white
+        setupNavigationBarButtons()
         setupCollectionView()
     }
     
@@ -60,6 +54,16 @@ class DeliveryMenuListViewController: BaseViewController {
             target: self,
             notificationName: .deliveryMenuListScrolled,
             selector: #selector(deliveryMenuListScrolledAction(_:)))
+    }
+    
+    private func setupNavigationBarButtons() {
+        navigationButtonView.addTarget(self, action: #selector(navigationTitleTapAction(_:)), for: .touchUpInside)
+        navigationButtonView.configure("학생회관 뒤")
+        let navigationReceiptButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainOrderlist"), style: .plain, target: self, action: nil)
+        let navigationCartButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainBasket"), style: .plain, target: self, action: nil)
+        
+        navigationItem.titleView = navigationButtonView
+        navigationItem.rightBarButtonItems = [navigationCartButton, navigationReceiptButton]
     }
     
     @objc private func navigationRightButtonTapAction(_ sender: Any) {

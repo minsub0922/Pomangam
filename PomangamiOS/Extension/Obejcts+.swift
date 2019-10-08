@@ -68,6 +68,10 @@ extension UserDefaults{
 }
 
 extension UINavigationController {
+    var rootViewController : UIViewController? {
+        return viewControllers.first
+    }
+    
     func pushViewController<T: UIViewController>(storyboard: String = "Main", viewController: T.Type) {
         let target = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(viewController)
             
@@ -82,7 +86,6 @@ extension UINavigationController {
         
         self.pushViewController(target, animated: true)
     }
-
     
     func pushViewController(target: UIViewController, packet: Any? = nil) {
         if let packet = packet {

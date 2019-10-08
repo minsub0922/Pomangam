@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeliveryArrivalCell: UICollectionViewCell {
+class DeliveryArrivalCell: UICollectionViewCell, CellProtocol {
     
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var timeButton: UIButton!
@@ -24,5 +24,10 @@ class DeliveryArrivalCell: UICollectionViewCell {
         
         locationButton.addImage(image: UIImage(named: "btnDeliverymainSelectplace")!)
         timeButton.addImage(image: UIImage(named: "btnDeliverymainSelectplace")!)
+    }
+    
+    func setupView(model: DeliveryArrivalCellViewModel) {
+        locationButton.setTitle(model.location, for: .normal)
+        timeButton.setTitle(model.arrivalTime, for: .normal)
     }
 }

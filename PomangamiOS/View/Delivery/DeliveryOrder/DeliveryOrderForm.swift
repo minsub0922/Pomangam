@@ -20,6 +20,13 @@ class DeliveryOrderForm: UIView {
     private let cartButton = UIButton()
     private let directOrderButton = UIButton()
     private let stackView = UIStackView()
+    var onlyOrderButton: Bool = false {
+        didSet{
+            if onlyOrderButton {
+                stackView.removeArrangedSubview(cartButton)
+            }
+        }
+    }
 
     override var bounds: CGRect {
         didSet {

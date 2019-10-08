@@ -13,13 +13,12 @@ public protocol DeliveryViewControllerDelegate: class {
     func navigateToMenuList<T>(packet: T?)
 }
 
-class DeliveryViewController: UIViewController {
+class DeliveryViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     public weak var delegate: DeliveryViewControllerDelegate?
     
     private var headerAdvertisements: [AdvertiseDto] = []
     private var markets: [DeliveryMarket] = []
-    private var navigationButtonView: NavigationTitleDropDownButton = NavigationTitleDropDownButton()
     private var homeHeaderAdCellViewModel: DeliveryHeaderAdvertisementCellViewModel {
         return DeliveryHeaderAdvertisementCellViewModel(headerAdvertisements: headerAdvertisements)
     }
@@ -28,8 +27,6 @@ class DeliveryViewController: UIViewController {
         super.viewDidLoad()
         
         setupNavigationBarButtons()
-        
-        navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         
         if let navigationController = navigationController {
             DeliveryCommon.shared.navigationController = navigationController
@@ -60,31 +57,48 @@ class DeliveryViewController: UIViewController {
     }
     
     private func setupNavigationBarButtons() {
+        let navigationButtonView = NavigationTitleDropDownButton()
         navigationButtonView.configure("한국항공대학교")
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "한국항공대학교", style: .plain, target: self, action: #selector(navigationTitleTapAction(_:)))
-        navigationItem.leftBarButtonItem?.customView = navigationButtonView
+        let navigationReceiptButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainOrderlist"),
+                                                      style: .plain,
+                                                      target: self,
+                                                      action: #selector(navigationReceiptButtonTapAction(_:)))
+        let navigationCartButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainBasket"),
+                                                   style: .plain,
+                                                   target: self,
+                                                   action: #selector(navigationCartButtonTapAction(_:)))
         
-        let navigationReceiptButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainOrderlist"), style: .plain, target: self, action: nil)
-        let navigationCartButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainBasket"), style: .plain, target: self, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "한국항공대학교",
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(navigationTitleTapAction(_:)))
+        navigationItem.leftBarButtonItem?.customView = navigationButtonView
         navigationItem.rightBarButtonItems = [navigationCartButton, navigationReceiptButton]
         
     }
     
-    @objc private func navigationTitleTapAction(_ sender: Any) {
+    @objc private func navigationReceiptButtonTapAction(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    @objc private func navigationCartButtonTapAction(_ sender: UIBarButtonItem) {
+        DeliveryCommon.shared.navigationController?.pushViewController(storyboard: "Delivery",
+                                                                      viewController: DeliveryCartViewController.self)
+    }
+    
+    @objc private func navigationTitleTapAction(_ sender: UIBarButtonItem) {
         print("cleicked??")
     }
 }
 
-/**
- Delivery 컬렉션 뷰의 타입
- 
- - headerAd: 상단 배너
- - arrivalSpot: 도착 장소 및 시간
- - market: 매장들
- */
-
-
 extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    /**
+     Delivery 컬렉션 뷰의 타입
+     
+     - headerAd: 상단 배너
+     - arrivalSpot: 도착 장소 및 시간
+     - market: 매장들
+     */
     enum CellType: Int {
         case headerAd = 0, arrivalSpot, market
     }

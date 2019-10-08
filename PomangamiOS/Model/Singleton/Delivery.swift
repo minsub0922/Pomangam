@@ -10,7 +10,8 @@ import UIKit
 
 class Cart {
     static let shared = Cart()
-    var products: [ProductResponse] = []
+    //var products: [ProductResponse] = []
+    var orders: [SingleOrder] = []
 }
 
 class CurrentMarket {
@@ -20,12 +21,35 @@ class CurrentMarket {
 
 class SingleOrder {
     static let shared = SingleOrder()
-    var options: [String:Int] = [:]
-    var request: String = String()
-    var amount: Int = Int()
+    var productInfo: ProductInfo? = nil
+    
+    struct ProductInfo {
+        var index = Int()
+        var name = String()
+        var price = Int()
+        var imageURL = String()
+        var options: [String:Int] = [:]
+        var request: String = String()
+        var amount: Int = Int()
+    }
 }
 
 class DeliveryCommon {
     static let shared = DeliveryCommon()
-    var navigationController: UINavigationController = UINavigationController()
+    private init() {}
+    
+    func setNavigationController(navigationController: UINavigationController?) {
+        if let navigationController = navigationController, self.navigationController == nil {
+            self.navigationController = navigationController
+        }
+    }
+    
+    var navigationController: UINavigationController? {
+        didSet {
+            navigationController?.navigationBar.backgroundColor = .white
+            navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        }
+    }
 }
+
+

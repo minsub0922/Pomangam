@@ -9,7 +9,6 @@
 import UIKit
 
 class NavigationTitleDropDownButton: UIButton {
-    
     /// Variable Declaration(s)
     var lblTitle: UILabel = {
         var lbl: UILabel = UILabel()
@@ -61,6 +60,14 @@ class NavigationTitleDropDownButton: UIButton {
         stackView.spacing = 4
         return stackView
     }()
+    
+    var onlyTitle: Bool = false {
+        didSet {
+            if onlyTitle {
+                horizontalStackView.removeArrangedSubview(imgVDropDown)
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

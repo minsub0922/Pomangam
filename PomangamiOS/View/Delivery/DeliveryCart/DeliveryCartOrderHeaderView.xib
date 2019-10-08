@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="DeliveryCartOrderHeaderView" customModule="PomangamiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="205"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o8d-8y-nrs">
+                    <rect key="frame" x="20" y="15" width="139" height="138"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="o8d-8y-nrs" secondAttribute="height" multiplier="1:1" constant="1" id="nZ7-um-Nxg"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8g-Hc-xzr">
+                    <rect key="frame" x="179" y="15" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fck-8O-yS5">
+                    <rect key="frame" x="179" y="38" width="33" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llZ-Od-AHv">
+                    <rect key="frame" x="273" y="134" width="6" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Dr-s3-qdq">
+                    <rect key="frame" x="297" y="15" width="10" height="22"/>
+                    <state key="normal" image="btnDeliverybasketDelete"/>
+                    <connections>
+                        <action selector="touchupExitButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="mQS-KU-W23"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIJ-qG-UTe">
+                    <rect key="frame" x="153" y="173" width="17" height="22"/>
+                    <state key="normal" image="btnDeliverybasketShowdetail"/>
+                    <connections>
+                        <action selector="touchupExpandButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="TXn-Oa-fe3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8id-S3-bCG">
+                    <rect key="frame" x="299" y="131" width="8" height="22"/>
+                    <state key="normal" image="btnDeliveryviewIncrease"/>
+                    <connections>
+                        <action selector="touchupIncreaseButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="jDc-Nj-yIN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGN-SH-fp6">
+                    <rect key="frame" x="245" y="131" width="8" height="22"/>
+                    <state key="normal" image="btnDeliveryviewReduce"/>
+                    <connections>
+                        <action selector="touchupDecreaseButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="WXM-CT-9Tz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="7Dr-s3-qdq" secondAttribute="trailing" constant="16" id="1bY-LW-XIB"/>
+                <constraint firstItem="Fck-8O-yS5" firstAttribute="top" secondItem="y8g-Hc-xzr" secondAttribute="bottom" constant="5" id="2cX-1n-jYL"/>
+                <constraint firstItem="llZ-Od-AHv" firstAttribute="leading" secondItem="jGN-SH-fp6" secondAttribute="trailing" constant="20" id="4BA-aX-NUL"/>
+                <constraint firstItem="Fck-8O-yS5" firstAttribute="leading" secondItem="y8g-Hc-xzr" secondAttribute="leading" id="Hxv-Zm-VIB"/>
+                <constraint firstItem="cIJ-qG-UTe" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="JFd-9q-rlp"/>
+                <constraint firstItem="o8d-8y-nrs" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" constant="15" id="PBa-kk-DPd"/>
+                <constraint firstItem="cIJ-qG-UTe" firstAttribute="top" secondItem="o8d-8y-nrs" secondAttribute="bottom" constant="20" id="PfE-AC-UgC"/>
+                <constraint firstItem="8id-S3-bCG" firstAttribute="bottom" secondItem="o8d-8y-nrs" secondAttribute="bottom" id="Q6U-uR-6lN"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="cIJ-qG-UTe" secondAttribute="bottom" constant="10" id="R0T-yb-HaL"/>
+                <constraint firstItem="8id-S3-bCG" firstAttribute="trailing" secondItem="7Dr-s3-qdq" secondAttribute="trailing" id="Xsb-iN-SQ1"/>
+                <constraint firstItem="y8g-Hc-xzr" firstAttribute="top" secondItem="o8d-8y-nrs" secondAttribute="top" id="aUJ-Cw-xeW"/>
+                <constraint firstItem="8id-S3-bCG" firstAttribute="leading" secondItem="llZ-Od-AHv" secondAttribute="trailing" constant="20" id="dIp-HK-0a0"/>
+                <constraint firstItem="jGN-SH-fp6" firstAttribute="centerY" secondItem="llZ-Od-AHv" secondAttribute="centerY" id="dXQ-g5-j5e"/>
+                <constraint firstItem="o8d-8y-nrs" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="20" id="pqr-Dd-IL2"/>
+                <constraint firstItem="y8g-Hc-xzr" firstAttribute="leading" secondItem="o8d-8y-nrs" secondAttribute="trailing" constant="20" id="r5G-TL-pV7"/>
+                <constraint firstItem="7Dr-s3-qdq" firstAttribute="top" secondItem="y8g-Hc-xzr" secondAttribute="top" id="t31-bH-iUl"/>
+                <constraint firstItem="llZ-Od-AHv" firstAttribute="centerY" secondItem="8id-S3-bCG" secondAttribute="centerY" id="uRD-jP-XFz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="amountLabel" destination="llZ-Od-AHv" id="P9X-ec-a1u"/>
+                <outlet property="menuImageView" destination="o8d-8y-nrs" id="iE4-YR-uGU"/>
+                <outlet property="menuNameLabel" destination="y8g-Hc-xzr" id="G8L-Yc-k62"/>
+                <outlet property="menuPriceLabel" destination="Fck-8O-yS5" id="2S6-wb-3jK"/>
+            </connections>
+            <point key="canvasLocation" x="160.80000000000001" y="183.95802098950526"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="btnDeliverybasketDelete" width="10" height="10"/>
+        <image name="btnDeliverybasketShowdetail" width="17" height="7"/>
+        <image name="btnDeliveryviewIncrease" width="8" height="13"/>
+        <image name="btnDeliveryviewReduce" width="8" height="13"/>
+    </resources>
+</document>

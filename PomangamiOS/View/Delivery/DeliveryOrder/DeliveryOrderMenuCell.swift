@@ -10,11 +10,15 @@ import UIKit
 
 class DeliveryOrderMenuCell: UICollectionViewCell, CellProtocol {
 
-    @IBOutlet weak var meneImageView: UIImageView!
-    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var menuImageView: UIImageView! {
+        didSet {
+            menuImageView.setupShadow(opacity: 0.1)
+        }
+    }
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var likeCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +26,8 @@ class DeliveryOrderMenuCell: UICollectionViewCell, CellProtocol {
     }
 
     func setupView(model: DeliveryOrderMenuCellViewModel) {
-        meneImageView.loadImageAsyc(fromURL: model.imageURL)
-        likeButton.setTitle(String(model.likeCount), for: .normal)
+        menuImageView.loadImageAsyc(fromURL: model.imageURL)
+        likeCountLabel.text = String(model.likeCount)
         nameLabel.text = model.name
         priceLabel.text = String(model.price)
         descriptionLabel.text = model.description

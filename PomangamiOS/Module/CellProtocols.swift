@@ -51,3 +51,15 @@ struct DeliveryOrderMenuCellViewModel: CellViewModel {
 struct DeliveryOrderOptionCellViewModel: CellViewModel {
     let optionName: String
 }
+
+struct DeliveryArrivalCellViewModel: CellViewModel {
+    let location: String
+    let arrivalTime: String
+}
+
+struct DeliveryCartOrderHeaderViewModel: CellViewModel {
+    let imagePath: String
+    let menuName: String
+    let menuPrice: Int
+    let amount: Int
+}
