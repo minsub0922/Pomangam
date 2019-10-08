@@ -17,7 +17,8 @@ protocol DeliveryOrderViewControllerDelegate: class {
 class DeliveryOrderViewController: BaseViewController {
     public weak var delegate: DeliveryOrderViewControllerDelegate?
     private var menudetail: MenuDetailResponse?
-    private let form = DeliveryOrderForm()
+    private var orderSelectorView: OptionSelectorView!
+    private var deliveryOrderForm: DeliveryOrderForm!
     
     var collectionView: UICollectionView = {
         return UICollectionView(frame: .zero,
@@ -26,9 +27,6 @@ class DeliveryOrderViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupFormView()
-        //setupCollectionView()
         
         guard let menuInfo = packet as? MenuResponse else {return}
         
@@ -36,6 +34,12 @@ class DeliveryOrderViewController: BaseViewController {
             self.menudetail = res
             self.collectionView.reloadSection(section: 0)
         }
+    }
+    
+    override func loadView() {
+        super.loadView()
+        
+        setupFormView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,17 +65,22 @@ class DeliveryOrderViewController: BaseViewController {
     }
     
     private func setupFormView() {
-        self.view.addSubview(form)
-        form.translatesAutoresizingMaskIntoConstraints = false
-        form.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        form.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        form.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        form.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: 90).isActive = true
-        //form.bounds.fr
-//        form.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        deliveryOrderForm = DeliveryOrderForm()
+        orderSelectorView = OptionSelectorView()
+        self.view.addSubview(deliveryOrderForm)
+        self.view.addSubview(orderSelectorView)
+
+        deliveryOrderForm.attachOnBottom(parent: self.view,
+                                         height: 60 + UIApplication.shared.safeAreaBottomInset)
+        orderSelectorView.attachOnBottom(parent: self.view,
+                                         on: deliveryOrderForm,
+                                         height: 60)
+        
+        
     }
 }
 
+//MARK:- UICollectionViewDelegate
 extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     enum CellType: Int {

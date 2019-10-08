@@ -21,7 +21,5 @@ class DeliveryTabpagerCell: UICollectionViewCell {
         self.addSubview(tabpagerLayout)
         tabpagerLayout.translatesAutoresizingMaskIntoConstraints = false
         tabpagerLayout.addAutoLayout(parent: self)
-        
-        print(self.frame)
     }
 }

@@ -94,3 +94,12 @@ extension UINavigationController {
         self.pushViewController(target, animated: true)
     }
 }
+
+extension UIApplication {
+    var safeAreaBottomInset: CGFloat {
+        return UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+    }
+    var safeAreaTopInset: CGFloat {
+        return UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
+    }
+}

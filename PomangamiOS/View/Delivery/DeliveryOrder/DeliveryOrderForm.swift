@@ -2,38 +2,68 @@
 //  DeliveryOrderForm.swift
 //  PomangamiOS
 //
-//  Created by 최민섭 on 06/10/2019.
+//  Created by 최민섭 on 08/10/2019.
 //  Copyright © 2019 최민섭. All rights reserved.
 //
 
 import UIKit
 
-class DeliveryOrderForm: UIView {
+protocol DeliveryOrderFormDelegate {
+    func tapCartButton()
+    func tapDirectOrderButton()
+}
 
-    var amountLabel = UILabel()
+class DeliveryOrderForm: UIView {
+    
+    var delegate: DeliveryOrderFormDelegate?
+    private var shouldSetupConstraints = true
+    private let cartButton = UIButton()
+    private let directOrderButton = UIButton()
+    private let stackView = UIStackView()
+
+    override var bounds: CGRect {
+        didSet {
+            self.setupShadow()
+            self.backgroundColor = .white
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .blue
-        let amountView = UIView(frame: CGRect(x: 0, y: 0, width: bounds.width, height: 45))
-        let reduceButton = UIButton()
-        reduceButton.setImage(UIImage(named: "btnDeliveryviewReduce"), for: .normal)
-        let increaseButton = UIButton()
-        increaseButton.setImage(UIImage(named: "btnDeliveryviewIncrease"), for: .normal)
-        let nameLabel = UILabel()
-        self.addSubview(amountView)
-        amountView.addSubview(reduceButton)
-        amountView.addSubview(increaseButton)
-        amountView.addSubview(amountLabel)
+        cartButton.setTitle("장바구니", for: .normal)
+        cartButton.setTitleColor(.dustyOrange, for: .normal)
+        cartButton.sizeToFit()
+        cartButton.translatesAutoresizingMaskIntoConstraints = false
+        directOrderButton.setTitle("바로주문", for: .normal)
+        directOrderButton.backgroundColor = .dustyOrange
+        directOrderButton.setTitleColor(.white, for: .normal)
+        directOrderButton.sizeToFit()
+        directOrderButton.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.spacing = self.bounds.width / 10
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        reduceButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        increaseButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        amountView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        stackView.backgroundColor = .blue
+        stackView.addArrangedSubview(cartButton)
+        stackView.addArrangedSubview(directOrderButton)
+        self.addSubview(stackView)
         
-        increaseButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 15).isActive = true
-        amountLabel.rightAnchor.constraint(equalTo: increaseButton.leftAnchor, constant: 15).isActive = true
-        reduceButton.rightAnchor.constraint(equalTo: amountLabel.leftAnchor, constant: 15).isActive = true
+        setSubviewConstraints()
+    }
+    
+    private func setSubviewConstraints() {
+        if shouldSetupConstraints {
+            shouldSetupConstraints = false
+            
+            NSLayoutConstraint.activate([
+                stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+                stackView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
+                stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 15)
+            ])
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

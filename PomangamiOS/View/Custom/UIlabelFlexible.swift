@@ -18,7 +18,6 @@ class UILabelFlexible: UILabel {
         super.layoutSubviews()
         
         if isFirst {
-            print(font.pointSize)
             isFirst = false
             font = fontToFitHeight()
         }

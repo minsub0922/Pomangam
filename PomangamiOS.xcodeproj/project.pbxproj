@@ -26,7 +26,8 @@
 		1A6A10BD2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */; };
 		1A6A10BF2345BB85007D2C78 /* NotificationCenter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10BE2345BB85007D2C78 /* NotificationCenter+.swift */; };
 		1A6AF01E2344CB98007ACE44 /* TabPagerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */; };
-		1AD25E862349C1FE008A0FF1 /* DeliveryOrderForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD25E852349C1FE008A0FF1 /* DeliveryOrderForm.swift */; };
+		1ABC5E20234C4E190091731E /* DeliveryOrderForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC5E1F234C4E190091731E /* DeliveryOrderForm.swift */; };
+		1AD25E862349C1FE008A0FF1 /* OptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */; };
 		1AE384B223498E1D00968944 /* TempNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE384B123498E1D00968944 /* TempNavigationController.swift */; };
 		1AE61FCC234789B40075285B /* DeliveryOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FCB234789B40075285B /* DeliveryOrderViewController.swift */; };
 		1AE61FD12347AFDC0075285B /* DeliveryOrderMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FCF2347AFDC0075285B /* DeliveryOrderMenuCell.swift */; };
@@ -61,7 +62,6 @@
 		AF4A3EA6230F8364003F3825 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3EA5230F8364003F3825 /* TokenModel.swift */; };
 		AF4A3EA9230F8554003F3825 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A3EA8230F8554003F3825 /* User.swift */; };
 		AF5B31F8232D3D8E0052F495 /* DropDownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B31F7232D3D8E0052F495 /* DropDownLabel.swift */; };
-		AF6F47C723059F3700B377C7 /* FasterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47C623059F3700B377C7 /* FasterImageView.swift */; };
 		AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */; };
 		AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CB2305A19C00B377C7 /* APISource.swift */; };
 		AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */; };
@@ -141,7 +141,8 @@
 		1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryMenuListHeaderCell.xib; sourceTree = "<group>"; };
 		1A6A10BE2345BB85007D2C78 /* NotificationCenter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+.swift"; sourceTree = "<group>"; };
 		1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPagerLayout.swift; sourceTree = "<group>"; };
-		1AD25E852349C1FE008A0FF1 /* DeliveryOrderForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderForm.swift; sourceTree = "<group>"; };
+		1ABC5E1F234C4E190091731E /* DeliveryOrderForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderForm.swift; sourceTree = "<group>"; };
+		1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectorView.swift; sourceTree = "<group>"; };
 		1AE384B123498E1D00968944 /* TempNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNavigationController.swift; sourceTree = "<group>"; };
 		1AE61FCB234789B40075285B /* DeliveryOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderViewController.swift; sourceTree = "<group>"; };
 		1AE61FCF2347AFDC0075285B /* DeliveryOrderMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderMenuCell.swift; sourceTree = "<group>"; };
@@ -178,7 +179,6 @@
 		AF4A3EA5230F8364003F3825 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		AF4A3EA8230F8554003F3825 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF5B31F7232D3D8E0052F495 /* DropDownLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownLabel.swift; sourceTree = "<group>"; };
-		AF6F47C623059F3700B377C7 /* FasterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasterImageView.swift; sourceTree = "<group>"; };
 		AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISourceProtocol.swift; sourceTree = "<group>"; };
 		AF6F47CB2305A19C00B377C7 /* APISource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISource.swift; sourceTree = "<group>"; };
 		AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListallMainResponse.swift; sourceTree = "<group>"; };
@@ -311,7 +311,7 @@
 				1AE61FD82347B0040075285B /* DeliveryOrderRequestCell.xib */,
 				1AE61FDB2347B14C0075285B /* DeliveryOrderFooter.swift */,
 				1AE61FDC2347B14C0075285B /* DeliveryOrderFooter.xib */,
-				1AD25E852349C1FE008A0FF1 /* DeliveryOrderForm.swift */,
+				1ABC5E1F234C4E190091731E /* DeliveryOrderForm.swift */,
 			);
 			path = DeliveryOrder;
 			sourceTree = "<group>";
@@ -521,10 +521,10 @@
 			isa = PBXGroup;
 			children = (
 				1A6AF01C2344CB62007ACE44 /* TabbarPager */,
+				1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */,
 				AFDD4CC222FC634C00CD8CD5 /* UIlabelFlexible.swift */,
 				AF4A3E9D230F7466003F3825 /* UITextFieldUnderlined.swift */,
 				AFDD4CC422FC7AFE00CD8CD5 /* UIViewRounded.swift */,
-				AF6F47C623059F3700B377C7 /* FasterImageView.swift */,
 				AF4A3EA1230F7B1B003F3825 /* UIButtonSelectorRounded.swift */,
 				AF4A3EA3230F7EF2003F3825 /* UIButtonCheckable.swift */,
 				AFD5E32B231424B10031E375 /* NavigationTitleDropDownButton.swift */,
@@ -850,7 +850,8 @@
 				AF4A3E97230EFF0F003F3825 /* PomangamModule.swift in Sources */,
 				AF4A3E90230EFD12003F3825 /* DeliveryMarketCell.swift in Sources */,
 				1AE61FE92348627D0075285B /* MoreCoordinator.swift in Sources */,
-				1AD25E862349C1FE008A0FF1 /* DeliveryOrderForm.swift in Sources */,
+				1ABC5E20234C4E190091731E /* DeliveryOrderForm.swift in Sources */,
+				1AD25E862349C1FE008A0FF1 /* OptionSelectorView.swift in Sources */,
 				1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */,
 				AF5B31F8232D3D8E0052F495 /* DropDownLabel.swift in Sources */,
 				AFDD4CC522FC7AFE00CD8CD5 /* UIViewRounded.swift in Sources */,
@@ -899,7 +900,6 @@
 				1AE61FE72348626C0075285B /* HotdealCoordinator.swift in Sources */,
 				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
 				AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */,
-				AF6F47C723059F3700B377C7 /* FasterImageView.swift in Sources */,
 				AF4A3E88230EFC3C003F3825 /* DeliveryArrivalCell.swift in Sources */,
 				AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */,
 				1A6A10BC2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift in Sources */,

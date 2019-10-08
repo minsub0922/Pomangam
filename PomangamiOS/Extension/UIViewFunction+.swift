@@ -69,6 +69,62 @@ extension UIView {
             self.bottomAnchor.constraint(equalTo: parent.bottomAnchor).isActive = true
         }
     }
+    
+    func addAutoLayout(top: NSLayoutYAxisAnchor? = nil,
+                       left: NSLayoutXAxisAnchor? = nil,
+                       right: NSLayoutXAxisAnchor? = nil,
+                       bottom: NSLayoutYAxisAnchor? = nil) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        if let top = top {
+            self.topAnchor.constraint(equalTo: top).isActive = true
+        }
+        if let left = left {
+            self.leftAnchor.constraint(equalTo: left).isActive = true
+        }
+        if let right = right {
+            self.rightAnchor.constraint(equalTo: right).isActive = true
+        }
+        if let bottom = bottom {
+            self.bottomAnchor.constraint(equalTo: bottom).isActive = true
+        }
+    }
+    
+    func attachOnBottom(parent: UIView, on: UIView? = nil, height: CGFloat) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.leftAnchor.constraint(equalTo: parent.leftAnchor).isActive = true
+        self.rightAnchor.constraint(equalTo: parent.rightAnchor).isActive = true
+        if let on = on {
+            self.bottomAnchor.constraint(equalTo: on.topAnchor).isActive = true
+        } else {
+            self.bottomAnchor.constraint(equalTo: parent.bottomAnchor).isActive = true
+        }
+        
+        self.heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+    
+    func attachOnTop(parent: UIView, height: CGFloat) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.leftAnchor.constraint(equalTo: parent.leftAnchor).isActive = true
+        self.rightAnchor.constraint(equalTo: parent.rightAnchor).isActive = true
+        self.topAnchor.constraint(equalTo: parent.topAnchor).isActive = true
+        self.heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+    
+    enum DividerPosition {
+        case top, bottom
+    }
+    
+    func addDivider(on: DividerPosition, height: CGFloat = 1) {
+        let divider = UIView()
+        self.addSubview(divider)
+        divider.backgroundColor = .dividerColor
+        switch on {
+        case .top:
+            divider.attachOnTop(parent: self, height: height)
+        case .bottom:
+            divider.attachOnBottom(parent: self, height: height)
+        }
+    }
 }
 
 extension UIButton {
