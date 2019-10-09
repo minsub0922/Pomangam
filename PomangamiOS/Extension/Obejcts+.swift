@@ -100,9 +100,17 @@ extension UINavigationController {
 
 extension UIApplication {
     var safeAreaBottomInset: CGFloat {
-        return UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+        if #available(iOS 11.0, *) {
+            return UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+        } else {
+            return 0
+        }
     }
     var safeAreaTopInset: CGFloat {
-        return UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
+        if #available(iOS 11.0, *) {
+            return UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
+        } else {
+            return 0
+        }
     }
 }

@@ -40,7 +40,7 @@ class DeliveryCartViewController: BaseViewController {
     private func setupTableView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .white 
         collectionView.registerNib(DeliveryArrivalCell.self)
         collectionView.registerNib(DeliveryCartOrderCell.self)
         collectionView.registerNib(DeliveryCartPriceCell.self)
