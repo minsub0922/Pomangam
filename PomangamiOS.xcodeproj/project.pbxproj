@@ -40,8 +40,6 @@
 		1AE61FD62347AFF20075285B /* DeliveryOrderOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE61FD42347AFF20075285B /* DeliveryOrderOptionCell.xib */; };
 		1AE61FD92347B0040075285B /* DeliveryOrderRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FD72347B0040075285B /* DeliveryOrderRequestCell.swift */; };
 		1AE61FDA2347B0040075285B /* DeliveryOrderRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE61FD82347B0040075285B /* DeliveryOrderRequestCell.xib */; };
-		1AE61FDD2347B14C0075285B /* DeliveryOrderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FDB2347B14C0075285B /* DeliveryOrderFooter.swift */; };
-		1AE61FDE2347B14C0075285B /* DeliveryOrderFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE61FDC2347B14C0075285B /* DeliveryOrderFooter.xib */; };
 		1AE61FE02348330A0075285B /* MenuDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FDF2348330A0075285B /* MenuDetailResponse.swift */; };
 		1AE61FE323485D730075285B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FE223485D730075285B /* Coordinator.swift */; };
 		1AE61FE523485E1E0075285B /* DeliveryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FE423485E1E0075285B /* DeliveryCoordinator.swift */; };
@@ -165,8 +163,6 @@
 		1AE61FD42347AFF20075285B /* DeliveryOrderOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryOrderOptionCell.xib; sourceTree = "<group>"; };
 		1AE61FD72347B0040075285B /* DeliveryOrderRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderRequestCell.swift; sourceTree = "<group>"; };
 		1AE61FD82347B0040075285B /* DeliveryOrderRequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryOrderRequestCell.xib; sourceTree = "<group>"; };
-		1AE61FDB2347B14C0075285B /* DeliveryOrderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderFooter.swift; sourceTree = "<group>"; };
-		1AE61FDC2347B14C0075285B /* DeliveryOrderFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryOrderFooter.xib; sourceTree = "<group>"; };
 		1AE61FDF2348330A0075285B /* MenuDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailResponse.swift; sourceTree = "<group>"; };
 		1AE61FE223485D730075285B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1AE61FE423485E1E0075285B /* DeliveryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCoordinator.swift; sourceTree = "<group>"; };
@@ -344,8 +340,6 @@
 				1AE61FD42347AFF20075285B /* DeliveryOrderOptionCell.xib */,
 				1AE61FD72347B0040075285B /* DeliveryOrderRequestCell.swift */,
 				1AE61FD82347B0040075285B /* DeliveryOrderRequestCell.xib */,
-				1AE61FDB2347B14C0075285B /* DeliveryOrderFooter.swift */,
-				1AE61FDC2347B14C0075285B /* DeliveryOrderFooter.xib */,
 				1ABC5E1F234C4E190091731E /* DeliveryOrderForm.swift */,
 			);
 			path = DeliveryOrder;
@@ -762,7 +756,6 @@
 				AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */,
 				1AF839FB234C862E0004EFEB /* DeliveryCartOrderFooterView.xib in Resources */,
 				1A6A10B92345B59B007D2C78 /* DeliveryTabpagerCell.xib in Resources */,
-				1AE61FDE2347B14C0075285B /* DeliveryOrderFooter.xib in Resources */,
 				1AF839F7234C7EC50004EFEB /* DeliveryCartOrderHeaderView.xib in Resources */,
 				1A6A10AD2345A1F4007D2C78 /* PageChildCell.xib in Resources */,
 				AFDD4C6122FC0BAD00CD8CD5 /* Delivery.storyboard in Resources */,
@@ -900,7 +893,6 @@
 				1AF839FE234C89660004EFEB /* DeliveryCartPriceCell.swift in Sources */,
 				AF5B31F8232D3D8E0052F495 /* DropDownLabel.swift in Sources */,
 				AFDD4CC522FC7AFE00CD8CD5 /* UIViewRounded.swift in Sources */,
-				1AE61FDD2347B14C0075285B /* DeliveryOrderFooter.swift in Sources */,
 				1AE61FD12347AFDC0075285B /* DeliveryOrderMenuCell.swift in Sources */,
 				AFDD4CBC22FC450500CD8CD5 /* Obejcts+.swift in Sources */,
 				1AE61FE02348330A0075285B /* MenuDetailResponse.swift in Sources */,

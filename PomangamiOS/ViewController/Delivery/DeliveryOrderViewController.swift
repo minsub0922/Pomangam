@@ -56,6 +56,7 @@ class DeliveryOrderViewController: BaseViewController {
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = .white
         collectionView.registerNib(DeliveryOrderMenuCell.self)
         collectionView.registerNib(DeliveryOrderOptionCell.self)
@@ -68,8 +69,8 @@ class DeliveryOrderViewController: BaseViewController {
     }
     
     private func setupFormView() {
-        deliveryOrderForm = DeliveryOrderForm()
-        orderSelectorView = OptionSelectorView()
+        deliveryOrderForm = DeliveryOrderForm(delegate: self)
+        orderSelectorView = OptionSelectorView(delegate: self)
         self.view.addSubview(deliveryOrderForm)
         self.view.addSubview(orderSelectorView)
 
@@ -78,8 +79,6 @@ class DeliveryOrderViewController: BaseViewController {
         orderSelectorView.attachOnBottom(parent: self.view,
                                          on: deliveryOrderForm,
                                          height: 60)
-        
-        
     }
 }
 
@@ -102,7 +101,7 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
         case .menu, .request:
             return 1
         case .options:
-            return 2
+            return 20
         }
     }
     
@@ -113,7 +112,7 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
         }
         switch cellType {
         case .menu:
-            return CGSize(width: fullSize.width, height: fullSize.height*0.5)
+            return CGSize(width: fullSize.width, height: fullSize.height*0.4)
         case .options:
             return CGSize(width: fullSize.width, height: 60)
         case .request:
@@ -135,6 +134,7 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
             return cell
         case .options:
             let cell = collectionView.dequeueReusableCell(DeliveryOrderOptionCell.self, for: indexPath)
+            cell.delegate = self
             cell.addDivider(on: .bottom)
             return cell
         case .request:
@@ -142,5 +142,28 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
             cell.addDivider(on: .bottom)
             return cell
         }
+    }
+}
+
+extension DeliveryOrderViewController: DeliveryOrderOptionCellDelegate {
+    func optionAmountChanged(indexPath: IndexPath, amount: Int) {
+        print("indexPath: \(indexPath), amount : \(amount)")
+    }
+}
+
+extension DeliveryOrderViewController: OptionSelectorViewDelegate {
+    func optionSelectorChanged(amount: Int) {
+        print("menu amount is : \(amount)")
+    }
+}
+
+extension DeliveryOrderViewController: DeliveryOrderFormDelegate {
+    func tapCartButton() {
+        print("tapcartButton")
+        DeliveryCommon.shared.navigationController?.pushViewController(storyboard: "Delivery", viewController: DeliveryCartViewController.self)
+    }
+    
+    func tapDirectOrderButton() {
+        print("tapdirectOrderButton")
     }
 }

@@ -131,6 +131,56 @@ extension UIView {
     }
 }
 
+extension UILabel {
+    func fontToFitHeight() {
+        var minFontSize: CGFloat = font.pointSize * 0.6 // CGFloat 18
+        var maxFontSize: CGFloat = font.pointSize     // CGFloat 67
+        var fontSizeAverage: CGFloat = 0
+        var textAndLabelHeightDiff: CGFloat = 0
+        
+        while (minFontSize <= maxFontSize) {
+            
+            fontSizeAverage = minFontSize + (maxFontSize - minFontSize) / 4
+            
+            guard (text?.count)! > 0 else {
+                break
+            }
+            
+            if let labelText: NSString = text as NSString? {
+                let labelHeight = frame.size.height
+                
+                let testStringHeight = labelText.size(
+                    withAttributes: [NSAttributedString.Key.font: font.withSize(fontSizeAverage)]
+                    ).height
+                
+                textAndLabelHeightDiff = labelHeight - testStringHeight
+                
+                if (fontSizeAverage == minFontSize || fontSizeAverage == maxFontSize) {
+                    if (textAndLabelHeightDiff < 0) {
+                        self.font = font.withSize(fontSizeAverage - 1)
+                        return
+                    }
+                    
+                    self.font  = font.withSize(fontSizeAverage)
+                    return
+                }
+                
+                if (textAndLabelHeightDiff < 0) {
+                    maxFontSize = fontSizeAverage - 1
+                    
+                } else if (textAndLabelHeightDiff > 0) {
+                    minFontSize = fontSizeAverage + 1
+                    
+                } else {
+                    self.font = font.withSize(fontSizeAverage)
+                    return 
+                }
+            }
+        }
+        self.font = font.withSize(fontSizeAverage)
+    }
+}
+
 extension UIButton {
     func centerImageAndButton(_ gap: CGFloat, imageOnTop: Bool) {
         
@@ -324,6 +374,7 @@ extension UIImageView {
     }
     
     func loadImageAsyc(fromURL stringUrl : String, fromPomangamAPI: Bool = true) {
+        print(stringUrl)
         let stringUrl = API.baseURL + stringUrl
         guard let url = URL(string: stringUrl) else { return }
         
@@ -389,3 +440,4 @@ extension UIViewController {
         dismiss(animated: false)
     }
 }
+

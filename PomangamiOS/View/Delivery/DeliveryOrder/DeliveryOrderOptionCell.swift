@@ -8,14 +8,44 @@
 
 import UIKit
 
+protocol DeliveryOrderOptionCellDelegate {
+    func optionAmountChanged(indexPath: IndexPath, amount: Int)
+}
+
 class DeliveryOrderOptionCell: UICollectionViewCell {
     @IBOutlet weak var optionnameLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
-    var isOptions: Bool = true
-
-    @IBAction func reduceButton(_ sender: Any) {
+    var delegate: DeliveryOrderOptionCellDelegate?
+    var amount = 0 {
+        didSet {
+            amountLabel.text = String(amount)
+        }
     }
-    @IBAction func increaseButton(_ sender: Any) {
+    
+
+    @IBAction func reduceButton(_ sender: UIButton) {
+        if amount <= 0 {
+            return
+        }
+        if let superview = sender.superview,
+            let cell = superview.superview as? UICollectionViewCell,
+            let collectionView = cell.superview as? UICollectionView {
+            if let indexPath = collectionView.indexPath(for: cell) {
+                amount -= 1
+                delegate?.optionAmountChanged(indexPath: indexPath, amount: amount)
+            }
+        }
+    }
+    
+    @IBAction func increaseButton(_ sender: UIButton) {
+        if let superview = sender.superview,
+            let cell = superview.superview as? UICollectionViewCell,
+            let collectionView = cell.superview as? UICollectionView {
+            if let indexPath = collectionView.indexPath(for: cell) {
+                amount += 1
+                delegate?.optionAmountChanged(indexPath: indexPath, amount: amount)
+            }
+        }
     }
     
     override func awakeFromNib() {

@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuT-S1-hZ0">
-                        <rect key="frame" x="201.5" y="92.5" width="8" height="21"/>
+                        <rect key="frame" x="221" y="92.5" width="8" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <state key="normal" image="btnDeliveryviewReduce"/>
                         <connections>
@@ -41,8 +41,11 @@
                             <action selector="increaseButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="snq-fP-rS0"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgh-sV-iQP">
-                        <rect key="frame" x="224.5" y="93.5" width="39.5" height="19.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgh-sV-iQP">
+                        <rect key="frame" x="244" y="93.5" width="20" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="FAc-G1-GFM"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>

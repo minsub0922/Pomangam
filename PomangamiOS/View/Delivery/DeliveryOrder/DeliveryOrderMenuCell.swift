@@ -10,15 +10,16 @@ import UIKit
 
 class DeliveryOrderMenuCell: UICollectionViewCell, CellProtocol {
 
-    @IBOutlet weak var menuImageView: UIImageView! {
-        didSet {
-            menuImageView.setupShadow(opacity: 0.1)
-        }
-    }
+    @IBOutlet weak var menuImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var likeCountLabel: UILabel!
+    override var bounds: CGRect {
+        didSet {
+            menuImageView.setupShadow(opacity: 0.1)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,5 +32,6 @@ class DeliveryOrderMenuCell: UICollectionViewCell, CellProtocol {
         nameLabel.text = model.name
         priceLabel.text = String(model.price)
         descriptionLabel.text = model.description
+        descriptionLabel.fontToFitHeight()
     }
 }

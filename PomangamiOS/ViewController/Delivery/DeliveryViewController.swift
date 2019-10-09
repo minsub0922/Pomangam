@@ -42,7 +42,9 @@ class DeliveryViewController: BaseViewController {
             self.headerAdvertisements = res.advertiseForMainDtoList
             self.collectionView.reloadSection(section: CellType.headerAd.rawValue)
             
-            APISource.shared.getDeliveryMarkets(arrivalDate: "2019-10-09 19:00:00", detailForDeliverySiteIndex: "1") { (res) in
+            //Test
+            let arrivalDate = "\(Date().tomorrow.toNormalFormat) 19:00:00"
+            APISource.shared.getDeliveryMarkets(arrivalDate: arrivalDate, detailForDeliverySiteIndex: "1") { (res) in
                 self.markets = res
                 self.collectionView.reloadSection(section: CellType.market.rawValue)
             }
@@ -82,8 +84,7 @@ class DeliveryViewController: BaseViewController {
     }
     
     @objc private func navigationCartButtonTapAction(_ sender: UIBarButtonItem) {
-        DeliveryCommon.shared.navigationController?.pushViewController(storyboard: "Delivery",
-                                                                      viewController: DeliveryCartViewController.self)
+        DeliveryCommon.shared.navigationController?.pushViewController(storyboard: "Delivery", viewController: DeliveryCartViewController.self)
     }
     
     @objc private func navigationTitleTapAction(_ sender: UIBarButtonItem) {

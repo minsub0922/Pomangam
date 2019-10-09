@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol DeliveryOrderFormDelegate {
-    func tapCartButton()
+@objc protocol DeliveryOrderFormDelegate {
+    @objc optional func tapCartButton()
     func tapDirectOrderButton()
 }
 
@@ -35,18 +35,26 @@ class DeliveryOrderForm: UIView {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(delegate: DeliveryOrderFormDelegate) {
+        super.init(frame: .zero)
+        
+        self.delegate = delegate
         
         cartButton.setTitle("장바구니", for: .normal)
         cartButton.setTitleColor(.dustyOrange, for: .normal)
         cartButton.sizeToFit()
         cartButton.translatesAutoresizingMaskIntoConstraints = false
+        cartButton.addTarget(self,
+                             action: #selector(touchupCartButton(_:)),
+                             for: .touchUpInside)
         directOrderButton.setTitle("바로주문", for: .normal)
         directOrderButton.backgroundColor = .dustyOrange
         directOrderButton.setTitleColor(.white, for: .normal)
         directOrderButton.sizeToFit()
         directOrderButton.translatesAutoresizingMaskIntoConstraints = false
+        directOrderButton.addTarget(self,
+                             action: #selector(touchupDirectOrderButton(_:)),
+                             for: .touchUpInside)
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
@@ -71,6 +79,14 @@ class DeliveryOrderForm: UIView {
                 stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 15)
             ])
         }
+    }
+    
+    @objc private func touchupCartButton(_ sender: UIButton) {
+        delegate?.tapCartButton?()
+    }
+    
+    @objc private func touchupDirectOrderButton(_ sender: UIButton) {
+        delegate?.tapDirectOrderButton()
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -41,6 +41,7 @@ class PageCell: UICollectionViewCell {
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.alwaysBounceVertical = true
         collectionView.registerNib(PageChildCell.self)
         self.addSubview(collectionView)
         

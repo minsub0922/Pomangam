@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension String{
+extension String {
     var toKM: String {
         return "\(self) km"
     }
@@ -27,5 +27,19 @@ extension String{
     
     var toPressure: String{
         return "\(self) mBar"
+    }
+}
+
+extension Date {
+    var toNormalFormat: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: self)
+    }
+    var tomorrow: Date {
+        return Calendar.current.date(byAdding: .day, value: 1, to: noon)!
+    }
+    var noon: Date {
+        return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
     }
 }

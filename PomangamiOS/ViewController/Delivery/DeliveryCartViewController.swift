@@ -31,7 +31,7 @@ class DeliveryCartViewController: BaseViewController {
     }
     
     private func setupOrderButton() {
-        deliveryOrderForm = DeliveryOrderForm()
+        deliveryOrderForm = DeliveryOrderForm(delegate: self)
         deliveryOrderForm.onlyOrderButton = true
         self.view.addSubview(deliveryOrderForm)
         deliveryOrderForm.attachOnBottom(parent: self.view, height: 60 + UIApplication.shared.safeAreaBottomInset)
@@ -40,6 +40,7 @@ class DeliveryCartViewController: BaseViewController {
     private func setupTableView() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = .white 
         collectionView.registerNib(DeliveryArrivalCell.self)
         collectionView.registerNib(DeliveryCartOrderCell.self)
@@ -145,5 +146,11 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
             let cell = collectionView.dequeueReusableCell(DeliveryCartOrderCell.self, for: indexPath)
             return cell
         }
+    }
+}
+
+extension DeliveryCartViewController: DeliveryOrderFormDelegate {
+    func tapDirectOrderButton() {
+        print("tapDirectorderButton")
     }
 }
