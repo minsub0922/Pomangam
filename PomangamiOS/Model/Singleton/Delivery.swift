@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
-class Cart {
-    static let shared = Cart()
+final class Cart: Object {
+    //static let shared = Cart()
     //var products: [ProductResponse] = []
-    var orders: [SingleOrder] = []
+    //var orders: [SingleOrder] = []
+    
+    let orders = List<SingleOrder>()
+    @objc dynamic var id = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 class CurrentMarket {
@@ -19,7 +27,7 @@ class CurrentMarket {
     var index: Int? = nil
 }
 
-class SingleOrder {
+class SingleOrder: Object {
     static let shared = SingleOrder()
     var productInfo: ProductInfo? = nil
     

@@ -32,6 +32,7 @@
 		1ABC5E2D234C79A00091731E /* DeliveryCartOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC5E2B234C79A00091731E /* DeliveryCartOrderCell.swift */; };
 		1ABC5E2E234C79A00091731E /* DeliveryCartOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC5E2C234C79A00091731E /* DeliveryCartOrderCell.xib */; };
 		1AD25E862349C1FE008A0FF1 /* OptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */; };
+		1AD93583234F8C6100B41DA5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD93582234F8C6100B41DA5 /* RealmManager.swift */; };
 		1AE384B223498E1D00968944 /* TempNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE384B123498E1D00968944 /* TempNavigationController.swift */; };
 		1AE61FCC234789B40075285B /* DeliveryOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FCB234789B40075285B /* DeliveryOrderViewController.swift */; };
 		1AE61FD12347AFDC0075285B /* DeliveryOrderMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61FCF2347AFDC0075285B /* DeliveryOrderMenuCell.swift */; };
@@ -155,6 +156,7 @@
 		1ABC5E2B234C79A00091731E /* DeliveryCartOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCartOrderCell.swift; sourceTree = "<group>"; };
 		1ABC5E2C234C79A00091731E /* DeliveryCartOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryCartOrderCell.xib; sourceTree = "<group>"; };
 		1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectorView.swift; sourceTree = "<group>"; };
+		1AD93582234F8C6100B41DA5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		1AE384B123498E1D00968944 /* TempNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNavigationController.swift; sourceTree = "<group>"; };
 		1AE61FCB234789B40075285B /* DeliveryOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderViewController.swift; sourceTree = "<group>"; };
 		1AE61FCF2347AFDC0075285B /* DeliveryOrderMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderMenuCell.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				AFC92E0F233B13C20054D92E /* Delivery.swift */,
+				1AD93582234F8C6100B41DA5 /* RealmManager.swift */,
 			);
 			path = Singleton;
 			sourceTree = "<group>";
@@ -916,6 +919,7 @@
 				AFC92E12233B152B0054D92E /* ProductResponse.swift in Sources */,
 				1A4535D62348696200DFFC8A /* SplashViewController.swift in Sources */,
 				AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */,
+				1AD93583234F8C6100B41DA5 /* RealmManager.swift in Sources */,
 				AF11247B230847E0009CAB21 /* DeliveryMenuListViewController.swift in Sources */,
 				AFDD4CC322FC634C00CD8CD5 /* UIlabelFlexible.swift in Sources */,
 				1A6AF01E2344CB98007ACE44 /* TabPagerLayout.swift in Sources */,

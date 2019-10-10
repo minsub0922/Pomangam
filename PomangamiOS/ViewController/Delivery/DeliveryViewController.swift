@@ -16,6 +16,8 @@ public protocol DeliveryViewControllerDelegate: class {
 class DeliveryViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     public weak var delegate: DeliveryViewControllerDelegate?
+    let realm = try? Realm()
+    var orders: Cart?
     
     private var headerAdvertisements: [AdvertiseDto] = []
     private var markets: [DeliveryMarket] = []
@@ -25,6 +27,7 @@ class DeliveryViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        test()
         
         setupNavigationBarButtons()
         
@@ -169,5 +172,32 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
             cell.setupView(model: markets[indexPath.row].asDeliveryMarketViewModel)
             return cell;
         }
+    }
+}
+
+import RealmSwift
+
+
+
+extension DeliveryViewController {
+    
+    private func test() {
+//        addDB(id: "1")
+//        addDB(id: "3")
+//        addDB(id: "7")
+//        addDB(id: "2")
+        
+        loadData()
+    }
+    
+    private func addDB(id: String) {
+        let cart = Cart()
+        cart.id = id
+        RealmManger.inputData(type: cart)
+    }
+    
+    private func loadData() {
+        let result = RealmManger.getObjects(type: Cart.self, byKeyPath: "id")
+        print(result)
     }
 }
