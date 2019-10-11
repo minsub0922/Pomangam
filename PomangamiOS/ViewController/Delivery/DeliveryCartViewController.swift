@@ -18,6 +18,12 @@ class DeliveryCartViewController: BaseViewController {
         self.title = "장바구니"
         setupOrderButton()
         setupTableView()
+        
+        guard let res = RealmManger.getObjects(type: SingleOrder.self, byKeyPath: SingleOrder.primaryKey()) else {return}
+        for r in res {
+            print(r)
+            print(r.product?.name)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -6,7 +6,6 @@
 //  Copyright © 2019 최민섭. All rights reserved.
 //
 
-import Foundation
 //[
 //    {
 //        "idx": 10,
@@ -27,7 +26,7 @@ import Foundation
 //        "imgpath": "/img/product/10.jpg"
 //    },
 
-struct MenuResponse: Codable {
+struct MenuResponse: Codable, Hashable {
     let index: Int
     let storeIndex: Int
     let name: String
@@ -45,6 +44,7 @@ struct MenuResponse: Codable {
     let finalCost: Int = Int()
     let imagePath: String = String()
     let likeType: String? = nil
+    var amount = 0
     
     enum CodingKeys: String, CodingKey {
         case index = "idx"

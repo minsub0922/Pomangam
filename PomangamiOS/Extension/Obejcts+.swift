@@ -123,7 +123,7 @@ extension Realm {
             return realm
         }
         catch {
-            // LOG ERROR
+            print("realm init fail")
         }
         return nil
     }

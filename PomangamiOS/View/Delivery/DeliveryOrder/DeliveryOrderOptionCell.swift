@@ -47,6 +47,10 @@ class DeliveryOrderOptionCell: UICollectionViewCell {
             }
         }
     }
+
+    func setupView(optionName: String) {
+        optionnameLabel.text = optionName
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

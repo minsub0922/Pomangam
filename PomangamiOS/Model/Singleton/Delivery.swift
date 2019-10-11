@@ -7,39 +7,11 @@
 //
 
 import UIKit
-import RealmSwift
-
-final class Cart: Object {
-    //static let shared = Cart()
-    //var products: [ProductResponse] = []
-    //var orders: [SingleOrder] = []
-    
-    let orders = List<SingleOrder>()
-    @objc dynamic var id = ""
-    
-    override static func primaryKey() -> String? {
-        return "id"
-    }
-}
 
 class CurrentMarket {
     static let shared = CurrentMarket()
+    private init() {}
     var index: Int? = nil
-}
-
-class SingleOrder: Object {
-    static let shared = SingleOrder()
-    var productInfo: ProductInfo? = nil
-    
-    struct ProductInfo {
-        var index = Int()
-        var name = String()
-        var price = Int()
-        var imageURL = String()
-        var options: [String:Int] = [:]
-        var request: String = String()
-        var amount: Int = Int()
-    }
 }
 
 class DeliveryCommon {
@@ -60,4 +32,11 @@ class DeliveryCommon {
     }
 }
 
+class Arrival {
+    static let shared = Arrival()
+    private init() {}
+    
+    var time: String = String()
+    var location: String = String()
+}
 

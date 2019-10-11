@@ -16,9 +16,16 @@ protocol DeliveryOrderViewControllerDelegate: class {
 
 class DeliveryOrderViewController: BaseViewController {
     public weak var delegate: DeliveryOrderViewControllerDelegate?
-    private var menudetail: MenuDetailResponse?
     private var orderSelectorView: OptionSelectorView!
     private var deliveryOrderForm: DeliveryOrderForm!
+    private var options: [MenuResponse] = []
+    private var menudetail: MenuDetailResponse? {
+        didSet {
+            if let options = menudetail?.options {
+                self.options = options
+            }
+        }
+    }
     
     var collectionView: UICollectionView = {
         return UICollectionView(frame: .zero,
@@ -101,7 +108,7 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
         case .menu, .request:
             return 1
         case .options:
-            return 20
+            return options.count
         }
     }
     
@@ -135,6 +142,7 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
         case .options:
             let cell = collectionView.dequeueReusableCell(DeliveryOrderOptionCell.self, for: indexPath)
             cell.delegate = self
+            cell.setupView(optionName: options[indexPath.row].name)
             cell.addDivider(on: .bottom)
             return cell
         case .request:
@@ -148,18 +156,26 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
 extension DeliveryOrderViewController: DeliveryOrderOptionCellDelegate {
     func optionAmountChanged(indexPath: IndexPath, amount: Int) {
         print("indexPath: \(indexPath), amount : \(amount)")
+        //collectionView.
+        options[indexPath.row].amount = amount
     }
 }
 
 extension DeliveryOrderViewController: OptionSelectorViewDelegate {
+    //Menu amount Observer
     func optionSelectorChanged(amount: Int) {
-        print("menu amount is : \(amount)")
+        self.menudetail?.menuInfo.amount = amount
     }
 }
 
 extension DeliveryOrderViewController: DeliveryOrderFormDelegate {
     func tapCartButton() {
-        print("tapcartButton")
+        guard let menuDetail = menudetail else { return }
+        let singleOrder = SingleOrder()
+        singleOrder.setProductInfo(productInfo: ProductInfo(menu: menuDetail.menuInfo,
+                                                            options: self.options,
+                                                            request: String())) 
+        RealmManger.inputData(type: singleOrder)
         DeliveryCommon.shared.navigationController?.pushViewController(storyboard: "Delivery", viewController: DeliveryCartViewController.self)
     }
     

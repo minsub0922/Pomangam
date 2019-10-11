@@ -7,7 +7,7 @@
 //
 
 struct MenuDetailResponse: Codable {
-    let menuInfo: MenuResponse
+    var menuInfo: MenuResponse
     let subMenuList: [MenuResponse]?
     let toppingMenuList: [MenuResponse]?
     let beverageMenuList: [MenuResponse]?
@@ -15,5 +15,20 @@ struct MenuDetailResponse: Codable {
     enum CodingKeys: String, CodingKey {
         case menuInfo = "productWithCostDto"
         case subMenuList, toppingMenuList, beverageMenuList
+    }
+    
+    var options: [MenuResponse] {
+        var options: [MenuResponse] = []
+        if let subMenuList = subMenuList {
+            options.append(contentsOf: subMenuList)
+        }
+        if let toppingMenuList = toppingMenuList {
+            options.append(contentsOf: toppingMenuList)
+        }
+        if let beverageMenuList = beverageMenuList {
+            options.append(contentsOf: beverageMenuList)
+        }
+        
+        return options
     }
 }

@@ -14,7 +14,7 @@ struct RealmManger {
     }
     static func inputData<T: Object>(type: T) {
         let realm = Realm.safeInit()
-        try? realm?.write {
+        realm?.safeWrite {
             realm?.add(type)
         }
     }
