@@ -32,6 +32,7 @@
 		1ABC5E29234C6F7C0091731E /* DeliveryCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC5E28234C6F7C0091731E /* DeliveryCartViewController.swift */; };
 		1ABC5E2D234C79A00091731E /* DeliveryCartOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC5E2B234C79A00091731E /* DeliveryCartOrderCell.swift */; };
 		1ABC5E2E234C79A00091731E /* DeliveryCartOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC5E2C234C79A00091731E /* DeliveryCartOrderCell.xib */; };
+		1ACD80232361B2EB00BFEDCC /* CartNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD80222361B2EB00BFEDCC /* CartNavigationItem.swift */; };
 		1AD25E862349C1FE008A0FF1 /* OptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */; };
 		1AD93583234F8C6100B41DA5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD93582234F8C6100B41DA5 /* RealmManager.swift */; };
 		1AE384B223498E1D00968944 /* TempNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE384B123498E1D00968944 /* TempNavigationController.swift */; };
@@ -157,6 +158,7 @@
 		1ABC5E28234C6F7C0091731E /* DeliveryCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCartViewController.swift; sourceTree = "<group>"; };
 		1ABC5E2B234C79A00091731E /* DeliveryCartOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCartOrderCell.swift; sourceTree = "<group>"; };
 		1ABC5E2C234C79A00091731E /* DeliveryCartOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryCartOrderCell.xib; sourceTree = "<group>"; };
+		1ACD80222361B2EB00BFEDCC /* CartNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartNavigationItem.swift; sourceTree = "<group>"; };
 		1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectorView.swift; sourceTree = "<group>"; };
 		1AD93582234F8C6100B41DA5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		1AE384B123498E1D00968944 /* TempNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNavigationController.swift; sourceTree = "<group>"; };
@@ -575,6 +577,7 @@
 				AF4A3EA3230F7EF2003F3825 /* UIButtonCheckable.swift */,
 				AFD5E32B231424B10031E375 /* NavigationTitleDropDownButton.swift */,
 				AF5B31F7232D3D8E0052F495 /* DropDownLabel.swift */,
+				1ACD80222361B2EB00BFEDCC /* CartNavigationItem.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -949,6 +952,7 @@
 				AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */,
 				AFDD4CBA22FC278100CD8CD5 /* UIViewEnum+.swift in Sources */,
 				AFDD4C6322FC0BBF00CD8CD5 /* HotdealViewController.swift in Sources */,
+				1ACD80232361B2EB00BFEDCC /* CartNavigationItem.swift in Sources */,
 				1AE61FEB2348628E0075285B /* LoginCoordinator.swift in Sources */,
 				1AE61FE523485E1E0075285B /* DeliveryCoordinator.swift in Sources */,
 				AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */,

@@ -16,13 +16,14 @@ public protocol DeliveryViewControllerDelegate: class {
 class DeliveryViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     public weak var delegate: DeliveryViewControllerDelegate?
-    
+    private let customCartButton = CartNavigationItem()
     private var headerAdvertisements: [AdvertiseDto] = []
     private var markets: [DeliveryMarket] = []
     private var homeHeaderAdCellViewModel: DeliveryHeaderAdvertisementCellViewModel {
         return DeliveryHeaderAdvertisementCellViewModel(headerAdvertisements: headerAdvertisements)
     }
-    
+
+    //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +37,7 @@ class DeliveryViewController: BaseViewController {
         getMainDatas()
     }
 
+    //MARK:- Server API
     private func getMainDatas() {
         let params = [ "deliverySiteIdx": 1 ]
         APISource.shared.getMainall(params: params) { res in
@@ -51,6 +53,7 @@ class DeliveryViewController: BaseViewController {
         }
     }
     
+    //MARK:- Setup Views
     private func setupCollectionView() {
         collectionView.contentInset = .init(top: 0, left: 0, bottom: 0, right: 0)
         collectionView.registerNib(DeliveryHeaderAdvertisementCell.self)
@@ -65,16 +68,21 @@ class DeliveryViewController: BaseViewController {
                                                       style: .plain,
                                                       target: self,
                                                       action: #selector(navigationReceiptButtonTapAction(_:)))
-        let navigationCartButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainBasket"),
-                                                   style: .plain,
-                                                   target: self,
-                                                   action: #selector(navigationCartButtonTapAction(_:)))
+        navigationReceiptButton.customView = ReceiptNavigationItem()
+        let navigationCartButton = UIBarButtonItem(title: "한국항공대학교",
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(navigationTitleTapAction(_:)))
+        
+        navigationCartButton.customView = customCartButton
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "한국항공대학교",
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(navigationTitleTapAction(_:)))
+        
         navigationItem.leftBarButtonItem?.customView = navigationButtonView
+        
         navigationItem.rightBarButtonItems = [navigationCartButton, navigationReceiptButton]
         
     }

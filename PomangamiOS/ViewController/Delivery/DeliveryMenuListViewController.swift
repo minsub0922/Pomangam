@@ -59,15 +59,25 @@ class DeliveryMenuListViewController: BaseViewController {
     private func setupNavigationBarButtons() {
         navigationButtonView.addTarget(self, action: #selector(navigationTitleTapAction(_:)), for: .touchUpInside)
         navigationButtonView.configure("학생회관 뒤")
-        let navigationReceiptButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainOrderlist"), style: .plain, target: self, action: nil)
-        let navigationCartButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainBasket"), style: .plain, target: self, action: nil)
+        let navigationReceiptButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainOrderlist"),
+                                                      style: .plain,
+                                                      target: self,
+                                                      action: #selector(navigationReceiptButtonTapAction(_:)))
+        let navigationCartButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainBasket"),
+                                                   style: .plain,
+                                                   target: self,
+                                                   action: #selector(navigationCartButtonTapAction(_:)))
         
         navigationItem.titleView = navigationButtonView
         navigationItem.rightBarButtonItems = [navigationCartButton, navigationReceiptButton]
     }
     
-    @objc private func navigationRightButtonTapAction(_ sender: Any) {
+    @objc private func navigationReceiptButtonTapAction(_ sender: UIBarButtonItem) {
         
+    }
+    
+    @objc private func navigationCartButtonTapAction(_ sender: UIBarButtonItem) {
+        DeliveryCommon.shared.navigationController?.pushViewController(storyboard: "Delivery", viewController: DeliveryCartViewController.self)
     }
     
     @objc private func navigationTitleTapAction(_ sender: Any) {

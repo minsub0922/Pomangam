@@ -58,20 +58,24 @@ extension UIView {
     
     func addAutoLayout(parent: UIView, topConstraint: UIView? = nil, bottomConstraint: UIView? = nil, heightRatio: CGFloat = 1, widthRatio: CGFloat = 1) {
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.leftAnchor.constraint(equalTo: parent.leftAnchor).isActive = true
-        self.rightAnchor.constraint(equalTo: parent.rightAnchor).isActive = true
+//        self.leftAnchor.constraint(equalTo: parent.leftAnchor).isActive = true
+//        self.rightAnchor.constraint(equalTo: parent.rightAnchor).isActive = true
         
-        if let topConstraint = topConstraint {
-            self.topAnchor.constraint(equalTo: topConstraint.bottomAnchor).isActive = true
-        } else {
-            self.topAnchor.constraint(equalTo: parent.topAnchor).isActive = true
-        }
+//        if let topConstraint = topConstraint {
+//            self.topAnchor.constraint(equalTo: topConstraint.bottomAnchor).isActive = true
+//        } else {
+//            self.topAnchor.constraint(equalTo: parent.topAnchor).isActive = true
+//        }
+        self.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: heightRatio).isActive = true
+        self.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: widthRatio).isActive = true
+        self.centerXAnchor.constraint(equalTo: parent.centerXAnchor).isActive = true
+        self.centerYAnchor.constraint(equalTo: parent.centerYAnchor).isActive = true
         
-        if let bottomConstraint = bottomConstraint {
-            self.bottomAnchor.constraint(equalTo: bottomConstraint.topAnchor).isActive = true
-        } else {
-            self.bottomAnchor.constraint(equalTo: parent.bottomAnchor).isActive = true
-        }
+//        if let bottomConstraint = bottomConstraint {
+//            self.bottomAnchor.constraint(equalTo: bottomConstraint.topAnchor).isActive = true
+//        } else {
+//            self.bottomAnchor.constraint(equalTo: parent.bottomAnchor).isActive = true
+//        }
     }
     
     func addAutoLayout(top: NSLayoutYAxisAnchor? = nil,
