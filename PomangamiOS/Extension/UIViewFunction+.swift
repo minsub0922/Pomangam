@@ -340,6 +340,12 @@ extension UICollectionView {
             })
         }
     }
+    
+    func reloadItemsWithAnimation(at: [IndexPath]) {
+        UIView.animate(withDuration: 0.8, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.9, options: UIView.AnimationOptions.curveEaseInOut, animations: {
+            self.reloadItems(at: at)
+                          }, completion: nil)
+    }
 }
 
 extension UITableViewCell {

@@ -13,6 +13,8 @@ class DeliveryCartViewController: BaseViewController {
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private var deliveryOrderForm: DeliveryOrderForm!
     private var orders: [SingleOrder] = []
+    private var isExpanded = [Bool]()
+    private var totalPrice = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +26,23 @@ class DeliveryCartViewController: BaseViewController {
         
         if let res = RealmManger.getObjects(type: SingleOrder.self, byKeyPath: SingleOrder.primaryKey()) {
             self.orders = res.compactMap{ $0 }
-            self.collectionView.reloadSection(section: CellType.orders.rawValue)
+            self.isExpanded = Array(repeating: false, count: orders.count+1)
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                self.updateTotalPrice()
+            }
         }
+    }
+    
+    private func updateTotalPrice() {
+        self.totalPrice = self.orders.reduce(0) {
+            let productPrice = ($1.product?.price ?? 0) + 1
+            //set Default value 1 for testing
+            let productAmount = $1.product?.amount ?? 1
+            print("productPrice \(productPrice), productAmount \(productAmount)")
+            return $0 + productPrice*productAmount
+        }
+        self.collectionView.reloadSection(section: CellType.price.rawValue)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,7 +90,7 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 2+orders.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -84,8 +101,9 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
             return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 7)
         case .price:
             return CGSize(width: UIScreen.main.bounds.width, height: 60)
-        case .orders:
-            return CGSize(width: UIScreen.main.bounds.width, height: 30)
+        default:
+            if isExpanded[indexPath.section] { return CGSize(width: UIScreen.main.bounds.width, height: 30) }
+            else { return CGSize(width: 1, height: 1) }
         }
     }
     
@@ -95,9 +113,9 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
         switch cellType {
         case .arrival, .price:
             return .zero
-        case .orders:
-            return .zero
-            //return CGSize(width: UIScreen.main.bounds.width, height: 40)
+        default:
+            if isExpanded[section] { return CGSize(width: UIScreen.main.bounds.width, height: 40) }
+            else { return .zero }
         }
     }
     
@@ -107,7 +125,7 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
         switch cellType {
         case .arrival, .price:
             return .zero
-        case .orders:
+        default:
             return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 4.5)
         }
     }
@@ -118,11 +136,13 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
         switch cellType {
         case .arrival, .price:
             return UICollectionReusableView()
-        case .orders:
+        default:
             if kind.elementsEqual(UICollectionView.elementKindSectionHeader) {
                 let headerView = collectionView.dequeueReusableSupplement(DeliveryCartOrderHeaderView.self, kind: kind, for: indexPath)
-                guard let product = orders[indexPath.row].product else {return headerView}
+                guard let product = orders[indexPath.section-1].product else {return headerView}
                 headerView.setupView(model: DeliveryCartOrderHeaderViewModel(imagePath: product.imagePath, menuName: product.name, menuPrice: product.price, amount: product.amount))
+                headerView.delegate = self
+                headerView.indexPath = indexPath
                 return headerView
             } else {
                 let footerView = collectionView.dequeueReusableSupplement(DeliveryCartOrderFooterView.self, kind: kind, for: indexPath)
@@ -137,8 +157,8 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
         switch cellType {
         case .arrival, .price:
             return 1
-        case .orders:
-            return orders.count
+        default:
+            return orders[section-1].options.count
         }
     }
     
@@ -151,8 +171,9 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
             return cell
         case .price:
             let cell = collectionView.dequeueReusableCell(DeliveryCartPriceCell.self, for: indexPath)
+            cell.setupView(totalPrice: totalPrice)
             return cell
-        case .orders:
+        default:
             let cell = collectionView.dequeueReusableCell(DeliveryCartOrderCell.self, for: indexPath)
             return cell
         }
@@ -162,5 +183,34 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
 extension DeliveryCartViewController: DeliveryOrderFormDelegate {
     func tapDirectOrderButton() {
         print("tapDirectorderButton")
+    }
+}
+
+extension DeliveryCartViewController: DeliveryCartOrderHeaderViewProtocol {
+    func expandableButtonTapAction(indexPath: IndexPath) {
+        isExpanded[indexPath.section] = !isExpanded[indexPath.section]
+        if orders[indexPath.section-1].options.count > 0 {
+            self.collectionView.reloadSection(section: indexPath.section)
+        }
+    }
+    
+    func amountDecreaseButtonTapAction(indexPath: IndexPath) {
+        RealmManger.updateData {
+            self.orders[indexPath.section-1].product?.amount -= 1
+            self.collectionView.reloadSection(section: indexPath.section)
+            self.updateTotalPrice()
+        }
+    }
+    
+    func amountIncreaseButtonTapAction(indexPath: IndexPath) {
+        RealmManger.updateData {
+            self.orders[indexPath.section-1].product?.amount += 1
+            self.collectionView.reloadSection(section: indexPath.section)
+            self.updateTotalPrice()
+        }
+    }
+    
+    func deleteOrderButtonTapAction(indexPath: IndexPath) {
+    
     }
 }

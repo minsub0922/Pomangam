@@ -18,4 +18,10 @@ struct RealmManger {
             realm?.add(type, update: .modified)
         }
     }
+    static func updateData(completion: @escaping () -> Void) {
+        let realm = Realm.safeInit()
+        realm?.safeWrite {
+            completion()
+        }
+    }
 }

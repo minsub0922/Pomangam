@@ -9,11 +9,10 @@
 import UIKit
 
 protocol DeliveryCartOrderHeaderViewProtocol {
-    func amountDecreaseButtonTapAction(section: Int)
-    func amountIncreaseButtonTapAction(section: Int)
-    func expandButtonTapAction(section: Int)
-    func collapseButtonTapAction(section: Int)
-    func deleteOrderButtonTapAction(section: Int)
+    func amountDecreaseButtonTapAction(indexPath: IndexPath)
+    func amountIncreaseButtonTapAction(indexPath: IndexPath)
+    func expandableButtonTapAction(indexPath: IndexPath)
+    func deleteOrderButtonTapAction(indexPath: IndexPath)
 }
 
 class DeliveryCartOrderHeaderView: UICollectionReusableView, CellProtocol {
@@ -21,27 +20,42 @@ class DeliveryCartOrderHeaderView: UICollectionReusableView, CellProtocol {
     @IBOutlet weak var menuNameLabel: UILabel!
     @IBOutlet weak var menuPriceLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var expandableButton: UIButton! {
+        didSet {
+            expandableButton.setImage(UIImage(named: "btnDeliverybasketShowdetail"), for: .normal)
+            expandableButton.setImage(UIImage(named: "btnDeliverybasketHidedetail"), for: .selected)
+        }
+    }
     
     var delegate: DeliveryCartOrderHeaderViewProtocol?
-    var index = -1
+    var indexPath: IndexPath = []
     var expanded = false
+    var price = 0 {
+        didSet {
+            menuPriceLabel.text = String(price)
+        }
+    }
     
     @IBAction func touchupExitButton(_ sender: Any) {
-        delegate?.deleteOrderButtonTapAction(section: index)
+        delegate?.deleteOrderButtonTapAction(indexPath: indexPath)
     }
     @IBAction func touchupDecreaseButton(_ sender: Any) {
-        delegate?.amountDecreaseButtonTapAction(section: index)
+        price -= 1
+        delegate?.amountDecreaseButtonTapAction(indexPath: indexPath)
     }
     @IBAction func touchupIncreaseButton(_ sender: Any) {
-        delegate?.amountIncreaseButtonTapAction(section: index)
+        price += 1
+        delegate?.amountIncreaseButtonTapAction(indexPath: indexPath)
     }
     @IBAction func touchupExpandButton(_ sender: Any) {
-        expanded ? delegate?.collapseButtonTapAction(section: index) : delegate?.expandButtonTapAction(section: index)
+        expanded = !expanded
+        expandableButton.isSelected = expanded
+        delegate?.expandableButtonTapAction(indexPath: indexPath)
     }
     
     func setupView(model: DeliveryCartOrderHeaderViewModel) {
         menuNameLabel.text = model.menuName
-        menuPriceLabel.text = String(model.menuPrice)
         amountLabel.text = String(model.amount)
+        self.price = model.menuPrice
     }
 }
