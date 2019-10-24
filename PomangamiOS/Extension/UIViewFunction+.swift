@@ -374,7 +374,6 @@ extension UIImageView {
     }
     
     func loadImageAsyc(fromURL stringUrl : String, fromPomangamAPI: Bool = true) {
-        print(stringUrl)
         let stringUrl = API.baseURL + stringUrl
         guard let url = URL(string: stringUrl) else { return }
         
@@ -392,10 +391,12 @@ extension UIImageView {
             }
             
             DispatchQueue.global().async {
-                guard let data = data, let imageToCache = UIImage(data: data) else {
+                guard let data = data, let imageToCache = UIImage(data: data)?.compressTo(bytes: 10) else {
                     print("Image Data Error")
                     return
                 }
+                
+                self.checkDataSize(data: data)
                 
                 if self.url == stringUrl {
                     DispatchQueue.main.async {
@@ -410,6 +411,39 @@ extension UIImageView {
             }
         }.resume()
     }
+    
+    private func checkDataSize(data: Data) {
+        let bcf = ByteCountFormatter()
+        bcf.allowedUnits = [.useKB] // optional: restricts the units to MB only
+        bcf.countStyle = .file
+        let string = bcf.string(fromByteCount: Int64(data.count))
+        print(Int64(data.count))
+        print("formatted result: \(string)")
+    }
+}
+
+extension UIImage {
+    var uncompressedPNGData: NSData      { return self.pngData()! as NSData                          }
+    var highestQualityJPEGNSData: NSData { return self.jpegData(compressionQuality: 1.0)! as NSData  }
+    var highQualityJPEGNSData: NSData    { return self.jpegData(compressionQuality: 0.75)! as NSData }
+    var mediumQualityJPEGNSData: NSData  { return self.jpegData(compressionQuality: 0.5)! as NSData  }
+    var lowQualityJPEGNSData: NSData     { return self.jpegData(compressionQuality: 0.25)! as NSData }
+    var lowestQualityJPEGNSData:NSData   { return self.jpegData(compressionQuality: 0.0)! as NSData  }
+    
+    func compressTo(bytes: Int) -> UIImage {
+       var compression: CGFloat = 0.9
+       let maxCompression: CGFloat = 0.1
+       let maxSize: Int = bytes * 1024
+       var imageData = jpegData(compressionQuality: compression)!
+       while imageData.count > maxSize && compression > maxCompression {
+           compression -= 0.1
+           imageData = jpegData(compressionQuality: compression)!
+       }
+        
+        
+
+        return UIImage(data: imageData)!
+   }
 }
 
 extension UIViewController {

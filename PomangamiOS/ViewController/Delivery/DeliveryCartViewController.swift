@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DeliveryCartViewController: BaseViewController {
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private var deliveryOrderForm: DeliveryOrderForm!
+    private var orders: [SingleOrder] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +21,10 @@ class DeliveryCartViewController: BaseViewController {
         setupOrderButton()
         setupTableView()
         
-        guard let res = RealmManger.getObjects(type: SingleOrder.self, byKeyPath: SingleOrder.primaryKey()) else {return}
-        for r in res {
-            print(r)
-            print(r.product?.name)
+        
+        if let res = RealmManger.getObjects(type: SingleOrder.self, byKeyPath: SingleOrder.primaryKey()) {
+            self.orders = res.compactMap{ $0 }
+            self.collectionView.reloadSection(section: CellType.orders.rawValue)
         }
     }
     
@@ -79,7 +81,7 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
         
         switch cellType {
         case .arrival:
-            return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 6)
+            return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 7)
         case .price:
             return CGSize(width: UIScreen.main.bounds.width, height: 60)
         case .orders:
@@ -94,7 +96,8 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
         case .arrival, .price:
             return .zero
         case .orders:
-            return CGSize(width: UIScreen.main.bounds.width, height: 40)
+            return .zero
+            //return CGSize(width: UIScreen.main.bounds.width, height: 40)
         }
     }
     
@@ -118,7 +121,8 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
         case .orders:
             if kind.elementsEqual(UICollectionView.elementKindSectionHeader) {
                 let headerView = collectionView.dequeueReusableSupplement(DeliveryCartOrderHeaderView.self, kind: kind, for: indexPath)
-                //headerView.setupView(model: DeliveryCartOrderHeaderViewModel(imagePath: <#String#>))
+                guard let product = orders[indexPath.row].product else {return headerView}
+                headerView.setupView(model: DeliveryCartOrderHeaderViewModel(imagePath: product.imagePath, menuName: product.name, menuPrice: product.price, amount: product.amount))
                 return headerView
             } else {
                 let footerView = collectionView.dequeueReusableSupplement(DeliveryCartOrderFooterView.self, kind: kind, for: indexPath)
@@ -134,7 +138,7 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
         case .arrival, .price:
             return 1
         case .orders:
-            return 2
+            return orders.count
         }
     }
     

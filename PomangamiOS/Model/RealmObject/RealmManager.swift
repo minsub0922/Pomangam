@@ -15,7 +15,7 @@ struct RealmManger {
     static func inputData<T: Object>(type: T) {
         let realm = Realm.safeInit()
         realm?.safeWrite {
-            realm?.add(type)
+            realm?.add(type, update: .modified)
         }
     }
 }

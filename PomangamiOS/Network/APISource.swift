@@ -12,13 +12,13 @@ import Alamofire
 class APISource: APISourceProtocol {
     static let shared = APISource()
     
-    lazy var headers: HTTPHeaders? = {
+    var headers: HTTPHeaders? {
         guard let model: TokenModel = UserDefaults.standard.getCustomObject(key: .accessToken) else {
             return nil
         }
         print("access token is \(model.accessToken)")
         return ["Authorization": "Bearer \(model.accessToken)"]
-    }()
+    }
     
     private func commonResponseHandler<T>(completion: @escaping (T) -> Void) -> (NetworkResult<(Int, T)>) -> Void {
         return { (res: NetworkResult<(Int, T)>) in

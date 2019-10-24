@@ -146,7 +146,7 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
         
         switch cellType {
         case .headerAd:
-            return CGSize(width: fullWidth, height: fullHeight * 0.3)
+            return CGSize(width: fullWidth, height: fullHeight * 0.35)
         case .arrivalSpot:
             return CGSize(width: fullWidth, height: fullHeight * 0.1)
         case .market:

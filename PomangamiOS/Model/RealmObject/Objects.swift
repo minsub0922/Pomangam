@@ -25,7 +25,7 @@ final class Cart: Object {
 final class SingleOrder: Object {
     @objc dynamic var product: ProductRealmObject? = ProductRealmObject()
     @objc dynamic var productId = 0
-    @objc dynamic var options: [ProductRealmObject] = []
+    var options = List<ProductRealmObject>()
     
     override static func primaryKey() -> String {
         return "productId"
@@ -47,13 +47,13 @@ struct ProductInfo {
         let product = ProductRealmObject()
         product.index = menu.index
         product.amount = menu.amount
-        product.name = menu.name
+        product.name = menu.name 
         product.price = menu.finalCost
         product.imagePath = menu.imagePath
         return product
     }
-    var asProductOptionsRealmObject: [ProductRealmObject] {
-        var options: [ProductRealmObject] = []
+    var asProductOptionsRealmObject: List<ProductRealmObject> {
+        var options = List<ProductRealmObject>()
         for option in self.options {
             let product = ProductRealmObject()
             product.index = option.index
