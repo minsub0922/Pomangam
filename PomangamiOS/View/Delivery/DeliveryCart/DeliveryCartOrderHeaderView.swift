@@ -35,6 +35,11 @@ class DeliveryCartOrderHeaderView: UICollectionReusableView, CellProtocol {
             menuPriceLabel.text = String(price)
         }
     }
+    override var bounds: CGRect {
+        didSet {
+            self.addDivider(on: .bottom)
+        }
+    }
     
     @IBAction func touchupExitButton(_ sender: Any) {
         delegate?.deleteOrderButtonTapAction(indexPath: indexPath)
@@ -49,8 +54,14 @@ class DeliveryCartOrderHeaderView: UICollectionReusableView, CellProtocol {
     }
     @IBAction func touchupExpandButton(_ sender: Any) {
         expanded = !expanded
+        showhideDivider()
         expandableButton.isSelected = expanded
         delegate?.expandableButtonTapAction(indexPath: indexPath)
+    }
+    
+    private func showhideDivider() {
+        let divider = self.subviews.last
+        divider?.isHidden = !(divider?.isHidden ?? false)
     }
     
     func setupView(model: DeliveryCartOrderHeaderViewModel) {
