@@ -12,13 +12,12 @@ class CartNavigationItem: UIView {
     var countLabel: UILabel = {
         var label: UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 10)
         label.backgroundColor = .clear
         label.textAlignment = .center
-        //label.adjustsFontSizeToFitWidth = true
+        label.text = " "
         label.textColor = .dustyOrange
         label.minimumScaleFactor = 0.2
-        label.text = "2"
-        //label.fontToFitHeight()
         return label
     }()
     
@@ -28,6 +27,8 @@ class CartNavigationItem: UIView {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
+    
+    var isEmpty = true
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,20 +53,12 @@ class CartNavigationItem: UIView {
     }
     
     public func update() {
-        //read cart from database
-        //countLabel.text =
-        
-    }
-    
-    public func bounce() {
-        var targetFrame = countLabel.frame
-        targetFrame.origin.y -= 3
-        self.countLabel.frame = targetFrame
-          
-        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
-            targetFrame.origin.y += 3
-            self.countLabel.frame = targetFrame
-          }, completion: nil)
+        if let res = RealmManger.getObjects(type: SingleOrder.self,
+                                            byKeyPath: SingleOrder.primaryKey()) {
+            self.isEmpty = res.count == 0
+            self.countLabel.text = self.isEmpty ? " " : String(res.count)
+            !self.isEmpty ? self.tick() : nil
+        }
     }
 }
 

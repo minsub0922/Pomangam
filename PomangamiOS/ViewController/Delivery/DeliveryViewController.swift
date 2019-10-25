@@ -40,7 +40,7 @@ class DeliveryViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        customCartButton.bounce()
+        customCartButton.update()
     }
 
     //MARK:- Server API

@@ -33,6 +33,7 @@
 		1ABC5E2D234C79A00091731E /* DeliveryCartOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC5E2B234C79A00091731E /* DeliveryCartOrderCell.swift */; };
 		1ABC5E2E234C79A00091731E /* DeliveryCartOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC5E2C234C79A00091731E /* DeliveryCartOrderCell.xib */; };
 		1ACD80232361B2EB00BFEDCC /* CartNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD80222361B2EB00BFEDCC /* CartNavigationItem.swift */; };
+		1ACD80252363256A00BFEDCC /* UIViewAnimation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD80242363256A00BFEDCC /* UIViewAnimation+.swift */; };
 		1AD25E862349C1FE008A0FF1 /* OptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */; };
 		1AD93583234F8C6100B41DA5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD93582234F8C6100B41DA5 /* RealmManager.swift */; };
 		1AE384B223498E1D00968944 /* TempNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE384B123498E1D00968944 /* TempNavigationController.swift */; };
@@ -159,6 +160,7 @@
 		1ABC5E2B234C79A00091731E /* DeliveryCartOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCartOrderCell.swift; sourceTree = "<group>"; };
 		1ABC5E2C234C79A00091731E /* DeliveryCartOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryCartOrderCell.xib; sourceTree = "<group>"; };
 		1ACD80222361B2EB00BFEDCC /* CartNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartNavigationItem.swift; sourceTree = "<group>"; };
+		1ACD80242363256A00BFEDCC /* UIViewAnimation+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewAnimation+.swift"; sourceTree = "<group>"; };
 		1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectorView.swift; sourceTree = "<group>"; };
 		1AD93582234F8C6100B41DA5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		1AE384B123498E1D00968944 /* TempNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNavigationController.swift; sourceTree = "<group>"; };
@@ -506,6 +508,7 @@
 				AFDD4CBB22FC450500CD8CD5 /* Obejcts+.swift */,
 				AFDD4CBD22FC457800CD8CD5 /* Types+.swift */,
 				AF4A3E9F230F7900003F3825 /* UIColor+.swift */,
+				1ACD80242363256A00BFEDCC /* UIViewAnimation+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -953,6 +956,7 @@
 				AFDD4CBA22FC278100CD8CD5 /* UIViewEnum+.swift in Sources */,
 				AFDD4C6322FC0BBF00CD8CD5 /* HotdealViewController.swift in Sources */,
 				1ACD80232361B2EB00BFEDCC /* CartNavigationItem.swift in Sources */,
+				1ACD80252363256A00BFEDCC /* UIViewAnimation+.swift in Sources */,
 				1AE61FEB2348628E0075285B /* LoginCoordinator.swift in Sources */,
 				1AE61FE523485E1E0075285B /* DeliveryCoordinator.swift in Sources */,
 				AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */,
