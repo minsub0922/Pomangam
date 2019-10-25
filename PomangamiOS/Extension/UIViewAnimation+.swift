@@ -45,41 +45,39 @@ extension UIView {
     }
     
     func tick() {
-        UIView.animateKeyframes(withDuration: 0.6,
+        UIView.animateKeyframes(withDuration: 1.1,
                                 delay: 0.1,
-                                options: [.calculationModeCubic],
+                                options: [.calculationModeCubic, .allowUserInteraction],
                                 animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1/4) {
-                self.rotate(to: CGFloat(Double.pi*0.1))
-            }
-            UIView.addKeyframe(withRelativeStartTime: 1/4, relativeDuration: 1/4) {
-                self.rotate(to: 0)
-            }
-            UIView.addKeyframe(withRelativeStartTime: 2/4, relativeDuration: 1/4) {
-                self.rotate(to: -CGFloat(Double.pi*0.1))
-            }
-            UIView.addKeyframe(withRelativeStartTime: 3/4, relativeDuration: 1/4) {
-                self.rotate(to: 0)
-            }
-        }, completion: { _ in
-            UIView.animateKeyframes(withDuration: 0.4,
-                                    delay: 0,
-                                options: [.calculationModeCubic],
-                                animations: {
-                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1/4) {
-                    self.rotate(to: CGFloat(Double.pi*0.07))
-                }
-                UIView.addKeyframe(withRelativeStartTime: 1/4, relativeDuration: 1/4) {
-                    self.rotate(to: 0)
-                }
-                UIView.addKeyframe(withRelativeStartTime: 2/4, relativeDuration: 1/4) {
-                    self.rotate(to: -CGFloat(Double.pi*0.07))
-                }
-                UIView.addKeyframe(withRelativeStartTime: 3/4, relativeDuration: 1/4) {
-                    self.rotate(to: 0)
-                }
-            }, completion: nil)
-        })
+                                    let firstRatio = 0.6
+                                    
+                                    UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1/4 * firstRatio) {
+                                        self.rotate(to: CGFloat(Double.pi*0.1))
+                                    }
+                                    UIView.addKeyframe(withRelativeStartTime: 1/4 * firstRatio, relativeDuration: 1/4 * firstRatio) {
+                                        self.rotate(to: 0)
+                                    }
+                                    UIView.addKeyframe(withRelativeStartTime: 2/4 * firstRatio, relativeDuration: 1/4 * firstRatio) {
+                                        self.rotate(to: -CGFloat(Double.pi*0.1))
+                                    }
+                                    UIView.addKeyframe(withRelativeStartTime: 3/4 * firstRatio, relativeDuration: 1/4 * firstRatio) {
+                                        self.rotate(to: 0)
+                                    }
+                                    
+                                    let secondRatio = 0.5
+                                    UIView.addKeyframe(withRelativeStartTime: firstRatio, relativeDuration: 1/4 * secondRatio) {
+                                        self.rotate(to: CGFloat(Double.pi*0.07))
+                                    }
+                                    UIView.addKeyframe(withRelativeStartTime: firstRatio + 1/4 * secondRatio, relativeDuration: 1/4 * secondRatio) {
+                                        self.rotate(to: 0)
+                                    }
+                                    UIView.addKeyframe(withRelativeStartTime: firstRatio + 2/4 * secondRatio, relativeDuration: 1/4 * secondRatio) {
+                                        self.rotate(to: -CGFloat(Double.pi*0.07))
+                                    }
+                                    UIView.addKeyframe(withRelativeStartTime: firstRatio + 3/4 * secondRatio, relativeDuration: 1/4 * secondRatio) {
+                                        self.rotate(to: 0)
+                                    }
+        }, completion: nil)
     }
     
     private func rotate(to: CGFloat) {

@@ -13,10 +13,9 @@ public protocol DeliveryViewControllerDelegate: class {
     func navigateToMenuList<T>(packet: T?)
 }
 
-class DeliveryViewController: BaseViewController {
+class DeliveryViewController: DeliveryBaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     public weak var delegate: DeliveryViewControllerDelegate?
-    private let customCartButton = CartNavigationItem()
     private var headerAdvertisements: [AdvertiseDto] = []
     private var markets: [DeliveryMarket] = []
     private var homeHeaderAdCellViewModel: DeliveryHeaderAdvertisementCellViewModel {
@@ -35,12 +34,6 @@ class DeliveryViewController: BaseViewController {
     
         setupCollectionView()
         getMainDatas()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        customCartButton.update()
     }
 
     //MARK:- Server API
@@ -70,35 +63,12 @@ class DeliveryViewController: BaseViewController {
     private func setupNavigationBarButtons() {
         let navigationButtonView = NavigationTitleDropDownButton()
         navigationButtonView.configure("한국항공대학교")
-        let navigationReceiptButton = UIBarButtonItem(image: UIImage(named: "btnDeliverymainOrderlist"),
-                                                      style: .plain,
-                                                      target: self,
-                                                      action: #selector(navigationReceiptButtonTapAction(_:)))
-        navigationReceiptButton.customView = ReceiptNavigationItem()
-        let navigationCartButton = UIBarButtonItem(title: "한국항공대학교",
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(navigationTitleTapAction(_:)))
-        
-        navigationCartButton.customView = customCartButton
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "한국항공대학교",
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "",
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(navigationTitleTapAction(_:)))
-        
         navigationItem.leftBarButtonItem?.customView = navigationButtonView
-        
-        navigationItem.rightBarButtonItems = [navigationCartButton, navigationReceiptButton]
-        
-    }
-    
-    @objc private func navigationReceiptButtonTapAction(_ sender: UIBarButtonItem) {
-        
-    }
-    
-    @objc private func navigationCartButtonTapAction(_ sender: UIBarButtonItem) {
-        DeliveryCommon.shared.navigationController?.pushViewController(storyboard: "Delivery", viewController: DeliveryCartViewController.self)
+        setupReceiptCartNavigationbarButton()
     }
     
     @objc private func navigationTitleTapAction(_ sender: UIBarButtonItem) {

@@ -33,6 +33,7 @@ class CartNavigationItem: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        self.isUserInteractionEnabled = true
         addSubview(countLabel)
         addSubview(imageView)
         
@@ -71,11 +72,12 @@ class ReceiptNavigationItem: UIView {
     }()
     
     override init(frame: CGRect) {
-         super.init(frame: frame)
+        super.init(frame: frame)
          
-         addSubview(imageView)
-         
-         autolayout()
+        self.isUserInteractionEnabled = true
+        
+        addSubview(imageView)
+        autolayout()
      }
      
      private func autolayout() {
