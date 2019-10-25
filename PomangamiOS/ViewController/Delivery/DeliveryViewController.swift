@@ -36,6 +36,12 @@ class DeliveryViewController: BaseViewController {
         setupCollectionView()
         getMainDatas()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        customCartButton.bounce()
+    }
 
     //MARK:- Server API
     private func getMainDatas() {

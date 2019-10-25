@@ -13,7 +13,6 @@ class CartNavigationItem: UIView {
         var label: UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = .clear
-        label.font = .boldSystemFont(ofSize: UIFont.smallSystemFontSize)
         label.textAlignment = .center
         //label.adjustsFontSizeToFitWidth = true
         label.textColor = .dustyOrange
@@ -57,6 +56,17 @@ class CartNavigationItem: UIView {
         //countLabel.text =
         
     }
+    
+    public func bounce() {
+        var targetFrame = countLabel.frame
+        targetFrame.origin.y -= 3
+        self.countLabel.frame = targetFrame
+          
+        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
+            targetFrame.origin.y += 3
+            self.countLabel.frame = targetFrame
+          }, completion: nil)
+    }
 }
 
 class ReceiptNavigationItem: UIView {
@@ -76,7 +86,7 @@ class ReceiptNavigationItem: UIView {
      }
      
      private func autolayout() {
-        imageView.frame = CGRect(x: 0, y: 13, width: 21, height: 21)
+        imageView.frame = CGRect(x: 0, y: 15, width: 21, height: 21)
         imageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6).isActive = true
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         imageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
