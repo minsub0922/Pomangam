@@ -13,11 +13,17 @@ protocol ArrivalPlaceViewControllerDelegate {
 }
 
 class ArrivalPlaceViewController: BaseViewController {
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView: MKMapView! {
+        didSet {
+            mapView.mapType = MKMapType.standard
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
-    private var selectedPin:MKPlacemark? = nil
-    private var selectedLoc: MKAnnotation?
-    private lazy var locationManager: CLLocationManager = {
+    
+    fileprivate var selectedPin:MKPlacemark? = nil
+    fileprivate var selectedLoc: MKAnnotation?
+    fileprivate var places: [ArrivalPlaceResponse] = []
+    fileprivate lazy var locationManager: CLLocationManager = {
         let locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -25,16 +31,38 @@ class ArrivalPlaceViewController: BaseViewController {
         locationManager.requestLocation()
         return locationManager
     }()
+    public var deliverySiteIndex: Int!
     
+    //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        setupTableView()
+        getDeliveryArrivalPlaces()
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    private func getDeliveryArrivalPlaces() {
+        APISource.shared.getDeliveryArrivalPlaces(deliverySiteIdx: deliverySiteIndex) { res in
+            self.places = res
+            self.setupMarkers()
+            self.tableView.reloadSection(section: 0)
+        }
+    }
+    
+    private func setupMarkers() {
+        zoomTo(location: places[0].asCLLocation)
+        for place in places {
+            self.mapView.addAnnotation(place.asAnnotation)
+        }
     }
 }
 
 extension ArrivalPlaceViewController: CLLocationManagerDelegate {
-    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             locationManager.requestLocation()
@@ -78,5 +106,36 @@ extension ArrivalPlaceViewController : MKMapViewDelegate {
     @objc func addLocationToList(){
         
     }
+    
+    fileprivate func zoomTo(location: CLLocationCoordinate2D) {
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: location, span: span)
+        mapView.setRegion(region, animated: true)
+    }
 }
 
+extension ArrivalPlaceViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return places.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let place = places[indexPath.row]
+        let cell: ArrivalPlaceCell = tableView.dequeueReusableCell(withIdentifier: "ArrivalPlaceCell", for: indexPath) as! ArrivalPlaceCell
+        cell.placeImageView.image = UIImage(named: "btnDeliveryplacePlaceAOn")
+        cell.locationLabel.text = place.name
+        if Int(place.asArrivalTimeToMinute) == 0 {
+            cell.arrivalTimeLabel.text = "정각 도착"
+        } else {
+            cell.arrivalTimeLabel.text = "도착시간 + \(place.asArrivalTimeToMinute)분"
+        }
+        
+        return cell
+    }
+}
+
+class ArrivalPlaceCell: UITableViewCell {
+    @IBOutlet weak var placeImageView: UIImageView!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var arrivalTimeLabel: UILabel!
+}

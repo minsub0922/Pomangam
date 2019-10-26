@@ -36,6 +36,7 @@
 		1ACD80252363256A00BFEDCC /* UIViewAnimation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD80242363256A00BFEDCC /* UIViewAnimation+.swift */; };
 		1ACD80272363CDA900BFEDCC /* ArrivalPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD80262363CDA900BFEDCC /* ArrivalPlaceViewController.swift */; };
 		1ACD80292363DCCE00BFEDCC /* ArrivalPlaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD80282363DCCE00BFEDCC /* ArrivalPlaceCoordinator.swift */; };
+		1ACD802B23641F8A00BFEDCC /* ArrivalLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD802A23641F8A00BFEDCC /* ArrivalLocationResponse.swift */; };
 		1AD25E862349C1FE008A0FF1 /* OptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */; };
 		1AD93583234F8C6100B41DA5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD93582234F8C6100B41DA5 /* RealmManager.swift */; };
 		1AE384B223498E1D00968944 /* TempNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE384B123498E1D00968944 /* TempNavigationController.swift */; };
@@ -165,6 +166,7 @@
 		1ACD80242363256A00BFEDCC /* UIViewAnimation+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewAnimation+.swift"; sourceTree = "<group>"; };
 		1ACD80262363CDA900BFEDCC /* ArrivalPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalPlaceViewController.swift; sourceTree = "<group>"; };
 		1ACD80282363DCCE00BFEDCC /* ArrivalPlaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalPlaceCoordinator.swift; sourceTree = "<group>"; };
+		1ACD802A23641F8A00BFEDCC /* ArrivalLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalLocationResponse.swift; sourceTree = "<group>"; };
 		1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectorView.swift; sourceTree = "<group>"; };
 		1AD93582234F8C6100B41DA5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		1AE384B123498E1D00968944 /* TempNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNavigationController.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */,
 				1A0BF4B22345F6CC007A7F21 /* MenuResponse.swift */,
 				1AE61FDF2348330A0075285B /* MenuDetailResponse.swift */,
+				1ACD802A23641F8A00BFEDCC /* ArrivalLocationResponse.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -902,6 +905,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE61FD92347B0040075285B /* DeliveryOrderRequestCell.swift in Sources */,
+				1ACD802B23641F8A00BFEDCC /* ArrivalLocationResponse.swift in Sources */,
 				1A3D145323507FEA00ED6D07 /* Objects.swift in Sources */,
 				1A6A10B42345A2C6007D2C78 /* TabbarCell.swift in Sources */,
 				1AE61FD52347AFF20075285B /* DeliveryOrderOptionCell.swift in Sources */,

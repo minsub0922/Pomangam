@@ -54,7 +54,7 @@ class APISource: APISourceProtocol {
              completion: commonResponseHandler(completion: completion))
     }
     
-    func getDeliveryMarkets(arrivalDate: String, detailForDeliverySiteIndex: String, completion: @escaping ([DeliveryMarket]) -> Void) {
+    func getDeliveryMarkets(arrivalDate: String, detailForDeliverySiteIndex: Int, completion: @escaping ([DeliveryMarket]) -> Void) {
         let params = [
             "arrivalDate": arrivalDate,
             "detailForDeliverySiteIdx": detailForDeliverySiteIndex
@@ -115,6 +115,15 @@ class APISource: APISourceProtocol {
         ] as [String: Any]
         
         get("/products/search/getDetailOrder",
+            params: params,
+            headers: headers,
+            completion: commonResponseHandler(completion: completion))
+    }
+    
+    func getDeliveryArrivalPlaces(deliverySiteIdx: Int, completion: @escaping ([ArrivalPlaceResponse]) -> Void) {
+        let params = ["deliverySiteIdx": deliverySiteIdx] as [String: Any]
+        
+        get("/detailForDeliverySites/search/findByDeliverySiteIdxOrderBySequence",
             params: params,
             headers: headers,
             completion: commonResponseHandler(completion: completion))

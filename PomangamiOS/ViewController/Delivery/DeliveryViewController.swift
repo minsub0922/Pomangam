@@ -19,6 +19,7 @@ class DeliveryViewController: DeliveryBaseViewController {
     public weak var delegate: DeliveryViewControllerDelegate?
     private var headerAdvertisements: [AdvertiseDto] = []
     private var markets: [DeliveryMarket] = []
+    private var deliverySiteIndex = 1
     private var homeHeaderAdCellViewModel: DeliveryHeaderAdvertisementCellViewModel {
         return DeliveryHeaderAdvertisementCellViewModel(headerAdvertisements: headerAdvertisements)
     }
@@ -39,14 +40,14 @@ class DeliveryViewController: DeliveryBaseViewController {
 
     //MARK:- Server API
     private func getMainDatas() {
-        let params = [ "deliverySiteIdx": 1 ]
+        let params = [ "deliverySiteIdx": deliverySiteIndex ]
         APISource.shared.getMainall(params: params) { res in
             self.headerAdvertisements = res.advertiseForMainDtoList
             self.collectionView.reloadSection(section: CellType.headerAd.rawValue)
             
             //Test
             let arrivalDate = "\(Date().tomorrow.toNormalFormat) 19:00:00"
-            APISource.shared.getDeliveryMarkets(arrivalDate: arrivalDate, detailForDeliverySiteIndex: "1") { (res) in
+            APISource.shared.getDeliveryMarkets(arrivalDate: arrivalDate, detailForDeliverySiteIndex: self.deliverySiteIndex) { (res) in
                 self.markets = res
                 self.collectionView.reloadSection(section: CellType.market.rawValue)
             }
@@ -160,6 +161,6 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
 
 extension DeliveryViewController: DeliveryArrivalCellProtocol {
     func tapLocationButton() {
-        delegate?.presentArrivalPlace(packet: 1)
+        delegate?.presentArrivalPlace(packet: self.deliverySiteIndex)
     }
 }

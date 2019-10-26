@@ -15,7 +15,9 @@ class ArrivalPlaceCoordinator: Coordinator {
     }
     
     func start<T>(packet: T) {
+        guard let deliverySiteIndex = packet as? Int else {return}
         let arrivalPlaceViewController = UIStoryboard(name: "Delivery", bundle: nil).instantiateViewController(ArrivalPlaceViewController.self)
+        arrivalPlaceViewController.deliverySiteIndex = deliverySiteIndex
         self.parent.present(arrivalPlaceViewController, animated: true, completion: nil)
     }
 }
