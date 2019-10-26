@@ -6,12 +6,14 @@
 //  Copyright © 2019 최민섭. All rights reserved.
 //
 import UIKit
+public protocol Coordinator {
+    func start<T>(packet: T)
+}
 
-public protocol Coordinator: RootCoordinator {
+public protocol ChildCoordinator: RootCoordinator {
     func start<T>(packet: T)
 }
 
 public protocol RootCoordinator {
-    var childCoordinators: [Coordinator] { get set }
-    init(navigationController: UINavigationController)
+    var childCoordinators: [ChildCoordinator] { get set }
 }

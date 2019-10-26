@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4PV-et-Y8a">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4PV-et-Y8a">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -136,17 +134,16 @@
             </objects>
             <point key="canvasLocation" x="3187" y="-322"/>
         </scene>
-        <!--View Controller-->
+        <!--Arrival Place View Controller-->
         <scene sceneID="EmD-vh-w4p">
             <objects>
-                <viewController id="HKB-gj-n2S" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArrivalPlaceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HKB-gj-n2S" customClass="ArrivalPlaceViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X7o-cn-khy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zG0-tS-zvT">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zG0-tS-zvT">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="수령장소 선택" id="ty4-Rk-HAQ">
@@ -156,14 +153,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fcu-Ub-ebg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="409"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dh3-F6-z8w">
+                                <rect key="frame" x="0.0" y="497" width="414" height="399"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fcu-Ub-ebg" firstAttribute="leading" secondItem="vuj-aB-hgw" secondAttribute="leading" id="1a3-h1-TgR"/>
+                            <constraint firstItem="zG0-tS-zvT" firstAttribute="trailing" secondItem="vuj-aB-hgw" secondAttribute="trailing" id="32E-i4-s0H"/>
+                            <constraint firstItem="Fcu-Ub-ebg" firstAttribute="top" secondItem="zG0-tS-zvT" secondAttribute="bottom" id="4lZ-A6-W5w"/>
+                            <constraint firstItem="zG0-tS-zvT" firstAttribute="top" secondItem="vuj-aB-hgw" secondAttribute="top" id="67d-gk-chF"/>
+                            <constraint firstItem="vuj-aB-hgw" firstAttribute="trailing" secondItem="Dh3-F6-z8w" secondAttribute="trailing" id="Uho-wo-KM8"/>
+                            <constraint firstItem="vuj-aB-hgw" firstAttribute="trailing" secondItem="Fcu-Ub-ebg" secondAttribute="trailing" id="flF-Yf-PTU"/>
+                            <constraint firstItem="Dh3-F6-z8w" firstAttribute="top" secondItem="Fcu-Ub-ebg" secondAttribute="bottom" id="fua-jk-TTo"/>
+                            <constraint firstItem="Fcu-Ub-ebg" firstAttribute="height" secondItem="vuj-aB-hgw" secondAttribute="height" multiplier="0.5" id="gTU-ze-dDs"/>
+                            <constraint firstItem="Dh3-F6-z8w" firstAttribute="leading" secondItem="vuj-aB-hgw" secondAttribute="leading" id="hno-sM-GtV"/>
+                            <constraint firstAttribute="bottom" secondItem="Dh3-F6-z8w" secondAttribute="bottom" id="j8x-KZ-RlK"/>
+                            <constraint firstItem="zG0-tS-zvT" firstAttribute="leading" secondItem="vuj-aB-hgw" secondAttribute="leading" id="ol8-J5-dqv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vuj-aB-hgw"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Fcu-Ub-ebg" id="RnZ-9e-LBA"/>
+                        <outlet property="tableView" destination="Dh3-F6-z8w" id="EK3-d8-hh6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybi-hZ-h0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="392"/>
+            <point key="canvasLocation" x="766.66666666666674" y="391.74107142857139"/>
         </scene>
     </scenes>
 </document>

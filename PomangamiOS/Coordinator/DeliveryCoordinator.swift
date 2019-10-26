@@ -11,23 +11,27 @@ import Foundation
 import UIKit
 
 class DeliveryCoordinator: RootCoordinator {
-    var childCoordinators: [Coordinator] = []
-    unowned let navigationController:UINavigationController
+    static let shared = DeliveryCoordinator()
+    private init() {}
     
-    required init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        guard let target = self.navigationController.topViewController as? DeliveryViewController else {
-            return
+    var childCoordinators: [ChildCoordinator] = []
+    weak var navigationController: UINavigationController? {
+        didSet {
+            if let target = self.navigationController?.topViewController as? DeliveryViewController {
+                  target.delegate = self
+            }
         }
-        
-        target.delegate = self
     }
-    
 }
 
 extension DeliveryCoordinator: DeliveryViewControllerDelegate {
+    func presentArrivalPlace<T>(packet: T?) {
+        let arrivalPlaceCoordinator = ArrivalPlaceCoordinator(parent: navigationController!)
+        arrivalPlaceCoordinator.start(packet: packet)
+    }
+    
     func navigateToMenuList<T>(packet: T) {
-        let deliveryMenuListCoordinator = DeliveryMenuListCoordinator(navigationController: navigationController)
+        let deliveryMenuListCoordinator = DeliveryMenuListCoordinator(navigationController: navigationController!)
         deliveryMenuListCoordinator.delegate = self
         childCoordinators.append(deliveryMenuListCoordinator)
         deliveryMenuListCoordinator.start(packet: packet)
@@ -36,7 +40,7 @@ extension DeliveryCoordinator: DeliveryViewControllerDelegate {
 
 extension  DeliveryCoordinator: BackToDeliveryViewControllerDelegate {
     func navigateBackToFirstPage() {
-        navigationController.popToRootViewController(animated: true)
+        navigationController!.popToRootViewController(animated: true)
         childCoordinators.removeSubrange(1..<childCoordinators.count)
     }
 }

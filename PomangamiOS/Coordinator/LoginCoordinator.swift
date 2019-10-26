@@ -7,11 +7,11 @@
 //
 import UIKit
 
-class LoginCoordinator: Coordinator {
+class LoginCoordinator: ChildCoordinator {
     func start<T>(packet: T) {
     }
     
-    var childCoordinators: [Coordinator] = []
+    var childCoordinators: [ChildCoordinator] = []
     unowned let navigationController:UINavigationController
     
     required init(navigationController: UINavigationController) {

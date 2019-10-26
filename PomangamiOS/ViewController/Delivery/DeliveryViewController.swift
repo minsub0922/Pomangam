@@ -11,6 +11,7 @@ import Alamofire
 
 public protocol DeliveryViewControllerDelegate: class {
     func navigateToMenuList<T>(packet: T?)
+    func presentArrivalPlace<T>(packet: T?)
 }
 
 class DeliveryViewController: DeliveryBaseViewController {
@@ -147,11 +148,18 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
             return cell;
         case .arrivalSpot:
             let cell = collectionView.dequeueReusableCell(DeliveryArrivalCell.self, for: indexPath)
+            cell.delegate = self
             return cell
         case .market:
             let cell = collectionView.dequeueReusableCell(DeliveryMarketCell.self, for: indexPath)
             cell.setupView(model: markets[indexPath.row].asDeliveryMarketViewModel)
             return cell;
         }
+    }
+}
+
+extension DeliveryViewController: DeliveryArrivalCellProtocol {
+    func tapLocationButton() {
+        delegate?.presentArrivalPlace(packet: 1)
     }
 }

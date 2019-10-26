@@ -12,8 +12,8 @@ protocol BackToDeliveryViewControllerDelegate: class {
     func navigateBackToFirstPage()
 }
 
-class DeliveryMenuListCoordinator: Coordinator {
-    var childCoordinators: [Coordinator] = []
+class DeliveryMenuListCoordinator: ChildCoordinator {
+    var childCoordinators: [ChildCoordinator] = []
     weak var delegate: BackToDeliveryViewControllerDelegate?
     
     unowned let navigationController: UINavigationController

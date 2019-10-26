@@ -48,14 +48,13 @@ class TabBarController: UITabBarController {
 }
 
 extension TabBarController: UITabBarControllerDelegate {
-    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         guard let controllerName = NavigationControllerType(rawValue: viewController.restorationIdentifier ?? ""), let viewController = viewController as? UINavigationController else {
             return
         }
         switch  controllerName{
         case .delivery:
-            DeliveryCoordinator(navigationController: viewController )
+            DeliveryCoordinator.shared.navigationController = viewController
         case .hotdeal:
             HotdealCoordinator(navigationController: viewController)
         case .community:

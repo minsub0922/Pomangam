@@ -7,8 +7,8 @@
 //
 import UIKit
 
-class DeliveryOrderCoordinator: Coordinator {
-    var childCoordinators: [Coordinator] = []
+class DeliveryOrderCoordinator: ChildCoordinator {
+    var childCoordinators: [ChildCoordinator] = []
     weak var delegate: BackToDeliveryViewControllerDelegate?
     
     unowned let navigationController: UINavigationController

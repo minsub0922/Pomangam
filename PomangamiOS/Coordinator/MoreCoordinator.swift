@@ -7,8 +7,8 @@
 //
 import UIKit
 
-class MoreCoordinator: Coordinator {
-    var childCoordinators: [Coordinator] = []
+class MoreCoordinator: ChildCoordinator {
+    var childCoordinators: [ChildCoordinator] = []
     unowned let navigationController:UINavigationController
     
     required init(navigationController: UINavigationController) {

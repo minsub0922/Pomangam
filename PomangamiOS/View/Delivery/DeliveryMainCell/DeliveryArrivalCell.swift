@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol DeliveryArrivalCellProtocol {
+    func tapLocationButton()
+}
+
 class DeliveryArrivalCell: UICollectionViewCell, CellProtocol {
-    
+    public var delegate: DeliveryArrivalCellProtocol?
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var timeButton: UIButton!
     @IBAction func tapLocationButton(_ sender: Any) {
+        delegate?.tapLocationButton()
     }
     @IBAction func tapTimeButton(_ sender: Any) {
     }
