@@ -45,8 +45,6 @@ class ArrivalPlaceViewController: BaseViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.tintColor = UIColor.dustyOrange.withAlphaComponent(0.1)
-        
     }
     
     private func getDeliveryArrivalPlaces() {
