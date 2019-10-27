@@ -175,7 +175,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5H-Lt-xqI">
-                                                    <rect key="frame" x="80" y="26" width="37.5" height="21"/>
+                                                    <rect key="frame" x="80" y="21" width="37.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Nrh-Gq-OvL"/>
                                                     </constraints>
@@ -184,22 +184,22 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3h-Ka-WaN">
-                                                    <rect key="frame" x="80" y="52" width="37.5" height="34"/>
+                                                    <rect key="frame" x="80" y="45" width="37.5" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="L3h-Ka-WaN" secondAttribute="bottom" constant="15" id="4az-8R-sH6"/>
-                                                <constraint firstItem="L3h-Ka-WaN" firstAttribute="top" secondItem="i5H-Lt-xqI" secondAttribute="bottom" constant="5" id="8X7-d7-aCp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="L3h-Ka-WaN" secondAttribute="bottom" constant="10" id="4az-8R-sH6"/>
+                                                <constraint firstItem="L3h-Ka-WaN" firstAttribute="top" secondItem="i5H-Lt-xqI" secondAttribute="bottom" constant="3" id="8X7-d7-aCp"/>
                                                 <constraint firstItem="i5H-Lt-xqI" firstAttribute="leading" secondItem="dO3-u2-c75" secondAttribute="trailing" constant="15" id="DL6-aS-RdN"/>
                                                 <constraint firstItem="dO3-u2-c75" firstAttribute="leading" secondItem="9CJ-lM-oWt" secondAttribute="leadingMargin" constant="15" id="Kec-6G-70I"/>
                                                 <constraint firstItem="dO3-u2-c75" firstAttribute="centerY" secondItem="9CJ-lM-oWt" secondAttribute="centerY" id="PfK-B8-V2A"/>
                                                 <constraint firstItem="L3h-Ka-WaN" firstAttribute="centerX" secondItem="i5H-Lt-xqI" secondAttribute="centerX" id="fLE-OV-yqY"/>
                                                 <constraint firstItem="L3h-Ka-WaN" firstAttribute="centerX" secondItem="i5H-Lt-xqI" secondAttribute="centerX" id="lQx-hM-Sgf"/>
                                                 <constraint firstItem="L3h-Ka-WaN" firstAttribute="leading" secondItem="i5H-Lt-xqI" secondAttribute="leading" id="wHk-85-edt"/>
-                                                <constraint firstItem="i5H-Lt-xqI" firstAttribute="top" secondItem="9CJ-lM-oWt" secondAttribute="topMargin" constant="15" id="xep-Gg-Pbb"/>
+                                                <constraint firstItem="i5H-Lt-xqI" firstAttribute="top" secondItem="9CJ-lM-oWt" secondAttribute="topMargin" constant="10" id="xep-Gg-Pbb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -229,6 +229,7 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="Fcu-Ub-ebg" id="RnZ-9e-LBA"/>
+                        <outlet property="navigationBar" destination="zG0-tS-zvT" id="XN3-SN-8x0"/>
                         <outlet property="tableView" destination="Dh3-F6-z8w" id="EK3-d8-hh6"/>
                     </connections>
                 </viewController>

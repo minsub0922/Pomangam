@@ -63,8 +63,7 @@ class DeliveryViewController: DeliveryBaseViewController {
     }
     
     private func setupNavigationBarButtons() {
-        let navigationButtonView = NavigationTitleDropDownButton()
-        navigationButtonView.configure("한국항공대학교")
+        let navigationButtonView = NavigationTitleDropDownButton(title: "한국항공대학교")
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "",
                                                            style: .plain,
                                                            target: self,

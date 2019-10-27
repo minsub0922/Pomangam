@@ -61,12 +61,19 @@ class NavigationTitleDropDownButton: UIButton {
         return stackView
     }()
     
-    var onlyTitle: Bool = false {
+    var titleOnly: Bool = false {
         didSet {
-            if onlyTitle {
+            if titleOnly {
                 horizontalStackView.removeArrangedSubview(imgVDropDown)
             }
         }
+    }
+    
+    init(title: String, titleOnly: Bool = false) {
+        super.init(frame: .zero)
+        self.configure(title)
+        self.titleOnly = titleOnly
+        prepareUIView()
     }
     
     override init(frame: CGRect) {
@@ -94,7 +101,7 @@ extension NavigationTitleDropDownButton {
         verticalStackView.addArrangedSubview(lblTitle)
         verticalStackView.addArrangedSubview(lblSubTitle)
         horizontalStackView.addArrangedSubview(verticalStackView)
-        horizontalStackView.addArrangedSubview(imgVDropDown)
+        !titleOnly ? horizontalStackView.addArrangedSubview(imgVDropDown) : nil
         addSubview(horizontalStackView)
     }
     

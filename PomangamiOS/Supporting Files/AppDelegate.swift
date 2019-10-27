@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         getToken()
+        setupViewDefault()
         return true
     }
 
@@ -24,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.setCustomObject(object: res, key: .accessToken)
             self.startController()
         }
+    }
+    
+    private func setupViewDefault() {
+        let fontAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 13)]
+        UINavigationBar.appearance().titleTextAttributes = fontAttributes
+        UIBarButtonItem.appearance().setTitleTextAttributes(fontAttributes, for: .normal)
     }
     
     private func startController() {

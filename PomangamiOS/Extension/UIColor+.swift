@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIColor {
-     open class var dustyOrange: UIColor {
+    open class var dustyOrange: UIColor {
         get {
             return UIColor(displayP3Red: 253/255.0, green: 109/255.0, blue: 45/255.0, alpha: 1)
         }

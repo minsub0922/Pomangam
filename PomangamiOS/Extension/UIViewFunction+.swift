@@ -302,10 +302,12 @@ extension UITableView {
         return self.dequeueReusableHeaderFooterView(withIdentifier: cellClass.className) as! T
     }
     
-    func reloadSection(section: Int) {
+    func reloadSection(section: Int, completion: @escaping () -> Void = {}) {
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.5, animations: {
                 self.reloadSections(IndexSet(section...section), with: .automatic)
+            }, completion: { _ in
+                completion()
             })
         }
     }

@@ -19,6 +19,7 @@ class ArrivalPlaceViewController: BaseViewController {
         }
     }
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
     fileprivate var selectedPin:MKPlacemark? = nil
     fileprivate var selectedLoc: MKAnnotation?
@@ -44,13 +45,20 @@ class ArrivalPlaceViewController: BaseViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tintColor = UIColor.dustyOrange.withAlphaComponent(0.1)
+        
     }
     
     private func getDeliveryArrivalPlaces() {
         APISource.shared.getDeliveryArrivalPlaces(deliverySiteIdx: deliverySiteIndex) { res in
             self.places = res
             self.setupMarkers()
-            self.tableView.reloadSection(section: 0)
+            self.tableView.reloadSection(section: 0) {
+                DispatchQueue.main.async {
+                    self.tableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .none)
+                }
+            }
+            
         }
     }
     
@@ -93,7 +101,7 @@ extension ArrivalPlaceViewController : MKMapViewDelegate {
         
         self.selectedLoc = annotation
         let actionButton = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 30, height: 30)))
-        actionButton.addTarget(self, action: #selector(addLocationToList), for: .touchUpInside)
+        actionButton.addTarget(self, action: #selector(touchupMarker), for: .touchUpInside)
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier:
             "pin") as? MKPinAnnotationView
         pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
@@ -103,7 +111,7 @@ extension ArrivalPlaceViewController : MKMapViewDelegate {
         return pinView
     }
     
-    @objc func addLocationToList(){
+    @objc private func touchupMarker(){
         
     }
     
@@ -115,6 +123,11 @@ extension ArrivalPlaceViewController : MKMapViewDelegate {
 }
 
 extension ArrivalPlaceViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let targetPlace = places[indexPath.row]
+        zoomTo(location: targetPlace.asCLLocation)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return places.count
     }
@@ -122,6 +135,7 @@ extension ArrivalPlaceViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let place = places[indexPath.row]
         let cell: ArrivalPlaceCell = tableView.dequeueReusableCell(withIdentifier: "ArrivalPlaceCell", for: indexPath) as! ArrivalPlaceCell
+        
         cell.placeImageView.image = UIImage(named: "btnDeliveryplacePlaceAOn")
         cell.locationLabel.text = place.name
         if Int(place.asArrivalTimeToMinute) == 0 {
@@ -138,4 +152,12 @@ class ArrivalPlaceCell: UITableViewCell {
     @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var arrivalTimeLabel: UILabel!
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.dustyOrange.withAlphaComponent(0.05)
+        self.selectedBackgroundView = backgroundView
+    }
 }
