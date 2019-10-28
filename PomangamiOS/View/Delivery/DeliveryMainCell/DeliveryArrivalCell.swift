@@ -10,6 +10,7 @@ import UIKit
 
 protocol DeliveryArrivalCellProtocol {
     func tapLocationButton()
+    func tapTimeButton()
 }
 
 class DeliveryArrivalCell: UICollectionViewCell, CellProtocol {
@@ -20,6 +21,7 @@ class DeliveryArrivalCell: UICollectionViewCell, CellProtocol {
         delegate?.tapLocationButton()
     }
     @IBAction func tapTimeButton(_ sender: Any) {
+        delegate?.tapTimeButton()
     }
     override func awakeFromNib() {
         super.awakeFromNib()

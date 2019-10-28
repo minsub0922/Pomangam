@@ -19,7 +19,6 @@ class ArrivalPlaceViewController: BaseViewController {
         }
     }
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var navigationBar: UINavigationBar!
     
     fileprivate var selectedPin:MKPlacemark? = nil
     fileprivate var selectedLoc: MKAnnotation?

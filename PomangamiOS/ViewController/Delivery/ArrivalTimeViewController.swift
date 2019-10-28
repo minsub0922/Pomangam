@@ -11,21 +11,35 @@ import UIKit
 class ArrivalTimeViewController: BaseViewController {
     @IBAction func touchupApplyButton(_ sender: Any) {
     }
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerView: UIView! {
+        didSet {
+            
+        }
+    }
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var timeStateLabel: UILabel!
     @IBOutlet weak var deliveryStateLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    fileprivate var availableTimes: [Any] = []
-    
+    fileprivate var availableTimes: [OrderTime] = []
+    public var deliverySiteIndex: Int!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupTableView()
+        getHours()
     }
     
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func getHours() {
+        APISource.shared.getDeliveryArrivalTimes(deliverySiteIdx: deliverySiteIndex) { res in
+            print(res)
+        }
     }
 }
 

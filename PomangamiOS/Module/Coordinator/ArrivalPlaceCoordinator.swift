@@ -8,9 +8,9 @@
 import UIKit
 
 class ArrivalPlaceCoordinator: Coordinator {
-    unowned let parent: UINavigationController
+    unowned let parent: UIViewController
     
-    required init(parent: UINavigationController) {
+    required init(parent: UIViewController) {
         self.parent = parent
     }
     

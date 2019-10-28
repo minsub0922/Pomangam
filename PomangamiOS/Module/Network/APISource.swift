@@ -129,6 +129,15 @@ class APISource: APISourceProtocol {
             completion: commonResponseHandler(completion: completion))
     }
     
+    func getDeliveryArrivalTimes(deliverySiteIdx: Int, completion: @escaping (ArrivalTimeResponse) -> Void ) {
+        let params = ["deliverySiteIdx": deliverySiteIdx] as [String: Any]
+        
+        get("/views/main/time",
+            params: params,
+            headers: headers,
+            completion: commonResponseHandler(completion: completion))
+    }
+    
 //    func getAffiliateMarkets(deliverySiteIndex: String, type: StoreType, orderBy: StoreOrderType? = nil, size: String? = nil, page: String? = nil, completion: @escaping ([Market]) -> Void) {
 //        //deliverySiteIdx=&type=&orderBy=&size=&page=
 ////        let params = [

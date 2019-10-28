@@ -12,6 +12,7 @@ import Alamofire
 public protocol DeliveryViewControllerDelegate: class {
     func navigateToMenuList<T>(packet: T?)
     func presentArrivalPlace<T>(packet: T?)
+    func presentArrivalTime<T>(packet: T?)
 }
 
 class DeliveryViewController: DeliveryBaseViewController {
@@ -159,6 +160,10 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
 }
 
 extension DeliveryViewController: DeliveryArrivalCellProtocol {
+    func tapTimeButton() {
+        delegate?.presentArrivalTime(packet: self.deliverySiteIndex)
+    }
+    
     func tapLocationButton() {
         delegate?.presentArrivalPlace(packet: self.deliverySiteIndex)
     }

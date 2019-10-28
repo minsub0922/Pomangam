@@ -15,6 +15,8 @@
 		1A4535D62348696200DFFC8A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4535D52348696200DFFC8A /* SplashViewController.swift */; };
 		1A4535D82348735800DFFC8A /* DeliveryMenuListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4535D72348735800DFFC8A /* DeliveryMenuListCoordinator.swift */; };
 		1A4DB1BC2365E6D0008343E6 /* ArrivalTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DB1BB2365E6D0008343E6 /* ArrivalTimeViewController.swift */; };
+		1A4DB1BE2366DF15008343E6 /* ArrivalTimeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DB1BD2366DF15008343E6 /* ArrivalTimeCoordinator.swift */; };
+		1A4DB1C02366E05F008343E6 /* ArrivalTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DB1BF2366E05F008343E6 /* ArrivalTimeResponse.swift */; };
 		1A5297B323489A4C00C601BE /* DeliveryOrderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */; };
 		1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10A623459D9C007D2C78 /* PageCell.swift */; };
 		1A6A10A923459D9C007D2C78 /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10A723459D9C007D2C78 /* PageCell.xib */; };
@@ -146,6 +148,8 @@
 		1A4535D52348696200DFFC8A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1A4535D72348735800DFFC8A /* DeliveryMenuListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMenuListCoordinator.swift; sourceTree = "<group>"; };
 		1A4DB1BB2365E6D0008343E6 /* ArrivalTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalTimeViewController.swift; sourceTree = "<group>"; };
+		1A4DB1BD2366DF15008343E6 /* ArrivalTimeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalTimeCoordinator.swift; sourceTree = "<group>"; };
+		1A4DB1BF2366E05F008343E6 /* ArrivalTimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalTimeResponse.swift; sourceTree = "<group>"; };
 		1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderCoordinator.swift; sourceTree = "<group>"; };
 		1A6A10A623459D9C007D2C78 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		1A6A10A723459D9C007D2C78 /* PageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
@@ -382,6 +386,7 @@
 				1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */,
 				1AE61FE423485E1E0075285B /* DeliveryCoordinator.swift */,
 				1ACD80282363DCCE00BFEDCC /* ArrivalPlaceCoordinator.swift */,
+				1A4DB1BD2366DF15008343E6 /* ArrivalTimeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 				1A0BF4B22345F6CC007A7F21 /* MenuResponse.swift */,
 				1AE61FDF2348330A0075285B /* MenuDetailResponse.swift */,
 				1ACD802A23641F8A00BFEDCC /* ArrivalLocationResponse.swift */,
+				1A4DB1BF2366E05F008343E6 /* ArrivalTimeResponse.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 		AFDD4C1922FBEE4F00CD8CD5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AFDD4C1B22FBEE5500CD8CD5 /* Extension */,
 				AFDD4CB722FC266C00CD8CD5 /* Enums.swift */,
 				AFDD4CBF22FC49E400CD8CD5 /* StaticLists.swift */,
 			);
@@ -506,6 +513,8 @@
 		AFDD4C1A22FBEE5300CD8CD5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				AF6F47C82305A0C200B377C7 /* Network */,
+				1AE61FE123485D540075285B /* Coordinator */,
 				AF4A3E96230EFF0F003F3825 /* CellProtocols.swift */,
 			);
 			path = Module;
@@ -622,9 +631,6 @@
 		AFF0C83622F659D2007D26DD /* PomangamiOS */ = {
 			isa = PBXGroup;
 			children = (
-				1AE61FE123485D540075285B /* Coordinator */,
-				AF6F47C82305A0C200B377C7 /* Network */,
-				AFDD4C1B22FBEE5500CD8CD5 /* Extension */,
 				AFDD4C1A22FBEE5300CD8CD5 /* Module */,
 				AFDD4C1922FBEE4F00CD8CD5 /* Utils */,
 				AFDD4C1822FBEE4D00CD8CD5 /* Model */,
@@ -924,6 +930,7 @@
 				1ABC5E20234C4E190091731E /* DeliveryOrderForm.swift in Sources */,
 				1AD25E862349C1FE008A0FF1 /* OptionSelectorView.swift in Sources */,
 				1ABC5E29234C6F7C0091731E /* DeliveryCartViewController.swift in Sources */,
+				1A4DB1BE2366DF15008343E6 /* ArrivalTimeCoordinator.swift in Sources */,
 				1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */,
 				1AF839FE234C89660004EFEB /* DeliveryCartPriceCell.swift in Sources */,
 				1ACD80292363DCCE00BFEDCC /* ArrivalPlaceCoordinator.swift in Sources */,
@@ -974,6 +981,7 @@
 				1ACD80252363256A00BFEDCC /* UIViewAnimation+.swift in Sources */,
 				1AE61FEB2348628E0075285B /* LoginCoordinator.swift in Sources */,
 				1AE61FE523485E1E0075285B /* DeliveryCoordinator.swift in Sources */,
+				1A4DB1C02366E05F008343E6 /* ArrivalTimeResponse.swift in Sources */,
 				AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */,
 				AF4A3EA0230F7900003F3825 /* UIColor+.swift in Sources */,
 				1AE61FE72348626C0075285B /* HotdealCoordinator.swift in Sources */,

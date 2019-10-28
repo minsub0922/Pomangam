@@ -25,6 +25,11 @@ class DeliveryCoordinator: RootCoordinator {
 }
 
 extension DeliveryCoordinator: DeliveryViewControllerDelegate {
+    func presentArrivalTime<T>(packet: T?) {
+        let arrivalTimeCoordinator = ArrivalTimeCoordinator(parent: navigationController!)
+        arrivalTimeCoordinator.start(packet: packet)
+    }
+    
     func presentArrivalPlace<T>(packet: T?) {
         let arrivalPlaceCoordinator = ArrivalPlaceCoordinator(parent: navigationController!)
         arrivalPlaceCoordinator.start(packet: packet)
