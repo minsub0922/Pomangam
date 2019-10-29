@@ -16,7 +16,6 @@ class APISource: APISourceProtocol {
         guard let model: TokenModel = UserDefaults.standard.getCustomObject(key: .accessToken) else {
             return nil
         }
-        print("access token is \(model.accessToken)")
         return ["Authorization": "Bearer \(model.accessToken)"]
     }
     

@@ -43,32 +43,39 @@ class DeliveryViewController: DeliveryBaseViewController {
         APISource.shared.getMainall(params: params) { res in
             self.headerAdvertisements = res.advertiseForMainDtoList
             self.collectionView.reloadSection(section: CellType.headerAd.rawValue)
-            
-            //Test
-            let arrivalDate = "\(Date().tomorrow.toNormalFormat) 19:00:00"
-            APISource.shared.getDeliveryMarkets(arrivalDate: arrivalDate, detailForDeliverySiteIndex: self.deliverySiteIndex) { (res) in
-                self.markets = res
-                self.collectionView.reloadSection(section: CellType.market.rawValue)
-                self.getRatings()
-            }
+            self.getMarketDatas()
         }
     }
     
-    private func getRatings() {
+    private func getMarketDatas() {
+        //Test
+        let arrivalDate = "\(Date().tomorrow.toNormalFormat) 19:00:00"
         let asyncGroup = DispatchGroup()
-        let asyncQueue = DispatchQueue(label: "getRating" ,qos: .userInitiated)
-        for market in self.markets {
-            asyncQueue.async(group: asyncGroup) {
-                APISource.shared.getMarketDetail(storeIndex: market.index) { res in
-                    print(res)
+        let asyncQueue = DispatchQueue.global()
+        var dictionary: [Int:Double] = [:]
+        
+        asyncGroup.enter()
+        APISource.shared.getDeliveryMarkets(arrivalDate: arrivalDate, detailForDeliverySiteIndex: self.deliverySiteIndex) { markets in
+            self.markets = markets
+            for market in markets {
+                asyncGroup.enter()
+                asyncQueue.async {
+                    APISource.shared.getMarketDetail(storeIndex: market.index) { res in
+                        dictionary[res.index] = res.starRating
+                        asyncGroup.leave()
+                    }
                 }
             }
+            asyncGroup.leave()
         }
         
         asyncGroup.notify(queue: asyncQueue) {
-            print("end!!")
+            for i in 0..<self.markets.count {
+                self.markets[i].rating = dictionary[self.markets[i].index] ?? 0
+            }
+            
+            self.collectionView.reloadSection(section: CellType.market.rawValue)
         }
-        //어떻게 저것들 전체 처리를 받아오지 ?!!!
     }
     
     //MARK:- Setup Views

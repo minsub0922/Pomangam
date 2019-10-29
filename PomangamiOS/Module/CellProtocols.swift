@@ -23,6 +23,7 @@ struct DeliveryMarketCellViewModel: CellViewModel {
     var imageUrl: String
     var name: String
     var rating: Double
+    var index: Int
 }
 
 

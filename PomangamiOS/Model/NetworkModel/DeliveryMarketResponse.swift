@@ -40,6 +40,7 @@ struct DeliveryMarket: Codable {
     let capacity: Int
     let arrivalTime: String
     let imagePath: String
+    var rating: Double = Double()
     
     enum CodingKeys: String, CodingKey {
         case name, location, description
@@ -57,10 +58,10 @@ struct DeliveryMarket: Codable {
     }
     
     var asDeliveryMarketViewModel: DeliveryMarketCellViewModel {
-        return DeliveryMarketCellViewModel(imageUrl: imagePath, name: name, rating: Double(likeCount))
+        return DeliveryMarketCellViewModel(imageUrl: imagePath, name: name, rating: rating, index: index)
     }
     
     var asDeliveryMenuListHeaderViewModel: DeliveryMenuListHeaderCellViewModel {
-        return DeliveryMenuListHeaderCellViewModel(imageURL: imagePath, name: name, rating: Double(likeCount), number: phoneNumber, description: description)
+        return DeliveryMenuListHeaderCellViewModel(imageURL: imagePath, name: name, rating: rating, number: phoneNumber, description: description)
     }
 }
