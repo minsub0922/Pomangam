@@ -35,7 +35,7 @@ struct MarketDetailResponse: Codable {
     let starRating: Double
     let type: Int
     let categories: [Category]
-    let likeType: Int
+    let likeType: Int?
     
     enum CodingKeys: String, CodingKey {
         case name, type, categories, likeType

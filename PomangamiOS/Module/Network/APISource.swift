@@ -54,6 +54,7 @@ class APISource: APISourceProtocol {
              completion: commonResponseHandler(completion: completion))
     }
     
+    //10.업체조회
     func getDeliveryMarkets(arrivalDate: String, detailForDeliverySiteIndex: Int, completion: @escaping ([DeliveryMarket]) -> Void) {
         let params = [
             "arrivalDate": arrivalDate,
@@ -66,6 +67,7 @@ class APISource: APISourceProtocol {
             completion: commonResponseHandler(completion: completion))
     }
     
+    //53. 제휴음식점 - 상세
     func getMarketDetail(storeIndex: Int, completion: @escaping (MarketDetailResponse) -> Void) {
         let params = [
             "storeIdx": storeIndex,

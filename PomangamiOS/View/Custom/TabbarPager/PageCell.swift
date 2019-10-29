@@ -34,7 +34,7 @@ class PageCell: UICollectionViewCell {
         APISource.shared.getMenuList(storeIndex: storeId) { menuList in
             self.menuList = menuList
             self.collectionView.reloadSection(section: 0)
-        
+            print(menuList)
         }
     }
     

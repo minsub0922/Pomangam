@@ -41,8 +41,8 @@ struct MenuResponse: Codable, Hashable {
     let modifyDate: String
     let sequence: Int
     let primeCost: Int
-    let finalCost: Int = Int()
-    let imagePath: String = String()
+    let finalCost: Int
+    let imagePath: String
     let likeType: String? = nil
     var amount = 0
     

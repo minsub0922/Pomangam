@@ -28,9 +28,7 @@ class DeliveryViewController: DeliveryBaseViewController {
     //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupNavigationBarButtons()
-        
         if let navigationController = navigationController {
             DeliveryCommon.shared.navigationController = navigationController
         }
@@ -51,8 +49,26 @@ class DeliveryViewController: DeliveryBaseViewController {
             APISource.shared.getDeliveryMarkets(arrivalDate: arrivalDate, detailForDeliverySiteIndex: self.deliverySiteIndex) { (res) in
                 self.markets = res
                 self.collectionView.reloadSection(section: CellType.market.rawValue)
+                self.getRatings()
             }
         }
+    }
+    
+    private func getRatings() {
+        let asyncGroup = DispatchGroup()
+        let asyncQueue = DispatchQueue(label: "getRating" ,qos: .userInitiated)
+        for market in self.markets {
+            asyncQueue.async(group: asyncGroup) {
+                APISource.shared.getMarketDetail(storeIndex: market.index) { res in
+                    print(res)
+                }
+            }
+        }
+        
+        asyncGroup.notify(queue: asyncQueue) {
+            print("end!!")
+        }
+        //어떻게 저것들 전체 처리를 받아오지 ?!!!
     }
     
     //MARK:- Setup Views
