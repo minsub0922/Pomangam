@@ -24,7 +24,7 @@ class DeliveryMenuListHeaderCell: UICollectionViewCell, CellProtocol {
     func setupView(model: DeliveryMenuListHeaderCellViewModel) {
         ratingLabel.text = String(model.rating)
         imageView.loadImageAsyc(fromURL: model.imageURL)
-        reviewButton.setTitle("리뷰보기(\(model.rating))", for: .normal)
+        reviewButton.setTitle("리뷰보기(\(model.commentCount))", for: .normal)
         phonenumberButton.setTitle(model.number, for: .normal)
         nameLabel.text = model.name
         descriptionLabel.text = model.description

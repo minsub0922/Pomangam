@@ -11,17 +11,13 @@ import UIKit
 class ArrivalTimeViewController: BaseViewController {
     @IBAction func touchupApplyButton(_ sender: Any) {
     }
-    @IBOutlet weak var containerView: UIView! {
-        didSet {
-            
-        }
-    }
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var timeStateLabel: UILabel!
     @IBOutlet weak var deliveryStateLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    fileprivate var availableTimes: [OrderTime] = []
+    fileprivate var availableTimes: [String] = []
     public var deliverySiteIndex: Int!
 
     override func viewDidLoad() {
@@ -31,6 +27,12 @@ class ArrivalTimeViewController: BaseViewController {
         getHours()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        containerView.setupShadow()
+    }
+    
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -38,7 +40,16 @@ class ArrivalTimeViewController: BaseViewController {
     
     private func getHours() {
         APISource.shared.getDeliveryArrivalTimes(deliverySiteIdx: deliverySiteIndex) { res in
-            print(res)
+            for hour in res.hours {
+                if let minutes = hour.minutes, let hour = hour.hour {
+                    for minute in minutes {
+                        self.availableTimes.append("\(hour)시 \(String(format: "%02d", minute))분")
+                    }
+                }
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 }
@@ -49,15 +60,16 @@ extension ArrivalTimeViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(ArrivalTimeCell.self)
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ArrivalTimeCell.className, for: indexPath) as? ArrivalTimeCell else {
+            return UITableViewCell()
+        }
+        cell.arrivalTimeLabel.text = availableTimes[indexPath.row]
         return cell
     }
 }
 
 class ArrivalTimeCell: UITableViewCell {
     @IBOutlet weak var arrivalTimeLabel: UILabel!
-    
     required init?(coder: NSCoder) {
        super.init(coder: coder)
        

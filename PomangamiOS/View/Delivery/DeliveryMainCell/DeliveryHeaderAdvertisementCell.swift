@@ -45,6 +45,7 @@ extension DeliveryHeaderAdvertisementCell: UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(DeliveryHeaderAdvertisementChildCell.self, for: indexPath)
         let ad = ads[indexPath.row]
+        cell.imageView.image = UIImage()
         cell.imageView.loadImageAsyc(fromURL: ad.imagePath)
         return cell
     }

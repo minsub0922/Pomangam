@@ -52,7 +52,7 @@ class DeliveryViewController: DeliveryBaseViewController {
         let arrivalDate = "\(Date().tomorrow.toNormalFormat) 19:00:00"
         let asyncGroup = DispatchGroup()
         let asyncQueue = DispatchQueue.global()
-        var dictionary: [Int:Double] = [:]
+        var dictionary: [Int:MarketDetailResponse] = [:]
         
         asyncGroup.enter()
         APISource.shared.getDeliveryMarkets(arrivalDate: arrivalDate, detailForDeliverySiteIndex: self.deliverySiteIndex) { markets in
@@ -61,7 +61,7 @@ class DeliveryViewController: DeliveryBaseViewController {
                 asyncGroup.enter()
                 asyncQueue.async {
                     APISource.shared.getMarketDetail(storeIndex: market.index) { res in
-                        dictionary[res.index] = res.starRating
+                        dictionary[res.index] = res
                         asyncGroup.leave()
                     }
                 }
@@ -71,7 +71,9 @@ class DeliveryViewController: DeliveryBaseViewController {
         
         asyncGroup.notify(queue: asyncQueue) {
             for i in 0..<self.markets.count {
-                self.markets[i].rating = dictionary[self.markets[i].index] ?? 0
+                if let market = dictionary[self.markets[i].index] {
+                    self.markets[i].setDetailSummary(rating: market.starRating, commentCount: market.commentCounts)
+                }
             }
             
             self.collectionView.reloadSection(section: CellType.market.rawValue)

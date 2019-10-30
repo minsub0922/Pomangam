@@ -41,6 +41,7 @@ struct DeliveryMarket: Codable {
     let arrivalTime: String
     let imagePath: String
     var rating: Double = Double()
+    var commentCount: Int = Int()
     
     enum CodingKeys: String, CodingKey {
         case name, location, description
@@ -62,6 +63,11 @@ struct DeliveryMarket: Codable {
     }
     
     var asDeliveryMenuListHeaderViewModel: DeliveryMenuListHeaderCellViewModel {
-        return DeliveryMenuListHeaderCellViewModel(imageURL: imagePath, name: name, rating: rating, number: phoneNumber, description: description)
+        return DeliveryMenuListHeaderCellViewModel(imageURL: imagePath, name: name, rating: rating, number: phoneNumber, description: description, commentCount: commentCount)
+    }
+    
+    public mutating func setDetailSummary(rating: Double, commentCount: Int) {
+        self.rating = rating
+        self.commentCount = commentCount
     }
 }

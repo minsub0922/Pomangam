@@ -33,6 +33,7 @@ struct DeliveryMenuListHeaderCellViewModel: CellViewModel {
     var rating: Double
     var number: String
     var description: String
+    var commentCount: Int
 }
 
 struct DeliveryMenuCellViewModel: CellViewModel {
