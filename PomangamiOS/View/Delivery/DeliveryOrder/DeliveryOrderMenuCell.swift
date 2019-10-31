@@ -30,7 +30,7 @@ class DeliveryOrderMenuCell: UICollectionViewCell, CellProtocol {
         menuImageView.loadImageAsyc(fromURL: model.imageURL)
         likeCountLabel.text = String(model.likeCount)
         nameLabel.text = model.name
-        priceLabel.text = String(model.price)
+        priceLabel.text = String(model.price).addThousandsSeperator()
         descriptionLabel.text = model.description
         descriptionLabel.fontToFitHeight()
     }

@@ -30,5 +30,13 @@ class PomangamiOSTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
+    func testReduceFunctionWithIndex() {
+        let strings = "17000"
+        let ss = strings.reversed().enumerated().reduce("") { (acc, curr) in
+        return String(curr.element) + String(curr.offset%3 == 0 ? "," : "")  + String(acc)
+        }
+        
+        print(String(ss.dropLast()))
+    }
 }

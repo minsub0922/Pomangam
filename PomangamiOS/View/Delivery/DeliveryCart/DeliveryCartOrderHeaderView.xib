@@ -66,12 +66,21 @@
                         <action selector="touchupDecreaseButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="WXM-CT-9Tz"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doB-yd-Kjh">
+                    <rect key="frame" x="0.0" y="204" width="323" height="1"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Fyr-0h-fNH"/>
+                    </constraints>
+                </view>
             </subviews>
             <constraints>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="7Dr-s3-qdq" secondAttribute="trailing" constant="16" id="1bY-LW-XIB"/>
                 <constraint firstItem="Fck-8O-yS5" firstAttribute="top" secondItem="y8g-Hc-xzr" secondAttribute="bottom" constant="5" id="2cX-1n-jYL"/>
                 <constraint firstItem="llZ-Od-AHv" firstAttribute="leading" secondItem="jGN-SH-fp6" secondAttribute="trailing" constant="20" id="4BA-aX-NUL"/>
+                <constraint firstItem="doB-yd-Kjh" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="CN0-dP-PGn"/>
                 <constraint firstItem="Fck-8O-yS5" firstAttribute="leading" secondItem="y8g-Hc-xzr" secondAttribute="leading" id="Hxv-Zm-VIB"/>
+                <constraint firstItem="doB-yd-Kjh" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" id="I9F-0l-Wnz"/>
                 <constraint firstItem="cIJ-qG-UTe" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="JFd-9q-rlp"/>
                 <constraint firstItem="o8d-8y-nrs" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" constant="15" id="PBa-kk-DPd"/>
                 <constraint firstItem="cIJ-qG-UTe" firstAttribute="top" secondItem="o8d-8y-nrs" secondAttribute="bottom" constant="20" id="PfE-AC-UgC"/>
@@ -79,6 +88,7 @@
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="cIJ-qG-UTe" secondAttribute="bottom" constant="10" id="R0T-yb-HaL"/>
                 <constraint firstItem="8id-S3-bCG" firstAttribute="trailing" secondItem="7Dr-s3-qdq" secondAttribute="trailing" id="Xsb-iN-SQ1"/>
                 <constraint firstItem="y8g-Hc-xzr" firstAttribute="top" secondItem="o8d-8y-nrs" secondAttribute="top" id="aUJ-Cw-xeW"/>
+                <constraint firstItem="doB-yd-Kjh" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="cdA-Gu-nMH"/>
                 <constraint firstItem="8id-S3-bCG" firstAttribute="leading" secondItem="llZ-Od-AHv" secondAttribute="trailing" constant="20" id="dIp-HK-0a0"/>
                 <constraint firstItem="jGN-SH-fp6" firstAttribute="centerY" secondItem="llZ-Od-AHv" secondAttribute="centerY" id="dXQ-g5-j5e"/>
                 <constraint firstItem="o8d-8y-nrs" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="20" id="pqr-Dd-IL2"/>
@@ -89,6 +99,7 @@
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <connections>
                 <outlet property="amountLabel" destination="llZ-Od-AHv" id="P9X-ec-a1u"/>
+                <outlet property="divider" destination="doB-yd-Kjh" id="Ese-M1-QiT"/>
                 <outlet property="expandableButton" destination="cIJ-qG-UTe" id="nui-Uc-0uE"/>
                 <outlet property="menuImageView" destination="o8d-8y-nrs" id="iE4-YR-uGU"/>
                 <outlet property="menuNameLabel" destination="y8g-Hc-xzr" id="G8L-Yc-k62"/>

@@ -17,6 +17,6 @@ class DeliveryCartPriceCell: UICollectionViewCell {
     }
 
     func setupView(totalPrice: Int) {
-        priceLabel.text = String(totalPrice)
+        priceLabel.text = String(totalPrice).addThousandsSeperator()
     }
 }

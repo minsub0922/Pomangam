@@ -20,6 +20,7 @@ class DeliveryCartOrderHeaderView: UICollectionReusableView, CellProtocol {
     @IBOutlet weak var menuNameLabel: UILabel!
     @IBOutlet weak var menuPriceLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var divider: UIView!
     @IBOutlet weak var expandableButton: UIButton! {
         didSet {
             expandableButton.setImage(UIImage(named: "btnDeliverybasketShowdetail"), for: .normal)
@@ -32,12 +33,7 @@ class DeliveryCartOrderHeaderView: UICollectionReusableView, CellProtocol {
     var expanded = false
     var price = 0 {
         didSet {
-            menuPriceLabel.text = String(price)
-        }
-    }
-    override var bounds: CGRect {
-        didSet {
-            self.addDivider(on: .bottom)
+            menuPriceLabel.text = String(price).addThousandsSeperator()
         }
     }
     
@@ -60,8 +56,7 @@ class DeliveryCartOrderHeaderView: UICollectionReusableView, CellProtocol {
     }
     
     private func showhideDivider() {
-        let divider = self.subviews.last
-        divider?.isHidden = !(divider?.isHidden ?? false)
+        divider.isHidden = !(divider.isHidden ?? false)
     }
     
     func setupView(model: DeliveryCartOrderHeaderViewModel) {
