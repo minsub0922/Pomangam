@@ -33,9 +33,7 @@ extension String {
         let newStringElements = self.reversed().enumerated().reduce("") { (acc, curr) in
             return String(curr.element) + String(curr.offset%3 == 0 ? "," : "")  + String(acc)
         }
-        
-        print(newStringElements)
-            
+                    
         return String(newStringElements.dropLast()) + String(isPrice ? "원" : "")
     }
 }

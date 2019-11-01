@@ -36,7 +36,6 @@ class TabPagerLayout: UIView, TabbarLayoutDelegate{
         self.addSubview(customMenuBar)
         customMenuBar.delegate = self
         customMenuBar.translatesAutoresizingMaskIntoConstraints = false
-        customMenuBar.indicatorViewWidthConstraint.constant = self.frame.width / 5
         customMenuBar.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         customMenuBar.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         customMenuBar.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
@@ -51,9 +50,11 @@ class TabPagerLayout: UIView, TabbarLayoutDelegate{
     func setupPageCollectionView(){
         pageCollectionView.delegate = self
         pageCollectionView.dataSource = self
+        pageCollectionView.backgroundColor = .white
         pageCollectionView.showsHorizontalScrollIndicator = false
         pageCollectionView.isPagingEnabled = true
         pageCollectionView.registerNib(PageCell.self)
+        
         self.addSubview(pageCollectionView)
         pageCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         pageCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
@@ -65,6 +66,15 @@ class TabPagerLayout: UIView, TabbarLayoutDelegate{
 extension TabPagerLayout: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(PageCell.self, for: indexPath)
+        print("indexPath : \(indexPath)")
+        if cell.productsType != indexPath.row {
+            cell.isHidden = true
+            cell.productsType = indexPath.row
+            return cell
+        }
+        
+        print("is same?")
+        
         return cell
     }
     

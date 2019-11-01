@@ -99,11 +99,11 @@ class APISource: APISourceProtocol {
         ] as [String: Any]
         
         if let categoryId = categoryId { params["categoryId"] = categoryId }
-        if let type = type { params["type"] = type }
+        if let type = type { params["type"] = type.rawValue }
         if let orderBy = orderBy { params["orderBy"] = orderBy.rawValue }
         if let size = size { params["size"] = size }
         if let page = page { params["page"] = page }
-        
+        print(params)
         get("/products/search/findByStoreIdx",
             params: params,
             headers: headers,

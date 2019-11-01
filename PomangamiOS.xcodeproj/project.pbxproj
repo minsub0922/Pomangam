@@ -30,6 +30,8 @@
 		1A6A10BD2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */; };
 		1A6A10BF2345BB85007D2C78 /* NotificationCenter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10BE2345BB85007D2C78 /* NotificationCenter+.swift */; };
 		1A6AF01E2344CB98007ACE44 /* TabPagerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */; };
+		1A96D9FE236C6B290087D8C0 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D9FC236C6B290087D8C0 /* BaseCollectionViewCell.swift */; };
+		1A96D9FF236C6B290087D8C0 /* BaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A96D9FD236C6B290087D8C0 /* BaseCollectionViewCell.xib */; };
 		1ABC5E20234C4E190091731E /* DeliveryOrderForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC5E1F234C4E190091731E /* DeliveryOrderForm.swift */; };
 		1ABC5E24234C60D30091731E /* DeliveryBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC5E23234C60D30091731E /* DeliveryBaseViewController.swift */; };
 		1ABC5E29234C6F7C0091731E /* DeliveryCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC5E28234C6F7C0091731E /* DeliveryCartViewController.swift */; };
@@ -167,6 +169,8 @@
 		1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryMenuListHeaderCell.xib; sourceTree = "<group>"; };
 		1A6A10BE2345BB85007D2C78 /* NotificationCenter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+.swift"; sourceTree = "<group>"; };
 		1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPagerLayout.swift; sourceTree = "<group>"; };
+		1A96D9FC236C6B290087D8C0 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		1A96D9FD236C6B290087D8C0 /* BaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		1ABC5E1F234C4E190091731E /* DeliveryOrderForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderForm.swift; sourceTree = "<group>"; };
 		1ABC5E23234C60D30091731E /* DeliveryBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryBaseViewController.swift; sourceTree = "<group>"; };
 		1ABC5E28234C6F7C0091731E /* DeliveryCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCartViewController.swift; sourceTree = "<group>"; };
@@ -421,6 +425,7 @@
 		AF11247923084729009CAB21 /* Delivery */ = {
 			isa = PBXGroup;
 			children = (
+				1A6AF01C2344CB62007ACE44 /* TabbarPager */,
 				AFDD4C6022FC0BAD00CD8CD5 /* Delivery.storyboard */,
 				AFDD4C5E22FC0BA200CD8CD5 /* DeliveryViewController.swift */,
 				AF11247A230847E0009CAB21 /* DeliveryMenuListViewController.swift */,
@@ -613,6 +618,8 @@
 				1AF78F8A23698B1300371B3A /* More */,
 				AF4A3E7D230EF9E1003F3825 /* Delivery */,
 				AFDD4CC122FC632E00CD8CD5 /* Custom */,
+				1A96D9FC236C6B290087D8C0 /* BaseCollectionViewCell.swift */,
+				1A96D9FD236C6B290087D8C0 /* BaseCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -620,7 +627,6 @@
 		AFDD4CC122FC632E00CD8CD5 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				1A6AF01C2344CB62007ACE44 /* TabbarPager */,
 				1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */,
 				AFDD4CC222FC634C00CD8CD5 /* UIlabelFlexible.swift */,
 				AF4A3E9D230F7466003F3825 /* UITextFieldUnderlined.swift */,
@@ -817,6 +823,7 @@
 				1AF839FF234C89660004EFEB /* DeliveryCartPriceCell.xib in Resources */,
 				AFF0C84222F659D2007D26DD /* Assets.xcassets in Resources */,
 				1AE61FDA2347B0040075285B /* DeliveryOrderRequestCell.xib in Resources */,
+				1A96D9FF236C6B290087D8C0 /* BaseCollectionViewCell.xib in Resources */,
 				1A6A10BD2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib in Resources */,
 				1AE61FD62347AFF20075285B /* DeliveryOrderOptionCell.xib in Resources */,
 				1AE61FD22347AFDC0075285B /* DeliveryOrderMenuCell.xib in Resources */,
@@ -1020,6 +1027,7 @@
 				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
 				1ACD80272363CDA900BFEDCC /* ArrivalPlaceViewController.swift in Sources */,
 				AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */,
+				1A96D9FE236C6B290087D8C0 /* BaseCollectionViewCell.swift in Sources */,
 				AF4A3E88230EFC3C003F3825 /* DeliveryArrivalCell.swift in Sources */,
 				AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */,
 				1A6A10BC2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift in Sources */,

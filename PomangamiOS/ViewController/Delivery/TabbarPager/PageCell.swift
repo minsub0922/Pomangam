@@ -19,22 +19,34 @@ class PageCell: UICollectionViewCell {
     private var preY: CGFloat = 0
     private var menuList: [MenuResponse] = []
     private let collectionViewMargin = UIScreen.main.bounds.width * 0.06
+    public var productsType: Int? {
+        didSet {
+            if let productsType = productsType {
+                getMenuList(productsType: productsType)
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         self.backgroundColor = .white
         setupCollectionView()
-        
+    }
+    
+    private func getMenuList(productsType: Int) {
         guard let storeId = CurrentMarket.shared.index else {
             print("there is no currentMarket!")
             return
         }
-        
-        APISource.shared.getMenuList(storeIndex: storeId) { menuList in
-            self.menuList = menuList
-            self.collectionView.reloadSection(section: 0)
-            print(menuList)
+                
+        let productsType = productsType == 0 ? nil : MenuType(rawValue: productsType - 1)
+        APISource.shared.getMenuList(storeIndex: storeId, type: productsType) { menuList in
+            DispatchQueue.main.async {
+                self.menuList = menuList
+                self.isHidden = false
+                self.collectionView.reloadSection(section: 0)
+            }
         }
     }
     

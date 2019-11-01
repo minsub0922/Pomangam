@@ -24,7 +24,6 @@ class BaseViewController: UIViewController {
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         if self != navigationController?.rootViewController {
-            print(".....")
             navigationController?.navigationBar.setupShadow(opacity: 0.1)
         }
     }

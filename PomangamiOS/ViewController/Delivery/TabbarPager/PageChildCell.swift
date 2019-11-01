@@ -27,7 +27,6 @@ class PageChildCell: UICollectionViewCell, CellProtocol {
     func setupView(model: DeliveryMenuCellViewModel) {
         nameLabel.text = model.name
         priceLabel.text = model.price.addThousandsSeperator()
-        print("menu image url : \(model.imageURL)")
         imageView.loadImageAsyc(fromURL: model.imageURL)
     }
 }
