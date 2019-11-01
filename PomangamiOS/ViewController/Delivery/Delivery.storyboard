@@ -108,7 +108,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="mCy-no-Rb9"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="oV8-OS-Ebd" appends="YES" id="HgQ-fO-V7w"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="상세주문" id="gXO-NN-MSN"/>
                     <connections>
@@ -116,6 +120,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcD-Eh-P1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oV8-OS-Ebd">
+                    <connections>
+                        <action selector="tapRecognizerAction:" destination="Idj-1K-gGX" id="D4Q-ph-Mpr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2429" y="-322"/>
         </scene>

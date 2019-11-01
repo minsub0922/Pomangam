@@ -8,12 +8,23 @@
 
 import UIKit
 
-class DeliveryOrderRequestCell: UICollectionViewCell {
+protocol DeliveryOrderRequestCellDelegate {
+    func onFocused()
+}
 
-    @IBOutlet weak var textfield: UITextField!
+class DeliveryOrderRequestCell: UICollectionViewCell, UITextFieldDelegate {
+    var delegate: DeliveryOrderRequestCellDelegate?
+    @IBOutlet weak var textfield: UITextField! {
+        didSet {
+            textfield.delegate = self
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        delegate?.onFocused()
+    }
 }

@@ -26,12 +26,25 @@ class DeliveryOrderViewController: BaseViewController {
             }
         }
     }
+    private var request: String {
+        var request = String()
+        if let cell = collectionView.cellForItem(at: IndexPath(row: 0, section: CellType.request.rawValue)) as? DeliveryOrderRequestCell, let text = cell.textfield.text {
+            request = text
+        }
+        return request
+    }
     
     var collectionView: UICollectionView = {
         return UICollectionView(frame: .zero,
                                 collectionViewLayout: UICollectionViewFlowLayout())
     }()
-
+    
+    //MARK:- Actions
+    @IBAction func tapRecognizerAction(_ sender: Any) {
+        self.view.endEditing(true)
+        moveCollectionView(toTop: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -119,7 +132,7 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
         }
         switch cellType {
         case .menu:
-            return CGSize(width: fullSize.width, height: fullSize.height*0.4)
+            return CGSize(width: fullSize.width, height: fullSize.height*0.45)
         case .options:
             return CGSize(width: fullSize.width, height: 60)
         case .request:
@@ -148,6 +161,7 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
         case .request:
             let cell = collectionView.dequeueReusableCell(DeliveryOrderRequestCell.self, for: indexPath)
             cell.addDivider(on: .bottom)
+            cell.delegate = self
             return cell
         }
     }
@@ -155,8 +169,6 @@ extension DeliveryOrderViewController: UICollectionViewDelegate, UICollectionVie
 
 extension DeliveryOrderViewController: DeliveryOrderOptionCellDelegate {
     func optionAmountChanged(indexPath: IndexPath, amount: Int) {
-        print("indexPath: \(indexPath), amount : \(amount)")
-        //collectionView.
         options[indexPath.row].amount = amount
     }
 }
@@ -174,12 +186,25 @@ extension DeliveryOrderViewController: DeliveryOrderFormDelegate {
         let singleOrder = SingleOrder()
         singleOrder.setProductInfo(productInfo: ProductInfo(menu: menuDetail.menuInfo,
                                                             options: self.options,
-                                                            request: String())) 
+                                                            request: request))
         RealmManger.inputData(type: singleOrder)
         DeliveryCommon.shared.navigationController?.pushViewController(storyboard: "Delivery", viewController: DeliveryCartViewController.self)
     }
     
     func tapDirectOrderButton() {
         print("tapdirectOrderButton")
+    }
+}
+
+extension DeliveryOrderViewController: DeliveryOrderRequestCellDelegate {
+    func onFocused() {
+        self.collectionView.scrollToItem(at: IndexPath(row: 0, section: CellType.request.rawValue), at: .top, animated: true)
+        moveCollectionView(toTop: true)
+    }
+    
+    fileprivate func moveCollectionView(toTop: Bool) {
+        UIView.animate(withDuration: 0.3) {
+            self.collectionView.frame.origin.y = self.collectionView.frame.origin.y + CGFloat(Int(toTop ? -200 : 200))
+        }
     }
 }
