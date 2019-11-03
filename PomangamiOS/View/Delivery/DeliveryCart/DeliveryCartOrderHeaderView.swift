@@ -31,21 +31,17 @@ class DeliveryCartOrderHeaderView: UICollectionReusableView, CellProtocol {
     var delegate: DeliveryCartOrderHeaderViewProtocol?
     var indexPath: IndexPath = []
     var expanded = false
-    var price = 0 {
-        didSet {
-            menuPriceLabel.text = String(price).addThousandsSeperator()
-        }
-    }
+    var price = 0
     
     @IBAction func touchupExitButton(_ sender: Any) {
         delegate?.deleteOrderButtonTapAction(indexPath: indexPath)
     }
     @IBAction func touchupDecreaseButton(_ sender: Any) {
-        price -= 1
+        price -= price
         delegate?.amountDecreaseButtonTapAction(indexPath: indexPath)
     }
     @IBAction func touchupIncreaseButton(_ sender: Any) {
-        price += 1
+        price += price
         delegate?.amountIncreaseButtonTapAction(indexPath: indexPath)
     }
     @IBAction func touchupExpandButton(_ sender: Any) {
@@ -56,12 +52,20 @@ class DeliveryCartOrderHeaderView: UICollectionReusableView, CellProtocol {
     }
     
     private func showhideDivider() {
-        divider.isHidden = !(divider.isHidden ?? false)
+        divider.isHidden = !(divider.isHidden)
     }
     
     func setupView(model: DeliveryCartOrderHeaderViewModel) {
-        menuNameLabel.text = model.menuName
         amountLabel.text = String(model.amount)
-        self.price = model.menuPrice
+        menuNameLabel.text = model.menuName
+        menuImageView.loadImageAsyc(fromURL: model.imagePath)
+        price = model.menuPrice
+        menuPriceLabel.text = String(price).addThousandsSeperator()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        menuImageView.setupShadow(opacity: 0.1)
     }
 }

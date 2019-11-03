@@ -68,9 +68,9 @@ class DeliveryMenuListViewController: DeliveryBaseViewController {
         
     }
     
+    //TODO scroll detection for sticky header
     @objc private func deliveryMenuListScrolledAction(_ notification: Notification) {
         guard let info = notification.scrollDetail else { return }
-        //print("i gotya! \(info.y)")
         let origin = collectionView.frame.origin
         
 //        collectionView.frame = CGRect(

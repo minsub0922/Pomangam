@@ -22,6 +22,7 @@ extension NSObject {
 extension UserDefaults{
     enum UserDefaultKeys: String {
         case accessToken
+        case arrivalPlace
     }
     
     func setCustomObject<T: Codable>(object: T, key: UserDefaultKeys) {

@@ -8,18 +8,12 @@
 
 import UIKit
 import MapKit
+
 protocol ArrivalPlaceViewControllerDelegate {
-    
+    func popToDeliveryMain(changedInstance: ArrivalPlaceResponse)
 }
 
 class ArrivalPlaceViewController: BaseViewController {
-    @IBOutlet weak var mapView: MKMapView! {
-        didSet {
-            mapView.mapType = MKMapType.standard
-        }
-    }
-    @IBOutlet weak var tableView: UITableView!
-    
     fileprivate var selectedPin:MKPlacemark? = nil
     fileprivate var selectedLoc: MKAnnotation?
     fileprivate var places: [ArrivalPlaceResponse] = []
@@ -31,7 +25,23 @@ class ArrivalPlaceViewController: BaseViewController {
         locationManager.requestLocation()
         return locationManager
     }()
+    fileprivate var selectedLocation: ArrivalPlaceResponse?
     public var deliverySiteIndex: Int!
+    public var delegate: ArrivalPlaceViewControllerDelegate?
+    
+    @IBOutlet weak var mapView: MKMapView! {
+        didSet {
+            mapView.mapType = MKMapType.standard
+        }
+    }
+    @IBOutlet weak var tableView: UITableView!
+    @IBAction func touchupAppleButton(_ sender: Any) {
+        if let selectedLocation = selectedLocation {
+            delegate?.popToDeliveryMain(changedInstance: selectedLocation)
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
+    }
     
     //MARK:- View LifeCycle
     override func viewDidLoad() {
@@ -55,7 +65,6 @@ class ArrivalPlaceViewController: BaseViewController {
                     self.tableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .none)
                 }
             }
-            
         }
     }
     
@@ -89,7 +98,7 @@ extension ArrivalPlaceViewController: CLLocationManagerDelegate {
 
 
 extension ArrivalPlaceViewController : MKMapViewDelegate {
-    //controll MapPin
+    //MARK: Controll MapPin
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
         if annotation is MKUserLocation {
             //return nil so map view draws "blue dot" for standard user location
@@ -119,10 +128,12 @@ extension ArrivalPlaceViewController : MKMapViewDelegate {
     }
 }
 
+//MARK: - UITalbeVewDelegate
 extension ArrivalPlaceViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let targetPlace = places[indexPath.row]
         zoomTo(location: targetPlace.asCLLocation)
+        selectedLocation = targetPlace
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

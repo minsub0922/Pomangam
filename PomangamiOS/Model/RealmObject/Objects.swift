@@ -25,6 +25,7 @@ final class Cart: Object {
 final class SingleOrder: Object {
     @objc dynamic var product: ProductRealmObject? = ProductRealmObject()
     @objc dynamic var productId = 0
+    @objc dynamic var request: String = String()
     var options = List<ProductRealmObject>()
     
     override static func primaryKey() -> String {
@@ -35,6 +36,7 @@ final class SingleOrder: Object {
         self.product = productInfo.asProductRealmObject
         self.productId = productInfo.asProductRealmObject.index 
         self.options = productInfo.asProductOptionsRealmObject
+        self.request = productInfo.request
     }
 }
 

@@ -339,9 +339,9 @@ extension UICollectionView {
         }
     }
     
-    func reloadSection(section: Int) {
+    func reloadSection(section: Int, animation: Bool = true) {
         DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: animation ? 0.5 : 0, animations: {
                 self.reloadSections(IndexSet(section...section))
             })
         }
@@ -385,7 +385,7 @@ extension UIImageView {
         }
     }
     
-    func loadImageAsyc(fromURL stringUrl : String, fromPomangamAPI: Bool = true) {
+    func loadImageAsyc(fromURL stringUrl : String, fromPomangamAPI: Bool = true, completion: @escaping () -> Void = {}) {
         let stringUrl = API.baseURL + stringUrl
         guard let url = URL(string: stringUrl) else { return }
         
@@ -415,8 +415,9 @@ extension UIImageView {
                         UIView.transition(with: self,
                                           duration:0.5,
                                           options: .transitionCrossDissolve,
-                                          animations: { self.image = imageToCache },
-                                          completion: nil)
+                                          animations: { self.image = imageToCache }) { _ in
+                                            completion()
+                        }
                         imageCache.setObject(imageToCache, forKey: stringUrl as AnyObject)
                     }
                 }

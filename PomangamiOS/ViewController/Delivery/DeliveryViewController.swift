@@ -34,10 +34,16 @@ class DeliveryViewController: DeliveryBaseViewController {
         }
     
         setupCollectionView()
+//        getMainDatas()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
         getMainDatas()
     }
 
-    //MARK:- Server API
+    // MARK:- Server API
     private func getMainDatas() {
         let params = [ "deliverySiteIdx": deliverySiteIndex ]
         APISource.shared.getMainall(params: params) { res in
@@ -48,7 +54,7 @@ class DeliveryViewController: DeliveryBaseViewController {
     }
     
     private func getMarketDatas() {
-        //Test
+        // TODO: need real data for time
         let arrivalDate = "\(Date().tomorrow.toNormalFormat) 19:00:00"
         let asyncGroup = DispatchGroup()
         let asyncQueue = DispatchQueue.global()
@@ -80,7 +86,7 @@ class DeliveryViewController: DeliveryBaseViewController {
         }
     }
     
-    //MARK:- Setup Views
+    // MARK:- Setup Views
     private func setupCollectionView() {
         collectionView.contentInset = .init(top: 0, left: 0, bottom: 0, right: 0)
         collectionView.registerNib(DeliveryHeaderAdvertisementCell.self)

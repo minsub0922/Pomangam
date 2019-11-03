@@ -158,6 +158,9 @@
                                     <navigationItem title="수령장소 선택" id="ty4-Rk-HAQ">
                                         <barButtonItem key="rightBarButtonItem" title="적용하기" id="G8o-9r-AE9">
                                             <color key="tintColor" red="0.99215686270000003" green="0.42745098040000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="touchupAppleButton:" destination="HKB-gj-n2S" id="I73-b9-EF5"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
