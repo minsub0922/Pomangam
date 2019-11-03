@@ -41,7 +41,6 @@ class DeliveryViewController: DeliveryBaseViewController {
     
         setupCollectionView()
         getMainDatas()
-        getArrivalInfos()
     }
 
     // MARK:- Server API
@@ -84,6 +83,7 @@ class DeliveryViewController: DeliveryBaseViewController {
             }
             
             self.collectionView.reloadSection(section: CellType.market.rawValue)
+            self.getArrivalInfos()
         }
     }
     
@@ -137,7 +137,7 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

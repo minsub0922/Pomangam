@@ -26,15 +26,12 @@ class DeliveryArrivalCell: UICollectionViewCell, CellProtocol {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        locationButton.setTitle("학생회관 뒤 ", for: .normal)
-        timeButton.setTitle("12시 ", for: .normal)
-        
         locationButton.addImage(image: UIImage(named: "btnDeliverymainSelectplace")!)
         timeButton.addImage(image: UIImage(named: "btnDeliverymainSelectplace")!)
     }
     
     func setupView(model: DeliveryArrivalCellViewModel) {
-        locationButton.setTitle(model.location, for: .normal)
-        timeButton.setTitle(model.arrivalTime, for: .normal)
+        locationButton.setTitle(model.location+"  ", for: .normal)
+        timeButton.setTitle(model.arrivalTime+"  ", for: .normal)
     }
 }
