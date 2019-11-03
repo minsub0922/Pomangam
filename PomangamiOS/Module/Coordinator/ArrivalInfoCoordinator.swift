@@ -7,6 +7,7 @@
 //
 import UIKit
 
+// MARK:- ArrivalPlaceCoordinator.swift
 class ArrivalPlaceCoordinator: Coordinator {
     unowned let parent: UINavigationController
     unowned let arrivalPlaceViewController: ArrivalPlaceViewController
@@ -27,7 +28,31 @@ class ArrivalPlaceCoordinator: Coordinator {
 extension ArrivalPlaceCoordinator: ArrivalPlaceViewControllerDelegate {
     func popToDeliveryMain(changedInstance: ArrivalPlaceResponse) {
         UserDefaults.standard.setCustomObject(object: changedInstance, key: .arrivalPlace)
-
         arrivalPlaceViewController.dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK:- ArrivalTimeCoordinator.swift
+class ArrivalTimeCoordinator: Coordinator {
+    unowned let parent: UIViewController
+    unowned let arrivalTimeViewController: ArrivalTimeViewController
+    
+    required init(parent: UIViewController) {
+        self.parent = parent
+        self.arrivalTimeViewController = UIStoryboard(name: "Delivery", bundle: nil).instantiateViewController(ArrivalTimeViewController.self)
+        self.arrivalTimeViewController.delegate = self
+    }
+    
+    func start<T>(packet: T) {
+        guard let deliverySiteIndex = packet as? Int else {return}
+        arrivalTimeViewController.deliverySiteIndex = deliverySiteIndex
+        self.parent.present(arrivalTimeViewController, animated: true, completion: nil)
+    }
+}
+
+extension ArrivalTimeCoordinator: ArrivalTimeViewControllerDelegate {
+    func popToDEliveryMain(changedInstance: String) {
+        UserDefaults.standard.setCustomObject(object: changedInstance, key: .arrivalPlace)
+        arrivalTimeViewController.dismiss(animated: true, completion: nil)
     }
 }

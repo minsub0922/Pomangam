@@ -8,7 +8,16 @@
 
 import UIKit
 
+protocol ArrivalTimeViewControllerDelegate {
+    func popToDEliveryMain(changedInstance: String)
+}
+
 class ArrivalTimeViewController: BaseViewController {
+    fileprivate var availableTimes: [String] = []
+    fileprivate var selectedHour: String = String()
+    public var deliverySiteIndex: Int!
+    public var delegate: ArrivalTimeViewControllerDelegate?
+    
     @IBAction func touchupApplyButton(_ sender: Any) {
     }
     @IBOutlet weak var containerView: UIView!
@@ -17,9 +26,12 @@ class ArrivalTimeViewController: BaseViewController {
     @IBOutlet weak var timeStateLabel: UILabel!
     @IBOutlet weak var deliveryStateLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    fileprivate var availableTimes: [String] = []
-    public var deliverySiteIndex: Int!
-
+    
+    
+    @IBAction func touchupApplyArrivalTimeButton(_ sender: Any) {
+        delegate?.popToDEliveryMain(changedInstance: selectedHour)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +59,7 @@ class ArrivalTimeViewController: BaseViewController {
                     }
                 }
             }
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -55,6 +68,10 @@ class ArrivalTimeViewController: BaseViewController {
 }
 
 extension ArrivalTimeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return availableTimes.count
     }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4PV-et-Y8a">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +19,6 @@
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pJW-zg-uWF">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -33,11 +34,11 @@
             <objects>
                 <viewController id="R6i-KY-g7D" customClass="DeliveryViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jqY-7D-CwT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3RB-gv-dqb">
-                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fo9-qJ-970">
                                     <size key="itemSize" width="50" height="50"/>
@@ -85,7 +86,7 @@
             <objects>
                 <viewController storyboardIdentifier="DeliveryMenuListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vdd-pV-7Kp" customClass="DeliveryMenuListViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IUE-XE-Dsw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="u06-Jz-jLe"/>
@@ -104,7 +105,7 @@
             <objects>
                 <viewController storyboardIdentifier="DeliveryOrderViewController" title="상세주문" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Idj-1K-gGX" customClass="DeliveryOrderViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2c0-Pd-4Pg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -132,7 +133,7 @@
             <objects>
                 <viewController storyboardIdentifier="DeliveryCartViewController" title="장바구니" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LEg-Fp-CRz" customClass="DeliveryCartViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dgb-XH-RRB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PaH-Mz-wPf"/>
@@ -147,11 +148,11 @@
             <objects>
                 <viewController storyboardIdentifier="ArrivalPlaceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HKB-gj-n2S" customClass="ArrivalPlaceViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X7o-cn-khy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zG0-tS-zvT">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="수령장소 선택" id="ty4-Rk-HAQ">
@@ -165,28 +166,28 @@
                                 </items>
                             </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fcu-Ub-ebg">
-                                <rect key="frame" x="0.0" y="44" width="600" height="300"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="409"/>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dh3-F6-z8w">
-                                <rect key="frame" x="0.0" y="344" width="600" height="256"/>
+                                <rect key="frame" x="0.0" y="497" width="414" height="399"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArrivalPlaceCell" rowHeight="112" id="ZAg-Be-7ib" customClass="ArrivalPlaceCell" customModule="PomangamiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="112"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZAg-Be-7ib" id="9CJ-lM-oWt">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="112"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dO3-u2-c75">
-                                                    <rect key="frame" x="30" y="41" width="30" height="30"/>
+                                                    <rect key="frame" x="35" y="41" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="C4M-sH-rrY"/>
                                                         <constraint firstAttribute="width" constant="30" id="zK7-E1-po0"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5H-Lt-xqI">
-                                                    <rect key="frame" x="75" y="21" width="37.5" height="21"/>
+                                                    <rect key="frame" x="80" y="21" width="37.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Nrh-Gq-OvL"/>
                                                     </constraints>
@@ -195,7 +196,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3h-Ka-WaN">
-                                                    <rect key="frame" x="75" y="45" width="37.5" height="46"/>
+                                                    <rect key="frame" x="80" y="45" width="37.5" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -252,11 +253,11 @@
             <objects>
                 <viewController storyboardIdentifier="ArrivalTimeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oun-uJ-38q" customClass="ArrivalTimeViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IWx-eV-4F7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ER6-pa-Ewh">
-                                <rect key="frame" x="0.0" y="44" width="600" height="290"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="191"/>
                                 <color key="backgroundColor" red="0.92463988070000003" green="0.4613221884" blue="0.25088164210000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="13a-6e-eAC">
@@ -271,7 +272,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVX-ux-kOg">
-                                                    <rect key="frame" x="280.5" y="19" width="39.5" height="19.5"/>
+                                                    <rect key="frame" x="187.5" y="19" width="39.5" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -289,24 +290,24 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6B-Az-KTt">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="배달시간 선택" id="zIa-Ru-lg6">
                                         <barButtonItem key="rightBarButtonItem" title="적용하기" id="y8F-mf-H3g">
                                             <color key="tintColor" red="0.99215686270000003" green="0.42745098040000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <action selector="touchupApplyButton:" destination="Oun-uJ-38q" id="zRW-pL-5ua"/>
+                                                <action selector="touchupApplyArrivalTimeButton:" destination="Oun-uJ-38q" id="eUh-8Q-sWO"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ne-Y0-rTu">
-                                <rect key="frame" x="60" y="74" width="480" height="320"/>
+                                <rect key="frame" x="41.5" y="118" width="331" height="221"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="firstBaseline" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="npW-Mj-jNb">
-                                        <rect key="frame" x="167.5" y="132.5" width="145.5" height="55"/>
+                                        <rect key="frame" x="93" y="83" width="145.5" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziJ-TN-WGh">
                                                 <rect key="frame" x="0.0" y="0.0" width="107.5" height="55"/>
@@ -324,13 +325,13 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onB-m5-Naq">
-                                        <rect key="frame" x="221.5" y="202.5" width="37.5" height="18"/>
+                                        <rect key="frame" x="147" y="153" width="37.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nx6-DH-72b">
-                                        <rect key="frame" x="210.5" y="15" width="59.5" height="15"/>
+                                        <rect key="frame" x="136" y="15" width="59.5" height="15"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xJH-Pl-Erp">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
