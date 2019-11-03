@@ -10,15 +10,41 @@ import Foundation
 
 import UIKit
 
+protocol DeliveryArrivalDelegate: class {
+    func placeDidChange(changedInstance: ArrivalPlaceResponse)
+    func timeDidChange(changedInstance: String)
+}
+
 class DeliveryCoordinator: RootCoordinator {
     static let shared = DeliveryCoordinator()
     private init() {}
     
+    weak var delegate: DeliveryArrivalDelegate?
     var childCoordinators: [ChildCoordinator] = []
+    var arrivalPlaceObserver: NSKeyValueObservation?
+    var arrivalTimeObserver: NSKeyValueObservation?
+
     weak var navigationController: UINavigationController? {
         didSet {
             if let target = self.navigationController?.topViewController as? DeliveryViewController {
-                  target.delegate = self
+                target.delegate = self
+                delegate = target
+                
+                setupObservers()
+            }
+        }
+    }
+    
+    private func setupObservers() {
+        arrivalPlaceObserver = UserDefaults.standard.addValueDidChangeObserver(keyPath: \.arrivalPlace) {
+            if let changeInstance = UserDefaults.standard.getCustomObject(key: .arrivalPlace) as ArrivalPlaceResponse? {
+                self.delegate?.placeDidChange(changedInstance: changeInstance)
+            }
+        }
+        
+        arrivalTimeObserver = UserDefaults.standard.addValueDidChangeObserver(keyPath: \.arrivalTime) {
+            if let changeInstance: String = UserDefaults.standard.getCustomObject(key: .arrivalTime) {
+                self.delegate?.timeDidChange(changedInstance: changeInstance)
             }
         }
     }
@@ -49,12 +75,3 @@ extension  DeliveryCoordinator: BackToDeliveryViewControllerDelegate {
         childCoordinators.removeSubrange(1..<childCoordinators.count)
     }
 }
-
-//extension DeliveryCoordinator: BackToFirstViewControllerDelegate {
-//
-//    // Back from third page
-//    func navigateBackToFirstPage(newOrderCoordinator: SecondCoordinator) {
-//        navigationController.popToRootViewController(animated: true)
-//        childCoordinators.removeLast()
-//    }
-//}

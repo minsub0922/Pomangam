@@ -25,7 +25,9 @@ class ArrivalPlaceViewController: BaseViewController {
         locationManager.requestLocation()
         return locationManager
     }()
-    fileprivate var selectedLocation: ArrivalPlaceResponse?
+    fileprivate var selectedLocation: ArrivalPlaceResponse? = {
+        return UserDefaults.standard.getCustomObject(key: .arrivalPlace)
+    }()
     public var deliverySiteIndex: Int!
     public var delegate: ArrivalPlaceViewControllerDelegate?
     
@@ -35,7 +37,7 @@ class ArrivalPlaceViewController: BaseViewController {
         }
     }
     @IBOutlet weak var tableView: UITableView!
-    @IBAction func touchupAppleButton(_ sender: Any) {
+    @IBAction func touchupApplyButton(_ sender: Any) {
         if let selectedLocation = selectedLocation {
             delegate?.popToDeliveryMain(changedInstance: selectedLocation)
         } else {
@@ -59,17 +61,18 @@ class ArrivalPlaceViewController: BaseViewController {
     private func getDeliveryArrivalPlaces() {
         APISource.shared.getDeliveryArrivalPlaces(deliverySiteIdx: deliverySiteIndex) { res in
             self.places = res
-            self.setupMarkers()
             self.tableView.reloadSection(section: 0) {
                 DispatchQueue.main.async {
-                    self.tableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .none)
+                    let index = self.places.firstIndex { place in place.name == self.selectedLocation?.name } ?? 0
+                    self.setupMarkers(initialSelectedIndex: index)
+                    self.tableView.selectRow(at: IndexPath.init(row: index, section: 0), animated: true, scrollPosition: .none)
                 }
             }
         }
     }
     
-    private func setupMarkers() {
-        zoomTo(location: places[0].asCLLocation)
+    private func setupMarkers(initialSelectedIndex: Int) {
+        zoomTo(location: places[initialSelectedIndex].asCLLocation)
         for place in places {
             self.mapView.addAnnotation(place.asAnnotation)
         }
@@ -142,8 +145,7 @@ extension ArrivalPlaceViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let place = places[indexPath.row]
-        let cell: ArrivalPlaceCell = tableView.dequeueReusableCell(withIdentifier: "ArrivalPlaceCell", for: indexPath) as! ArrivalPlaceCell
-        
+        let cell: ArrivalPlaceCell = tableView.dequeueReusableCell(ArrivalPlaceCell.self)
         cell.placeImageView.image = UIImage(named: "btnDeliveryplacePlaceAOn")
         cell.locationLabel.text = place.name
         if Int(place.asArrivalTimeToMinute) == 0 {

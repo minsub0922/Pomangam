@@ -16,7 +16,16 @@
 //   "longitude": 126.864485
 import MapKit
 
-class ArrivalPlaceResponse: Codable {
+struct ArrivalInfos {
+    let arrivalPlaceResponse: ArrivalPlaceResponse
+    let hour: String
+    
+    var asPair: (String, String) {
+        return (arrivalPlaceResponse.name, hour)
+    }
+}
+
+struct ArrivalPlaceResponse: Codable {
     let index: Int?
     let deliverySiteIdx: Int
     let name: String
@@ -49,3 +58,50 @@ class ArrivalPlaceResponse: Codable {
         return String(offsetArrivalTime.split(separator: ":")[1])
     }
 }
+
+struct ArrivalTimeResponse: Codable {
+    let arrivalDate: String
+    let orderTimeList: [OrderTime]
+    let hours: [ArrivalTime]
+    
+    enum CodingKeys: String, CodingKey {
+        case arrivalDate = "arrival_date"
+        case orderTimeList = "orderTimeDtoList"
+        case hours
+    }
+}
+
+struct SelectedArrivalTime {
+    let hour: Int
+    let minute: Int = 0
+}
+
+struct ArrivalTime: Codable {
+    let hour: Int?
+    let minutes: [Int]?
+}
+
+struct OrderTime: Codable {
+    let index: Int?
+    let deliverySiteIndex: Int?
+    let storeIndex: Int?
+    let pauseState: Int?
+    let deadline: String?
+    let arrivalTime: String?
+    let arrivalTomorrow: Int?
+    let sequence: Int?
+    let description: String?
+    
+    enum CodinKeys: String, CodingKey {
+        case index = "idx"
+        case deliverySiteIndex = "delivery_site_idx"
+        case storeIndex = "store_idx"
+        case pauseState = "state_pause"
+        case deadline = "order_deadline"
+        case arrivalTime = "arrival_time"
+        case arrivalTomorrow = "arrival_tomorrow"
+        case sequence
+        case description = "pause_description"
+    }
+}
+

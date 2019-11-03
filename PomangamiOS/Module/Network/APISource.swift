@@ -32,7 +32,11 @@ class APISource: APISourceProtocol {
         }
     }
     
-    func getMainall(params: Parameters, completion: @escaping (ListAllMainResponse) -> Void) {
+    func getMainall(deliverySiteIdx: Int, completion: @escaping (DeliveryMainResponse) -> Void) {
+        let params = [
+            "deliverySiteIdx" : deliverySiteIdx,
+        ] as [String : Any]
+        
         get("/views/main",
             params: params,
             headers: headers,

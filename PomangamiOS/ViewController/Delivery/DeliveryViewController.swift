@@ -24,6 +24,12 @@ class DeliveryViewController: DeliveryBaseViewController {
     private var homeHeaderAdCellViewModel: DeliveryHeaderAdvertisementCellViewModel {
         return DeliveryHeaderAdvertisementCellViewModel(headerAdvertisements: headerAdvertisements)
     }
+    
+    private var arrivalInfos: (String, String) = (String(), String()) {
+        didSet {
+            self.collectionView.reloadSection(section: CellType.arrivalSpot.rawValue)
+        }
+    }
 
     //MARK:- View LifeCycle
     override func viewDidLoad() {
@@ -34,19 +40,13 @@ class DeliveryViewController: DeliveryBaseViewController {
         }
     
         setupCollectionView()
-//        getMainDatas()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
         getMainDatas()
+        getArrivalInfos()
     }
 
     // MARK:- Server API
     private func getMainDatas() {
-        let params = [ "deliverySiteIdx": deliverySiteIndex ]
-        APISource.shared.getMainall(params: params) { res in
+        APISource.shared.getMainall(deliverySiteIdx: self.deliverySiteIndex) { res in
             self.headerAdvertisements = res.advertiseForMainDtoList
             self.collectionView.reloadSection(section: CellType.headerAd.rawValue)
             self.getMarketDatas()
@@ -61,7 +61,8 @@ class DeliveryViewController: DeliveryBaseViewController {
         var dictionary: [Int:MarketDetailResponse] = [:]
         
         asyncGroup.enter()
-        APISource.shared.getDeliveryMarkets(arrivalDate: arrivalDate, detailForDeliverySiteIndex: self.deliverySiteIndex) { markets in
+        APISource.shared.getDeliveryMarkets(arrivalDate: arrivalDate,
+                                            detailForDeliverySiteIndex: self.deliverySiteIndex) { markets in
             self.markets = markets
             for market in markets {
                 asyncGroup.enter()
@@ -83,6 +84,20 @@ class DeliveryViewController: DeliveryBaseViewController {
             }
             
             self.collectionView.reloadSection(section: CellType.market.rawValue)
+        }
+    }
+    
+    private func getArrivalInfos() {
+        guard let arrivalPlace: ArrivalPlaceResponse = UserDefaults.standard.getCustomObject(key: .arrivalPlace) else {
+            return
+        }
+        
+        APISource.shared.getDeliveryArrivalTimes(deliverySiteIdx: deliverySiteIndex) { res in
+            let arrivalTime = String(res.hours.filter { $0.hour ?? 0 > 1 } [0].hour ?? res.hours.last?.hour ?? 0)
+            
+            UserDefaults.standard.setCustomObject(object: arrivalTime,
+                                                  key: .arrivalTime)
+            self.arrivalInfos = (arrivalPlace.name, arrivalTime)
         }
     }
     
@@ -181,6 +196,8 @@ extension DeliveryViewController: UICollectionViewDelegate, UICollectionViewData
         case .arrivalSpot:
             let cell = collectionView.dequeueReusableCell(DeliveryArrivalCell.self, for: indexPath)
             cell.delegate = self
+            cell.setupView(model: DeliveryArrivalCellViewModel(location: arrivalInfos.0,
+                                                               arrivalTime: arrivalInfos.1))
             return cell
         case .market:
             let cell = collectionView.dequeueReusableCell(DeliveryMarketCell.self, for: indexPath)
@@ -197,5 +214,15 @@ extension DeliveryViewController: DeliveryArrivalCellProtocol {
     
     func tapLocationButton() {
         delegate?.presentArrivalPlace(packet: self.deliverySiteIndex)
+    }
+}
+
+extension DeliveryViewController: DeliveryArrivalDelegate {
+    func placeDidChange(changedInstance: ArrivalPlaceResponse) {
+        self.arrivalInfos = (changedInstance.name, self.arrivalInfos.1)
+    }
+    
+    func timeDidChange(changedInstance: String) {
+        self.arrivalInfos = (self.arrivalInfos.0, changedInstance)
     }
 }

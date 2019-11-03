@@ -23,6 +23,7 @@ extension UserDefaults{
     enum UserDefaultKeys: String {
         case accessToken
         case arrivalPlace
+        case arrivalTime
     }
     
     func setCustomObject<T: Codable>(object: T, key: UserDefaultKeys) {
@@ -43,18 +44,32 @@ extension UserDefaults{
         completion()
     }
 
-    func getCustomObject<T: Codable>(key: UserDefaultKeys) -> T! {
+    func getCustomObject<T: Codable>(key: UserDefaultKeys) -> T? {
         guard let decoded  = self.data(forKey: key.rawValue) else {return nil}
         guard let data = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? Data else {return nil}
-        
+
         do {
-            let output = try PropertyListDecoder().decode(T.self, from: data)
-            return output
+           let output = try PropertyListDecoder().decode(T.self, from: data)
+           return output
         } catch {
-            print(error.localizedDescription)
+           print(error.localizedDescription)
         }
-        
+
         return nil
+    }
+    
+    @objc dynamic var arrivalPlace: Int {
+        return integer(forKey: UserDefaultKeys.arrivalPlace.rawValue)
+    }
+    @objc dynamic var arrivalTime: Int {
+        return integer(forKey: UserDefaultKeys.arrivalTime.rawValue)
+    }
+    
+    func addValueDidChangeObserver(keyPath: KeyPath<UserDefaults, Int>, completion: @escaping () -> Void) -> NSKeyValueObservation {
+        return self.observe(keyPath,
+                            options: [.new]) {_,_ in
+                        completion()
+        }
     }
 
 //    func deleteFromArray(index: Int, key: UserDefaultKeys, completion: @escaping() -> Void) {

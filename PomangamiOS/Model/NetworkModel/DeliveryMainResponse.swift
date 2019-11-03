@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ListAllMainResponse: Codable {
+struct DeliveryMainResponse: Codable {
     let advertiseForPopupDtoList: [AdvertiseDto]
     let advertiseForMainDtoList: [AdvertiseDto]
     let deliverySiteDto: DeliverySiteDto
@@ -84,7 +84,8 @@ struct OrderTimeDto: Codable {
     //        "order_deadline": "16:40:00",
     //        "arrival_time": "17:00:00",
     //        "arrival_tomorrow": 0,
-    //        "sequence": 3
+    //        "sequence": 3,
+    //        "pause_description": null
     let idx: Int
     let deliverySiteIndex: Int
     let storeIndex: Int

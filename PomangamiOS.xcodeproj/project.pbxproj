@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A0BF4B32345F6CC007A7F21 /* MenuResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0BF4B22345F6CC007A7F21 /* MenuResponse.swift */; };
+		1A213F86236EDBDF00A28D93 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A213F85236EDBDF00A28D93 /* Observer.swift */; };
 		1A39D7EC2345E5050002A3C6 /* MarketDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */; };
 		1A39D7EE2345E7580002A3C6 /* MarketCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */; };
 		1A39D7F02345EC660002A3C6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7EF2345EC660002A3C6 /* BaseViewController.swift */; };
@@ -16,7 +17,6 @@
 		1A4535D82348735800DFFC8A /* DeliveryMenuListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4535D72348735800DFFC8A /* DeliveryMenuListCoordinator.swift */; };
 		1A4DB1BC2365E6D0008343E6 /* ArrivalTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DB1BB2365E6D0008343E6 /* ArrivalTimeViewController.swift */; };
 		1A4DB1BE2366DF15008343E6 /* ArrivalTimeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DB1BD2366DF15008343E6 /* ArrivalTimeCoordinator.swift */; };
-		1A4DB1C02366E05F008343E6 /* ArrivalTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DB1BF2366E05F008343E6 /* ArrivalTimeResponse.swift */; };
 		1A5297B323489A4C00C601BE /* DeliveryOrderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */; };
 		1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10A623459D9C007D2C78 /* PageCell.swift */; };
 		1A6A10A923459D9C007D2C78 /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10A723459D9C007D2C78 /* PageCell.xib */; };
@@ -41,7 +41,7 @@
 		1ACD80252363256A00BFEDCC /* UIViewAnimation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD80242363256A00BFEDCC /* UIViewAnimation+.swift */; };
 		1ACD80272363CDA900BFEDCC /* ArrivalPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD80262363CDA900BFEDCC /* ArrivalPlaceViewController.swift */; };
 		1ACD80292363DCCE00BFEDCC /* ArrivalPlaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD80282363DCCE00BFEDCC /* ArrivalPlaceCoordinator.swift */; };
-		1ACD802B23641F8A00BFEDCC /* ArrivalLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD802A23641F8A00BFEDCC /* ArrivalLocationResponse.swift */; };
+		1ACD802B23641F8A00BFEDCC /* ArrivalInfosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD802A23641F8A00BFEDCC /* ArrivalInfosResponse.swift */; };
 		1AD25E862349C1FE008A0FF1 /* OptionSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */; };
 		1AD93583234F8C6100B41DA5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD93582234F8C6100B41DA5 /* RealmManager.swift */; };
 		1AE384B223498E1D00968944 /* TempNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE384B123498E1D00968944 /* TempNavigationController.swift */; };
@@ -88,7 +88,7 @@
 		AF5B31F8232D3D8E0052F495 /* DropDownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B31F7232D3D8E0052F495 /* DropDownLabel.swift */; };
 		AF6F47CA2305A10000B377C7 /* APISourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */; };
 		AF6F47CC2305A19C00B377C7 /* APISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CB2305A19C00B377C7 /* APISource.swift */; };
-		AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */; };
+		AF6F47D02305A95600B377C7 /* DeliveryMainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F47CF2305A95600B377C7 /* DeliveryMainResponse.swift */; };
 		AF8A010C233F21B3002EAEA6 /* DeliveryMarketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A010B233F21B3002EAEA6 /* DeliveryMarketResponse.swift */; };
 		AF99D4EC233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99D4EA233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift */; };
 		AF99D4ED233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF99D4EB233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib */; };
@@ -147,6 +147,7 @@
 /* Begin PBXFileReference section */
 		172BAE90DE915F9CEAD5EA8A /* Pods-PomangamiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOS.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOS/Pods-PomangamiOS.release.xcconfig"; sourceTree = "<group>"; };
 		1A0BF4B22345F6CC007A7F21 /* MenuResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuResponse.swift; sourceTree = "<group>"; };
+		1A213F85236EDBDF00A28D93 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetailResponse.swift; sourceTree = "<group>"; };
 		1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCommentResponse.swift; sourceTree = "<group>"; };
 		1A39D7EF2345EC660002A3C6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +156,6 @@
 		1A4535D72348735800DFFC8A /* DeliveryMenuListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMenuListCoordinator.swift; sourceTree = "<group>"; };
 		1A4DB1BB2365E6D0008343E6 /* ArrivalTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalTimeViewController.swift; sourceTree = "<group>"; };
 		1A4DB1BD2366DF15008343E6 /* ArrivalTimeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalTimeCoordinator.swift; sourceTree = "<group>"; };
-		1A4DB1BF2366E05F008343E6 /* ArrivalTimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalTimeResponse.swift; sourceTree = "<group>"; };
 		1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderCoordinator.swift; sourceTree = "<group>"; };
 		1A6A10A623459D9C007D2C78 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		1A6A10A723459D9C007D2C78 /* PageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		1ACD80242363256A00BFEDCC /* UIViewAnimation+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewAnimation+.swift"; sourceTree = "<group>"; };
 		1ACD80262363CDA900BFEDCC /* ArrivalPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalPlaceViewController.swift; sourceTree = "<group>"; };
 		1ACD80282363DCCE00BFEDCC /* ArrivalPlaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalPlaceCoordinator.swift; sourceTree = "<group>"; };
-		1ACD802A23641F8A00BFEDCC /* ArrivalLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalLocationResponse.swift; sourceTree = "<group>"; };
+		1ACD802A23641F8A00BFEDCC /* ArrivalInfosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalInfosResponse.swift; sourceTree = "<group>"; };
 		1AD25E852349C1FE008A0FF1 /* OptionSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectorView.swift; sourceTree = "<group>"; };
 		1AD93582234F8C6100B41DA5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		1AE384B123498E1D00968944 /* TempNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNavigationController.swift; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 		AF5B31F7232D3D8E0052F495 /* DropDownLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownLabel.swift; sourceTree = "<group>"; };
 		AF6F47C92305A10000B377C7 /* APISourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISourceProtocol.swift; sourceTree = "<group>"; };
 		AF6F47CB2305A19C00B377C7 /* APISource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISource.swift; sourceTree = "<group>"; };
-		AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListallMainResponse.swift; sourceTree = "<group>"; };
+		AF6F47CF2305A95600B377C7 /* DeliveryMainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMainResponse.swift; sourceTree = "<group>"; };
 		AF8A010B233F21B3002EAEA6 /* DeliveryMarketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMarketResponse.swift; sourceTree = "<group>"; };
 		AF99D4EA233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryHeaderAdvertisementChildCell.swift; sourceTree = "<group>"; };
 		AF99D4EB233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryHeaderAdvertisementChildCell.xib; sourceTree = "<group>"; };
@@ -316,6 +316,14 @@
 				3CC65E7CAA8B949866BEAD9E /* Pods-PomangamiOSUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		1A213F84236EDBCE00A28D93 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				1A213F85236EDBDF00A28D93 /* Observer.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 		1A3D145123507FD100ED6D07 /* RealmObject */ = {
@@ -464,15 +472,14 @@
 			children = (
 				AF4A3EA5230F8364003F3825 /* TokenModel.swift */,
 				AFF148EB23210514006FB68B /* MarketResponse.swift */,
-				AF6F47CF2305A95600B377C7 /* ListallMainResponse.swift */,
+				AF6F47CF2305A95600B377C7 /* DeliveryMainResponse.swift */,
 				AFC92E11233B152B0054D92E /* ProductResponse.swift */,
 				AF8A010B233F21B3002EAEA6 /* DeliveryMarketResponse.swift */,
 				1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */,
 				1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */,
 				1A0BF4B22345F6CC007A7F21 /* MenuResponse.swift */,
 				1AE61FDF2348330A0075285B /* MenuDetailResponse.swift */,
-				1ACD802A23641F8A00BFEDCC /* ArrivalLocationResponse.swift */,
-				1A4DB1BF2366E05F008343E6 /* ArrivalTimeResponse.swift */,
+				1ACD802A23641F8A00BFEDCC /* ArrivalInfosResponse.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -545,6 +552,7 @@
 		AFDD4C1A22FBEE5300CD8CD5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				1A213F84236EDBCE00A28D93 /* Observer */,
 				AF6F47C82305A0C200B377C7 /* Network */,
 				1AE61FE123485D540075285B /* Coordinator */,
 				AF4A3E96230EFF0F003F3825 /* CellProtocols.swift */,
@@ -951,7 +959,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE61FD92347B0040075285B /* DeliveryOrderRequestCell.swift in Sources */,
-				1ACD802B23641F8A00BFEDCC /* ArrivalLocationResponse.swift in Sources */,
+				1ACD802B23641F8A00BFEDCC /* ArrivalInfosResponse.swift in Sources */,
 				1A3D145323507FEA00ED6D07 /* Objects.swift in Sources */,
 				1A6A10B42345A2C6007D2C78 /* TabbarCell.swift in Sources */,
 				1AE61FD52347AFF20075285B /* DeliveryOrderOptionCell.swift in Sources */,
@@ -1020,8 +1028,7 @@
 				1ACD80252363256A00BFEDCC /* UIViewAnimation+.swift in Sources */,
 				1AE61FEB2348628E0075285B /* LoginCoordinator.swift in Sources */,
 				1AE61FE523485E1E0075285B /* DeliveryCoordinator.swift in Sources */,
-				1A4DB1C02366E05F008343E6 /* ArrivalTimeResponse.swift in Sources */,
-				AF6F47D02305A95600B377C7 /* ListallMainResponse.swift in Sources */,
+				AF6F47D02305A95600B377C7 /* DeliveryMainResponse.swift in Sources */,
 				AF4A3EA0230F7900003F3825 /* UIColor+.swift in Sources */,
 				1AE61FE72348626C0075285B /* HotdealCoordinator.swift in Sources */,
 				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
@@ -1029,6 +1036,7 @@
 				AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */,
 				1A96D9FE236C6B290087D8C0 /* BaseCollectionViewCell.swift in Sources */,
 				AF4A3E88230EFC3C003F3825 /* DeliveryArrivalCell.swift in Sources */,
+				1A213F86236EDBDF00A28D93 /* Observer.swift in Sources */,
 				AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */,
 				1A6A10BC2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift in Sources */,
 				1A39D7F02345EC660002A3C6 /* BaseViewController.swift in Sources */,

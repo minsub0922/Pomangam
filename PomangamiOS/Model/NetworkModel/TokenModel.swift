@@ -9,7 +9,7 @@
 struct TokenModel: Codable {
     var accessToken: String
     var tokenType: String
-    var refreshToken: String?
+    var refreshToken: String? = nil
     var expireDate: Int
     var authScope: String
     

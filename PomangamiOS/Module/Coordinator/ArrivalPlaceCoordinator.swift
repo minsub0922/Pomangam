@@ -27,6 +27,7 @@ class ArrivalPlaceCoordinator: Coordinator {
 extension ArrivalPlaceCoordinator: ArrivalPlaceViewControllerDelegate {
     func popToDeliveryMain(changedInstance: ArrivalPlaceResponse) {
         UserDefaults.standard.setCustomObject(object: changedInstance, key: .arrivalPlace)
+
         arrivalPlaceViewController.dismiss(animated: true, completion: nil)
     }
 }
