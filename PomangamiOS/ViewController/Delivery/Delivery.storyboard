@@ -138,6 +138,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PaH-Mz-wPf"/>
                     </view>
+                    <connections>
+                        <segue destination="TZx-jH-TRd" kind="show" id="Vhq-6A-a3E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xP4-hp-QAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -393,6 +396,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gv0-xF-dvk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1531.8840579710145" y="391.74107142857139"/>
+        </scene>
+        <!--결제 정보-->
+        <scene sceneID="WWh-Tq-YSx">
+            <objects>
+                <viewController storyboardIdentifier="DeliveryPaymentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TZx-jH-TRd" customClass="DeliveryPaymentViewController" customModule="PomangamiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e8y-U3-h7d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yUh-s7-0CM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="결제 정보" id="gG8-Yb-NRs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bd1-bu-rc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2429" y="392"/>
         </scene>
     </scenes>
 </document>

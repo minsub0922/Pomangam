@@ -10,7 +10,7 @@ public protocol Coordinator {
     func start<T>(packet: T)
 }
 
-public protocol ChildCoordinator: RootCoordinator {
+public protocol ChildCoordinator: Coordinator {
     func start<T>(packet: T)
 }
 

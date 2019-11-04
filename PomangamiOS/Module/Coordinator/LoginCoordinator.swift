@@ -11,7 +11,6 @@ class LoginCoordinator: ChildCoordinator {
     func start<T>(packet: T) {
     }
     
-    var childCoordinators: [ChildCoordinator] = []
     unowned let navigationController:UINavigationController
     
     required init(navigationController: UINavigationController) {

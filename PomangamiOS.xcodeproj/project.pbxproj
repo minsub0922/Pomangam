@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A0BF4B32345F6CC007A7F21 /* MenuResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0BF4B22345F6CC007A7F21 /* MenuResponse.swift */; };
-		1A213F86236EDBDF00A28D93 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A213F85236EDBDF00A28D93 /* Observer.swift */; };
 		1A39D7EC2345E5050002A3C6 /* MarketDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */; };
 		1A39D7EE2345E7580002A3C6 /* MarketCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */; };
 		1A39D7F02345EC660002A3C6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7EF2345EC660002A3C6 /* BaseViewController.swift */; };
@@ -17,6 +16,8 @@
 		1A4535D82348735800DFFC8A /* DeliveryMenuListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4535D72348735800DFFC8A /* DeliveryMenuListCoordinator.swift */; };
 		1A4DB1BC2365E6D0008343E6 /* ArrivalTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DB1BB2365E6D0008343E6 /* ArrivalTimeViewController.swift */; };
 		1A5297B323489A4C00C601BE /* DeliveryOrderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */; };
+		1A5405F8236FF88A00AB0C0D /* DeliveryPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5405F7236FF88A00AB0C0D /* DeliveryPaymentViewController.swift */; };
+		1A5405FA236FF92200AB0C0D /* DeliveryPaymentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5405F9236FF92200AB0C0D /* DeliveryPaymentCoordinator.swift */; };
 		1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10A623459D9C007D2C78 /* PageCell.swift */; };
 		1A6A10A923459D9C007D2C78 /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10A723459D9C007D2C78 /* PageCell.xib */; };
 		1A6A10AC2345A1F4007D2C78 /* PageChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10AA2345A1F4007D2C78 /* PageChildCell.swift */; };
@@ -146,7 +147,6 @@
 /* Begin PBXFileReference section */
 		172BAE90DE915F9CEAD5EA8A /* Pods-PomangamiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOS.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOS/Pods-PomangamiOS.release.xcconfig"; sourceTree = "<group>"; };
 		1A0BF4B22345F6CC007A7F21 /* MenuResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuResponse.swift; sourceTree = "<group>"; };
-		1A213F85236EDBDF00A28D93 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetailResponse.swift; sourceTree = "<group>"; };
 		1A39D7ED2345E7580002A3C6 /* MarketCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCommentResponse.swift; sourceTree = "<group>"; };
 		1A39D7EF2345EC660002A3C6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +155,8 @@
 		1A4535D72348735800DFFC8A /* DeliveryMenuListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMenuListCoordinator.swift; sourceTree = "<group>"; };
 		1A4DB1BB2365E6D0008343E6 /* ArrivalTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalTimeViewController.swift; sourceTree = "<group>"; };
 		1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderCoordinator.swift; sourceTree = "<group>"; };
+		1A5405F7236FF88A00AB0C0D /* DeliveryPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPaymentViewController.swift; sourceTree = "<group>"; };
+		1A5405F9236FF92200AB0C0D /* DeliveryPaymentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPaymentCoordinator.swift; sourceTree = "<group>"; };
 		1A6A10A623459D9C007D2C78 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		1A6A10A723459D9C007D2C78 /* PageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
 		1A6A10AA2345A1F4007D2C78 /* PageChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageChildCell.swift; sourceTree = "<group>"; };
@@ -316,14 +318,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		1A213F84236EDBCE00A28D93 /* Observer */ = {
-			isa = PBXGroup;
-			children = (
-				1A213F85236EDBDF00A28D93 /* Observer.swift */,
-			);
-			path = Observer;
-			sourceTree = "<group>";
-		};
 		1A3D145123507FD100ED6D07 /* RealmObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +398,7 @@
 				1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */,
 				1AE61FE423485E1E0075285B /* DeliveryCoordinator.swift */,
 				1ACD80282363DCCE00BFEDCC /* ArrivalInfoCoordinator.swift */,
+				1A5405F9236FF92200AB0C0D /* DeliveryPaymentCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -433,6 +428,7 @@
 				1A6AF01C2344CB62007ACE44 /* TabbarPager */,
 				AFDD4C6022FC0BAD00CD8CD5 /* Delivery.storyboard */,
 				AFDD4C5E22FC0BA200CD8CD5 /* DeliveryViewController.swift */,
+				1A5405F7236FF88A00AB0C0D /* DeliveryPaymentViewController.swift */,
 				AF11247A230847E0009CAB21 /* DeliveryMenuListViewController.swift */,
 				1AE61FCB234789B40075285B /* DeliveryOrderViewController.swift */,
 				1ABC5E23234C60D30091731E /* DeliveryBaseViewController.swift */,
@@ -549,7 +545,6 @@
 		AFDD4C1A22FBEE5300CD8CD5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				1A213F84236EDBCE00A28D93 /* Observer */,
 				AF6F47C82305A0C200B377C7 /* Network */,
 				1AE61FE123485D540075285B /* Coordinator */,
 				AF4A3E96230EFF0F003F3825 /* CellProtocols.swift */,
@@ -955,6 +950,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5405FA236FF92200AB0C0D /* DeliveryPaymentCoordinator.swift in Sources */,
 				1AE61FD92347B0040075285B /* DeliveryOrderRequestCell.swift in Sources */,
 				1ACD802B23641F8A00BFEDCC /* ArrivalInfosResponse.swift in Sources */,
 				1A3D145323507FEA00ED6D07 /* Objects.swift in Sources */,
@@ -1016,6 +1012,7 @@
 				1ABC5E24234C60D30091731E /* DeliveryBaseViewController.swift in Sources */,
 				AF99D4EC233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift in Sources */,
 				AFDD4CBE22FC457900CD8CD5 /* Types+.swift in Sources */,
+				1A5405F8236FF88A00AB0C0D /* DeliveryPaymentViewController.swift in Sources */,
 				AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */,
 				AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */,
 				AFDD4CBA22FC278100CD8CD5 /* UIViewEnum+.swift in Sources */,
@@ -1032,7 +1029,6 @@
 				AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */,
 				1A96D9FE236C6B290087D8C0 /* BaseCollectionViewCell.swift in Sources */,
 				AF4A3E88230EFC3C003F3825 /* DeliveryArrivalCell.swift in Sources */,
-				1A213F86236EDBDF00A28D93 /* Observer.swift in Sources */,
 				AFDD4CB822FC266C00CD8CD5 /* Enums.swift in Sources */,
 				1A6A10BC2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.swift in Sources */,
 				1A39D7F02345EC660002A3C6 /* BaseViewController.swift in Sources */,

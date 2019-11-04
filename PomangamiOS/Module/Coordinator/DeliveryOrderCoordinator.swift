@@ -8,7 +8,6 @@
 import UIKit
 
 class DeliveryOrderCoordinator: ChildCoordinator {
-    var childCoordinators: [ChildCoordinator] = []
     weak var delegate: BackToDeliveryViewControllerDelegate?
     
     unowned let navigationController: UINavigationController
@@ -17,7 +16,7 @@ class DeliveryOrderCoordinator: ChildCoordinator {
     }
     
     func start<T>(packet: T) {
-        let target : DeliveryOrderViewController = DeliveryOrderViewController()
+        let target = DeliveryOrderViewController()
         target.delegate = self
         target.setPacket(packet: packet)
         navigationController.pushViewController(target, animated: true)

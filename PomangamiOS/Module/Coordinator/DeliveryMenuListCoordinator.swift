@@ -13,10 +13,9 @@ protocol BackToDeliveryViewControllerDelegate: class {
 }
 
 class DeliveryMenuListCoordinator: ChildCoordinator {
-    var childCoordinators: [ChildCoordinator] = []
     weak var delegate: BackToDeliveryViewControllerDelegate?
-    
     unowned let navigationController: UINavigationController
+    
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }

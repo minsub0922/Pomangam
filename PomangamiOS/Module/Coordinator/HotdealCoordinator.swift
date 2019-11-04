@@ -7,8 +7,9 @@
 //
 import UIKit
 
-class HotdealCoordinator: ChildCoordinator {
+class HotdealCoordinator: RootCoordinator {
     var childCoordinators: [ChildCoordinator] = []
+    
     unowned let navigationController:UINavigationController
     
     required init(navigationController: UINavigationController) {

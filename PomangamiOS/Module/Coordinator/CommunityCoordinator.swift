@@ -8,7 +8,6 @@
 import UIKit
 
 class CommunityCoordinator: ChildCoordinator {
-    var childCoordinators: [ChildCoordinator] = []
     unowned let navigationController:UINavigationController
     
     required init(navigationController: UINavigationController) {
