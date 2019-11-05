@@ -127,6 +127,7 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
         }
     }
     
+    // MARK:- Set Header, Footer
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch indexPath.section {
         case 0, orders.count+1:
@@ -136,11 +137,12 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
                 let headerView = collectionView.dequeueReusableSupplement(DeliveryCartOrderHeaderView.self, kind: kind, for: indexPath)
                 guard let product = orders[indexPath.section-1].product else {return headerView}
                 
-                if headerView.indexPath == indexPath { return headerView }
                 headerView.setupView(model: DeliveryCartOrderHeaderViewModel(imagePath: product.imagePath,
-                                                                             menuName: product.name,
-                                                                             menuPrice: product.price,
-                                                                             amount: product.amount))
+                menuName: product.name,
+                menuPrice: product.price,
+                amount: product.amount))
+                
+                if headerView.indexPath == indexPath { return headerView }
                 headerView.delegate = self
                 headerView.indexPath = indexPath
                 return headerView

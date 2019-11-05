@@ -41,8 +41,11 @@ class DeliveryOrderViewController: BaseViewController {
     
     //MARK:- Actions
     @IBAction func tapRecognizerAction(_ sender: Any) {
+        if isEditing {
+            isEditing = false
+            moveCollectionView(toTop: false)            
+        }
         self.view.endEditing(true)
-        moveCollectionView(toTop: false)
     }
     
     override func viewDidLoad() {
@@ -52,6 +55,7 @@ class DeliveryOrderViewController: BaseViewController {
         
         APISource.shared.getMenuDetail(productIndex: menuInfo.index) { res in
             self.menudetail = res
+            self.menudetail?.menuInfo.amount = 1
             self.collectionView.reloadSection(section: 0)
         }
     }
@@ -200,6 +204,7 @@ extension DeliveryOrderViewController: DeliveryOrderRequestCellDelegate {
     func onFocused() {
         self.collectionView.scrollToItem(at: IndexPath(row: 0, section: CellType.request.rawValue), at: .top, animated: true)
         moveCollectionView(toTop: true)
+        self.isEditing = true
     }
     
     fileprivate func moveCollectionView(toTop: Bool) {
