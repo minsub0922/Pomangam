@@ -7,18 +7,15 @@
 //
 
 import UIKit
+enum UIButtonSelectorType {
+    case filled
+    case stroke
+}
 
 class UIButtonSelectorRounded: UIButton {
     override var isHighlighted: Bool {
         didSet {
-            if isHighlighted {
-                self.backgroundColor = .dustyOrange
-                self.layer.borderWidth = 0
-            } else {
-                self.backgroundColor = .white
-                self.layer.borderColor = UIColor.dustyOrange.cgColor
-                self.layer.borderWidth = 1.5
-            }
+            self.setupButtonView()
         }
     }
     
@@ -28,26 +25,27 @@ class UIButtonSelectorRounded: UIButton {
             attributedString(
                 from: self.currentTitle ?? "",
                 textColor: .dustyOrange ),
-            for: .normal)
+                for: .highlighted)
         self.setAttributedTitle(
             attributedString(
                 from: self.currentTitle ?? "",
-                textColor: .white),
-            for: .highlighted)
-//        self.widthAnchor.constraint(equalToConstant: 87).isActive = true
-//        self.heightAnchor.constraint(equalToConstant: 41).isActive = true
-//        self.translatesAutoresizingMaskIntoConstraints = false
+                textColor: .lightGray),
+                for: .normal)
+        self.layer.borderWidth = 1.5
+    }
+    
+    private func setupButtonView() {
+        if isHighlighted {
+            self.layer.borderColor = UIColor.dustyOrange.cgColor
+        } else {
+            self.layer.borderColor = UIColor.lightGray.cgColor
+        }
     }
     
     override func draw(_ rect: CGRect) {
         self.layer.cornerRadius = self.bounds.height / 2
         self.layer.masksToBounds = true
-        if isHighlighted {
-            self.backgroundColor = .dustyOrange
-        } else {
-            self.layer.borderColor = UIColor.dustyOrange.cgColor
-            self.layer.borderWidth = 1.5
-        }
+        self.setupButtonView()
         //self.insetsLayoutMarginsFromSafeArea = true
     }
     

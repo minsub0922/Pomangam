@@ -9,29 +9,50 @@
 import UIKit
 
 protocol ArrivalTimeViewControllerDelegate {
-    func popToDEliveryMain(changedInstance: String)
+    func popToDeliveryMain(changedInstance: SelectedArrivalTime?)
 }
 
 class ArrivalTimeViewController: BaseViewController {
-    fileprivate var availableTimes: [String] = []
-    fileprivate var selectedHour: String = String()
+    fileprivate var availableTimes: [SelectedArrivalTime] = []
+    fileprivate var selectedTime: SelectedArrivalTime?
     public var deliverySiteIndex: Int!
     public var delegate: ArrivalTimeViewControllerDelegate?
-    
-    @IBAction func touchupApplyButton(_ sender: Any) {
-    }
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var timeStateLabel: UILabel!
-    @IBOutlet weak var deliveryStateLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var locationLabel: UILabel! {
+        didSet {
+            guard let place: ArrivalPlaceResponse = UserDefaults.standard.getCustomObject(key: .arrivalPlace) else {
+                return
+            }
+            
+            locationLabel.text = place.name
+        }
+    }
+    @IBOutlet weak var timeLabel: UILabel! {
+        didSet {
+            guard let time: SelectedArrivalTime = UserDefaults.standard.getCustomObject(key: .arrivalTime) else {
+                return
+            }
+            timeLabel.text = "\(time.hour)시 \(String(format: "%02d", time.minute))분"
+        }
+    }
+    @IBOutlet weak var timeStateLabel: UILabel! {
+        didSet {
+            timeStateLabel.text = "PM"
+        }
+    }
+    @IBOutlet weak var deliveryStateLabel: UILabel! {
+        didSet {
+            deliveryStateLabel.text = "도착예정"
+        }
+    }
     
     
     @IBAction func touchupApplyArrivalTimeButton(_ sender: Any) {
-        delegate?.popToDEliveryMain(changedInstance: selectedHour)
+        delegate?.popToDeliveryMain(changedInstance: selectedTime)
     }
     
+    // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,7 +76,7 @@ class ArrivalTimeViewController: BaseViewController {
             for hour in res.hours {
                 if let minutes = hour.minutes, let hour = hour.hour {
                     for minute in minutes {
-                        self.availableTimes.append("\(hour)시 \(String(format: "%02d", minute))분")
+                        self.availableTimes.append(SelectedArrivalTime(hour: hour, minute: minute))
                     }
                 }
             }
@@ -69,7 +90,7 @@ class ArrivalTimeViewController: BaseViewController {
 
 extension ArrivalTimeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        selectedTime = availableTimes[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,7 +101,8 @@ extension ArrivalTimeViewController: UITableViewDelegate, UITableViewDataSource 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ArrivalTimeCell.className, for: indexPath) as? ArrivalTimeCell else {
             return UITableViewCell()
         }
-        cell.arrivalTimeLabel.text = availableTimes[indexPath.row]
+        let time = availableTimes[indexPath.row]
+        cell.arrivalTimeLabel.text = "\(time.hour)시 \(String(format: "%02d", time.minute))분"
         return cell
     }
 }

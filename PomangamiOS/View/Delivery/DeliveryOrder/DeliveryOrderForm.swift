@@ -18,12 +18,13 @@ class DeliveryOrderForm: UIView {
     var delegate: DeliveryOrderFormDelegate?
     private var shouldSetupConstraints = true
     private let cartButton = UIButton()
-    private let directOrderButton = UIButton()
+    private let directOrderButton = UIButtonRoundedFilled()
     private let stackView = UIStackView()
     var onlyOrderButton: Bool = false {
         didSet{
             if onlyOrderButton {
                 stackView.removeArrangedSubview(cartButton)
+                cartButton.isHidden = true
             }
         }
     }
@@ -32,12 +33,12 @@ class DeliveryOrderForm: UIView {
         didSet {
             self.setupShadow()
             self.backgroundColor = .white
+            self.setSubviewConstraints()
         }
     }
     
     init(delegate: DeliveryOrderFormDelegate) {
         super.init(frame: .zero)
-        
         self.delegate = delegate
         
         cartButton.setTitle("장바구니", for: .normal)
@@ -61,12 +62,9 @@ class DeliveryOrderForm: UIView {
         stackView.spacing = self.bounds.width / 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        stackView.backgroundColor = .blue
         stackView.addArrangedSubview(cartButton)
         stackView.addArrangedSubview(directOrderButton)
         self.addSubview(stackView)
-        
-        setSubviewConstraints()
     }
     
     private func setSubviewConstraints() {

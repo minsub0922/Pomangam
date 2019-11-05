@@ -71,9 +71,9 @@ struct ArrivalTimeResponse: Codable {
     }
 }
 
-struct SelectedArrivalTime {
+struct SelectedArrivalTime: Codable {
     let hour: Int
-    let minute: Int = 0
+    var minute: Int = Int()
 }
 
 struct ArrivalTime: Codable {

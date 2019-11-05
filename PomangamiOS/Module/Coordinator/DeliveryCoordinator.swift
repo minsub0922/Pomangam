@@ -12,7 +12,7 @@ import UIKit
 
 protocol DeliveryArrivalDelegate: class {
     func placeDidChange(changedInstance: ArrivalPlaceResponse)
-    func timeDidChange(changedInstance: String)
+    func timeDidChange(changedInstance: SelectedArrivalTime)
 }
 
 class DeliveryCoordinator: RootCoordinator {
@@ -43,7 +43,7 @@ class DeliveryCoordinator: RootCoordinator {
         }
         
         arrivalTimeObserver = UserDefaults.standard.addValueDidChangeObserver(keyPath: \.arrivalTime) {
-            if let changeInstance: String = UserDefaults.standard.getCustomObject(key: .arrivalTime) {
+            if let changeInstance: SelectedArrivalTime = UserDefaults.standard.getCustomObject(key: .arrivalTime) {
                 self.delegate?.timeDidChange(changedInstance: changeInstance)
             }
         }

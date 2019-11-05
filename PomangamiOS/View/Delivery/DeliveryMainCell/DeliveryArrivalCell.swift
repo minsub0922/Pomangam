@@ -34,4 +34,9 @@ class DeliveryArrivalCell: UICollectionViewCell, CellProtocol {
         locationButton.setTitle(model.location+"  ", for: .normal)
         timeButton.setTitle(model.arrivalTime+"  ", for: .normal)
     }
+    
+    func disableButton() {
+        locationButton.setImage(nil, for: .normal)
+        timeButton.setImage(nil, for: .normal)
+    }
 }

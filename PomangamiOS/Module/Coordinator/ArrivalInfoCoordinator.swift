@@ -51,8 +51,8 @@ class ArrivalTimeCoordinator: Coordinator {
 }
 
 extension ArrivalTimeCoordinator: ArrivalTimeViewControllerDelegate {
-    func popToDEliveryMain(changedInstance: String) {
-        UserDefaults.standard.setCustomObject(object: changedInstance, key: .arrivalPlace)
+    func popToDeliveryMain(changedInstance: SelectedArrivalTime?) {
+        UserDefaults.standard.setCustomObject(object: changedInstance, key: .arrivalTime)
         arrivalTimeViewController.dismiss(animated: true, completion: nil)
     }
 }

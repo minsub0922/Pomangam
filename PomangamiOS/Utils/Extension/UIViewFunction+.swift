@@ -58,24 +58,10 @@ extension UIView {
     
     func addAutoLayout(parent: UIView, topConstraint: UIView? = nil, bottomConstraint: UIView? = nil, heightRatio: CGFloat = 1, widthRatio: CGFloat = 1) {
         self.translatesAutoresizingMaskIntoConstraints = false
-//        self.leftAnchor.constraint(equalTo: parent.leftAnchor).isActive = true
-//        self.rightAnchor.constraint(equalTo: parent.rightAnchor).isActive = true
-        
-//        if let topConstraint = topConstraint {
-//            self.topAnchor.constraint(equalTo: topConstraint.bottomAnchor).isActive = true
-//        } else {
-//            self.topAnchor.constraint(equalTo: parent.topAnchor).isActive = true
-//        }
         self.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: heightRatio).isActive = true
         self.widthAnchor.constraint(equalTo: parent.widthAnchor, multiplier: widthRatio).isActive = true
         self.centerXAnchor.constraint(equalTo: parent.centerXAnchor).isActive = true
         self.centerYAnchor.constraint(equalTo: parent.centerYAnchor).isActive = true
-        
-//        if let bottomConstraint = bottomConstraint {
-//            self.bottomAnchor.constraint(equalTo: bottomConstraint.topAnchor).isActive = true
-//        } else {
-//            self.bottomAnchor.constraint(equalTo: parent.bottomAnchor).isActive = true
-//        }
     }
     
     func addAutoLayout(top: NSLayoutYAxisAnchor? = nil,
@@ -488,3 +474,38 @@ extension UIViewController {
     }
 }
 
+extension UIStackView {
+    enum SeperatorColor {
+        case heavy
+        case light
+        
+         var value: UIColor {
+               get {
+                   switch self {
+                   case .heavy:
+                    return UIColor.lightGray
+                   case .light:
+                    return UIColor.lightGray.withAlphaComponent(0.5)
+                   }
+               }
+           }
+    }
+    
+    
+    func addHorizontalSeparators(color : SeperatorColor) {
+        var i = self.arrangedSubviews.count
+        while i >= 0 {
+            let separator = createSeparator(color: color.value)
+            insertArrangedSubview(separator, at: i)
+            separator.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1).isActive = true
+            i -= 1
+        }
+    }
+
+    private func createSeparator(color : UIColor) -> UIView {
+        let separator = UIView()
+        separator.heightAnchor.constraint(equalToConstant: 0.8).isActive = true
+        separator.backgroundColor = color
+        return separator
+    }
+}

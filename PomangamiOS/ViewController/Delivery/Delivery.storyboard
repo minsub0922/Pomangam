@@ -336,7 +336,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nx6-DH-72b">
                                         <rect key="frame" x="136" y="15" width="59.5" height="15"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xJH-Pl-Erp">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnDeliveryplacePlaceAOn" translatesAutoresizingMaskIntoConstraints="NO" id="xJH-Pl-Erp">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="Csl-Oo-qg8"/>
@@ -414,4 +414,7 @@
             <point key="canvasLocation" x="2429" y="392"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btnDeliveryplacePlaceAOn" width="23" height="29.5"/>
+    </resources>
 </document>

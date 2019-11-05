@@ -89,16 +89,26 @@ class DeliveryViewController: DeliveryBaseViewController {
     
     private func getArrivalInfos() {
         guard let arrivalPlace: ArrivalPlaceResponse = UserDefaults.standard.getCustomObject(key: .arrivalPlace) else {
+            self.getDeliveryArrivalPlaces()
             return
         }
         
         APISource.shared.getDeliveryArrivalTimes(deliverySiteIdx: deliverySiteIndex) { res in
-            let arrivalTime = String(res.hours.filter { $0.hour ?? 0 > 1 } [0].hour ?? res.hours.last?.hour ?? 0)
+            let arrivalTime = res.hours.filter { $0.hour ?? 0 > 1 } [0].hour ?? res.hours.last?.hour ?? 0
+            let arrivalTimeInfo = SelectedArrivalTime(hour: arrivalTime)
             
-            UserDefaults.standard.setCustomObject(object: arrivalTime,
+            UserDefaults.standard.setCustomObject(object: arrivalTimeInfo,
                                                   key: .arrivalTime)
-            self.arrivalInfos = (arrivalPlace.name, arrivalTime)
+            self.arrivalInfos = (arrivalPlace.name, "\(arrivalTime)시")
         }
+    }
+    
+    private func getDeliveryArrivalPlaces() {
+       APISource.shared.getDeliveryArrivalPlaces(deliverySiteIdx: deliverySiteIndex) { res in
+        UserDefaults.standard.setCustomObject(object: res[0], key: .arrivalPlace)
+        UserDefaults.standard.setCustomObject(object: SelectedArrivalTime(hour: 17), key: .arrivalTime)
+        self.arrivalInfos = (res[0].name, "17시")
+       }
     }
     
     // MARK:- Setup Views
@@ -218,11 +228,11 @@ extension DeliveryViewController: DeliveryArrivalCellProtocol {
 }
 
 extension DeliveryViewController: DeliveryArrivalDelegate {
-    func placeDidChange(changedInstance: ArrivalPlaceResponse) {
-        self.arrivalInfos = (changedInstance.name, self.arrivalInfos.1)
+    func timeDidChange(changedInstance: SelectedArrivalTime) {
+        self.arrivalInfos = (self.arrivalInfos.0, "\(changedInstance.hour)시")
     }
     
-    func timeDidChange(changedInstance: String) {
-        self.arrivalInfos = (self.arrivalInfos.0, changedInstance)
+    func placeDidChange(changedInstance: ArrivalPlaceResponse) {
+        self.arrivalInfos = (changedInstance.name, self.arrivalInfos.1)
     }
 }

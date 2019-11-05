@@ -35,7 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func startController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(TabBarController.self)
+        //window?.rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(TabBarController.self)
+        ////////
+        let viewController = UIStoryboard.init(name: "Delivery", bundle: nil).instantiateViewController(withIdentifier: "DeliveryNavigationController") as! UINavigationController
+        DeliveryCoordinator.shared.navigationController = viewController
+        window?.rootViewController = viewController
+        /////////
         window?.makeKeyAndVisible()
     }
 

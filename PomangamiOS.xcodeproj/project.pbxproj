@@ -18,6 +18,15 @@
 		1A5297B323489A4C00C601BE /* DeliveryOrderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */; };
 		1A5405F8236FF88A00AB0C0D /* DeliveryPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5405F7236FF88A00AB0C0D /* DeliveryPaymentViewController.swift */; };
 		1A5405FA236FF92200AB0C0D /* DeliveryPaymentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5405F9236FF92200AB0C0D /* DeliveryPaymentCoordinator.swift */; };
+		1A5405FE2370181100AB0C0D /* DeliveryPaymentArrivalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5405FC2370181100AB0C0D /* DeliveryPaymentArrivalCell.swift */; };
+		1A5405FF2370181100AB0C0D /* DeliveryPaymentArrivalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5405FD2370181100AB0C0D /* DeliveryPaymentArrivalCell.xib */; };
+		1A540602237020D300AB0C0D /* DeliveryPaymentPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A540600237020D300AB0C0D /* DeliveryPaymentPriceCell.swift */; };
+		1A540603237020D300AB0C0D /* DeliveryPaymentPriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A540601237020D300AB0C0D /* DeliveryPaymentPriceCell.xib */; };
+		1A540606237021AA00AB0C0D /* DeliveryPaymentTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A540604237021AA00AB0C0D /* DeliveryPaymentTypeCell.swift */; };
+		1A540607237021AA00AB0C0D /* DeliveryPaymentSelectWayToPay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A540605237021AA00AB0C0D /* DeliveryPaymentSelectWayToPay.xib */; };
+		1A54060A2370299100AB0C0D /* DeliveryPaymentCouponCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5406082370299100AB0C0D /* DeliveryPaymentCouponCellTableViewCell.swift */; };
+		1A54060B2370299100AB0C0D /* DeliveryPaymentCouponCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5406092370299100AB0C0D /* DeliveryPaymentCouponCellTableViewCell.xib */; };
+		1A54060D23711AF500AB0C0D /* UIButtonRoundedFilled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A54060C23711AF500AB0C0D /* UIButtonRoundedFilled.swift */; };
 		1A6A10A823459D9C007D2C78 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10A623459D9C007D2C78 /* PageCell.swift */; };
 		1A6A10A923459D9C007D2C78 /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A10A723459D9C007D2C78 /* PageCell.xib */; };
 		1A6A10AC2345A1F4007D2C78 /* PageChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10AA2345A1F4007D2C78 /* PageChildCell.swift */; };
@@ -157,6 +166,15 @@
 		1A5297B223489A4C00C601BE /* DeliveryOrderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderCoordinator.swift; sourceTree = "<group>"; };
 		1A5405F7236FF88A00AB0C0D /* DeliveryPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPaymentViewController.swift; sourceTree = "<group>"; };
 		1A5405F9236FF92200AB0C0D /* DeliveryPaymentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPaymentCoordinator.swift; sourceTree = "<group>"; };
+		1A5405FC2370181100AB0C0D /* DeliveryPaymentArrivalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPaymentArrivalCell.swift; sourceTree = "<group>"; };
+		1A5405FD2370181100AB0C0D /* DeliveryPaymentArrivalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryPaymentArrivalCell.xib; sourceTree = "<group>"; };
+		1A540600237020D300AB0C0D /* DeliveryPaymentPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPaymentPriceCell.swift; sourceTree = "<group>"; };
+		1A540601237020D300AB0C0D /* DeliveryPaymentPriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryPaymentPriceCell.xib; sourceTree = "<group>"; };
+		1A540604237021AA00AB0C0D /* DeliveryPaymentTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPaymentTypeCell.swift; sourceTree = "<group>"; };
+		1A540605237021AA00AB0C0D /* DeliveryPaymentSelectWayToPay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryPaymentSelectWayToPay.xib; sourceTree = "<group>"; };
+		1A5406082370299100AB0C0D /* DeliveryPaymentCouponCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPaymentCouponCellTableViewCell.swift; sourceTree = "<group>"; };
+		1A5406092370299100AB0C0D /* DeliveryPaymentCouponCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryPaymentCouponCellTableViewCell.xib; sourceTree = "<group>"; };
+		1A54060C23711AF500AB0C0D /* UIButtonRoundedFilled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonRoundedFilled.swift; sourceTree = "<group>"; };
 		1A6A10A623459D9C007D2C78 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		1A6A10A723459D9C007D2C78 /* PageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
 		1A6A10AA2345A1F4007D2C78 /* PageChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageChildCell.swift; sourceTree = "<group>"; };
@@ -327,6 +345,21 @@
 			path = RealmObject;
 			sourceTree = "<group>";
 		};
+		1A5405FB237017A800AB0C0D /* DeliveryPaymentCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A5405FC2370181100AB0C0D /* DeliveryPaymentArrivalCell.swift */,
+				1A5405FD2370181100AB0C0D /* DeliveryPaymentArrivalCell.xib */,
+				1A540600237020D300AB0C0D /* DeliveryPaymentPriceCell.swift */,
+				1A540601237020D300AB0C0D /* DeliveryPaymentPriceCell.xib */,
+				1A540604237021AA00AB0C0D /* DeliveryPaymentTypeCell.swift */,
+				1A540605237021AA00AB0C0D /* DeliveryPaymentSelectWayToPay.xib */,
+				1A5406082370299100AB0C0D /* DeliveryPaymentCouponCellTableViewCell.swift */,
+				1A5406092370299100AB0C0D /* DeliveryPaymentCouponCellTableViewCell.xib */,
+			);
+			path = DeliveryPaymentCell;
+			sourceTree = "<group>";
+		};
 		1A6AF01C2344CB62007ACE44 /* TabbarPager */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,6 +475,7 @@
 		AF4A3E7D230EF9E1003F3825 /* Delivery */ = {
 			isa = PBXGroup;
 			children = (
+				1A5405FB237017A800AB0C0D /* DeliveryPaymentCell */,
 				1ABC5E2A234C79580091731E /* DeliveryCart */,
 				1AE61FCE2347AF890075285B /* DeliveryOrder */,
 				1AE61FCD2347AF780075285B /* DeliveryMainCell */,
@@ -636,6 +670,7 @@
 				AFD5E32B231424B10031E375 /* NavigationTitleDropDownButton.swift */,
 				AF5B31F7232D3D8E0052F495 /* DropDownLabel.swift */,
 				1ACD80222361B2EB00BFEDCC /* CartNavigationItem.swift */,
+				1A54060C23711AF500AB0C0D /* UIButtonRoundedFilled.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -815,18 +850,22 @@
 			files = (
 				AFDD4C6922FC0BD900CD8CD5 /* More.storyboard in Resources */,
 				AF4A3E89230EFC3C003F3825 /* DeliveryArrivalCell.xib in Resources */,
+				1A540607237021AA00AB0C0D /* DeliveryPaymentSelectWayToPay.xib in Resources */,
 				1AF78F9323698BAA00371B3A /* MoreMenuListPointCell.xib in Resources */,
 				1ABC5E2E234C79A00091731E /* DeliveryCartOrderCell.xib in Resources */,
 				1A6A10A923459D9C007D2C78 /* PageCell.xib in Resources */,
 				AFF0C84522F659D2007D26DD /* LaunchScreen.storyboard in Resources */,
 				AFDD4C6D22FC0BEA00CD8CD5 /* Community.storyboard in Resources */,
 				1AF839FF234C89660004EFEB /* DeliveryCartPriceCell.xib in Resources */,
+				1A54060B2370299100AB0C0D /* DeliveryPaymentCouponCellTableViewCell.xib in Resources */,
 				AFF0C84222F659D2007D26DD /* Assets.xcassets in Resources */,
+				1A540603237020D300AB0C0D /* DeliveryPaymentPriceCell.xib in Resources */,
 				1AE61FDA2347B0040075285B /* DeliveryOrderRequestCell.xib in Resources */,
 				1A96D9FF236C6B290087D8C0 /* BaseCollectionViewCell.xib in Resources */,
 				1A6A10BD2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib in Resources */,
 				1AE61FD62347AFF20075285B /* DeliveryOrderOptionCell.xib in Resources */,
 				1AE61FD22347AFDC0075285B /* DeliveryOrderMenuCell.xib in Resources */,
+				1A5405FF2370181100AB0C0D /* DeliveryPaymentArrivalCell.xib in Resources */,
 				AFF0C83D22F659D2007D26DD /* Main.storyboard in Resources */,
 				1AF839FB234C862E0004EFEB /* DeliveryCartOrderFooterView.xib in Resources */,
 				1A6A10B92345B59B007D2C78 /* DeliveryTabpagerCell.xib in Resources */,
@@ -952,6 +991,7 @@
 			files = (
 				1A5405FA236FF92200AB0C0D /* DeliveryPaymentCoordinator.swift in Sources */,
 				1AE61FD92347B0040075285B /* DeliveryOrderRequestCell.swift in Sources */,
+				1A54060A2370299100AB0C0D /* DeliveryPaymentCouponCellTableViewCell.swift in Sources */,
 				1ACD802B23641F8A00BFEDCC /* ArrivalInfosResponse.swift in Sources */,
 				1A3D145323507FEA00ED6D07 /* Objects.swift in Sources */,
 				1A6A10B42345A2C6007D2C78 /* TabbarCell.swift in Sources */,
@@ -964,6 +1004,7 @@
 				AF4A3EA4230F7EF2003F3825 /* UIButtonCheckable.swift in Sources */,
 				AF4A3E97230EFF0F003F3825 /* CellProtocols.swift in Sources */,
 				AF4A3E90230EFD12003F3825 /* DeliveryMarketCell.swift in Sources */,
+				1A540602237020D300AB0C0D /* DeliveryPaymentPriceCell.swift in Sources */,
 				1AE61FE92348627D0075285B /* MoreCoordinator.swift in Sources */,
 				1ABC5E20234C4E190091731E /* DeliveryOrderForm.swift in Sources */,
 				1AD25E862349C1FE008A0FF1 /* OptionSelectorView.swift in Sources */,
@@ -1011,8 +1052,10 @@
 				1AF78F8E23698B6D00371B3A /* MoreMenuListProfileCell.swift in Sources */,
 				1ABC5E24234C60D30091731E /* DeliveryBaseViewController.swift in Sources */,
 				AF99D4EC233A0A3600DB3A95 /* DeliveryHeaderAdvertisementChildCell.swift in Sources */,
+				1A54060D23711AF500AB0C0D /* UIButtonRoundedFilled.swift in Sources */,
 				AFDD4CBE22FC457900CD8CD5 /* Types+.swift in Sources */,
 				1A5405F8236FF88A00AB0C0D /* DeliveryPaymentViewController.swift in Sources */,
+				1A5405FE2370181100AB0C0D /* DeliveryPaymentArrivalCell.swift in Sources */,
 				AFDD4CAE22FC1BAD00CD8CD5 /* TabBarController.swift in Sources */,
 				AFF0C83822F659D2007D26DD /* AppDelegate.swift in Sources */,
 				AFDD4CBA22FC278100CD8CD5 /* UIViewEnum+.swift in Sources */,
@@ -1034,6 +1077,7 @@
 				1A39D7F02345EC660002A3C6 /* BaseViewController.swift in Sources */,
 				AF4A3EA2230F7B1B003F3825 /* UIButtonSelectorRounded.swift in Sources */,
 				AFDD4C5F22FC0BA200CD8CD5 /* DeliveryViewController.swift in Sources */,
+				1A540606237021AA00AB0C0D /* DeliveryPaymentTypeCell.swift in Sources */,
 				1A6A10AC2345A1F4007D2C78 /* PageChildCell.swift in Sources */,
 				1A6A10BF2345BB85007D2C78 /* NotificationCenter+.swift in Sources */,
 			);
