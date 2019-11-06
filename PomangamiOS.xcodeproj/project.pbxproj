@@ -275,7 +275,7 @@
 		AFDD4CBF22FC49E400CD8CD5 /* StaticLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticLists.swift; sourceTree = "<group>"; };
 		AFDD4CC222FC634C00CD8CD5 /* UIlabelFlexible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIlabelFlexible.swift; sourceTree = "<group>"; };
 		AFDD4CC422FC7AFE00CD8CD5 /* UIViewRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRounded.swift; sourceTree = "<group>"; };
-		AFF0C83422F659D2007D26DD /* PomangamiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomangamiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF0C83422F659D2007D26DD /* 포만감.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "포만감.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF0C83722F659D2007D26DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF0C83C22F659D2007D26DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFF0C83F22F659D2007D26DD /* PomangamiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PomangamiOS.xcdatamodel; sourceTree = "<group>"; };
@@ -690,7 +690,7 @@
 		AFF0C83522F659D2007D26DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AFF0C83422F659D2007D26DD /* PomangamiOS.app */,
+				AFF0C83422F659D2007D26DD /* 포만감.app */,
 				AFF0C84B22F659D2007D26DD /* PomangamiOSTests.xctest */,
 				AFF0C85622F659D2007D26DD /* PomangamiOSUITests.xctest */,
 			);
@@ -759,7 +759,7 @@
 			);
 			name = PomangamiOS;
 			productName = PomangamiOS;
-			productReference = AFF0C83422F659D2007D26DD /* PomangamiOS.app */;
+			productReference = AFF0C83422F659D2007D26DD /* 포만감.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AFF0C84A22F659D2007D26DD /* PomangamiOSTests */ = {
@@ -1264,8 +1264,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kau.com.PomangamiOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.minseops.pomangam;
+				PRODUCT_NAME = "포만감";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1283,8 +1283,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kau.com.PomangamiOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.minseops.pomangam;
+				PRODUCT_NAME = "포만감";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

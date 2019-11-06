@@ -14,5 +14,4 @@ class BaseCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

@@ -11,12 +11,6 @@ import UIKit
 class DeliveryBaseViewController: BaseViewController {
     private var customCartButton: CartNavigationItem?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -26,12 +20,14 @@ class DeliveryBaseViewController: BaseViewController {
     open func setupReceiptCartNavigationbarButton() {
         let navigationReceiptButton = UIBarButtonItem()
         let receiptNavigationItem = ReceiptNavigationItem()
-        receiptNavigationItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(navigationReceiptButtonTapAction(_:))))
+        receiptNavigationItem.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                                          action: #selector(navigationReceiptButtonTapAction(_:))))
         navigationReceiptButton.customView = receiptNavigationItem
         
         let navigationCartButton = UIBarButtonItem()
         customCartButton = CartNavigationItem()
-        customCartButton?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(navigationCartButtonTapAction(_:))))
+        customCartButton?.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                                      action: #selector(navigationCartButtonTapAction(_:))))
         navigationCartButton.customView = customCartButton
     
         navigationItem.rightBarButtonItems = [navigationCartButton, navigationReceiptButton]
