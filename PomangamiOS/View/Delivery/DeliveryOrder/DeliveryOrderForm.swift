@@ -49,10 +49,6 @@ class DeliveryOrderForm: UIView {
                              action: #selector(touchupCartButton(_:)),
                              for: .touchUpInside)
         directOrderButton.setTitle("바로주문", for: .normal)
-        directOrderButton.backgroundColor = .dustyOrange
-        directOrderButton.setTitleColor(.white, for: .normal)
-        directOrderButton.sizeToFit()
-        directOrderButton.translatesAutoresizingMaskIntoConstraints = false
         directOrderButton.addTarget(self,
                              action: #selector(touchupDirectOrderButton(_:)),
                              for: .touchUpInside)

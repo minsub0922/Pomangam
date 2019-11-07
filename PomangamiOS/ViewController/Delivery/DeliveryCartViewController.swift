@@ -182,7 +182,7 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
 //MARK:- DeliveryOrderForm Button Action
 extension DeliveryCartViewController: DeliveryOrderFormDelegate {
     func tapDirectOrderButton() {
-        print("tapDirectorderButton")
+        presentPreparingViewController(target: self)
     }
 }
 

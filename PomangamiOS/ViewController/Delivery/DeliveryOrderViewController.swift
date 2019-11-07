@@ -196,7 +196,7 @@ extension DeliveryOrderViewController: DeliveryOrderFormDelegate {
     }
     
     func tapDirectOrderButton() {
-        print("tapdirectOrderButton")
+        presentPreparingViewController(target: self)
     }
 }
 

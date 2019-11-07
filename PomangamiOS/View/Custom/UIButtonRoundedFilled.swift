@@ -16,18 +16,32 @@ class UIButtonRoundedFilled: UIButton {
         }
     }
     
-    override func draw(_ rect: CGRect) {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        setupView()
+    }
+    
+    private func setupView() {
+        sizeToFit()
+        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .dustyOrange
-               self.setAttributedTitle(
-                   attributedString(
-                       from: self.currentTitle ?? "",
-                       textColor: .white ),
-                       for: .normal)
-               self.setAttributedTitle(
-                   attributedString(
-                       from: self.currentTitle ?? "",
-                       textColor: UIColor.dustyOrange.withAlphaComponent(0.5)),
-                   for: .focused)
+        self.setAttributedTitle(
+                          attributedString(
+                              from: self.currentTitle ?? "",
+                              textColor: .white ),
+                              for: .normal)
+                      self.setAttributedTitle(
+                          attributedString(
+                              from: self.currentTitle ?? "",
+                              textColor: UIColor.dustyOrange.withAlphaComponent(0.5)),
+                          for: .focused)
     }
     
     func attributedString(from string: String, textColor: UIColor) -> NSAttributedString {
