@@ -27,7 +27,7 @@ class DeliveryMenuListHeaderCell: UICollectionViewCell, CellProtocol {
         reviewButton.setTitle("리뷰보기(\(model.commentCount))", for: .normal)
         phonenumberButton.setTitle(model.number, for: .normal)
         nameLabel.text = model.name
-        descriptionLabel.text = model.description
+        descriptionLabel.text = model.description.html2String
     }
     
     override func awakeFromNib() {

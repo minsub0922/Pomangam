@@ -21,7 +21,7 @@ class DeliveryCartViewController: BaseViewController {
         super.viewDidLoad()
         
         self.title = "장바구니"
-        setupOrderButton()
+        //setupOrderButton()
         setupCollectionView()
         readCartDatas()
     }
@@ -61,7 +61,8 @@ class DeliveryCartViewController: BaseViewController {
             collectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
             collectionView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: deliveryOrderForm.topAnchor, constant: -10)
+            //collectionView.bottomAnchor.constraint(equalTo: deliveryOrderForm.topAnchor, constant: -10)
+            collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
     }
     

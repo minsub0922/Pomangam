@@ -31,7 +31,7 @@ class DeliveryOrderMenuCell: UICollectionViewCell, CellProtocol {
         likeCountLabel.text = String(model.likeCount)
         nameLabel.text = model.name
         priceLabel.text = String(model.price).addThousandsSeperator()
-        descriptionLabel.text = model.description
+        descriptionLabel.text = model.description.html2String
         descriptionLabel.fontToFitHeight()
     }
 }

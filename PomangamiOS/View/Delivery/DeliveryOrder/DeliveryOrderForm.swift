@@ -28,6 +28,14 @@ class DeliveryOrderForm: UIView {
             }
         }
     }
+    var onlyCartButton: Bool = false {
+        didSet {
+            if onlyCartButton {
+                stackView.removeArrangedSubview(directOrderButton)
+                directOrderButton.isHidden = true
+            }
+        }
+    }
 
     override var bounds: CGRect {
         didSet {

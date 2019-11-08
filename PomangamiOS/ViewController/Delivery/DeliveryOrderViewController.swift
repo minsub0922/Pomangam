@@ -94,6 +94,7 @@ class DeliveryOrderViewController: BaseViewController {
     
     private func setupFormView() {
         deliveryOrderForm = DeliveryOrderForm(delegate: self)
+        deliveryOrderForm.onlyCartButton = true
         orderSelectorView = OptionSelectorView(delegate: self)
         self.view.addSubview(deliveryOrderForm)
         self.view.addSubview(orderSelectorView)
