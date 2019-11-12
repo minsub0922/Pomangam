@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0B0495237A3FCB005F8434 /* DeliveryTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B0494237A3FCB005F8434 /* DeliveryTempViewController.swift */; };
 		1A0BF4B32345F6CC007A7F21 /* MenuResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0BF4B22345F6CC007A7F21 /* MenuResponse.swift */; };
 		1A39C18023742304008C2788 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39C17F23742304008C2788 /* CommonUtils.swift */; };
 		1A39D7EC2345E5050002A3C6 /* MarketDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */; };
@@ -157,6 +158,7 @@
 
 /* Begin PBXFileReference section */
 		0D3E463BF89C6436AA880CEF /* Pods-PomangamiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomangamiOSTests.release.xcconfig"; path = "Target Support Files/Pods-PomangamiOSTests/Pods-PomangamiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A0B0494237A3FCB005F8434 /* DeliveryTempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTempViewController.swift; sourceTree = "<group>"; };
 		1A0BF4B22345F6CC007A7F21 /* MenuResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuResponse.swift; sourceTree = "<group>"; };
 		1A39C17F23742304008C2788 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		1A39D7EB2345E5050002A3C6 /* MarketDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetailResponse.swift; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 				1ABC5E28234C6F7C0091731E /* DeliveryCartViewController.swift */,
 				1ACD80262363CDA900BFEDCC /* ArrivalPlaceViewController.swift */,
 				1A4DB1BB2365E6D0008343E6 /* ArrivalTimeViewController.swift */,
+				1A0B0494237A3FCB005F8434 /* DeliveryTempViewController.swift */,
 			);
 			path = Delivery;
 			sourceTree = "<group>";
@@ -1085,6 +1088,7 @@
 				AF4A3EA0230F7900003F3825 /* UIColor+.swift in Sources */,
 				1AE61FE72348626C0075285B /* HotdealCoordinator.swift in Sources */,
 				AFF0C84022F659D2007D26DD /* PomangamiOS.xcdatamodeld in Sources */,
+				1A0B0495237A3FCB005F8434 /* DeliveryTempViewController.swift in Sources */,
 				1ACD80272363CDA900BFEDCC /* ArrivalPlaceViewController.swift in Sources */,
 				AFDD4CB122FC21B700CD8CD5 /* BaseRootViewController.swift in Sources */,
 				1A96D9FE236C6B290087D8C0 /* BaseCollectionViewCell.swift in Sources */,
@@ -1274,15 +1278,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_TEAM = CJ9DCX3V4H;
 				INFOPLIST_FILE = PomangamiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minseops.pomangam;
 				PRODUCT_NAME = "포만감";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1295,15 +1299,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_TEAM = CJ9DCX3V4H;
 				INFOPLIST_FILE = PomangamiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minseops.pomangam;
 				PRODUCT_NAME = "포만감";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

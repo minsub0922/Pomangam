@@ -21,7 +21,7 @@ class DeliveryCartViewController: BaseViewController {
         super.viewDidLoad()
         
         self.title = "장바구니"
-        //setupOrderButton()
+        setupOrderButton()
         setupCollectionView()
         readCartDatas()
     }
@@ -39,8 +39,8 @@ class DeliveryCartViewController: BaseViewController {
     //MARK:- setupView
     private func setupOrderButton() {
         deliveryOrderForm = DeliveryOrderForm(delegate: self)
-        deliveryOrderForm.onlyOrderButton = true
         self.view.addSubview(deliveryOrderForm)
+        deliveryOrderForm.onlyOrderButton = true
         deliveryOrderForm.attachOnBottom(parent: self.view, height: 60 + UIApplication.shared.safeAreaBottomInset)
     }
     
@@ -61,8 +61,8 @@ class DeliveryCartViewController: BaseViewController {
             collectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
             collectionView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            //collectionView.bottomAnchor.constraint(equalTo: deliveryOrderForm.topAnchor, constant: -10)
-            collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+            collectionView.bottomAnchor.constraint(equalTo: deliveryOrderForm.topAnchor, constant: -10)
+            //collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
     }
     
@@ -183,7 +183,9 @@ extension DeliveryCartViewController: UICollectionViewDelegate, UICollectionView
 //MARK:- DeliveryOrderForm Button Action
 extension DeliveryCartViewController: DeliveryOrderFormDelegate {
     func tapDirectOrderButton() {
-        presentPreparingViewController(target: self)
+        //presentPreparingViewController(target: self)
+        let target = UIStoryboard.init(name: "Delivery", bundle: nil).instantiateViewController(DeliveryTempViewController.self)
+        DeliveryCommon.shared.navigationController?.pushViewController(target: target)
     }
 }
 
