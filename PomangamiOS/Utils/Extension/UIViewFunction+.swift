@@ -44,18 +44,6 @@ extension UIView {
         self.layer.shadowOpacity = 0
     }
     
-//    // MARK: Set Shadow on the view without bound limited
-//    private func applyShadow(radius: CGFloat = 0.0, opacity: Float = 0.3) {
-//        self.layer.cornerRadius = radius
-//        self.layer.shadowOffset = CGSize(width: 0, height: 2)
-//        self.layer.shadowRadius = radius
-//        self.layer.shadowOpacity = opacity
-//        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 3, height: 2)).cgPath
-//        self.layer.shouldRasterize = true
-//        self.layer.rasterizationScale = UIScreen.main.scale
-//        self.layer.masksToBounds = false
-//    }
-    
     func addAutoLayout(parent: UIView, topConstraint: UIView? = nil, bottomConstraint: UIView? = nil, heightRatio: CGFloat = 1, widthRatio: CGFloat = 1) {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.heightAnchor.constraint(equalTo: parent.heightAnchor, multiplier: heightRatio).isActive = true

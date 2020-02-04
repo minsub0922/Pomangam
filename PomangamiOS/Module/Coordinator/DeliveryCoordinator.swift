@@ -29,7 +29,6 @@ class DeliveryCoordinator: RootCoordinator {
             if let target = self.navigationController?.topViewController as? DeliveryViewController {
                 target.delegate = self
                 delegate = target
-                
                 setupObservers()
             }
         }

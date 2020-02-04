@@ -192,6 +192,7 @@
 		1A6A10BB2345B5B4007D2C78 /* DeliveryMenuListHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryMenuListHeaderCell.xib; sourceTree = "<group>"; };
 		1A6A10BE2345BB85007D2C78 /* NotificationCenter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+.swift"; sourceTree = "<group>"; };
 		1A6AF01D2344CB98007ACE44 /* TabPagerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPagerLayout.swift; sourceTree = "<group>"; };
+		1A952A9F23E961950062D462 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1A96D9FC236C6B290087D8C0 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A96D9FD236C6B290087D8C0 /* BaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		1ABC5E1F234C4E190091731E /* DeliveryOrderForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrderForm.swift; sourceTree = "<group>"; };
@@ -705,6 +706,7 @@
 		AFF0C82B22F659D2007D26DD = {
 			isa = PBXGroup;
 			children = (
+				1A952A9F23E961950062D462 /* README.md */,
 				AFF0C83622F659D2007D26DD /* PomangamiOS */,
 				AFF0C84E22F659D2007D26DD /* PomangamiOSTests */,
 				AFF0C85922F659D2007D26DD /* PomangamiOSUITests */,
