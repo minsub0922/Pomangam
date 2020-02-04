@@ -1,6 +1,6 @@
-#  
-
-<center><a href="https://apps.apple.com/us/app/%ED%8F%AC%EB%A7%8C%EA%B0%90/id1486288130"> <img src="https://user-images.githubusercontent.com/9532432/73726427-e01c0d00-4772-11ea-8ce1-7d290aede2ca.png" width="250" height="250">
+<p align="center" >
+<a href="https://apps.apple.com/us/app/%ED%8F%AC%EB%A7%8C%EA%B0%90/id1486288130" align="center"> <img src="https://user-images.githubusercontent.com/9532432/73726427-e01c0d00-4772-11ea-8ce1-7d290aede2ca.png" width="250" height="250" align="center"/></a>
+</p>
 
 <h1 align="center">
   포만감  <img alt="Swift" src="https://img.shields.io/badge/swift-5-orange.svg"> <img alt="Platform" src="https://img.shields.io/badge/platform-ios-lightgrey.svg"> 
