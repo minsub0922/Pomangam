@@ -48,5 +48,5 @@
 
 ### 포만감
 
-<a href="https://itunes.apple.com/us/app/songol/id1436932614#?platform=iphone"> <img src="https://user-images.githubusercontent.com/9532432/73726427-e01c0d00-4772-11ea-8ce1-7d290aede2ca.png" width="150" height="150"></a> ```ver 1.0.2```
+<a href="https://apps.apple.com/us/app/%ED%8F%AC%EB%A7%8C%EA%B0%90/id1486288130"> <img src="https://user-images.githubusercontent.com/9532432/73726427-e01c0d00-4772-11ea-8ce1-7d290aede2ca.png" width="150" height="150"></a> ```ver 1.0.2```
 
